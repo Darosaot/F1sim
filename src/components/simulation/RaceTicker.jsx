@@ -40,12 +40,15 @@ export default function RaceTicker({ races, d1Name, d2Name }) {
     setVisible([])
     if (!races?.length) return
     let i = 0
+    let cancelled = false
     const iv = setInterval(() => {
-      if (i >= races.length) { clearInterval(iv); return }
-      setVisible(prev => [...prev, { ...races[i], raceNumber: i + 1 }])
+      if (cancelled || i >= races.length) { clearInterval(iv); return }
+      const race = races[i]
+      if (!race?.circuit) { i++; return }
+      setVisible(prev => [...prev, { ...race, raceNumber: i + 1 }])
       i++
     }, 400)
-    return () => clearInterval(iv)
+    return () => { cancelled = true; clearInterval(iv) }
   }, [races])
 
   const isRunning = visible.length < (races?.length ?? 0)
