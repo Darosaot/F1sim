@@ -72,7 +72,7 @@ export default function ElementItem({ slotKey, element, showStats }) {
   const rating      = getElementValue(element, slotKey)
   const isNumeric   = typeof element === 'number'
   const displayName = isNumeric
-    ? `${element}/100`
+    ? (showStats ? `${element}/100` : '—')
     : element?.name || '—'
   const subLabel    = isNumeric
     ? null
@@ -128,7 +128,7 @@ export default function ElementItem({ slotKey, element, showStats }) {
         </div>
 
         <div className="flex items-center gap-2 shrink-0">
-          {showStats && rating > 0 && (
+          {showStats && rating > 0 && !isNumeric && (
             <span className="font-display font-black text-xl text-rust">{rating}</span>
           )}
           {alreadyFilled ? (
