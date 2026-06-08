@@ -12,7 +12,7 @@ function StandingsTable({ title, rows, showTeam }) {
         <span className="text-[10px] font-bold uppercase tracking-widest text-ink-md">{title}</span>
       </div>
       <div className="divide-y divide-borderc">
-        {rows.slice(0, 12).map((s, i) => (
+        {rows.map((s, i) => (
           <div
             key={`${s.name}-${i}`}
             className={`flex items-center justify-between px-4 py-2 ${s.isPlayer ? 'bg-sand-lt' : ''}`}
