@@ -15,8 +15,11 @@ export default function Game() {
   const era                 = useGameStore(s => s.era)
   const mode                = useGameStore(s => s.mode)
   const rollCount           = useGameStore(s => s.rollCount)
-  const setSimulationResults = useGameStore(s => s.setSimulationResults)
-  const resetGame           = useGameStore(s => s.resetGame)
+  const setSimulationResults  = useGameStore(s => s.setSimulationResults)
+  const useWildcard           = useGameStore(s => s.useWildcard)
+  const useWildcardSameTeam   = useGameStore(s => s.useWildcardSameTeam)
+  const wildcards             = useGameStore(s => s.wildcards)
+  const resetGame             = useGameStore(s => s.resetGame)
   const filledCount         = useGameStore(s => s.getFilledCount())
   const currentCard         = useGameStore(s => s.currentCard)
 
@@ -90,6 +93,29 @@ export default function Game() {
                 </motion.div>
               )}
             </AnimatePresence>
+
+            {/* Re-roll buttons — shown when a card is active and wildcards remain */}
+            {currentCard && wildcards > 0 && (
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-widest text-ink-md mb-2">
+                  NOT FEELING IT? RE-ROLL · {wildcards} LEFT
+                </p>
+                <div className="flex gap-2">
+                  <button
+                    onClick={useWildcard}
+                    className="flex-1 py-2.5 border border-ink text-ink font-display font-black text-xs uppercase tracking-widest hover:bg-ink hover:text-white transition-colors text-center"
+                  >
+                    ↺ OTRO EQUIPO
+                  </button>
+                  <button
+                    onClick={useWildcardSameTeam}
+                    className="flex-1 py-2.5 border border-ink text-ink font-display font-black text-xs uppercase tracking-widest hover:bg-ink hover:text-white transition-colors text-center"
+                  >
+                    ↺ OTRA TEMPORADA
+                  </button>
+                </div>
+              </div>
+            )}
 
             {/* Roll count */}
             {rollCount > 0 && phase !== 'complete' && !currentCard && (
