@@ -131,7 +131,7 @@ export default function ElementItem({ slotKey, element, showStats }) {
         </div>
 
         <div className="flex items-center gap-2 shrink-0">
-          {showStats && !isNumeric && (
+          {showStats && rating > 0 && (
             <span className="font-display font-black text-xl text-rust">{rating}</span>
           )}
           {alreadyFilled ? (
