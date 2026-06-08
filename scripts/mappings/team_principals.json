@@ -1,0 +1,111 @@
+{
+  "ferrari":      [
+    {"from":1950,"to":1988,"tp":"ferrari_enzo"},
+    {"from":1996,"to":2007,"tp":"todt_jean"},
+    {"from":2008,"to":2014,"tp":"domenicali_stefano"},
+    {"from":2015,"to":2018,"tp":"arrivabene_maurizio"},
+    {"from":2019,"to":2022,"tp":"binotto_mattia"},
+    {"from":2023,"to":2025,"tp":"vasseur_fred"}
+  ],
+  "mclaren":      [
+    {"from":1982,"to":2009,"tp":"dennis_ron"},
+    {"from":2018,"to":2025,"tp":"brown_zak"}
+  ],
+  "williams":     [
+    {"from":1977,"to":2012,"tp":"williams_frank"}
+  ],
+  "red_bull":     [
+    {"from":2005,"to":2025,"tp":"horner_christian"}
+  ],
+  "mercedes":     [
+    {"from":2010,"to":2025,"tp":"wolff_toto"}
+  ],
+  "renault":      [
+    {"from":2002,"to":2009,"tp":"briatore_flavio_renault"},
+    {"from":2016,"to":2020,"tp":"szafnauer_otmar"}
+  ],
+  "alpine":       [
+    {"from":2021,"to":2025,"tp":"szafnauer_otmar"}
+  ],
+  "lotus":        [
+    {"from":1958,"to":1982,"tp":"chapman_colin_tp"}
+  ],
+  "benetton":     [
+    {"from":1986,"to":2001,"tp":"briatore_flavio_benetton"}
+  ],
+  "brabham":      [
+    {"from":1963,"to":1992,"tp":null}
+  ],
+  "tyrrell":      [
+    {"from":1970,"to":1997,"tp":"tyrrell_ken"}
+  ],
+  "jordan":       [
+    {"from":1991,"to":2004,"tp":"jordan_eddie"}
+  ],
+  "bar":          [
+    {"from":1999,"to":2005,"tp":"fry_nick"}
+  ],
+  "toyota":       [
+    {"from":2002,"to":2009,"tp":null}
+  ],
+  "bmw_sauber":   [
+    {"from":2006,"to":2009,"tp":"theissen_mario"}
+  ],
+  "sauber":       [
+    {"from":1993,"to":2005,"tp":"sauber_peter"}
+  ],
+  "alfa":         [
+    {"from":2019,"to":2022,"tp":"vasseur_fred"}
+  ],
+  "force_india":  [
+    {"from":2008,"to":2018,"tp":"szafnauer_otmar"}
+  ],
+  "racing_point": [
+    {"from":2019,"to":2020,"tp":"szafnauer_otmar"}
+  ],
+  "aston_martin": [
+    {"from":2021,"to":2025,"tp":"krack_mike"}
+  ],
+  "alphatauri":   [
+    {"from":2020,"to":2023,"tp":"tost_franz"}
+  ],
+  "toro_rosso":   [
+    {"from":2006,"to":2019,"tp":"tost_franz"}
+  ],
+  "haas":         [
+    {"from":2016,"to":2024,"tp":"steiner_guenther"}
+  ],
+  "minardi":      [
+    {"from":1985,"to":2005,"tp":"minardi_giancarlo"}
+  ],
+  "jaguar":       [
+    {"from":2000,"to":2004,"tp":"lauda_niki_tp"}
+  ],
+  "stewart":      [
+    {"from":1997,"to":1999,"tp":"stewart_jackie_tp"}
+  ],
+  "arrows":       [
+    {"from":1977,"to":2002,"tp":"walkinshaw_tom"}
+  ],
+  "brawn":        [
+    {"from":2009,"to":2009,"tp":"brawn_ross_tp"}
+  ],
+  "maserati":     [
+    {"from":1950,"to":1957,"tp":"bertocchi_guerino"}
+  ],
+  "eagle":        [
+    {"from":1966,"to":1968,"tp":"gurney_dan_tp"}
+  ],
+  "wolf":         [
+    {"from":1977,"to":1979,"tp":"wolf_walter_tp"}
+  ],
+  "shadow":       [
+    {"from":1973,"to":1979,"tp":"nichols_don_tp"}
+  ],
+  "toleman":      [
+    {"from":1981,"to":1985,"tp":"toleman_ted_tp"}
+  ],
+  "ligier":       [
+    {"from":1976,"to":1996,"tp":"ligier_guy"}
+  ]
+}
