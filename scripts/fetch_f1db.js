@@ -35,6 +35,9 @@ if (fromIdx !== -1) fromYear = parseInt(args[fromIdx + 1])
 const toIdx = args.indexOf('--to')
 if (toIdx !== -1) toYear = parseInt(args[toIdx + 1])
 
+// --force: regenerate all entries, ignoring existing IDs (use with apply_generated --overwrite)
+const FORCE = args.includes('--force')
+
 // ── Load f1db files ───────────────────────────────────────────────────────────
 function loadF1db(name) {
   const p = path.join(F1DB_DIR, name)
@@ -295,8 +298,9 @@ function getNationality(driverInfo) {
   return code
 }
 
-// ── Derive driver attributes from career stats ────────────────────────────────
-function deriveDriverAttributes(driverInfo, year) {
+// ── Derive driver attributes from career stats + year-specific standing ──────
+// yearStanding: { positionNumber, points } from f1db-seasons-driver-standings
+function deriveDriverAttributes(driverInfo, yearStanding) {
   if (!driverInfo) return { pace: 60, racecraft: 60, consistency: 60, wet_performance: 60, qualifying: 60, experience: 60, tire_management: 60 }
 
   const wins   = driverInfo.totalRaceWins || 0
@@ -306,32 +310,40 @@ function deriveDriverAttributes(driverInfo, year) {
   const flaps  = driverInfo.totalFastestLaps || 0
   const starts = Math.max(1, driverInfo.totalRaceStarts || 1)
   const pts    = driverInfo.totalChampionshipPoints || 0
+  const bestPos = driverInfo.bestChampionshipPosition || 99
 
-  const winRate  = Math.min(wins / starts, 0.5)
-  const podRate  = Math.min(pods / starts, 0.8)
-  const champBonus = Math.min(champs * 8, 24)
+  const winRate  = wins / starts
+  const podRate  = pods / starts
+  const poleRate = poles / starts
+  const flapRate = flaps / starts
 
-  // Normalize to 45-99
-  function scale(rate, floor, ceil) {
-    return Math.round(Math.min(ceil, floor + rate * (ceil - floor)))
-  }
+  // Career-level bonuses (capped to avoid all-time legends dominating too much)
+  const champBonus   = Math.min(champs * 6, 24)
+  const bestPosBonus = bestPos <= 5 ? Math.max(0, (6 - bestPos) * 3) : 0  // max +15 for P1
 
-  const pace         = Math.min(99, Math.round(45 + winRate * 100 + champBonus + (poles / starts) * 20))
-  const racecraft    = Math.min(99, Math.round(45 + winRate * 80 + podRate * 30 + champBonus))
-  const consistency  = Math.min(99, Math.round(45 + podRate * 50 + champBonus * 0.5 + (pts / starts) * 0.3))
-  const qualifying   = Math.min(99, Math.round(45 + (poles / starts) * 120 + champBonus))
-  const tireMgmt     = Math.min(99, Math.round(50 + (flaps / starts) * 80 + winRate * 30))
-  const experience   = Math.min(99, Math.round(45 + Math.min(starts / 3, 40) + champBonus))
-  const wet          = Math.min(99, Math.round(55 + winRate * 30 + champBonus * 0.5))
+  // Year-specific championship standing — primary quality signal
+  // P1 → +30, P5 → +18, P10 → +10.5, P20 → 0
+  const yearPos   = yearStanding?.positionNumber || null
+  const yearBonus = yearPos ? Math.max(0, (21 - yearPos) * 1.5) : 0
+
+  const base = 52
+
+  const pace         = Math.min(99, Math.round(base + winRate*70 + poleRate*40 + champBonus + bestPosBonus + yearBonus*0.6))
+  const racecraft    = Math.min(99, Math.round(base + winRate*60 + podRate*25 + champBonus*0.8 + yearBonus*0.6))
+  const consistency  = Math.min(99, Math.round(base + podRate*40 + (pts/starts)*0.15 + champBonus*0.5 + yearBonus*0.5))
+  const qualifying   = Math.min(99, Math.round(base + poleRate*100 + winRate*20 + champBonus*0.5 + yearBonus*0.4))
+  const tireMgmt     = Math.min(99, Math.round(base + flapRate*60 + podRate*20 + yearBonus*0.4))
+  const experience   = Math.min(99, Math.round(50 + Math.min(starts / 3, 35) + champBonus + bestPosBonus * 0.5))
+  const wet          = Math.min(99, Math.round(55 + winRate*25 + champBonus*0.5 + bestPosBonus*0.3 + yearBonus*0.3))
 
   return {
-    pace:             Math.max(40, pace),
-    racecraft:        Math.max(40, racecraft),
-    consistency:      Math.max(40, consistency),
-    wet_performance:  Math.max(40, wet),
-    qualifying:       Math.max(40, qualifying),
-    experience:       Math.max(40, experience),
-    tire_management:  Math.max(40, tireMgmt),
+    pace:             Math.max(45, pace),
+    racecraft:        Math.max(45, racecraft),
+    consistency:      Math.max(45, consistency),
+    wet_performance:  Math.max(45, wet),
+    qualifying:       Math.max(45, qualifying),
+    experience:       Math.max(45, experience),
+    tire_management:  Math.max(45, tireMgmt),
   }
 }
 
@@ -444,30 +456,31 @@ function getPrimaryEngine(year, entrantIds) {
 }
 
 // ── Get tyre for a constructor+year ───────────────────────────────────────────
-const TYRE_ID_MAP = {
-  'pirelli':    'pirelli_pzero',
-  'bridgestone':'bridgestone_potenza',
-  'michelin':   'michelin_modern',
-  'goodyear':   'goodyear_eagle',
-  'dunlop':     'dunlop_classic',
-  'firestone':  'firestone_f1',
-  'continental':'continental_racing',
-  'avon':       'dunlop_classic',
-  'englebert':  'dunlop_classic',
-  'india':      'dunlop_classic',
+function getTyreId(manufacturer, year) {
+  if (manufacturer === 'pirelli') return year >= 2022 ? 'pirelli_2022' : 'pirelli_2011'
+  const MAP = {
+    'bridgestone': 'bridgestone_potenza',
+    'michelin':    'michelin_modern',
+    'goodyear':    'goodyear_eagle',
+    'dunlop':      'dunlop_classic',
+    'firestone':   'firestone_f1',
+    'continental': 'continental_racing',
+    'avon':        'dunlop_classic',
+    'englebert':   'dunlop_classic',
+    'india':       'dunlop_classic',
+  }
+  return MAP[manufacturer] || null
 }
 
 function getTyre(year, entrantIds) {
-  // Check per-team tyre from f1db
   for (const entrantId of entrantIds) {
     const key = `${year}|${entrantId}`
     const rows = tyreIdx[key] || []
     if (rows[0]) {
-      const mapped = TYRE_ID_MAP[rows[0].tyreManufacturerId]
+      const mapped = getTyreId(rows[0].tyreManufacturerId, year)
       if (mapped) return mapped
     }
   }
-  // Fall back to year mapping
   return tyreMapping[String(year)] || 'dunlop_classic'
 }
 
@@ -501,8 +514,8 @@ for (let year = fromYear; year <= toYear; year++) {
     const seasonId   = `${toKey(constructorId)}_${year}`
     const yearTeamKey = `${year}_${teamName}`
 
-    // Skip if already in game (by ID or by year+team)
-    if (existingSeasonIds.has(seasonId) || existingSeasonYearTeam.has(yearTeamKey)) continue
+    // Skip if already in game (unless --force regenerates existing pipeline entries)
+    if (!FORCE && (existingSeasonIds.has(seasonId) || existingSeasonYearTeam.has(yearTeamKey))) continue
 
     const entrantIds = constructorEntrants[`${year}|${constructorId}`] || []
     const standing   = standingsMap[`${year}|${constructorId}`]
@@ -513,7 +526,7 @@ for (let year = fromYear; year <= toYear; year++) {
 
     if (f1dbChassisId) {
       gameChassisId = f1dbChassisToGameId(f1dbChassisId, year)
-      if (!existingChassisIds.has(gameChassisId) && !newChassisIds.has(gameChassisId)) {
+      if ((FORCE || !existingChassisIds.has(gameChassisId)) && !newChassisIds.has(gameChassisId)) {
         const chassisInfo = chassisInfoMap[f1dbChassisId]
         const attrs = deriveChassisAttributes(standing, year)
         generatedChassis[gameChassisId] = {
@@ -537,7 +550,7 @@ for (let year = fromYear; year <= toYear; year++) {
       const f1dbEngineId = getPrimaryEngine(year, entrantIds)
       if (f1dbEngineId) {
         gameEngineId = f1dbEngineToGameId(f1dbEngineId)
-        if (!existingEngineIds.has(gameEngineId) && !newEngineIds.has(gameEngineId)) {
+        if ((FORCE || !existingEngineIds.has(gameEngineId)) && !newEngineIds.has(gameEngineId)) {
           const engInfo = engineInfoMap[f1dbEngineId]
           const attrs = deriveEngineAttributes(engInfo, standing, era)
           generatedEngines[gameEngineId] = {
@@ -567,9 +580,10 @@ for (let year = fromYear; year <= toYear; year++) {
       const gameDriverId = f1dbDriverToGameId(driverId, year)
       gameDriverIds.push(gameDriverId)
 
-      if (!existingDriverIds.has(gameDriverId) && !newDriverIds.has(gameDriverId)) {
-        const driverInfo = driverStatsMap[driverId]
-        const attrs = deriveDriverAttributes(driverInfo, year)
+      if ((FORCE || !existingDriverIds.has(gameDriverId)) && !newDriverIds.has(gameDriverId)) {
+        const driverInfo   = driverStatsMap[driverId]
+        const yearStanding = driverStandingsMap[`${year}|${driverId}`]
+        const attrs = deriveDriverAttributes(driverInfo, yearStanding)
         const nat   = getNationality(driverInfo)
         generatedDrivers[gameDriverId] = {
           id:          gameDriverId,

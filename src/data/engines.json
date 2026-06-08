@@ -788,11 +788,11 @@
       1960
     ],
     "attributes": {
-      "power": 60,
-      "driveability": 58,
+      "power": 58,
+      "driveability": 52,
       "fuel_efficiency": 53,
-      "reliability": 57,
-      "deployment_mode": 40
+      "reliability": 53,
+      "deployment_mode": 44
     },
     "bio": "Offenhauser 4.5 L4 engine."
   },
@@ -806,11 +806,11 @@
       1951
     ],
     "attributes": {
-      "power": 58,
-      "driveability": 57,
-      "fuel_efficiency": 50,
-      "reliability": 49,
-      "deployment_mode": 44
+      "power": 63,
+      "driveability": 55,
+      "fuel_efficiency": 49,
+      "reliability": 54,
+      "deployment_mode": 41
     },
     "bio": "Talbot 23CV 4.5 L6 engine."
   },
@@ -824,11 +824,11 @@
       1951
     ],
     "attributes": {
-      "power": 62,
-      "driveability": 55,
+      "power": 64,
+      "driveability": 59,
       "fuel_efficiency": 53,
       "reliability": 50,
-      "deployment_mode": 45
+      "deployment_mode": 42
     },
     "bio": "ERA 1.5 L6 S engine."
   },
@@ -843,11 +843,11 @@
       1952
     ],
     "attributes": {
-      "power": 58,
-      "driveability": 57,
-      "fuel_efficiency": 50,
+      "power": 60,
+      "driveability": 55,
+      "fuel_efficiency": 47,
       "reliability": 51,
-      "deployment_mode": 41
+      "deployment_mode": 45
     },
     "bio": "Gordini 15C 1.5 L4 S engine."
   },
@@ -862,10 +862,10 @@
     ],
     "attributes": {
       "power": 65,
-      "driveability": 58,
-      "fuel_efficiency": 50,
+      "driveability": 52,
+      "fuel_efficiency": 49,
       "reliability": 54,
-      "deployment_mode": 44
+      "deployment_mode": 47
     },
     "bio": "Alta 1.5 L4 S engine."
   },
@@ -878,11 +878,11 @@
       1950
     ],
     "attributes": {
-      "power": 61,
-      "driveability": 58,
-      "fuel_efficiency": 52,
-      "reliability": 51,
-      "deployment_mode": 40
+      "power": 65,
+      "driveability": 54,
+      "fuel_efficiency": 49,
+      "reliability": 49,
+      "deployment_mode": 42
     },
     "bio": "JAP 1.1 V2 engine."
   },
@@ -895,11 +895,11 @@
       1950
     ],
     "attributes": {
-      "power": 59,
-      "driveability": 53,
-      "fuel_efficiency": 46,
-      "reliability": 51,
-      "deployment_mode": 45
+      "power": 62,
+      "driveability": 57,
+      "fuel_efficiency": 48,
+      "reliability": 56,
+      "deployment_mode": 47
     },
     "bio": "Offenhauser 3.0 L4 S engine."
   },
@@ -909,14 +909,15 @@
     "supplier": "Alfa Romeo",
     "era": "early",
     "years_available": [
+      1950,
       1951
     ],
     "attributes": {
-      "power": 59,
-      "driveability": 57,
-      "fuel_efficiency": 49,
-      "reliability": 49,
-      "deployment_mode": 47
+      "power": 60,
+      "driveability": 55,
+      "fuel_efficiency": 53,
+      "reliability": 52,
+      "deployment_mode": 40
     },
     "bio": "Alfa Romeo 158 1.5 L8 S engine."
   },
@@ -930,11 +931,11 @@
       1952
     ],
     "attributes": {
-      "power": 66,
-      "driveability": 58,
-      "fuel_efficiency": 48,
+      "power": 61,
+      "driveability": 56,
+      "fuel_efficiency": 52,
       "reliability": 52,
-      "deployment_mode": 47
+      "deployment_mode": 44
     },
     "bio": "Alta F2 2.0 L4 engine."
   },
@@ -947,11 +948,11 @@
       1951
     ],
     "attributes": {
-      "power": 63,
-      "driveability": 59,
+      "power": 60,
+      "driveability": 52,
       "fuel_efficiency": 47,
-      "reliability": 52,
-      "deployment_mode": 40
+      "reliability": 50,
+      "deployment_mode": 45
     },
     "bio": "OSCA 4500 4.5 V12 engine."
   },
@@ -966,11 +967,11 @@
       1953
     ],
     "attributes": {
-      "power": 64,
-      "driveability": 57,
-      "fuel_efficiency": 51,
-      "reliability": 56,
-      "deployment_mode": 42
+      "power": 59,
+      "driveability": 56,
+      "fuel_efficiency": 47,
+      "reliability": 54,
+      "deployment_mode": 44
     },
     "bio": "Veritas 2.0 L6 engine."
   },
@@ -983,11 +984,11 @@
       1952
     ],
     "attributes": {
-      "power": 62,
+      "power": 61,
       "driveability": 57,
-      "fuel_efficiency": 53,
-      "reliability": 56,
-      "deployment_mode": 44
+      "fuel_efficiency": 49,
+      "reliability": 52,
+      "deployment_mode": 46
     },
     "bio": "Küchen 2.0 V8 engine."
   },
@@ -1003,11 +1004,11 @@
       1956
     ],
     "attributes": {
-      "power": 63,
-      "driveability": 55,
-      "fuel_efficiency": 52,
-      "reliability": 52,
-      "deployment_mode": 43
+      "power": 59,
+      "driveability": 54,
+      "fuel_efficiency": 49,
+      "reliability": 51,
+      "deployment_mode": 47
     },
     "bio": "Bristol BS1 2.0 L6 engine."
   },
@@ -1022,11 +1023,11 @@
       1954
     ],
     "attributes": {
-      "power": 63,
-      "driveability": 57,
-      "fuel_efficiency": 48,
-      "reliability": 53,
-      "deployment_mode": 46
+      "power": 58,
+      "driveability": 56,
+      "fuel_efficiency": 54,
+      "reliability": 54,
+      "deployment_mode": 42
     },
     "bio": "BMW 328 2.0 L6 engine."
   },
@@ -1041,11 +1042,11 @@
       1954
     ],
     "attributes": {
-      "power": 60,
+      "power": 59,
       "driveability": 52,
-      "fuel_efficiency": 51,
-      "reliability": 53,
-      "deployment_mode": 45
+      "fuel_efficiency": 50,
+      "reliability": 51,
+      "deployment_mode": 44
     },
     "bio": "Lea Francis 2.0 L4 engine."
   },
@@ -1060,10 +1061,10 @@
     ],
     "attributes": {
       "power": 62,
-      "driveability": 53,
+      "driveability": 56,
       "fuel_efficiency": 49,
-      "reliability": 49,
-      "deployment_mode": 43
+      "reliability": 50,
+      "deployment_mode": 40
     },
     "bio": "OSCA 2000 2.0 L6 engine."
   },
@@ -1077,11 +1078,11 @@
       1953
     ],
     "attributes": {
-      "power": 60,
-      "driveability": 56,
-      "fuel_efficiency": 47,
+      "power": 59,
+      "driveability": 54,
+      "fuel_efficiency": 51,
       "reliability": 52,
-      "deployment_mode": 41
+      "deployment_mode": 40
     },
     "bio": "Gordini 20 2.0 L6 engine."
   },
@@ -1094,11 +1095,11 @@
       1952
     ],
     "attributes": {
-      "power": 59,
-      "driveability": 53,
-      "fuel_efficiency": 46,
-      "reliability": 49,
-      "deployment_mode": 46
+      "power": 63,
+      "driveability": 56,
+      "fuel_efficiency": 52,
+      "reliability": 54,
+      "deployment_mode": 47
     },
     "bio": "BPM 2.0 L4 engine."
   },
@@ -1111,11 +1112,11 @@
       1952
     ],
     "attributes": {
-      "power": 65,
-      "driveability": 59,
-      "fuel_efficiency": 47,
+      "power": 59,
+      "driveability": 52,
+      "fuel_efficiency": 53,
       "reliability": 51,
-      "deployment_mode": 42
+      "deployment_mode": 44
     },
     "bio": "Butterworth 2.0 F4 engine."
   },
@@ -1134,11 +1135,11 @@
       1959
     ],
     "attributes": {
-      "power": 61,
-      "driveability": 57,
-      "fuel_efficiency": 49,
-      "reliability": 49,
-      "deployment_mode": 47
+      "power": 63,
+      "driveability": 54,
+      "fuel_efficiency": 53,
+      "reliability": 52,
+      "deployment_mode": 42
     },
     "bio": "Alta GP 2.5 L4 engine."
   },
@@ -1151,11 +1152,11 @@
       1953
     ],
     "attributes": {
-      "power": 65,
-      "driveability": 54,
-      "fuel_efficiency": 50,
-      "reliability": 49,
-      "deployment_mode": 40
+      "power": 59,
+      "driveability": 59,
+      "fuel_efficiency": 51,
+      "reliability": 55,
+      "deployment_mode": 45
     },
     "bio": "EMW 6 2.0 L6 engine."
   },
@@ -1169,11 +1170,11 @@
       1955
     ],
     "attributes": {
-      "power": 63,
-      "driveability": 60,
-      "fuel_efficiency": 51,
-      "reliability": 51,
-      "deployment_mode": 45
+      "power": 65,
+      "driveability": 53,
+      "fuel_efficiency": 53,
+      "reliability": 56,
+      "deployment_mode": 43
     },
     "bio": "Mercedes M196 2.5 L8 engine."
   },
@@ -1188,11 +1189,11 @@
       1956
     ],
     "attributes": {
-      "power": 62,
-      "driveability": 54,
-      "fuel_efficiency": 51,
-      "reliability": 55,
-      "deployment_mode": 40
+      "power": 61,
+      "driveability": 59,
+      "fuel_efficiency": 46,
+      "reliability": 51,
+      "deployment_mode": 42
     },
     "bio": "Gordini 23 2.5 L6 engine."
   },
@@ -1205,11 +1206,11 @@
       1954
     ],
     "attributes": {
-      "power": 65,
-      "driveability": 53,
-      "fuel_efficiency": 53,
-      "reliability": 52,
-      "deployment_mode": 46
+      "power": 58,
+      "driveability": 57,
+      "fuel_efficiency": 47,
+      "reliability": 49,
+      "deployment_mode": 41
     },
     "bio": "Lancia DS50 2.5 V8 engine."
   },
@@ -1223,10 +1224,10 @@
     ],
     "attributes": {
       "power": 59,
-      "driveability": 55,
-      "fuel_efficiency": 46,
-      "reliability": 52,
-      "deployment_mode": 39
+      "driveability": 57,
+      "fuel_efficiency": 48,
+      "reliability": 49,
+      "deployment_mode": 44
     },
     "bio": "Ferrari 555 2.5 L4 engine."
   },
@@ -1242,8 +1243,8 @@
       "power": 65,
       "driveability": 53,
       "fuel_efficiency": 47,
-      "reliability": 54,
-      "deployment_mode": 41
+      "reliability": 52,
+      "deployment_mode": 44
     },
     "bio": "Maserati 4CLT 2.5 L4 engine."
   },
@@ -1256,11 +1257,11 @@
       1956
     ],
     "attributes": {
-      "power": 59,
-      "driveability": 58,
-      "fuel_efficiency": 52,
-      "reliability": 56,
-      "deployment_mode": 44
+      "power": 66,
+      "driveability": 55,
+      "fuel_efficiency": 51,
+      "reliability": 50,
+      "deployment_mode": 42
     },
     "bio": "Bugatti 2.5 L8 engine."
   },
@@ -1273,11 +1274,11 @@
       1957
     ],
     "attributes": {
-      "power": 59,
-      "driveability": 59,
-      "fuel_efficiency": 49,
-      "reliability": 56,
-      "deployment_mode": 40
+      "power": 60,
+      "driveability": 53,
+      "fuel_efficiency": 50,
+      "reliability": 54,
+      "deployment_mode": 47
     },
     "bio": "Bristol BS2 2.2 L6 engine."
   },
@@ -1296,11 +1297,11 @@
       1964
     ],
     "attributes": {
-      "power": 63,
-      "driveability": 54,
-      "fuel_efficiency": 49,
-      "reliability": 52,
-      "deployment_mode": 42
+      "power": 58,
+      "driveability": 58,
+      "fuel_efficiency": 50,
+      "reliability": 51,
+      "deployment_mode": 40
     },
     "bio": "Porsche 547/3 1.5 F4 engine."
   },
@@ -1316,11 +1317,11 @@
       1962
     ],
     "attributes": {
-      "power": 81,
-      "driveability": 77,
-      "fuel_efficiency": 66,
-      "reliability": 70,
-      "deployment_mode": 57
+      "power": 86,
+      "driveability": 76,
+      "fuel_efficiency": 68,
+      "reliability": 71,
+      "deployment_mode": 60
     },
     "bio": "Climax FPF 1.5 L4 engine."
   },
@@ -1333,10 +1334,10 @@
       1958
     ],
     "attributes": {
-      "power": 59,
-      "driveability": 58,
-      "fuel_efficiency": 52,
-      "reliability": 50,
+      "power": 62,
+      "driveability": 59,
+      "fuel_efficiency": 50,
+      "reliability": 54,
       "deployment_mode": 44
     },
     "bio": "OSCA 372 1.5 L4 engine."
@@ -1350,11 +1351,11 @@
       1959
     ],
     "attributes": {
-      "power": 58,
-      "driveability": 60,
-      "fuel_efficiency": 47,
-      "reliability": 50,
-      "deployment_mode": 41
+      "power": 64,
+      "driveability": 57,
+      "fuel_efficiency": 52,
+      "reliability": 53,
+      "deployment_mode": 40
     },
     "bio": "Maserati 250F1 2.5 L6 engine."
   },
@@ -1368,11 +1369,11 @@
       1960
     ],
     "attributes": {
-      "power": 65,
-      "driveability": 54,
-      "fuel_efficiency": 47,
+      "power": 59,
+      "driveability": 59,
+      "fuel_efficiency": 51,
       "reliability": 54,
-      "deployment_mode": 47
+      "deployment_mode": 46
     },
     "bio": "Aston Martin RB6 2.5 L6 engine."
   },
@@ -1386,11 +1387,11 @@
       1960
     ],
     "attributes": {
-      "power": 65,
-      "driveability": 56,
-      "fuel_efficiency": 47,
-      "reliability": 55,
-      "deployment_mode": 45
+      "power": 61,
+      "driveability": 55,
+      "fuel_efficiency": 48,
+      "reliability": 49,
+      "deployment_mode": 40
     },
     "bio": "Maserati 250S 2.5 L4 engine."
   },
@@ -1403,11 +1404,11 @@
       1960
     ],
     "attributes": {
-      "power": 64,
-      "driveability": 59,
-      "fuel_efficiency": 46,
-      "reliability": 53,
-      "deployment_mode": 40
+      "power": 60,
+      "driveability": 58,
+      "fuel_efficiency": 51,
+      "reliability": 54,
+      "deployment_mode": 46
     },
     "bio": "Scarab 2.5 L4 engine."
   },
@@ -1420,11 +1421,11 @@
       1961
     ],
     "attributes": {
-      "power": 61,
-      "driveability": 59,
-      "fuel_efficiency": 52,
+      "power": 65,
+      "driveability": 57,
+      "fuel_efficiency": 53,
       "reliability": 52,
-      "deployment_mode": 46
+      "deployment_mode": 47
     },
     "bio": "Maserati Tipo 6 1.5 L4 engine."
   },
@@ -1441,9 +1442,9 @@
     ],
     "attributes": {
       "power": 61,
-      "driveability": 56,
-      "fuel_efficiency": 52,
-      "reliability": 55,
+      "driveability": 59,
+      "fuel_efficiency": 49,
+      "reliability": 51,
       "deployment_mode": 42
     },
     "bio": "Alfa Romeo Giulietta 1.5 L4 engine."
@@ -1458,10 +1459,10 @@
       1964
     ],
     "attributes": {
-      "power": 62,
-      "driveability": 61,
-      "fuel_efficiency": 53,
-      "reliability": 58,
+      "power": 68,
+      "driveability": 56,
+      "fuel_efficiency": 57,
+      "reliability": 59,
       "deployment_mode": 44
     },
     "bio": "Climax FWMV 1.5 V8 engine."
@@ -1477,11 +1478,11 @@
       1964
     ],
     "attributes": {
-      "power": 60,
-      "driveability": 52,
-      "fuel_efficiency": 46,
-      "reliability": 55,
-      "deployment_mode": 46
+      "power": 59,
+      "driveability": 54,
+      "fuel_efficiency": 52,
+      "reliability": 56,
+      "deployment_mode": 42
     },
     "bio": "BRM P56 1.5 V8 engine."
   },
@@ -1494,11 +1495,11 @@
       1962
     ],
     "attributes": {
-      "power": 65,
+      "power": 63,
       "driveability": 59,
-      "fuel_efficiency": 46,
+      "fuel_efficiency": 47,
       "reliability": 56,
-      "deployment_mode": 44
+      "deployment_mode": 42
     },
     "bio": "De Tomaso 1.5 F8 engine."
   },
@@ -1512,11 +1513,11 @@
       1964
     ],
     "attributes": {
-      "power": 59,
-      "driveability": 55,
+      "power": 62,
+      "driveability": 54,
       "fuel_efficiency": 49,
-      "reliability": 52,
-      "deployment_mode": 42
+      "reliability": 50,
+      "deployment_mode": 46
     },
     "bio": "ATS 100 1.5 V8 engine."
   },
@@ -1529,11 +1530,11 @@
       1963
     ],
     "attributes": {
-      "power": 60,
-      "driveability": 59,
-      "fuel_efficiency": 48,
-      "reliability": 52,
-      "deployment_mode": 43
+      "power": 59,
+      "driveability": 53,
+      "fuel_efficiency": 46,
+      "reliability": 51,
+      "deployment_mode": 44
     },
     "bio": "Ford 109E 1.5 L4 engine."
   },
@@ -1546,11 +1547,11 @@
       1963
     ],
     "attributes": {
-      "power": 62,
-      "driveability": 55,
-      "fuel_efficiency": 47,
-      "reliability": 53,
-      "deployment_mode": 46
+      "power": 65,
+      "driveability": 52,
+      "fuel_efficiency": 49,
+      "reliability": 56,
+      "deployment_mode": 42
     },
     "bio": "Ferrari 178 1.5 V6 engine."
   },
@@ -1563,10 +1564,10 @@
       1964
     ],
     "attributes": {
-      "power": 62,
-      "driveability": 53,
-      "fuel_efficiency": 51,
-      "reliability": 49,
+      "power": 66,
+      "driveability": 59,
+      "fuel_efficiency": 48,
+      "reliability": 51,
       "deployment_mode": 43
     },
     "bio": "Honda RA271E 1.5 V12 engine."
@@ -1580,11 +1581,11 @@
       1965
     ],
     "attributes": {
-      "power": 68,
-      "driveability": 63,
-      "fuel_efficiency": 57,
-      "reliability": 61,
-      "deployment_mode": 50
+      "power": 72,
+      "driveability": 61,
+      "fuel_efficiency": 52,
+      "reliability": 59,
+      "deployment_mode": 46
     },
     "bio": "Honda RA272E 1.5 V12 engine."
   },
@@ -1599,11 +1600,11 @@
       1968
     ],
     "attributes": {
-      "power": 59,
-      "driveability": 52,
-      "fuel_efficiency": 50,
-      "reliability": 51,
-      "deployment_mode": 45
+      "power": 61,
+      "driveability": 58,
+      "fuel_efficiency": 49,
+      "reliability": 54,
+      "deployment_mode": 44
     },
     "bio": "Honda RA273E 3.0 V12 engine."
   },
@@ -1616,11 +1617,11 @@
       1966
     ],
     "attributes": {
-      "power": 64,
-      "driveability": 54,
-      "fuel_efficiency": 49,
-      "reliability": 56,
-      "deployment_mode": 42
+      "power": 61,
+      "driveability": 53,
+      "fuel_efficiency": 50,
+      "reliability": 54,
+      "deployment_mode": 46
     },
     "bio": "Ford Cosworth SCA 1.0 L4 engine."
   },
@@ -1633,11 +1634,11 @@
       1966
     ],
     "attributes": {
-      "power": 61,
-      "driveability": 58,
-      "fuel_efficiency": 51,
+      "power": 64,
+      "driveability": 54,
+      "fuel_efficiency": 48,
       "reliability": 53,
-      "deployment_mode": 40
+      "deployment_mode": 45
     },
     "bio": "Climax FPE 3.0 V8 engine."
   },
@@ -1651,11 +1652,11 @@
       1969
     ],
     "attributes": {
-      "power": 61,
-      "driveability": 59,
-      "fuel_efficiency": 50,
-      "reliability": 56,
-      "deployment_mode": 45
+      "power": 60,
+      "driveability": 55,
+      "fuel_efficiency": 46,
+      "reliability": 54,
+      "deployment_mode": 46
     },
     "bio": "Ford Cosworth FVA 1.6 L4 engine."
   },
@@ -1669,11 +1670,11 @@
       1969
     ],
     "attributes": {
-      "power": 61,
-      "driveability": 59,
-      "fuel_efficiency": 53,
-      "reliability": 53,
-      "deployment_mode": 45
+      "power": 64,
+      "driveability": 60,
+      "fuel_efficiency": 47,
+      "reliability": 52,
+      "deployment_mode": 47
     },
     "bio": "Climax FPF 2.8 L4 engine."
   },
@@ -1701,11 +1702,11 @@
       1983
     ],
     "attributes": {
-      "power": 60,
-      "driveability": 49,
-      "fuel_efficiency": 50,
-      "reliability": 49,
-      "deployment_mode": 41
+      "power": 58,
+      "driveability": 55,
+      "fuel_efficiency": 49,
+      "reliability": 51,
+      "deployment_mode": 39
     },
     "bio": "Ford Cosworth DFV 3.0 V8 engine."
   },
@@ -1718,11 +1719,11 @@
       1968
     ],
     "attributes": {
-      "power": 59,
-      "driveability": 55,
-      "fuel_efficiency": 52,
-      "reliability": 50,
-      "deployment_mode": 47
+      "power": 65,
+      "driveability": 59,
+      "fuel_efficiency": 53,
+      "reliability": 56,
+      "deployment_mode": 44
     },
     "bio": "Repco 620 3.0 V8 engine."
   },
@@ -1735,11 +1736,11 @@
       1969
     ],
     "attributes": {
-      "power": 65,
-      "driveability": 59,
-      "fuel_efficiency": 47,
-      "reliability": 55,
-      "deployment_mode": 41
+      "power": 61,
+      "driveability": 55,
+      "fuel_efficiency": 51,
+      "reliability": 49,
+      "deployment_mode": 40
     },
     "bio": "Maserati 10/F1 3.0 V12 engine."
   },
@@ -1752,11 +1753,11 @@
       1969
     ],
     "attributes": {
-      "power": 62,
-      "driveability": 55,
-      "fuel_efficiency": 51,
-      "reliability": 49,
-      "deployment_mode": 44
+      "power": 58,
+      "driveability": 53,
+      "fuel_efficiency": 53,
+      "reliability": 50,
+      "deployment_mode": 40
     },
     "bio": "BMW M12/1 1.6 L4 engine."
   },
@@ -1769,11 +1770,11 @@
       1970
     ],
     "attributes": {
-      "power": 69,
-      "driveability": 61,
-      "fuel_efficiency": 51,
-      "reliability": 54,
-      "deployment_mode": 48
+      "power": 63,
+      "driveability": 59,
+      "fuel_efficiency": 56,
+      "reliability": 56,
+      "deployment_mode": 47
     },
     "bio": "Matra MS12 3.0 V12 engine."
   },
@@ -1786,11 +1787,11 @@
       1971
     ],
     "attributes": {
-      "power": 63,
-      "driveability": 63,
+      "power": 69,
+      "driveability": 62,
       "fuel_efficiency": 55,
-      "reliability": 56,
-      "deployment_mode": 42
+      "reliability": 58,
+      "deployment_mode": 44
     },
     "bio": "Matra MS71 3.0 V12 engine."
   },
@@ -1804,10 +1805,10 @@
     ],
     "attributes": {
       "power": 59,
-      "driveability": 58,
-      "fuel_efficiency": 51,
-      "reliability": 54,
-      "deployment_mode": 43
+      "driveability": 60,
+      "fuel_efficiency": 47,
+      "reliability": 53,
+      "deployment_mode": 46
     },
     "bio": "Matra MS72 3.0 V12 engine."
   },
@@ -1821,11 +1822,11 @@
       1973
     ],
     "attributes": {
-      "power": 62,
-      "driveability": 58,
-      "fuel_efficiency": 51,
-      "reliability": 51,
-      "deployment_mode": 44
+      "power": 63,
+      "driveability": 56,
+      "fuel_efficiency": 47,
+      "reliability": 52,
+      "deployment_mode": 39
     },
     "bio": "Tecno Series-P 3.0 F12 engine."
   },
@@ -1838,11 +1839,11 @@
       1979
     ],
     "attributes": {
-      "power": 58,
-      "driveability": 57,
+      "power": 64,
+      "driveability": 54,
       "fuel_efficiency": 49,
       "reliability": 50,
-      "deployment_mode": 45
+      "deployment_mode": 40
     },
     "bio": "Alfa Romeo 115-12 3.0 F12 engine."
   },
@@ -1857,11 +1858,11 @@
       1982
     ],
     "attributes": {
-      "power": 51,
-      "driveability": 42,
+      "power": 46,
+      "driveability": 47,
       "fuel_efficiency": 38,
-      "reliability": 42,
-      "deployment_mode": 38
+      "reliability": 40,
+      "deployment_mode": 34
     },
     "bio": "Alfa Romeo 1260 3.0 V12 engine."
   },
@@ -1878,11 +1879,11 @@
       1987
     ],
     "attributes": {
-      "power": 72,
-      "driveability": 52,
-      "fuel_efficiency": 44,
-      "reliability": 58,
-      "deployment_mode": 50
+      "power": 76,
+      "driveability": 55,
+      "fuel_efficiency": 48,
+      "reliability": 61,
+      "deployment_mode": 47
     },
     "bio": "Alfa Romeo 890T 1.5 V8 T engine."
   },
@@ -1895,11 +1896,11 @@
       1983
     ],
     "attributes": {
-      "power": 70,
-      "driveability": 46,
-      "fuel_efficiency": 36,
+      "power": 66,
+      "driveability": 42,
+      "fuel_efficiency": 40,
       "reliability": 49,
-      "deployment_mode": 42
+      "deployment_mode": 46
     },
     "bio": "Honda RA163E 1.5 V6 T engine."
   },
@@ -1913,11 +1914,11 @@
       1984
     ],
     "attributes": {
-      "power": 66,
-      "driveability": 48,
-      "fuel_efficiency": 43,
-      "reliability": 52,
-      "deployment_mode": 42
+      "power": 67,
+      "driveability": 49,
+      "fuel_efficiency": 42,
+      "reliability": 51,
+      "deployment_mode": 47
     },
     "bio": "BMW M12/13 1.5 L4 T engine."
   },
@@ -1931,11 +1932,11 @@
       1985
     ],
     "attributes": {
-      "power": 84,
-      "driveability": 63,
-      "fuel_efficiency": 57,
-      "reliability": 67,
-      "deployment_mode": 56
+      "power": 88,
+      "driveability": 60,
+      "fuel_efficiency": 58,
+      "reliability": 66,
+      "deployment_mode": 61
     },
     "bio": "Renault EF4B 1.5 V6 T engine."
   },
@@ -1949,11 +1950,11 @@
       1985
     ],
     "attributes": {
-      "power": 63,
-      "driveability": 47,
-      "fuel_efficiency": 42,
+      "power": 66,
+      "driveability": 42,
+      "fuel_efficiency": 37,
       "reliability": 55,
-      "deployment_mode": 46
+      "deployment_mode": 42
     },
     "bio": "Hart 415T 1.5 L4 T engine."
   },
@@ -1969,11 +1970,11 @@
       1988
     ],
     "attributes": {
-      "power": 70,
-      "driveability": 45,
-      "fuel_efficiency": 37,
-      "reliability": 54,
-      "deployment_mode": 45
+      "power": 68,
+      "driveability": 48,
+      "fuel_efficiency": 44,
+      "reliability": 55,
+      "deployment_mode": 46
     },
     "bio": "Zakspeed 1500/4 1.5 L4 T engine."
   },
@@ -1986,11 +1987,11 @@
       1986
     ],
     "attributes": {
-      "power": 87,
-      "driveability": 61,
-      "fuel_efficiency": 57,
-      "reliability": 73,
-      "deployment_mode": 61
+      "power": 91,
+      "driveability": 66,
+      "fuel_efficiency": 59,
+      "reliability": 72,
+      "deployment_mode": 60
     },
     "bio": "Renault EF15B 1.5 V6 T engine."
   },
@@ -2003,11 +2004,11 @@
       1986
     ],
     "attributes": {
-      "power": 65,
+      "power": 63,
       "driveability": 48,
-      "fuel_efficiency": 39,
-      "reliability": 53,
-      "deployment_mode": 45
+      "fuel_efficiency": 43,
+      "reliability": 50,
+      "deployment_mode": 41
     },
     "bio": "Motori Moderni Tipo 615-90 1.5 V6 T engine."
   },
@@ -2020,11 +2021,11 @@
       1987
     ],
     "attributes": {
-      "power": 86,
-      "driveability": 61,
-      "fuel_efficiency": 57,
-      "reliability": 70,
-      "deployment_mode": 57
+      "power": 87,
+      "driveability": 64,
+      "fuel_efficiency": 52,
+      "reliability": 72,
+      "deployment_mode": 61
     },
     "bio": "Honda RA166E 1.5 V6 T engine."
   },
@@ -2038,11 +2039,11 @@
       1988
     ],
     "attributes": {
-      "power": 52,
-      "driveability": 45,
-      "fuel_efficiency": 42,
-      "reliability": 39,
-      "deployment_mode": 35
+      "power": 50,
+      "driveability": 44,
+      "fuel_efficiency": 36,
+      "reliability": 45,
+      "deployment_mode": 37
     },
     "bio": "Ford Cosworth DFZ 3.5 V8 engine."
   },
@@ -2055,11 +2056,11 @@
       1988
     ],
     "attributes": {
-      "power": 79,
-      "driveability": 63,
-      "fuel_efficiency": 56,
+      "power": 84,
+      "driveability": 61,
+      "fuel_efficiency": 54,
       "reliability": 69,
-      "deployment_mode": 57
+      "deployment_mode": 51
     },
     "bio": "Honda RA168E 1.5 V6 T engine."
   },
@@ -2072,11 +2073,11 @@
       1988
     ],
     "attributes": {
-      "power": 64,
-      "driveability": 49,
-      "fuel_efficiency": 40,
-      "reliability": 51,
-      "deployment_mode": 42
+      "power": 67,
+      "driveability": 47,
+      "fuel_efficiency": 36,
+      "reliability": 52,
+      "deployment_mode": 40
     },
     "bio": "Osella 890T 1.5 V8 T engine."
   },
@@ -2091,11 +2092,11 @@
       1991
     ],
     "attributes": {
-      "power": 48,
+      "power": 44,
       "driveability": 42,
-      "fuel_efficiency": 32,
+      "fuel_efficiency": 33,
       "reliability": 42,
-      "deployment_mode": 33
+      "deployment_mode": 35
     },
     "bio": "Ford Cosworth DFR 3.5 V8 engine."
   },
@@ -2109,11 +2110,11 @@
       1990
     ],
     "attributes": {
-      "power": 70,
-      "driveability": 61,
-      "fuel_efficiency": 54,
-      "reliability": 60,
-      "deployment_mode": 45
+      "power": 72,
+      "driveability": 62,
+      "fuel_efficiency": 56,
+      "reliability": 61,
+      "deployment_mode": 53
     },
     "bio": "Judd CV 3.5 V8 engine."
   },
@@ -2126,10 +2127,10 @@
       1989
     ],
     "attributes": {
-      "power": 61,
-      "driveability": 54,
-      "fuel_efficiency": 47,
-      "reliability": 53,
+      "power": 66,
+      "driveability": 56,
+      "fuel_efficiency": 46,
+      "reliability": 56,
       "deployment_mode": 44
     },
     "bio": "Yamaha OX88 3.5 V8 engine."
@@ -2146,11 +2147,11 @@
       1993
     ],
     "attributes": {
-      "power": 64,
-      "driveability": 55,
-      "fuel_efficiency": 50,
-      "reliability": 55,
-      "deployment_mode": 45
+      "power": 63,
+      "driveability": 59,
+      "fuel_efficiency": 54,
+      "reliability": 49,
+      "deployment_mode": 42
     },
     "bio": "Lamborghini 3512 3.5 V12 engine."
   },
@@ -2164,11 +2165,11 @@
       1991
     ],
     "attributes": {
-      "power": 64,
-      "driveability": 62,
-      "fuel_efficiency": 52,
-      "reliability": 54,
-      "deployment_mode": 44
+      "power": 67,
+      "driveability": 59,
+      "fuel_efficiency": 51,
+      "reliability": 56,
+      "deployment_mode": 47
     },
     "bio": "Judd EV 3.5 V8 engine."
   },
@@ -2181,10 +2182,10 @@
       1990
     ],
     "attributes": {
-      "power": 64,
-      "driveability": 56,
-      "fuel_efficiency": 48,
-      "reliability": 50,
+      "power": 58,
+      "driveability": 52,
+      "fuel_efficiency": 49,
+      "reliability": 56,
       "deployment_mode": 42
     },
     "bio": "Life F35 3.5 W12 engine."
@@ -2199,11 +2200,11 @@
       1992
     ],
     "attributes": {
-      "power": 66,
-      "driveability": 56,
-      "fuel_efficiency": 50,
-      "reliability": 55,
-      "deployment_mode": 40
+      "power": 59,
+      "driveability": 57,
+      "fuel_efficiency": 53,
+      "reliability": 49,
+      "deployment_mode": 47
     },
     "bio": "Judd GV 3.5 V10 engine."
   },
@@ -2219,10 +2220,10 @@
     ],
     "attributes": {
       "power": 45,
-      "driveability": 39,
-      "fuel_efficiency": 38,
-      "reliability": 35,
-      "deployment_mode": 33
+      "driveability": 38,
+      "fuel_efficiency": 34,
+      "reliability": 40,
+      "deployment_mode": 36
     },
     "bio": "Ilmor 2175A 3.5 V10 engine."
   },
@@ -2235,11 +2236,11 @@
       1992
     ],
     "attributes": {
-      "power": 57,
-      "driveability": 52,
-      "fuel_efficiency": 41,
-      "reliability": 43,
-      "deployment_mode": 38
+      "power": 56,
+      "driveability": 51,
+      "fuel_efficiency": 44,
+      "reliability": 49,
+      "deployment_mode": 39
     },
     "bio": "Ferrari 037 3.5 V12 engine."
   },
@@ -2252,11 +2253,11 @@
       1992
     ],
     "attributes": {
-      "power": 61,
-      "driveability": 58,
-      "fuel_efficiency": 47,
-      "reliability": 53,
-      "deployment_mode": 40
+      "power": 65,
+      "driveability": 54,
+      "fuel_efficiency": 49,
+      "reliability": 54,
+      "deployment_mode": 44
     },
     "bio": "Ford HBA5 3.5 V8 engine."
   },
@@ -2269,11 +2270,11 @@
       1992
     ],
     "attributes": {
-      "power": 64,
-      "driveability": 61,
-      "fuel_efficiency": 55,
-      "reliability": 56,
-      "deployment_mode": 46
+      "power": 68,
+      "driveability": 58,
+      "fuel_efficiency": 56,
+      "reliability": 60,
+      "deployment_mode": 50
     },
     "bio": "Mugen-Honda MF-351H 3.5 V10 engine."
   },
@@ -2288,9 +2289,9 @@
     "attributes": {
       "power": 59,
       "driveability": 50,
-      "fuel_efficiency": 43,
-      "reliability": 48,
-      "deployment_mode": 41
+      "fuel_efficiency": 46,
+      "reliability": 52,
+      "deployment_mode": 43
     },
     "bio": "Mugen-Honda MF-351HB 3.5 V10 engine."
   },
@@ -2304,11 +2305,11 @@
       1994
     ],
     "attributes": {
-      "power": 70,
-      "driveability": 67,
-      "fuel_efficiency": 58,
-      "reliability": 58,
-      "deployment_mode": 50
+      "power": 68,
+      "driveability": 62,
+      "fuel_efficiency": 57,
+      "reliability": 57,
+      "deployment_mode": 48
     },
     "bio": "Ford HBD6 3.5 V8 engine."
   },
@@ -2321,11 +2322,11 @@
       1994
     ],
     "attributes": {
-      "power": 56,
-      "driveability": 55,
+      "power": 60,
+      "driveability": 49,
       "fuel_efficiency": 44,
-      "reliability": 51,
-      "deployment_mode": 43
+      "reliability": 53,
+      "deployment_mode": 44
     },
     "bio": "Ford HBE7/8 3.5 V8 engine."
   },
@@ -2338,11 +2339,11 @@
       1994
     ],
     "attributes": {
-      "power": 64,
-      "driveability": 56,
-      "fuel_efficiency": 50,
-      "reliability": 53,
-      "deployment_mode": 47
+      "power": 65,
+      "driveability": 55,
+      "fuel_efficiency": 46,
+      "reliability": 55,
+      "deployment_mode": 41
     },
     "bio": "Mugen-Honda MF-351HC 3.5 V10 engine."
   },
@@ -2357,9 +2358,9 @@
     "attributes": {
       "power": 50,
       "driveability": 46,
-      "fuel_efficiency": 38,
+      "fuel_efficiency": 37,
       "reliability": 40,
-      "deployment_mode": 31
+      "deployment_mode": 39
     },
     "bio": "Ford HBF7/8 3.5 V8 engine."
   },
@@ -2373,11 +2374,11 @@
       1996
     ],
     "attributes": {
-      "power": 63,
-      "driveability": 59,
-      "fuel_efficiency": 51,
-      "reliability": 52,
-      "deployment_mode": 46
+      "power": 66,
+      "driveability": 53,
+      "fuel_efficiency": 48,
+      "reliability": 49,
+      "deployment_mode": 42
     },
     "bio": "Hart 830 3.0 V8 engine."
   },
@@ -2391,10 +2392,10 @@
     ],
     "attributes": {
       "power": 59,
-      "driveability": 57,
-      "fuel_efficiency": 53,
+      "driveability": 56,
+      "fuel_efficiency": 46,
       "reliability": 50,
-      "deployment_mode": 45
+      "deployment_mode": 44
     },
     "bio": "Ford ED 3.0 V8 engine."
   },
@@ -2407,11 +2408,11 @@
       1995
     ],
     "attributes": {
-      "power": 65,
-      "driveability": 55,
-      "fuel_efficiency": 50,
-      "reliability": 50,
-      "deployment_mode": 44
+      "power": 60,
+      "driveability": 57,
+      "fuel_efficiency": 48,
+      "reliability": 55,
+      "deployment_mode": 40
     },
     "bio": "Ford EDB 3.0 V8 engine."
   },
@@ -2424,11 +2425,11 @@
       1995
     ],
     "attributes": {
-      "power": 60,
-      "driveability": 54,
-      "fuel_efficiency": 47,
-      "reliability": 55,
-      "deployment_mode": 41
+      "power": 59,
+      "driveability": 58,
+      "fuel_efficiency": 52,
+      "reliability": 49,
+      "deployment_mode": 40
     },
     "bio": "Ford EDC 3.0 V8 engine."
   },
@@ -2442,10 +2443,10 @@
     ],
     "attributes": {
       "power": 63,
-      "driveability": 59,
-      "fuel_efficiency": 51,
-      "reliability": 54,
-      "deployment_mode": 43
+      "driveability": 54,
+      "fuel_efficiency": 50,
+      "reliability": 51,
+      "deployment_mode": 45
     },
     "bio": "Ford EDD 3.0 V8 engine."
   },
@@ -2458,11 +2459,11 @@
       1996
     ],
     "attributes": {
-      "power": 64,
-      "driveability": 55,
-      "fuel_efficiency": 49,
+      "power": 60,
+      "driveability": 59,
+      "fuel_efficiency": 53,
       "reliability": 55,
-      "deployment_mode": 43
+      "deployment_mode": 44
     },
     "bio": "Ford ECA Zetec-R 3.0 V8 engine."
   },
@@ -2475,11 +2476,11 @@
       1998
     ],
     "attributes": {
-      "power": 60,
-      "driveability": 56,
-      "fuel_efficiency": 52,
+      "power": 62,
+      "driveability": 59,
+      "fuel_efficiency": 50,
       "reliability": 54,
-      "deployment_mode": 45
+      "deployment_mode": 47
     },
     "bio": "Ford JD Zetec-R 3.0 V10 engine."
   },
@@ -2492,11 +2493,11 @@
       2005
     ],
     "attributes": {
-      "power": 62,
-      "driveability": 52,
-      "fuel_efficiency": 49,
-      "reliability": 52,
-      "deployment_mode": 38
+      "power": 55,
+      "driveability": 55,
+      "fuel_efficiency": 44,
+      "reliability": 47,
+      "deployment_mode": 39
     },
     "bio": "Toyota RVX-05 3.0 V10 engine."
   },
@@ -2509,11 +2510,11 @@
       2011
     ],
     "attributes": {
-      "power": 73,
-      "driveability": 65,
-      "fuel_efficiency": 58,
-      "reliability": 66,
-      "deployment_mode": 53
+      "power": 74,
+      "driveability": 68,
+      "fuel_efficiency": 59,
+      "reliability": 59,
+      "deployment_mode": 54
     },
     "bio": "Renault RS27-2011 2.4 V8 engine."
   },
@@ -2526,11 +2527,11 @@
       2015
     ],
     "attributes": {
-      "power": 54,
-      "driveability": 47,
-      "fuel_efficiency": 47,
-      "reliability": 50,
-      "deployment_mode": 39
+      "power": 52,
+      "driveability": 46,
+      "fuel_efficiency": 46,
+      "reliability": 49,
+      "deployment_mode": 36
     },
     "bio": "Ferrari 059/3 1.6 V6 T H engine."
   },
@@ -2543,10 +2544,10 @@
       2019
     ],
     "attributes": {
-      "power": 58,
-      "driveability": 59,
-      "fuel_efficiency": 48,
-      "reliability": 51,
+      "power": 61,
+      "driveability": 57,
+      "fuel_efficiency": 49,
+      "reliability": 52,
       "deployment_mode": 45
     },
     "bio": "Ferrari 064 1.6 V6 T H engine."
@@ -2560,11 +2561,11 @@
       2020
     ],
     "attributes": {
-      "power": 64,
-      "driveability": 54,
-      "fuel_efficiency": 48,
-      "reliability": 53,
-      "deployment_mode": 40
+      "power": 66,
+      "driveability": 60,
+      "fuel_efficiency": 46,
+      "reliability": 51,
+      "deployment_mode": 46
     },
     "bio": "Ferrari 065 1.6 V6 T H engine."
   },
@@ -2577,11 +2578,11 @@
       2021
     ],
     "attributes": {
-      "power": 54,
-      "driveability": 56,
-      "fuel_efficiency": 47,
-      "reliability": 51,
-      "deployment_mode": 43
+      "power": 59,
+      "driveability": 52,
+      "fuel_efficiency": 42,
+      "reliability": 48,
+      "deployment_mode": 39
     },
     "bio": "Ferrari 065/6 1.6 V6 T H engine."
   },
@@ -2594,11 +2595,11 @@
       2022
     ],
     "attributes": {
-      "power": 71,
-      "driveability": 59,
-      "fuel_efficiency": 58,
-      "reliability": 58,
-      "deployment_mode": 51
+      "power": 72,
+      "driveability": 62,
+      "fuel_efficiency": 54,
+      "reliability": 63,
+      "deployment_mode": 52
     },
     "bio": "Ferrari 066/7 1.6 V6 T H engine."
   },
@@ -2611,10 +2612,10 @@
       2023
     ],
     "attributes": {
-      "power": 55,
+      "power": 57,
       "driveability": 53,
-      "fuel_efficiency": 43,
-      "reliability": 47,
+      "fuel_efficiency": 50,
+      "reliability": 46,
       "deployment_mode": 40
     },
     "bio": "Ferrari 066/10 1.6 V6 T H engine."
@@ -2628,11 +2629,11 @@
       2026
     ],
     "attributes": {
-      "power": 51,
+      "power": 52,
       "driveability": 51,
-      "fuel_efficiency": 40,
-      "reliability": 49,
-      "deployment_mode": 35
+      "fuel_efficiency": 41,
+      "reliability": 44,
+      "deployment_mode": 38
     },
     "bio": "Honda RA626H 1.6 V6 T H engine."
   },
@@ -2645,10 +2646,10 @@
       2026
     ],
     "attributes": {
-      "power": 66,
+      "power": 64,
       "driveability": 54,
-      "fuel_efficiency": 52,
-      "reliability": 56,
+      "fuel_efficiency": 49,
+      "reliability": 49,
       "deployment_mode": 40
     },
     "bio": "Mercedes-AMG F1 M17 1.6 V6 T H engine."
@@ -2663,10 +2664,10 @@
     ],
     "attributes": {
       "power": 62,
-      "driveability": 54,
-      "fuel_efficiency": 50,
-      "reliability": 51,
-      "deployment_mode": 43
+      "driveability": 49,
+      "fuel_efficiency": 49,
+      "reliability": 52,
+      "deployment_mode": 41
     },
     "bio": "Audi AFR 26 Hybrid 1.6 V6 T H engine."
   },
@@ -2679,11 +2680,11 @@
       2026
     ],
     "attributes": {
-      "power": 47,
-      "driveability": 44,
-      "fuel_efficiency": 40,
-      "reliability": 46,
-      "deployment_mode": 32
+      "power": 48,
+      "driveability": 49,
+      "fuel_efficiency": 42,
+      "reliability": 44,
+      "deployment_mode": 33
     },
     "bio": "Ferrari 067/6 1.6 V6 T H engine."
   },
@@ -2696,11 +2697,11 @@
       2026
     ],
     "attributes": {
-      "power": 81,
-      "driveability": 72,
-      "fuel_efficiency": 64,
-      "reliability": 66,
-      "deployment_mode": 58
+      "power": 82,
+      "driveability": 74,
+      "fuel_efficiency": 62,
+      "reliability": 68,
+      "deployment_mode": 57
     },
     "bio": "Red Bull Ford DM01 1.6 V6 T H engine."
   }
