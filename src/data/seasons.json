@@ -1834,7 +1834,7 @@
     "engine": "maserati_250f_engine_1957",
     "tp": "bertocchi_guerino",
     "td": "alfieri_giulio",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 49
@@ -1962,7 +1962,7 @@
     "engine": "ferrari_375_engine_1951",
     "tp": "ferrari_enzo",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 51
@@ -2170,7 +2170,7 @@
     "engine": "alfa_romeo_158_15_l8_s",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 73
@@ -2202,7 +2202,7 @@
     "engine": "maserati_250f_engine_1957",
     "tp": "bertocchi_guerino",
     "td": "alfieri_giulio",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 45
@@ -2378,7 +2378,7 @@
     "engine": "ferrari_375_engine_1951",
     "tp": "ferrari_enzo",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 73
@@ -2506,7 +2506,7 @@
     "engine": "osca_4500_45_v12",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 95
@@ -2538,7 +2538,7 @@
     "engine": "veritas_20_l6",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 45
@@ -2746,7 +2746,7 @@
     "engine": "osca_2000_20_l6",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 45
@@ -2778,7 +2778,7 @@
     "engine": "maserati_250f_engine_1957",
     "tp": "bertocchi_guerino",
     "td": "alfieri_giulio",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 53
@@ -2922,7 +2922,7 @@
     "engine": "bpm_20_l4",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 95
@@ -3130,7 +3130,7 @@
     "engine": "ferrari_375_engine_1951",
     "tp": "ferrari_enzo",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 78
@@ -3146,7 +3146,7 @@
     "engine": "osca_2000_20_l6",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 68
@@ -3162,7 +3162,7 @@
     "engine": "maserati_250f_engine_1957",
     "tp": "bertocchi_guerino",
     "td": "alfieri_giulio",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 59
@@ -3578,7 +3578,7 @@
     "engine": "bmw_328_20_l6",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 45
@@ -3626,7 +3626,7 @@
     "engine": "lancia_ds50_25_v8",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 45
@@ -3642,7 +3642,7 @@
     "engine": "ford_dfv_1967",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 63
@@ -3674,7 +3674,7 @@
     "engine": "maserati_250f_engine_1957",
     "tp": "bertocchi_guerino",
     "td": "alfieri_giulio",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 58
@@ -3898,7 +3898,7 @@
     "engine": "maserati_4clt_25_l4",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 45
@@ -3930,7 +3930,7 @@
     "engine": "ford_dfv_1967",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 45
@@ -3946,7 +3946,7 @@
     "engine": "maserati_250f_engine_1957",
     "tp": "bertocchi_guerino",
     "td": "alfieri_giulio",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 54
@@ -4026,7 +4026,7 @@
     "engine": "alta_gp_25_l4",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 45
@@ -4154,7 +4154,7 @@
     "engine": "ford_dfv_1967",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 45
@@ -4346,7 +4346,7 @@
     "engine": "ferrari_375_engine_1951",
     "tp": "ferrari_enzo",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 68
@@ -4362,7 +4362,7 @@
     "engine": "ford_dfv_1967",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 63
@@ -4394,7 +4394,7 @@
     "engine": "maserati_250f_engine_1957",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 66,
     "aero_index": 68,
     "reliability_index": 59
@@ -4570,7 +4570,7 @@
     "engine": "osca_372_15_l4",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 95
@@ -9418,7 +9418,7 @@
     "engine": "hart_415t_1984",
     "tp": "toleman_ted_tp",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 91
@@ -9658,7 +9658,7 @@
     "engine": "hart_415t_1984",
     "tp": "toleman_ted_tp",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 54
@@ -9722,7 +9722,7 @@
     "engine": "ford_cosworth_dfv_30_v8",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 20,
     "aero_index": 25,
     "reliability_index": 82
@@ -9754,7 +9754,7 @@
     "engine": "ford_dfv_1967",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 71
@@ -9802,7 +9802,7 @@
     "engine": "ford_cosworth_dfv_30_v8",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 20,
     "aero_index": 28,
     "reliability_index": 55
@@ -9834,7 +9834,7 @@
     "engine": "ford_dfv_1967",
     "tp": "walkinshaw_tom",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 30,
     "aero_index": 38,
     "reliability_index": 76
@@ -9946,7 +9946,7 @@
     "engine": "hart_415t_1984",
     "tp": "toleman_ted_tp",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 42,
     "aero_index": 48,
     "reliability_index": 45
@@ -9994,7 +9994,7 @@
     "engine": "ford_dfv_1967",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 24,
     "aero_index": 33,
     "reliability_index": 45
@@ -10058,7 +10058,7 @@
     "engine": "ford_cosworth_dfv_30_v8",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 89
@@ -10234,7 +10234,7 @@
     "engine": "alfa_romeo_890t_15_v8_t",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 24,
     "aero_index": 33,
     "reliability_index": 45
@@ -10266,7 +10266,7 @@
     "engine": "hart_415t_15_l4_t",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 45
@@ -10282,7 +10282,7 @@
     "engine": "hart_415t_15_l4_t",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 65
@@ -10298,7 +10298,7 @@
     "engine": "bmw_m12_13_15_l4_t",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 45
@@ -10378,7 +10378,7 @@
     "engine": "ford_dfv_1967",
     "tp": "ligier_guy",
     "td": "ducarouge_gerard",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 60,
     "aero_index": 63,
     "reliability_index": 60
@@ -10426,7 +10426,7 @@
     "engine": "alfa_romeo_890t_15_v8_t",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 71
@@ -10442,7 +10442,7 @@
     "engine": "ford_dfv_1967",
     "tp": "minardi_giancarlo",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 48
@@ -10458,7 +10458,7 @@
     "engine": "ford_dfv_1967",
     "tp": null,
     "td": "murray_gordon",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 66,
     "aero_index": 68,
     "reliability_index": 53
@@ -10490,7 +10490,7 @@
     "engine": "hart_415t_15_l4_t",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 45
@@ -10506,7 +10506,7 @@
     "engine": "hart_415t_15_l4_t",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 45
@@ -10538,7 +10538,7 @@
     "engine": "hart_415t_1984",
     "tp": "toleman_ted_tp",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 45
@@ -10602,7 +10602,7 @@
     "engine": "ford_dfv_1967",
     "tp": "briatore_flavio_benetton",
     "td": "brawn_ross_td",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 60,
     "aero_index": 63,
     "reliability_index": 45
@@ -10634,7 +10634,7 @@
     "engine": "ford_dfv_1967",
     "tp": "ligier_guy",
     "td": "ducarouge_gerard",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 66,
     "aero_index": 68,
     "reliability_index": 59
@@ -10666,7 +10666,7 @@
     "engine": "motori_moderni_tipo_615_90_15_v6_t",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 45
@@ -10698,7 +10698,7 @@
     "engine": "ford_dfv_1967",
     "tp": "minardi_giancarlo",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 45
@@ -10714,7 +10714,7 @@
     "engine": "ford_dfv_1967",
     "tp": null,
     "td": "murray_gordon",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 42,
     "aero_index": 48,
     "reliability_index": 45
@@ -10730,7 +10730,7 @@
     "engine": "alfa_romeo_890t_15_v8_t",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 45
@@ -11322,7 +11322,7 @@
     "engine": "ford_cosworth_dfr_35_v8",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 48,
     "aero_index": 53,
     "reliability_index": 53
@@ -11370,7 +11370,7 @@
     "engine": "ford_cosworth_dfr_35_v8",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 80
@@ -11386,7 +11386,7 @@
     "engine": "judd_cv_35_v8",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 95
@@ -11402,7 +11402,7 @@
     "engine": "judd_cv_35_v8",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 70
@@ -11418,7 +11418,7 @@
     "engine": "ford_cosworth_dfr_35_v8",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 65
@@ -11466,7 +11466,7 @@
     "engine": "ford_dfv_1967",
     "tp": "minardi_giancarlo",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 30,
     "aero_index": 38,
     "reliability_index": 56
@@ -11498,7 +11498,7 @@
     "engine": "ford_dfv_1967",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 42,
     "aero_index": 48,
     "reliability_index": 48
@@ -11594,7 +11594,7 @@
     "engine": "yamaha_ox88_35_v8",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 92
@@ -11642,7 +11642,7 @@
     "engine": "ford_cosworth_dfr_35_v8",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 45
@@ -11722,7 +11722,7 @@
     "engine": "judd_cv_35_v8",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 88
@@ -11738,7 +11738,7 @@
     "engine": "ford_cosworth_dfr_35_v8",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 77
@@ -11850,7 +11850,7 @@
     "engine": "ford_dfv_1967",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 42,
     "aero_index": 48,
     "reliability_index": 48
@@ -11866,7 +11866,7 @@
     "engine": "ford_dfv_1967",
     "tp": "minardi_giancarlo",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 56
@@ -11882,7 +11882,7 @@
     "engine": "ford_dfv_1967",
     "tp": "tyrrell_ken",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 66,
     "aero_index": 68,
     "reliability_index": 50
@@ -11914,7 +11914,7 @@
     "engine": "judd_gv_35_v10",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 48,
     "aero_index": 53,
     "reliability_index": 56
@@ -11930,7 +11930,7 @@
     "engine": "ford_dfv_1967",
     "tp": "tyrrell_ken",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 60,
     "aero_index": 63,
     "reliability_index": 48
@@ -11946,7 +11946,7 @@
     "engine": "ford_dfv_1967",
     "tp": "briatore_flavio_benetton",
     "td": "brawn_ross_td",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 72,
     "aero_index": 73,
     "reliability_index": 62
@@ -12090,7 +12090,7 @@
     "engine": "ford_dfv_1967",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 50
@@ -15098,7 +15098,7 @@
     "engine": "cosworth_ca_2010",
     "tp": "williams_frank",
     "td": "head_patrick",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 42,
     "aero_index": 48,
     "reliability_index": 73
@@ -15114,7 +15114,7 @@
     "engine": "mercedes_fo110_2010",
     "tp": "szafnauer_otmar",
     "td": "green_andrew",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 60,
     "aero_index": 63,
     "reliability_index": 88
@@ -15130,7 +15130,7 @@
     "engine": "cosworth_ca_2010",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 30,
     "aero_index": 38,
     "reliability_index": 77
@@ -15146,7 +15146,7 @@
     "engine": "renault_rs27_2011_24_v8",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 66,
     "aero_index": 68,
     "reliability_index": 90
@@ -15162,7 +15162,7 @@
     "engine": "cosworth_ca_2010",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 24,
     "aero_index": 33,
     "reliability_index": 78
@@ -15178,7 +15178,7 @@
     "engine": "mercedes_fo110_2010",
     "tp": "wolff_toto",
     "td": "allison_james",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 72,
     "aero_index": 73,
     "reliability_index": 85
@@ -15194,7 +15194,7 @@
     "engine": "ferrari_056_v8_2006",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 54,
     "aero_index": 58,
     "reliability_index": 75
@@ -15210,7 +15210,7 @@
     "engine": "ferrari_056_v8_2006",
     "tp": "domenicali_stefano",
     "td": "costa_aldo",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 78,
     "aero_index": 78,
     "reliability_index": 90
@@ -15226,7 +15226,7 @@
     "engine": "ferrari_056_v8_2006",
     "tp": "tost_franz",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 48,
     "aero_index": 53,
     "reliability_index": 83
@@ -15242,7 +15242,7 @@
     "engine": "cosworth_ca_2010",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 75
@@ -15258,7 +15258,7 @@
     "engine": "mercedes_fo110_2010",
     "tp": null,
     "td": "prodromou_peter",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 84,
     "aero_index": 83,
     "reliability_index": 88
@@ -15274,7 +15274,7 @@
     "engine": "renault_rs27_2010",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 86
@@ -15290,7 +15290,7 @@
     "engine": "cosworth_ca_2010",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 24,
     "aero_index": 33,
     "reliability_index": 76
@@ -15306,7 +15306,7 @@
     "engine": "renault_re14_2014",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 72,
     "aero_index": 73,
     "reliability_index": 88
@@ -15322,7 +15322,7 @@
     "engine": "cosworth_ca_2010",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 30,
     "aero_index": 38,
     "reliability_index": 76
@@ -15338,7 +15338,7 @@
     "engine": "mercedes_fo110_2010",
     "tp": "wolff_toto",
     "td": "allison_james",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 66,
     "aero_index": 68,
     "reliability_index": 78
@@ -15354,7 +15354,7 @@
     "engine": "mercedes_fo110_2010",
     "tp": "szafnauer_otmar",
     "td": "green_andrew",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 54,
     "aero_index": 58,
     "reliability_index": 88
@@ -15370,7 +15370,7 @@
     "engine": "ferrari_056_v8_2006",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 60,
     "aero_index": 63,
     "reliability_index": 74
@@ -15386,7 +15386,7 @@
     "engine": "ferrari_056_v8_2006",
     "tp": "tost_franz",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 42,
     "aero_index": 48,
     "reliability_index": 86
@@ -15402,7 +15402,7 @@
     "engine": "renault_rs27_2010",
     "tp": "williams_frank",
     "td": "head_patrick",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 48,
     "aero_index": 53,
     "reliability_index": 76
@@ -15418,7 +15418,7 @@
     "engine": "renault_rs27_2010",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 30,
     "aero_index": 38,
     "reliability_index": 83
@@ -15434,7 +15434,7 @@
     "engine": "renault_re14_2014",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 72,
     "aero_index": 73,
     "reliability_index": 80
@@ -15450,7 +15450,7 @@
     "engine": "cosworth_ca_2010",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 93
@@ -15466,7 +15466,7 @@
     "engine": "mercedes_fo110_2010",
     "tp": "wolff_toto",
     "td": "allison_james",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 84,
     "aero_index": 83,
     "reliability_index": 85
@@ -15482,7 +15482,7 @@
     "engine": "mercedes_fo110_2010",
     "tp": "szafnauer_otmar",
     "td": "green_andrew",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 60,
     "aero_index": 63,
     "reliability_index": 78
@@ -15498,7 +15498,7 @@
     "engine": "ferrari_056_v8_2006",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 54,
     "aero_index": 58,
     "reliability_index": 85
@@ -15514,7 +15514,7 @@
     "engine": "ferrari_056_v8_2006",
     "tp": "domenicali_stefano",
     "td": "costa_aldo",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 78,
     "aero_index": 78,
     "reliability_index": 90
@@ -15530,7 +15530,7 @@
     "engine": "ferrari_056_v8_2006",
     "tp": "tost_franz",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 48,
     "aero_index": 53,
     "reliability_index": 73
@@ -15546,7 +15546,7 @@
     "engine": "mercedes_fo110_2010",
     "tp": null,
     "td": "prodromou_peter",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 66,
     "aero_index": 68,
     "reliability_index": 88
@@ -15562,7 +15562,7 @@
     "engine": "renault_rs27_2010",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 42,
     "aero_index": 48,
     "reliability_index": 88
@@ -15578,7 +15578,7 @@
     "engine": "renault_rs27_2010",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 30,
     "aero_index": 38,
     "reliability_index": 64
@@ -15594,7 +15594,7 @@
     "engine": "renault_re14_2014",
     "tp": "horner_christian",
     "td": "newey_adrian",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 84,
     "aero_index": 83,
     "reliability_index": 80
@@ -15610,7 +15610,7 @@
     "engine": "renault_re14_2014",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 48,
     "aero_index": 53,
     "reliability_index": 63
@@ -15626,7 +15626,7 @@
     "engine": "cosworth_ca_2010",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 42,
     "aero_index": 48,
     "reliability_index": 83
@@ -15642,7 +15642,7 @@
     "engine": "mercedes_fo110_2010",
     "tp": null,
     "td": "prodromou_peter",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 66,
     "aero_index": 68,
     "reliability_index": 88
@@ -15658,7 +15658,7 @@
     "engine": "mercedes_fo110_2010",
     "tp": "szafnauer_otmar",
     "td": "green_andrew",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 60,
     "aero_index": 63,
     "reliability_index": 88
@@ -15674,7 +15674,7 @@
     "engine": "ferrari_059_4_2015",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 73
@@ -15690,7 +15690,7 @@
     "engine": "ferrari_059_4_2015",
     "tp": "domenicali_stefano",
     "td": "costa_aldo",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 72,
     "aero_index": 73,
     "reliability_index": 90
@@ -15706,7 +15706,7 @@
     "engine": "renault_re14_2014",
     "tp": "tost_franz",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 54,
     "aero_index": 58,
     "reliability_index": 70
@@ -15722,7 +15722,7 @@
     "engine": "mercedes_m13_2022",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 78,
     "aero_index": 78,
     "reliability_index": 90
@@ -15738,7 +15738,7 @@
     "engine": "renault_re14_2014",
     "tp": "horner_christian",
     "td": "newey_adrian",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 72,
     "aero_index": 73,
     "reliability_index": 83
@@ -15754,7 +15754,7 @@
     "engine": "renault_re14_2014",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 60,
     "aero_index": 63,
     "reliability_index": 65
@@ -15770,7 +15770,7 @@
     "engine": "ferrari_059_3_16_v6_t_h",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 83
@@ -15786,7 +15786,7 @@
     "engine": "honda_ra615h_2015",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 42,
     "aero_index": 48,
     "reliability_index": 63
@@ -15802,7 +15802,7 @@
     "engine": "mercedes_fo110_2010",
     "tp": "szafnauer_otmar",
     "td": "green_andrew",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 66,
     "aero_index": 68,
     "reliability_index": 85
@@ -15818,7 +15818,7 @@
     "engine": "ferrari_059_4_2015",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 48,
     "aero_index": 53,
     "reliability_index": 83
@@ -15834,7 +15834,7 @@
     "engine": "ferrari_059_4_2015",
     "tp": "arrivabene_maurizio",
     "td": "costa_aldo",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 84,
     "aero_index": 83,
     "reliability_index": 85
@@ -15850,7 +15850,7 @@
     "engine": "renault_re14_2014",
     "tp": "tost_franz",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 54,
     "aero_index": 58,
     "reliability_index": 68
@@ -15866,7 +15866,7 @@
     "engine": "mercedes_m13_2022",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 78,
     "aero_index": 78,
     "reliability_index": 83
@@ -15882,7 +15882,7 @@
     "engine": "ferrari_v6h_2019",
     "tp": "steiner_guenther",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 48,
     "aero_index": 53,
     "reliability_index": 77
@@ -15898,7 +15898,7 @@
     "engine": "ferrari_059_4_2015",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 30,
     "aero_index": 38,
     "reliability_index": 84
@@ -15914,7 +15914,7 @@
     "engine": "honda_ra615h_2015",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 60,
     "aero_index": 63,
     "reliability_index": 75
@@ -15930,7 +15930,7 @@
     "engine": "renault_re14_2014",
     "tp": "horner_christian",
     "td": "newey_adrian",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 84,
     "aero_index": 83,
     "reliability_index": 90
@@ -15946,7 +15946,7 @@
     "engine": "renault_re14_2014",
     "tp": "szafnauer_otmar",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 42,
     "aero_index": 48,
     "reliability_index": 75
@@ -15962,7 +15962,7 @@
     "engine": "ferrari_059_5_2017",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 77
@@ -15978,7 +15978,7 @@
     "engine": "ferrari_059_4_2015",
     "tp": "arrivabene_maurizio",
     "td": "binotto_mattia_td",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 78,
     "aero_index": 78,
     "reliability_index": 84
@@ -15994,7 +15994,7 @@
     "engine": "renault_re14_2014",
     "tp": "tost_franz",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 54,
     "aero_index": 58,
     "reliability_index": 75
@@ -16010,7 +16010,7 @@
     "engine": "mercedes_m13_2022",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 66,
     "aero_index": 68,
     "reliability_index": 84
@@ -16026,7 +16026,7 @@
     "engine": "ferrari_v6h_2019",
     "tp": "steiner_guenther",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 48,
     "aero_index": 53,
     "reliability_index": 81
@@ -16042,7 +16042,7 @@
     "engine": "honda_ra615h_2015",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 42,
     "aero_index": 48,
     "reliability_index": 59
@@ -16058,7 +16058,7 @@
     "engine": "renault_re14_2014",
     "tp": "horner_christian",
     "td": "newey_adrian",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 78,
     "aero_index": 78,
     "reliability_index": 67
@@ -16074,7 +16074,7 @@
     "engine": "renault_re14_2014",
     "tp": "szafnauer_otmar",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 60,
     "aero_index": 63,
     "reliability_index": 67
@@ -16090,7 +16090,7 @@
     "engine": "mercedes_fo110_2010",
     "tp": "szafnauer_otmar",
     "td": "green_andrew",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 72,
     "aero_index": 73,
     "reliability_index": 90
@@ -16106,7 +16106,7 @@
     "engine": "ferrari_059_5_2017",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 81
@@ -16122,7 +16122,7 @@
     "engine": "renault_re14_2014",
     "tp": "tost_franz",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 54,
     "aero_index": 58,
     "reliability_index": 76
@@ -16138,7 +16138,7 @@
     "engine": "mercedes_m13_2022",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 66,
     "aero_index": 68,
     "reliability_index": 83
@@ -16154,7 +16154,7 @@
     "engine": "ferrari_059_5_2017",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 48,
     "aero_index": 53,
     "reliability_index": 79
@@ -16170,7 +16170,7 @@
     "engine": "renault_re14_2014",
     "tp": "horner_christian",
     "td": "newey_adrian",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 78,
     "aero_index": 78,
     "reliability_index": 72
@@ -16186,7 +16186,7 @@
     "engine": "renault_rs27_2010",
     "tp": "brown_zak",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 60,
     "aero_index": 63,
     "reliability_index": 75
@@ -16202,7 +16202,7 @@
     "engine": "mercedes_fo110_2010",
     "tp": "szafnauer_otmar",
     "td": "green_andrew",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 84
@@ -16218,7 +16218,7 @@
     "engine": "renault_re14_2014",
     "tp": "tost_franz",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 42,
     "aero_index": 48,
     "reliability_index": 77
@@ -16234,7 +16234,7 @@
     "engine": "renault_re14_2014",
     "tp": "szafnauer_otmar",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 72,
     "aero_index": 73,
     "reliability_index": 86
@@ -16250,7 +16250,7 @@
     "engine": "mercedes_m13_2022",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 86
@@ -16266,7 +16266,7 @@
     "engine": "ferrari_064_16_v6_t_h",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 48,
     "aero_index": 53,
     "reliability_index": 90
@@ -16282,7 +16282,7 @@
     "engine": "ferrari_v6h_2019",
     "tp": "steiner_guenther",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 42,
     "aero_index": 48,
     "reliability_index": 75
@@ -16298,7 +16298,7 @@
     "engine": "renault_rs27_2010",
     "tp": "brown_zak",
     "td": "key_james",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 72,
     "aero_index": 73,
     "reliability_index": 75
@@ -16314,7 +16314,7 @@
     "engine": "honda_ra618h_2019",
     "tp": "tost_franz",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 60,
     "aero_index": 63,
     "reliability_index": 84
@@ -16330,7 +16330,7 @@
     "engine": "renault_e_tech_2021",
     "tp": "szafnauer_otmar",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 66,
     "aero_index": 68,
     "reliability_index": 75
@@ -16346,7 +16346,7 @@
     "engine": "mercedes_m13_2022",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 88
@@ -16362,7 +16362,7 @@
     "engine": "mercedes_m09_2020",
     "tp": "szafnauer_otmar",
     "td": "green_andrew",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 54,
     "aero_index": 58,
     "reliability_index": 88
@@ -16378,7 +16378,7 @@
     "engine": "ferrari_065_16_v6_t_h",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 48,
     "aero_index": 53,
     "reliability_index": 89
@@ -16394,7 +16394,7 @@
     "engine": "honda_ra618h_2019",
     "tp": "horner_christian",
     "td": "newey_adrian",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 84,
     "aero_index": 83,
     "reliability_index": 81
@@ -16410,7 +16410,7 @@
     "engine": "ferrari_v6h_2019",
     "tp": "steiner_guenther",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 42,
     "aero_index": 48,
     "reliability_index": 75
@@ -16426,7 +16426,7 @@
     "engine": "renault_e_tech_2021",
     "tp": "szafnauer_otmar",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 66,
     "aero_index": 68,
     "reliability_index": 81
@@ -16442,7 +16442,7 @@
     "engine": "ferrari_v6h_2019",
     "tp": "binotto_mattia",
     "td": "allison_james",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 60,
     "aero_index": 63,
     "reliability_index": 84
@@ -16458,7 +16458,7 @@
     "engine": "mercedes_m13_2022",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 84
@@ -16474,7 +16474,7 @@
     "engine": "ferrari_065_6_16_v6_t_h",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 42,
     "aero_index": 48,
     "reliability_index": 91
@@ -16490,7 +16490,7 @@
     "engine": "mercedes_m13_2022",
     "tp": "krack_mike",
     "td": "fallows_dan",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 54,
     "aero_index": 58,
     "reliability_index": 82
@@ -16506,7 +16506,7 @@
     "engine": "mercedes_m13_2022",
     "tp": "brown_zak",
     "td": "key_james",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 72,
     "aero_index": 73,
     "reliability_index": 91
@@ -16522,7 +16522,7 @@
     "engine": "honda_ra620h_2021",
     "tp": "tost_franz",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 60,
     "aero_index": 63,
     "reliability_index": 82
@@ -16538,7 +16538,7 @@
     "engine": "ferrari_v6h_2019",
     "tp": "binotto_mattia",
     "td": "allison_james",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 78,
     "aero_index": 78,
     "reliability_index": 93
@@ -16554,7 +16554,7 @@
     "engine": "ferrari_v6h_2019",
     "tp": "steiner_guenther",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 86
@@ -16570,7 +16570,7 @@
     "engine": "mercedes_m13_2022",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2011",
     "budget_index": 48,
     "aero_index": 53,
     "reliability_index": 80
@@ -16586,7 +16586,7 @@
     "engine": "ferrari_066_7_16_v6_t_h",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 60,
     "aero_index": 63,
     "reliability_index": 76
@@ -16602,7 +16602,7 @@
     "engine": "mercedes_m13_2022",
     "tp": "krack_mike",
     "td": "fallows_dan",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 54,
     "aero_index": 58,
     "reliability_index": 89
@@ -16618,7 +16618,7 @@
     "engine": "renault_e_tech_2022",
     "tp": "szafnauer_otmar",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 72,
     "aero_index": 73,
     "reliability_index": 78
@@ -16634,7 +16634,7 @@
     "engine": "ferrari_066_12_2022",
     "tp": "steiner_guenther",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 48,
     "aero_index": 53,
     "reliability_index": 82
@@ -16650,7 +16650,7 @@
     "engine": "mercedes_m13_2022",
     "tp": "brown_zak",
     "td": "key_james",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 66,
     "aero_index": 68,
     "reliability_index": 89
@@ -16666,7 +16666,7 @@
     "engine": "mercedes_m13_2022",
     "tp": "wolff_toto",
     "td": "allison_james",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 78,
     "aero_index": 78,
     "reliability_index": 91
@@ -16682,7 +16682,7 @@
     "engine": "rbpth001_2023",
     "tp": "tost_franz",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 42,
     "aero_index": 48,
     "reliability_index": 80
@@ -16698,7 +16698,7 @@
     "engine": "mercedes_m13_2022",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 78
@@ -16714,7 +16714,7 @@
     "engine": "ferrari_066_10_16_v6_t_h",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 42,
     "aero_index": 48,
     "reliability_index": 84
@@ -16730,7 +16730,7 @@
     "engine": "renault_e_tech_2022",
     "tp": "szafnauer_otmar",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 60,
     "aero_index": 63,
     "reliability_index": 84
@@ -16746,7 +16746,7 @@
     "engine": "mercedes_m13_2022",
     "tp": "brown_zak",
     "td": "key_james",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 72,
     "aero_index": 73,
     "reliability_index": 89
@@ -16762,7 +16762,7 @@
     "engine": "mercedes_m13_2022",
     "tp": "wolff_toto",
     "td": "allison_james",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 84,
     "aero_index": 83,
     "reliability_index": 86
@@ -16778,7 +16778,7 @@
     "engine": "ferrari_066_12_2022",
     "tp": "steiner_guenther",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 84
@@ -16794,7 +16794,7 @@
     "engine": "rbpth001_2023",
     "tp": "tost_franz",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 48,
     "aero_index": 53,
     "reliability_index": 89
@@ -16810,7 +16810,7 @@
     "engine": "mercedes_m13_2022",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 54,
     "aero_index": 58,
     "reliability_index": 78
@@ -16826,7 +16826,7 @@
     "engine": "mercedes_m13_2022",
     "tp": "krack_mike",
     "td": "fallows_dan",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 66,
     "aero_index": 68,
     "reliability_index": 89
@@ -16842,7 +16842,7 @@
     "engine": "renault_e_tech_2022",
     "tp": "szafnauer_otmar",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 60,
     "aero_index": 63,
     "reliability_index": 85
@@ -16858,7 +16858,7 @@
     "engine": "mercedes_m13_2022",
     "tp": "wolff_toto",
     "td": "allison_james",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 72,
     "aero_index": 73,
     "reliability_index": 87
@@ -16874,7 +16874,7 @@
     "engine": "ferrari_066_12_2022",
     "tp": "steiner_guenther",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 54,
     "aero_index": 58,
     "reliability_index": 89
@@ -16890,7 +16890,7 @@
     "engine": "rbpth001_2023",
     "tp": "horner_christian",
     "td": "wache_pierre",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 78,
     "aero_index": 78,
     "reliability_index": 89
@@ -16906,7 +16906,7 @@
     "engine": "ferrari_066_12_2022",
     "tp": "vasseur_fred",
     "td": "cardile_enrico",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 84,
     "aero_index": 83,
     "reliability_index": 91
@@ -16922,7 +16922,7 @@
     "engine": "ferrari_v6h_2019",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 87
@@ -16938,7 +16938,7 @@
     "engine": "rbpth001_2023",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 48,
     "aero_index": 53,
     "reliability_index": 87
@@ -16954,7 +16954,7 @@
     "engine": "mercedes_m13_2022",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 42,
     "aero_index": 48,
     "reliability_index": 85
@@ -16970,7 +16970,7 @@
     "engine": "mercedes_m13_2022",
     "tp": "krack_mike",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 54,
     "aero_index": 58,
     "reliability_index": 83
@@ -16986,7 +16986,7 @@
     "engine": "mercedes_m13_2022",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 66,
     "aero_index": 68,
     "reliability_index": 81
@@ -17002,7 +17002,7 @@
     "engine": "renault_e_tech_2022",
     "tp": "szafnauer_otmar",
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 89
@@ -17018,7 +17018,7 @@
     "engine": "mercedes_m13_2022",
     "tp": "brown_zak",
     "td": "key_james",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 90,
     "aero_index": 88,
     "reliability_index": 89
@@ -17034,7 +17034,7 @@
     "engine": "mercedes_m13_2022",
     "tp": "wolff_toto",
     "td": "allison_james",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 84,
     "aero_index": 83,
     "reliability_index": 89
@@ -17050,7 +17050,7 @@
     "engine": "ferrari_066_12_2022",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 48,
     "aero_index": 53,
     "reliability_index": 87
@@ -17066,7 +17066,7 @@
     "engine": "rbpth001_2023",
     "tp": "horner_christian",
     "td": "wache_pierre",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 78,
     "aero_index": 78,
     "reliability_index": 93
@@ -17082,7 +17082,7 @@
     "engine": "ferrari_066_12_2022",
     "tp": "vasseur_fred",
     "td": "cardile_enrico",
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 72,
     "aero_index": 73,
     "reliability_index": 89
@@ -17098,7 +17098,7 @@
     "engine": "ferrari_v6h_2019",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 42,
     "aero_index": 48,
     "reliability_index": 87
@@ -17114,7 +17114,7 @@
     "engine": "rbpth001_2023",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 60,
     "aero_index": 63,
     "reliability_index": 85
@@ -17130,7 +17130,7 @@
     "engine": "honda_ra626h_16_v6_t_h",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 36,
     "aero_index": 43,
     "reliability_index": 55
@@ -17146,7 +17146,7 @@
     "engine": "mercedes_amg_f1_m17_16_v6_t_h",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 48,
     "aero_index": 53,
     "reliability_index": 79
@@ -17162,7 +17162,7 @@
     "engine": "audi_afr_26_hybrid_16_v6_t_h",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 42,
     "aero_index": 48,
     "reliability_index": 71
@@ -17178,7 +17178,7 @@
     "engine": "mercedes_amg_f1_m17_16_v6_t_h",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 66,
     "aero_index": 68,
     "reliability_index": 95
@@ -17194,7 +17194,7 @@
     "engine": "ferrari_067_6_16_v6_t_h",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 30,
     "aero_index": 38,
     "reliability_index": 71
@@ -17210,7 +17210,7 @@
     "engine": "mercedes_amg_f1_m17_16_v6_t_h",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 78,
     "aero_index": 78,
     "reliability_index": 63
@@ -17226,7 +17226,7 @@
     "engine": "mercedes_amg_f1_m17_16_v6_t_h",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 90,
     "aero_index": 88,
     "reliability_index": 87
@@ -17242,7 +17242,7 @@
     "engine": "red_bull_ford_dm01_16_v6_t_h",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 72,
     "aero_index": 73,
     "reliability_index": 71
@@ -17258,7 +17258,7 @@
     "engine": "ferrari_067_6_16_v6_t_h",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 84,
     "aero_index": 83,
     "reliability_index": 95
@@ -17274,7 +17274,7 @@
     "engine": "ferrari_067_6_16_v6_t_h",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 54,
     "aero_index": 58,
     "reliability_index": 87
@@ -17290,9 +17290,41 @@
     "engine": "red_bull_ford_dm01_16_v6_t_h",
     "tp": null,
     "td": null,
-    "tires": "pirelli_pzero",
+    "tires": "pirelli_2022",
     "budget_index": 60,
     "aero_index": 63,
     "reliability_index": 79
+  },
+  {
+    "id": "alfa_romeo_1950",
+    "team": "Alfa Romeo",
+    "year": 1950,
+    "era": "early",
+    "driver1": "fangio_1950",
+    "driver2": "fagioli_1950",
+    "chassis": "alfa_romeo_158_1950",
+    "engine": "alfa_romeo_158_15_l8_s",
+    "tp": null,
+    "td": null,
+    "tires": "pirelli_2011",
+    "budget_index": 36,
+    "aero_index": 43,
+    "reliability_index": 69
+  },
+  {
+    "id": "alphatauri_2020",
+    "team": "AlphaTauri",
+    "year": 2020,
+    "era": "hybrid",
+    "driver1": "kvyat_2020",
+    "driver2": "gasly_2020",
+    "chassis": "alphatauri_at01_2020",
+    "engine": "honda_ra620h_2021",
+    "tp": "tost_franz",
+    "td": null,
+    "tires": "pirelli_2011",
+    "budget_index": 54,
+    "aero_index": 58,
+    "reliability_index": 84
   }
 ]

@@ -19,11 +19,13 @@ const ERAS = [
 ]
 
 export default function Home() {
-  const startGame = useGameStore(s => s.startGame)
-  const era       = useGameStore(s => s.era)
-  const mode      = useGameStore(s => s.mode)
-  const setEra    = useGameStore(s => s.setEra)
-  const setMode   = useGameStore(s => s.setMode)
+  const startGame         = useGameStore(s => s.startGame)
+  const era               = useGameStore(s => s.era)
+  const mode              = useGameStore(s => s.mode)
+  const draftDifficulty   = useGameStore(s => s.draftDifficulty)
+  const setEra            = useGameStore(s => s.setEra)
+  const setMode           = useGameStore(s => s.setMode)
+  const setDraftDifficulty = useGameStore(s => s.setDraftDifficulty)
 
   return (
     <div className="min-h-screen bg-sand font-body">
@@ -123,6 +125,33 @@ export default function Home() {
                   >
                     <div className="text-sm font-bold">{m.label}</div>
                     <div className="text-[10px] opacity-60">{m.desc}</div>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Draft difficulty selector */}
+            <div>
+              <p className="text-xs font-bold uppercase tracking-widest text-ink-md mb-2">
+                SORTEO · DIFICULTAD
+              </p>
+              <div className="flex gap-2">
+                {[
+                  { id: 'hard',   label: 'Realista',    desc: 'Todos los equipos al azar' },
+                  { id: 'medium', label: 'Equilibrado', desc: 'Equipos mejores más frecuentes' },
+                  { id: 'easy',   label: 'Fácil',       desc: 'Solo equipos de alto nivel' },
+                ].map(d => (
+                  <button
+                    key={d.id}
+                    onClick={() => setDraftDifficulty(d.id)}
+                    className={`flex-1 px-3 py-2.5 border text-left transition-colors ${
+                      draftDifficulty === d.id
+                        ? 'bg-ink text-white border-ink'
+                        : 'bg-white text-ink border-borderc hover:border-ink'
+                    }`}
+                  >
+                    <div className="text-sm font-bold">{d.label}</div>
+                    <div className="text-[10px] opacity-60">{d.desc}</div>
                   </button>
                 ))}
               </div>

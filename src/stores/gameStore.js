@@ -1,17 +1,18 @@
 import { create } from 'zustand'
 import { getRandomSeason, getFilteredSeasons, resolveSeasonElements } from '../utils/dataQueries'
 
+// undefined = not yet picked; null = slot unavailable for this team (auto-skipped)
 const EMPTY_TEAM = {
-  driver1: null,
-  driver2: null,
-  team_principal: null,
-  technical_director: null,
-  chassis: null,
-  engine: null,
-  tires: null,
-  aero: null,
-  budget: null,
-  reliability: null,
+  driver1: undefined,
+  driver2: undefined,
+  team_principal: undefined,
+  technical_director: undefined,
+  chassis: undefined,
+  engine: undefined,
+  tires: undefined,
+  aero: undefined,
+  budget: undefined,
+  reliability: undefined,
 }
 
 const SLOT_KEYS = Object.keys(EMPTY_TEAM)
@@ -20,6 +21,7 @@ export const useGameStore = create((set, get) => ({
   // Config
   era: 'all',
   mode: 'vip',
+  draftDifficulty: 'hard',
 
   // Phase: 'setup' | 'drafting' | 'complete' | 'results'
   phase: 'setup',
@@ -39,6 +41,7 @@ export const useGameStore = create((set, get) => ({
   // ---- Config actions ----
   setEra: (era) => set({ era }),
   setMode: (mode) => set({ mode }),
+  setDraftDifficulty: (draftDifficulty) => set({ draftDifficulty }),
 
   // ---- Game flow ----
   startGame: () => {
@@ -55,13 +58,50 @@ export const useGameStore = create((set, get) => ({
   },
 
   rollCard: () => {
-    const { era, usedSeasonIds } = get()
-    const season = getRandomSeason(era, usedSeasonIds)
-    if (!season) return
-    const resolved = resolveSeasonElements(season)
+    const { era, usedSeasonIds, draftDifficulty, team } = get()
+
+    // Slots still needing a value (undefined = not yet picked)
+    const unfilledSlots = SLOT_KEYS.filter(k => team[k] === undefined)
+    if (unfilledSlots.length === 0) { set({ phase: 'complete' }); return }
+
+    // Map slot key → resolved card field name
+    const SLOT_FIELD = {
+      driver1: 'driver1', driver2: 'driver2',
+      team_principal: 'team_principal', technical_director: 'technical_director',
+      chassis: 'chassis', engine: 'engine', tires: 'tires',
+      aero: 'aero', budget: 'budget', reliability: 'reliability',
+    }
+
+    // Try up to 15 draws to find a card with at least one pickable slot.
+    // Cards that have nothing to offer are still consumed (added to usedIds).
+    const newUsedIds = [...usedSeasonIds]
+    let season = null, resolved = null
+
+    for (let attempt = 0; attempt < 15; attempt++) {
+      const candidate = getRandomSeason(era, newUsedIds, draftDifficulty)
+      if (!candidate) break
+      const r = resolveSeasonElements(candidate)
+      newUsedIds.push(candidate.id)
+
+      const hasPickable = unfilledSlots.some(slot => {
+        const val = r[SLOT_FIELD[slot]]
+        return val !== null && val !== undefined
+      })
+
+      if (hasPickable) { season = candidate; resolved = r; break }
+    }
+
+    if (!season) {
+      // Truly stuck — auto-skip all remaining null slots and complete
+      const newTeam = { ...team }
+      unfilledSlots.forEach(k => { newTeam[k] = null })
+      set({ team: newTeam, phase: 'complete', currentCard: null, usedSeasonIds: newUsedIds })
+      return
+    }
+
     set({
       currentCard: resolved,
-      usedSeasonIds: [...usedSeasonIds, season.id],
+      usedSeasonIds: newUsedIds,
       rollCount: get().rollCount + 1,
     })
   },
@@ -72,13 +112,14 @@ export const useGameStore = create((set, get) => ({
     // Drivers are a shared pool — fill whichever slot is open
     let actualSlot = slotKey
     if (slotKey === 'driver1' || slotKey === 'driver2') {
-      if (team.driver1 === null || team.driver1 === undefined) actualSlot = 'driver1'
-      else if (team.driver2 === null || team.driver2 === undefined) actualSlot = 'driver2'
+      if (team.driver1 === undefined) actualSlot = 'driver1'
+      else if (team.driver2 === undefined) actualSlot = 'driver2'
       else return // both full, nothing to do
     }
 
     team[actualSlot] = element
-    const allFilled = SLOT_KEYS.every(k => team[k] !== null && team[k] !== undefined)
+    // null = auto-skipped (unavailable); undefined = still needs picking
+    const allFilled = SLOT_KEYS.every(k => team[k] !== undefined)
     set({
       team,
       currentCard: null,
@@ -140,11 +181,11 @@ export const useGameStore = create((set, get) => ({
   // ---- Helpers ----
   getEmptySlots: () => {
     const team = get().team
-    return SLOT_KEYS.filter(k => team[k] === null || team[k] === undefined)
+    return SLOT_KEYS.filter(k => team[k] === undefined)
   },
 
   getFilledCount: () => {
     const team = get().team
-    return SLOT_KEYS.filter(k => team[k] !== null && team[k] !== undefined).length
+    return SLOT_KEYS.filter(k => team[k] !== undefined).length
   },
 }))
