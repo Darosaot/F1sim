@@ -1,84 +1,75 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-const POS_COLORS = {
-  1: 'text-yellow-400',
-  2: 'text-gray-300',
-  3: 'text-amber-600',
-}
-
-const CIRCUIT_TYPE_EMOJI = {
-  street: '🏙️',
-  power: '⚡',
-  balanced: '🏁',
-  high_speed: '💨',
-  high_downforce: '🔄',
+const STAGE_LABELS = {
+  1: 'GRUPOS', 2: 'GRUPOS', 3: 'GRUPOS', 4: 'GRUPOS',
+  5: 'GRUPOS', 6: 'GRUPOS', 7: 'GRUPOS', 8: 'GRUPOS',
+  9: 'RONDA 16', 10: 'RONDA 16', 11: 'CUARTOS', 12: 'CUARTOS',
+  13: 'SEMIS', 14: 'SEMIS', 15: 'FINAL', 16: 'EXTRA',
 }
 
 export default function RaceTicker({ races, onComplete }) {
-  const [visibleRaces, setVisibleRaces] = useState([])
-  const [done, setDone] = useState(false)
+  const [visible, setVisible] = useState([])
+  const [done,    setDone]    = useState(false)
 
   useEffect(() => {
     let i = 0
-    const interval = setInterval(() => {
+    const iv = setInterval(() => {
       if (i >= races.length) {
-        clearInterval(interval)
+        clearInterval(iv)
         setDone(true)
-        setTimeout(onComplete, 800)
+        setTimeout(onComplete, 600)
         return
       }
-      setVisibleRaces(prev => [...prev, races[i]])
+      setVisible(prev => [...prev, races[i]])
       i++
-    }, 180)
-    return () => clearInterval(interval)
+    }, 160)
+    return () => clearInterval(iv)
   }, [races, onComplete])
 
   return (
-    <div className="space-y-1 max-h-[50vh] overflow-y-auto pr-1">
+    <div className="space-y-px">
       <AnimatePresence initial={false}>
-        {visibleRaces.map((race, idx) => (
+        {visible.map((race, idx) => (
           <motion.div
             key={idx}
-            initial={{ opacity: 0, x: -10 }}
+            initial={{ opacity: 0, x: -6 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.2 }}
-            className={`
-              flex items-center justify-between px-3 py-2 rounded-lg
-              ${race.dnf
-                ? 'bg-[#1a0a0a] border border-red-900'
-                : race.playerPos === 1
-                  ? 'bg-[#1a1400] border border-yellow-900'
-                  : 'bg-[#0e0e16] border border-[#1a1a2a]'
-              }
-            `}
+            transition={{ duration: 0.15 }}
+            className="flex items-center justify-between bg-white border border-borderc px-4 py-3"
           >
-            <div className="flex items-center gap-2 min-w-0">
-              <span className="text-xs">{race.emoji}</span>
+            <div className="flex items-center gap-3 min-w-0">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-ink-md w-14 shrink-0">
+                {race.isWet ? '🌧️ ' : ''}CARRERA
+              </span>
               <div className="min-w-0">
-                <div className="text-xs font-semibold text-white truncate">{race.circuit}</div>
                 <div className="flex items-center gap-1.5">
-                  <span className="text-[9px] text-[#555577]">
-                    {CIRCUIT_TYPE_EMOJI[race.type]} {race.type}
-                  </span>
-                  {race.isWet && <span className="text-[9px] text-blue-400">🌧️ lluvia</span>}
-                  {race.safetyCar && <span className="text-[9px] text-yellow-500">🚗 SC</span>}
+                  <span className="text-xs">{race.emoji}</span>
+                  <span className="text-sm font-bold text-ink truncate">{race.circuit}</span>
+                </div>
+                <div className="text-[10px] text-ink-md">
+                  {race.safetyCar ? '🚗 Safety Car · ' : ''}
+                  {race.isWet ? 'Lluvia' : race.type}
                 </div>
               </div>
             </div>
-            <div className="flex items-center gap-3 shrink-0">
+
+            <div className="flex items-center gap-4 shrink-0">
               {race.dnf ? (
-                <span className="text-xs font-bold text-red-500">DNF</span>
+                <span className="font-display font-black text-lg text-rust">DNF</span>
               ) : (
                 <>
-                  <span className={`text-sm font-black ${POS_COLORS[race.playerPos] || 'text-[#f0f0f0]'}`}>
+                  <span className={`font-display font-black text-xl ${
+                    race.playerPos === 1 ? 'text-[#c9a030]' :
+                    race.playerPos <= 3  ? 'text-ink' : 'text-ink-md'
+                  }`}>
                     P{race.playerPos}
                   </span>
-                  <span className="text-xs font-bold text-[#e10600] w-8 text-right">
+                  <span className="font-bold text-sm text-rust w-10 text-right">
                     {race.racePoints > 0 ? `+${race.racePoints}` : '—'}
                   </span>
-                  <span className="text-xs text-[#555577] w-10 text-right">
-                    {race.playerPoints}pts
+                  <span className="text-xs text-ink-md w-14 text-right">
+                    {race.playerPoints} pts
                   </span>
                 </>
               )}
@@ -86,8 +77,9 @@ export default function RaceTicker({ races, onComplete }) {
           </motion.div>
         ))}
       </AnimatePresence>
+
       {!done && (
-        <div className="text-center py-2 text-[#555577] text-xs animate-pulse">
+        <div className="text-center py-3 text-xs text-ink-md font-bold uppercase tracking-widest animate-pulse">
           Simulando temporada...
         </div>
       )}

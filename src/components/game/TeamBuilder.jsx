@@ -1,57 +1,111 @@
 import { useGameStore } from '../../stores/gameStore'
-import { SLOT_LABELS, calculateTeamRating, getBenchmark } from '../../utils/ratingEngine'
-import SlotCard from './SlotCard'
+import { SLOT_LABELS, calculateTeamRating, getElementValue } from '../../utils/ratingEngine'
 
 const SLOT_KEYS = Object.keys(SLOT_LABELS)
 
-export default function TeamBuilder({ activeSlot }) {
-  const team = useGameStore(s => s.team)
+// Driver vs Car split for attack/defense equivalent
+const DRIVER_KEYS  = ['driver1', 'driver2']
+const CAR_KEYS     = ['chassis', 'engine', 'aero', 'tires', 'reliability']
+const MGMT_KEYS    = ['team_principal', 'technical_director', 'strategist', 'budget']
+
+function avg(team, keys) {
+  const vals = keys.map(k => {
+    const el = team[k]
+    if (!el) return null
+    return getElementValue(el, k)
+  }).filter(v => v !== null)
+  if (!vals.length) return null
+  return Math.round(vals.reduce((a, b) => a + b, 0) / vals.length)
+}
+
+export default function TeamBuilder() {
+  const team        = useGameStore(s => s.team)
   const filledCount = useGameStore(s => s.getFilledCount())
-  const rating = calculateTeamRating(team)
-  const benchmark = getBenchmark(rating)
+  const rating      = calculateTeamRating(team)
+
+  const driverAvg = avg(team, DRIVER_KEYS)
+  const carAvg    = avg(team, CAR_KEYS)
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col h-full">
       {/* Header */}
-      <div className="flex items-center justify-between">
-        <h2 className="text-sm font-bold uppercase tracking-widest text-[#8888aa]">
-          Tu Equipo
-        </h2>
-        <span className="text-xs text-[#555577]">{filledCount}/11</span>
+      <div className="flex items-baseline justify-between mb-3">
+        <span className="text-xs font-bold uppercase tracking-widest text-ink-md">
+          Box Score · {filledCount}/11
+        </span>
+        {filledCount === 11 && (
+          <span className="font-display font-black text-3xl text-ink">{rating.toFixed(0)}</span>
+        )}
       </div>
 
       {/* Progress bar */}
-      <div className="h-1 bg-[#1a1a2a] rounded-full overflow-hidden">
+      <div className="h-0.5 bg-borderc mb-3">
         <div
-          className="h-full bg-[#e10600] rounded-full transition-all duration-500"
+          className="h-full bg-ink transition-all duration-500"
           style={{ width: `${(filledCount / 11) * 100}%` }}
         />
       </div>
 
-      {/* Slots */}
-      <div className="grid grid-cols-1 gap-1.5">
-        {SLOT_KEYS.map(key => (
-          <SlotCard
-            key={key}
-            slotKey={key}
-            element={team[key]}
-            isActive={activeSlot === key}
-          />
-        ))}
-      </div>
-
-      {/* Rating */}
-      {filledCount > 0 && (
-        <div className="mt-1 rounded-lg bg-[#1a1a28] border border-[#2a2a3a] p-3">
-          <div className="flex items-center justify-between mb-1">
-            <span className="text-xs text-[#8888aa] uppercase tracking-wider">Rating</span>
-            <span className="text-xl font-black text-[#e10600]">{rating.toFixed(1)}</span>
-          </div>
-          <div className="text-[10px] text-[#555577] truncate">
-            ≈ {benchmark.name}
-          </div>
+      {/* Attack / Defense labels */}
+      {(driverAvg || carAvg) && (
+        <div className="flex gap-4 mb-3 text-xs font-bold uppercase tracking-wide">
+          {driverAvg && (
+            <span>
+              <span className="text-rust">{driverAvg}</span>
+              <span className="text-ink-md ml-1">Pilotos</span>
+            </span>
+          )}
+          {carAvg && (
+            <span>
+              <span className="text-ink font-black">{carAvg}</span>
+              <span className="text-ink-md ml-1">Coche</span>
+            </span>
+          )}
         </div>
       )}
+
+      <hr className="divider mb-3" />
+
+      {/* Slot rows */}
+      <div className="flex-1 overflow-y-auto space-y-0 divide-y divide-borderc">
+        {SLOT_KEYS.map(key => {
+          const el      = team[key]
+          const isEmpty = el === null || el === undefined
+          const slotInfo = SLOT_LABELS[key]
+          const rating   = isEmpty ? null : getElementValue(el, key)
+          const name     = isEmpty
+            ? null
+            : typeof el === 'number'
+              ? `${el}/100`
+              : el?.name
+
+          return (
+            <div key={key} className="flex items-center justify-between py-2">
+              <div className="flex items-center gap-2 min-w-0">
+                <span className="text-[10px] font-bold text-ink-lt w-10 uppercase shrink-0">
+                  {key === 'driver1'            ? 'DRV 1'
+                   : key === 'driver2'          ? 'DRV 2'
+                   : key === 'team_principal'   ? 'TP'
+                   : key === 'technical_director' ? 'TD'
+                   : key === 'chassis'          ? 'CAR'
+                   : key === 'engine'           ? 'ENG'
+                   : key === 'strategist'       ? 'STRAT'
+                   : key === 'tires'            ? 'TYRES'
+                   : key === 'aero'             ? 'AERO'
+                   : key === 'budget'           ? 'BDGT'
+                   : 'REL'}
+                </span>
+                <span className={`text-xs truncate ${isEmpty ? 'text-ink-lt' : 'text-ink font-semibold'}`}>
+                  {isEmpty ? '—' : name}
+                </span>
+              </div>
+              {!isEmpty && (
+                <span className="text-xs font-black text-rust shrink-0 ml-2">{rating}</span>
+              )}
+            </div>
+          )
+        })}
+      </div>
     </div>
   )
 }

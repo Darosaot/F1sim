@@ -4,19 +4,22 @@ export default {
   theme: {
     extend: {
       colors: {
-        f1red: '#e10600',
-        f1dark: '#0a0a0f',
-        f1surface: '#12121a',
-        f1border: '#2a2a3a',
-        f1text: '#f0f0f0',
-        f1muted: '#8888aa',
+        sand:        '#ede8dc',
+        'sand-lt':   '#f5f1e8',
+        ink:         '#1a1a1a',
+        'ink-md':    '#888880',
+        'ink-lt':    '#c8c4bc',
+        rust:        '#e05535',
+        gold:        '#c9a030',
+        success:     '#2d8c42',
+        loss:        '#e05535',
+        borderc:     '#d0c8bc',
+        garage:      '#1c1c1c',
+        'garage-lt': '#2a2a2a',
       },
       fontFamily: {
-        racing: ['Inter', 'system-ui', 'sans-serif'],
-      },
-      animation: {
-        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'spin-slow': 'spin 3s linear infinite',
+        display: ['"Barlow Condensed"', 'system-ui', 'sans-serif'],
+        body:    ['"Barlow"', 'system-ui', 'sans-serif'],
       },
     },
   },
