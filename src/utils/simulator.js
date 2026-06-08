@@ -40,27 +40,22 @@ function calculateDriverRacePerf(driverAttrs, chassisAttrs, engineAttrs, circuit
 }
 
 function calculateDriverQualyPerf(driverAttrs, chassisAttrs, engineAttrs, circuit) {
-  const c = circuit.modifiers
   const d = driverAttrs
   const ch = chassisAttrs
   const en = engineAttrs
 
-  // Scale to match rivals' rating range (~79-130)
-  const base = d.qualifying * c.qualifying_weight * 0.5
-    + d.pace * 0.2
-    + ch.downforce * 0.15
-    + en.power * 0.15
-
-  return base * rng(0.90, 1.10)
+  // Fixed weights — no qualifying_weight circuit modifier (it only hurt player, not rivals)
+  const base = d.qualifying * 0.52 + d.pace * 0.18 + ch.downforce * 0.15 + en.power * 0.15
+  return base * rng(0.92, 1.08)
 }
 
 function gridBonus(gridPos, overtakingDifficulty) {
-  if (gridPos === 1)  return 10
-  if (gridPos <= 3)   return 5
+  if (gridPos === 1)  return 12
+  if (gridPos <= 3)   return 6
   if (gridPos <= 6)   return 1
-  if (gridPos <= 10)  return -3 * overtakingDifficulty
-  if (gridPos <= 15)  return -6 * overtakingDifficulty
-  return -9 * overtakingDifficulty
+  if (gridPos <= 10)  return -6 * overtakingDifficulty
+  if (gridPos <= 15)  return -12 * overtakingDifficulty
+  return -18 * overtakingDifficulty
 }
 
 function isDNF(reliabilityAttr, chassisReliability) {
@@ -94,12 +89,12 @@ export function simulateSeason(team) {
   }
   const effEn = { ...enAttrs }
 
-  // Strategy bonus (affects both drivers equally)
-  const stratBonus = (stAttrs.race_management * 0.4 + stAttrs.pit_timing * 0.3 + stAttrs.undercut_instinct * 0.3) / 100 * 8
-  const tdBonus    = tdAttrs.design_genius / 100 * 6
-  const tireBonus  = (tiAttrs.peak_grip * 0.4 + tiAttrs.thermal_window * 0.3 + tiAttrs.durability * 0.3) / 100 * 6
-  const budgetBonus= budgetVal / 100 * 4
-  const relBonus   = relVal / 100 * 4
+  // Strategy bonus — reduced so rivals stay competitive
+  const stratBonus = (stAttrs.race_management * 0.4 + stAttrs.pit_timing * 0.3 + stAttrs.undercut_instinct * 0.3) / 100 * 3
+  const tdBonus    = tdAttrs.design_genius / 100 * 2
+  const tireBonus  = (tiAttrs.peak_grip * 0.4 + tiAttrs.thermal_window * 0.3 + tiAttrs.durability * 0.3) / 100 * 2
+  const budgetBonus= budgetVal / 100 * 1.5
+  const relBonus   = relVal / 100 * 1.5
   const teamBonus  = stratBonus + tdBonus + tireBonus + budgetBonus + relBonus
 
   // Rivals: each team has 2 drivers (D1 slightly stronger than D2)
@@ -131,8 +126,8 @@ export function simulateSeason(team) {
     const d2QualyBase = calculateDriverQualyPerf(d2Attrs, effCh, effEn, circuit)
 
     const rivalQualyScores = rivals.flatMap(r => [
-      { name: r.d1, team: r.name, color: r.color, score: r.d1Rating * rng(0.90, 1.10), isPlayer: false },
-      { name: r.d2, team: r.name, color: r.color, score: r.d2Rating * rng(0.90, 1.10), isPlayer: false },
+      { name: r.d1, team: r.name, color: r.color, score: r.d1Rating * 0.90 * rng(0.92, 1.08), isPlayer: false },
+      { name: r.d2, team: r.name, color: r.color, score: r.d2Rating * 0.90 * rng(0.92, 1.08), isPlayer: false },
     ])
 
     const allQualyEntries = [
@@ -301,11 +296,15 @@ export function simulateSeason(team) {
 }
 
 export function getVerdict(d1Pos, d2Pos, constructorPos) {
-  if (d1Pos === 1) return '🏆 ¡CAMPEÓN DE PILOTOS! Dominio absoluto.'
-  if (constructorPos === 1 && d1Pos <= 3) return '🏆 ¡CAMPEONES DE CONSTRUCTORES! La mejor escudería.'
-  if (constructorPos === 1) return '🏆 ¡CAMPEONES DE CONSTRUCTORES! Victoria colectiva.'
-  if (d1Pos <= 3 && constructorPos <= 3) return '🥇 Podio en ambos campeonatos. Temporada brillante.'
-  if (d1Pos <= 5) return `🥈 P${d1Pos} en el campeonato. Muy cerca de lo más alto.`
+  const bestDriver = Math.min(d1Pos, d2Pos)
+  const bothOnPodium = d1Pos <= 3 && d2Pos <= 3
+  if (bestDriver === 1 && constructorPos === 1) return '🏆 ¡DOBLETE HISTÓRICO! Campeones de pilotos y constructores.'
+  if (bestDriver === 1) return '🏆 ¡CAMPEÓN DE PILOTOS! Dominio absoluto en pista.'
+  if (constructorPos === 1 && bothOnPodium) return '🏆 ¡CAMPEONES DE CONSTRUCTORES! Los dos pilotos en el podio.'
+  if (constructorPos === 1) return '🏆 ¡CAMPEONES DE CONSTRUCTORES! El mejor equipo de la parrilla.'
+  if (bestDriver <= 3 && constructorPos <= 3) return '🥇 Podio en ambos campeonatos. Temporada brillante.'
+  if (bestDriver <= 3) return `🥈 P${bestDriver} en el campeonato de pilotos. Podio en parrilla.`
   if (constructorPos <= 3) return `🥉 P${constructorPos} constructores. Buen trabajo de equipo.`
-  return `P${d1Pos} pilotos · P${constructorPos} constructores. Hay margen de mejora.`
+  if (bestDriver <= 5) return `P${bestDriver} pilotos · P${constructorPos} constructores. Cerca de lo más alto.`
+  return `P${bestDriver} pilotos · P${constructorPos} constructores. Hay margen de mejora.`
 }

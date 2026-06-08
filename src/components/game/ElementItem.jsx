@@ -58,9 +58,7 @@ function getTopAttrs(element, slotKey) {
   if (!element || typeof element === 'number') return []
   const attrs = element.attributes
   if (!attrs) return []
-  return Object.entries(attrs)
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 3)
+  return Object.entries(attrs).sort((a, b) => b[1] - a[1])
 }
 
 export default function ElementItem({ slotKey, element, showStats }) {
