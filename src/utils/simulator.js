@@ -59,10 +59,11 @@ function isDNF(team) {
 export function simulateSeason(team) {
   const seasonCircuits = [...circuits].sort(() => Math.random() - 0.5).slice(0, 22)
 
-  // Rival rating range: 62–98, spread so competition feels real
+  // Rivals rated in the same scale as calculated player performance (~60-130)
+  // Spread from midfield (~80) to frontrunners (~115) to create realistic competition
   const rivals = RIVAL_TEAMS.map((r, i) => ({
     ...r,
-    rating: rng(62 + i * 1.5, 92 + i * 0.5),
+    rating: rng(78 + i * 2.5, 108 + i * 1.5),
     points: 0,
     wins: 0,
     podiums: 0,
@@ -102,7 +103,7 @@ export function simulateSeason(team) {
 
     const rivalScores = rivals.map(r => ({
       ...r,
-      raceScore: r.rating * rng(0.80, 1.20),
+      raceScore: r.rating * rng(0.82, 1.18),
     }))
 
     const allEntries = [

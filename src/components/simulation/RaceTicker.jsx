@@ -1,26 +1,24 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-const STAGE_LABELS = {
-  1: 'GRUPOS', 2: 'GRUPOS', 3: 'GRUPOS', 4: 'GRUPOS',
-  5: 'GRUPOS', 6: 'GRUPOS', 7: 'GRUPOS', 8: 'GRUPOS',
-  9: 'RONDA 16', 10: 'RONDA 16', 11: 'CUARTOS', 12: 'CUARTOS',
-  13: 'SEMIS', 14: 'SEMIS', 15: 'FINAL', 16: 'EXTRA',
+const CIRCUIT_TYPE_ES = {
+  street:         'Urbano',
+  power:          'Potencia',
+  balanced:       'Equilibrado',
+  high_speed:     'Alta velocidad',
+  high_downforce: 'Alta carga',
 }
 
-export default function RaceTicker({ races, onComplete }) {
+export default function RaceTicker({ races }) {
   const [visible, setVisible] = useState([])
-  const [done,    setDone]    = useState(false)
-  const onCompleteRef = useRef(onComplete)
-  useEffect(() => { onCompleteRef.current = onComplete }, [onComplete])
 
   useEffect(() => {
+    setVisible([])
+    if (!races?.length) return
     let i = 0
     const iv = setInterval(() => {
       if (i >= races.length) {
         clearInterval(iv)
-        setDone(true)
-        setTimeout(() => onCompleteRef.current(), 600)
         return
       }
       setVisible(prev => [...prev, races[i]])
@@ -29,10 +27,12 @@ export default function RaceTicker({ races, onComplete }) {
     return () => clearInterval(iv)
   }, [races])
 
+  const isRunning = visible.length < (races?.length ?? 0)
+
   return (
     <div className="space-y-px">
       <AnimatePresence initial={false}>
-        {visible.map((race, idx) => (
+        {visible.filter(Boolean).map((race, idx) => (
           <motion.div
             key={idx}
             initial={{ opacity: 0, x: -6 }}
@@ -42,7 +42,7 @@ export default function RaceTicker({ races, onComplete }) {
           >
             <div className="flex items-center gap-3 min-w-0">
               <span className="text-[10px] font-bold uppercase tracking-widest text-ink-md w-14 shrink-0">
-                {race.isWet ? '🌧️ ' : ''}CARRERA
+                {race.isWet ? '🌧 ' : ''}CARRERA
               </span>
               <div className="min-w-0">
                 <div className="flex items-center gap-1.5">
@@ -51,14 +51,14 @@ export default function RaceTicker({ races, onComplete }) {
                 </div>
                 <div className="text-[10px] text-ink-md">
                   {race.safetyCar ? '🚗 Safety Car · ' : ''}
-                  {race.isWet ? 'Lluvia' : race.type}
+                  {race.isWet ? 'Lluvia' : (CIRCUIT_TYPE_ES[race.type] || race.type)}
                 </div>
               </div>
             </div>
 
             <div className="flex items-center gap-4 shrink-0">
               {race.dnf ? (
-                <span className="font-display font-black text-lg text-rust">DNF</span>
+                <span className="font-display font-black text-lg text-rust">ABANDONO</span>
               ) : (
                 <>
                   <span className={`font-display font-black text-xl ${
@@ -80,7 +80,7 @@ export default function RaceTicker({ races, onComplete }) {
         ))}
       </AnimatePresence>
 
-      {!done && (
+      {isRunning && (
         <div className="text-center py-3 text-xs text-ink-md font-bold uppercase tracking-widest animate-pulse">
           Simulando temporada...
         </div>

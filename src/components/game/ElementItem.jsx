@@ -2,6 +2,44 @@ import { motion } from 'framer-motion'
 import { useGameStore } from '../../stores/gameStore'
 import { SLOT_LABELS, getElementValue } from '../../utils/ratingEngine'
 
+const ATTR_ES = {
+  pace:                'Ritmo',
+  racecraft:           'Carrera',
+  consistency:         'Const.',
+  wet_performance:     'Lluvia',
+  qualifying:          'Clasif.',
+  experience:          'Experi.',
+  tire_management:     'Neumát.',
+  downforce:           'Carga',
+  mechanical_grip:     'Grip',
+  drag_efficiency:     'Drag',
+  reliability:         'Fiab.',
+  weight_distribution: 'Peso',
+  power:               'Potencia',
+  driveability:        'Control',
+  fuel_efficiency:     'Comb.',
+  deployment_mode:     'Desp.',
+  team_management:     'Gestión',
+  driver_management:   'Pilotos',
+  political_skill:     'Política',
+  budget_generation:   'Presup.',
+  crisis_management:   'Crisis',
+  design_genius:       'Diseño',
+  innovation:          'Innova.',
+  development_speed:   'Desa.',
+  detail_obsession:    'Detalle',
+  aerodynamic_vision:  'Aero.',
+  race_management:     'Táctica',
+  pit_timing:          'Parada',
+  undercut_instinct:   'Undercut',
+  safety_car_read:     'SC',
+  pressure_decisions:  'Presión',
+  peak_grip:           'Grip',
+  durability:          'Durab.',
+  thermal_window:      'Térm.',
+  compound_versatility:'Versát.',
+}
+
 const SLOT_SHORT = {
   driver1:            'DRV 1',
   driver2:            'DRV 2',
@@ -28,7 +66,11 @@ function getTopAttrs(element, slotKey) {
 export default function ElementItem({ slotKey, element, showStats }) {
   const pickElement   = useGameStore(s => s.pickElement)
   const team          = useGameStore(s => s.team)
-  const alreadyFilled = team[slotKey] !== null && team[slotKey] !== undefined
+  // Drivers share a pool of 2 slots — only disabled when both are taken
+  const alreadyFilled = (slotKey === 'driver1' || slotKey === 'driver2')
+    ? (team.driver1 !== null && team.driver1 !== undefined &&
+       team.driver2 !== null && team.driver2 !== undefined)
+    : (team[slotKey] !== null && team[slotKey] !== undefined)
 
   const rating      = getElementValue(element, slotKey)
   const isNumeric   = typeof element === 'number'
@@ -75,7 +117,7 @@ export default function ElementItem({ slotKey, element, showStats }) {
                 {topAttrs.map(([key, val]) => (
                   <div key={key} className="flex items-center gap-1">
                     <span className="text-[9px] text-ink-lt uppercase tracking-wide shrink-0">
-                      {key.replace(/_/g, ' ').split(' ').map(w => w.slice(0, 4)).join(' ')}
+                      {ATTR_ES[key] || key.slice(0, 5)}
                     </span>
                     <div className="w-10 h-[3px] bg-borderc rounded-full overflow-hidden">
                       <div className="h-full bg-rust rounded-full" style={{ width: `${val}%` }} />

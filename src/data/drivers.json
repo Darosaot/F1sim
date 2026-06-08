@@ -370,5 +370,101 @@
     "team": "Ferrari", "year": 2008, "era": "v8",
     "attributes": { "pace": 89, "racecraft": 87, "consistency": 85, "wet_performance": 80, "qualifying": 88, "experience": 85, "tire_management": 84 },
     "titles": 0, "bio": "Perdió el título en la última curva de la última carrera."
+  },
+  {
+    "id": "raikkonen_2003", "name": "Kimi Räikkönen", "nationality": "FIN",
+    "team": "McLaren", "year": 2003, "era": "v10_v12",
+    "attributes": { "pace": 95, "racecraft": 90, "consistency": 88, "wet_performance": 88, "qualifying": 92, "experience": 80, "tire_management": 85 },
+    "titles": 1, "bio": "El Iceman. Ritmo puro y glacial."
+  },
+  {
+    "id": "hamilton_2015", "name": "Lewis Hamilton", "nationality": "GBR",
+    "team": "Mercedes", "year": 2015, "era": "hybrid",
+    "attributes": { "pace": 96, "racecraft": 92, "consistency": 94, "wet_performance": 92, "qualifying": 97, "experience": 91, "tire_management": 90 },
+    "titles": 6, "bio": "Dominación absoluta en la era híbrida."
+  },
+  {
+    "id": "vettel_2017", "name": "Sebastian Vettel", "nationality": "DEU",
+    "team": "Ferrari", "year": 2017, "era": "hybrid",
+    "attributes": { "pace": 92, "racecraft": 88, "consistency": 90, "wet_performance": 85, "qualifying": 91, "experience": 89, "tire_management": 88 },
+    "titles": 4, "bio": "Lideró el mundial hasta el final. Ferrari vs Mercedes al límite."
+  },
+  {
+    "id": "vettel_2018", "name": "Sebastian Vettel", "nationality": "DEU",
+    "team": "Ferrari", "year": 2018, "era": "hybrid",
+    "attributes": { "pace": 91, "racecraft": 87, "consistency": 88, "wet_performance": 84, "qualifying": 90, "experience": 91, "tire_management": 87 },
+    "titles": 4, "bio": "Temporada de altibajos. Errores cruciales en Alemania y Monza."
+  },
+  {
+    "id": "leclerc_2019", "name": "Charles Leclerc", "nationality": "MCO",
+    "team": "Ferrari", "year": 2019, "era": "hybrid",
+    "attributes": { "pace": 95, "racecraft": 88, "consistency": 85, "wet_performance": 84, "qualifying": 96, "experience": 74, "tire_management": 84 },
+    "titles": 0, "bio": "Temporada de eclosión. Victorias en Spa y Monza con clase magistral."
+  },
+  {
+    "id": "alonso_2023", "name": "Fernando Alonso", "nationality": "ESP",
+    "team": "Aston Martin", "year": 2023, "era": "current",
+    "attributes": { "pace": 91, "racecraft": 95, "consistency": 92, "wet_performance": 92, "qualifying": 90, "experience": 98, "tire_management": 93 },
+    "titles": 2, "bio": "Resurgimiento épico con Aston Martin. El maestro no envejece."
+  },
+  {
+    "id": "verstappen_2019", "name": "Max Verstappen", "nationality": "NLD",
+    "team": "Red Bull", "year": 2019, "era": "hybrid",
+    "attributes": { "pace": 94, "racecraft": 93, "consistency": 87, "wet_performance": 90, "qualifying": 90, "experience": 80, "tire_management": 88 },
+    "titles": 4, "bio": "Verstappen emergiendo. 3 victorias y peleas con los grandes."
+  },
+  {
+    "id": "hamilton_2012", "name": "Lewis Hamilton", "nationality": "GBR",
+    "team": "McLaren", "year": 2012, "era": "v8",
+    "attributes": { "pace": 94, "racecraft": 91, "consistency": 90, "wet_performance": 91, "qualifying": 95, "experience": 85, "tire_management": 89 },
+    "titles": 6, "bio": "Último año en McLaren. Cuatro victorias pero el título se escapó."
+  },
+  {
+    "id": "hamilton_2017", "name": "Lewis Hamilton", "nationality": "GBR",
+    "team": "Mercedes", "year": 2017, "era": "hybrid",
+    "attributes": { "pace": 96, "racecraft": 93, "consistency": 93, "wet_performance": 93, "qualifying": 97, "experience": 94, "tire_management": 91 },
+    "titles": 6, "bio": "Quinto título. Duelo épico con Vettel hasta el final de la temporada."
+  },
+  {
+    "id": "ickx_1970", "name": "Jacky Ickx", "nationality": "BEL",
+    "team": "Ferrari", "year": 1970, "era": "pre_turbo",
+    "attributes": { "pace": 91, "racecraft": 90, "consistency": 82, "wet_performance": 94, "qualifying": 89, "experience": 78, "tire_management": 84 },
+    "titles": 0, "bio": "El maestro de la lluvia. Segundo en el mundial 1970 con Ferrari."
+  },
+  {
+    "id": "regazzoni_1970", "name": "Clay Regazzoni", "nationality": "CHE",
+    "team": "Ferrari", "year": 1970, "era": "pre_turbo",
+    "attributes": { "pace": 87, "racecraft": 86, "consistency": 83, "wet_performance": 82, "qualifying": 85, "experience": 70, "tire_management": 81 },
+    "titles": 0, "bio": "Debut espectacular en 1970. Ganó en Monza en su primera temporada."
+  },
+  {
+    "id": "hulme_1974", "name": "Denny Hulme", "nationality": "NZL",
+    "team": "McLaren", "year": 1974, "era": "pre_turbo",
+    "attributes": { "pace": 87, "racecraft": 87, "consistency": 86, "wet_performance": 81, "qualifying": 84, "experience": 92, "tire_management": 85 },
+    "titles": 1, "bio": "El oso. Campeón 1967, sólido compañero de Fittipaldi en McLaren."
+  },
+  {
+    "id": "rindt_1968", "name": "Jochen Rindt", "nationality": "AUT",
+    "team": "Lotus", "year": 1968, "era": "pre_turbo",
+    "attributes": { "pace": 93, "racecraft": 91, "consistency": 79, "wet_performance": 88, "qualifying": 94, "experience": 72, "tire_management": 77 },
+    "titles": 1, "bio": "El único campeón póstumo. Velocidad sin concesiones."
+  },
+  {
+    "id": "r_schumacher_1998", "name": "Ralf Schumacher", "nationality": "DEU",
+    "team": "Jordan", "year": 1998, "era": "v10_v12",
+    "attributes": { "pace": 85, "racecraft": 82, "consistency": 83, "wet_performance": 80, "qualifying": 84, "experience": 72, "tire_management": 82 },
+    "titles": 0, "bio": "El hermano Schumacher. Debut prometedor con Jordan en 1998."
+  },
+  {
+    "id": "irvine_1999", "name": "Eddie Irvine", "nationality": "GBR",
+    "team": "Ferrari", "year": 1999, "era": "v10_v12",
+    "attributes": { "pace": 86, "racecraft": 85, "consistency": 84, "wet_performance": 80, "qualifying": 84, "experience": 86, "tire_management": 83 },
+    "titles": 0, "bio": "Estuvo a punto de ser campeón del mundo en 1999 con Ferrari."
+  },
+  {
+    "id": "patrese_1991", "name": "Riccardo Patrese", "nationality": "ITA",
+    "team": "Williams", "year": 1991, "era": "v10_v12",
+    "attributes": { "pace": 88, "racecraft": 87, "consistency": 87, "wet_performance": 82, "qualifying": 87, "experience": 92, "tire_management": 86 },
+    "titles": 0, "bio": "El veterano italiano. Compañero fiel de Mansell en Williams."
   }
 ]

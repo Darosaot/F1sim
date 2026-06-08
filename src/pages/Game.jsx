@@ -34,7 +34,7 @@ export default function Game() {
     <div className="min-h-screen bg-sand font-body flex flex-col">
 
       {/* Header */}
-      <header className="bg-sand px-6 py-3 flex items-center justify-between">
+      <header className="bg-sand px-4 md:px-6 py-3 flex items-center justify-between">
         <button onClick={resetGame} className="flex items-center gap-3 hover:opacity-70 transition-opacity">
           <div>
             <div className="flex items-baseline gap-1 leading-none">
@@ -43,7 +43,7 @@ export default function Game() {
               <span className="font-display font-black text-2xl text-ink">P1</span>
             </div>
             <div className="text-[9px] font-bold uppercase tracking-widest text-ink-md">
-              BUILD · SIMULATE · P1
+              CONSTRUYE · SIMULA · P1
             </div>
           </div>
         </button>
@@ -56,19 +56,29 @@ export default function Game() {
           <span className={filledCount === 11 ? 'text-rust' : ''}>{filledCount}/11</span>
         </div>
 
-        <WildcardBar />
+        {/* Mobile progress pill */}
+        <div className="flex md:hidden items-center gap-2">
+          <span className={`text-[10px] font-bold uppercase tracking-wider ${filledCount === 11 ? 'text-rust' : 'text-ink-md'}`}>
+            {filledCount}/11
+          </span>
+          <WildcardBar />
+        </div>
+
+        <div className="hidden md:block">
+          <WildcardBar />
+        </div>
       </header>
 
       <hr className="divider" />
 
-      {/* 3-Column Layout — left is flex-1, center is narrow, right fixed */}
+      {/* Layout: single column on mobile, 3-column on desktop */}
       <div className="flex flex-1 min-h-0 overflow-hidden">
 
-        {/* LEFT — Config + Season card (takes most space) */}
-        <div className="flex-1 min-w-0 border-r border-borderc flex flex-col overflow-y-auto">
+        {/* LEFT — Config + Season card */}
+        <div className="flex-1 min-w-0 md:border-r md:border-borderc flex flex-col overflow-y-auto">
 
-          {/* Config strip */}
-          <div className="flex items-start gap-6 px-4 pt-4 pb-3 border-b border-borderc flex-wrap">
+          {/* Config strip — compact on mobile */}
+          <div className="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6 px-4 pt-4 pb-3 border-b border-borderc">
             <EraSelector />
             <ModeToggle />
           </div>
@@ -81,7 +91,7 @@ export default function Game() {
               ) : phase === 'complete' ? (
                 <motion.div key="complete" initial={{ opacity: 0 }} animate={{ opacity: 1 }}
                   className="border-2 border-ink p-4">
-                  <div className="text-[10px] font-bold uppercase tracking-widest text-ink-md mb-1">LINEUP COMPLETO</div>
+                  <div className="text-[10px] font-bold uppercase tracking-widest text-ink-md mb-1">EQUIPO COMPLETO</div>
                   <div className="font-display font-black text-3xl text-ink">11/11</div>
                 </motion.div>
               ) : (
@@ -94,11 +104,11 @@ export default function Game() {
               )}
             </AnimatePresence>
 
-            {/* Re-roll buttons — shown when a card is active and wildcards remain */}
+            {/* Re-roll buttons */}
             {currentCard && wildcards > 0 && (
               <div>
                 <p className="text-[10px] font-bold uppercase tracking-widest text-ink-md mb-2">
-                  NOT FEELING IT? RE-ROLL · {wildcards} LEFT
+                  ¿NO CONVENCE? NUEVO TIRO · {wildcards} RESTANTES
                 </p>
                 <div className="flex gap-2">
                   <button
@@ -137,13 +147,13 @@ export default function Game() {
           )}
         </div>
 
-        {/* CENTER — Team Garage visualization (narrow) */}
+        {/* CENTER — Team Garage (desktop only) */}
         <div className="w-64 shrink-0 bg-garage hidden lg:block">
           <TeamVisualization />
         </div>
 
-        {/* RIGHT — Box Score */}
-        <div className="w-56 shrink-0 border-l border-borderc flex flex-col p-4 overflow-y-auto">
+        {/* RIGHT — Box Score (tablet+ only) */}
+        <div className="w-56 shrink-0 border-l border-borderc hidden md:flex flex-col p-4 overflow-y-auto">
           <TeamBuilder />
         </div>
       </div>
