@@ -79,8 +79,8 @@ export default function Game() {
 
           {/* Config strip — compact on mobile */}
           <div className="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6 px-4 pt-4 pb-3 border-b border-borderc">
-            <EraSelector />
-            <ModeToggle />
+            <EraSelector locked={rollCount > 0} />
+            <ModeToggle  locked={rollCount > 0} />
           </div>
 
           {/* Season card / placeholder / complete */}
