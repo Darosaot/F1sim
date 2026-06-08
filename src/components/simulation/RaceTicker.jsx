@@ -11,17 +11,20 @@ const TYPE_ES = {
 
 function DriverResult({ qualyPos, racePos, points, dnf, name }) {
   const posColor = racePos === 1 ? 'text-[#c9a030]' : racePos <= 3 ? 'text-ink' : 'text-ink-md'
+  const isPole = qualyPos === 1
   return (
-    <div className="flex items-center gap-2 text-xs">
-      <span className="text-ink-lt w-20 truncate shrink-0">{name}</span>
-      <span className="text-[9px] text-ink-lt">C{qualyPos}</span>
-      <span className="text-ink-lt text-[9px]">→</span>
+    <div className="flex items-center gap-1.5 text-xs">
+      <span className="text-ink w-24 shrink-0 truncate font-medium">{name}</span>
+      <span className={`text-[8px] font-bold shrink-0 ${isPole ? 'text-[#c9a030]' : 'text-ink-lt'}`}>
+        {isPole ? 'POLE' : `C${qualyPos}`}
+      </span>
+      <span className="text-ink-lt text-[8px]">→</span>
       {dnf ? (
-        <span className="font-bold text-rust text-[10px]">ABANDONO</span>
+        <span className="font-bold text-rust text-[9px]">DNF</span>
       ) : (
         <>
           <span className={`font-display font-black text-sm ${posColor}`}>P{racePos}</span>
-          <span className="text-rust font-bold text-[10px] w-8 text-right">
+          <span className="text-rust font-bold text-[9px] w-7 text-right shrink-0">
             {points > 0 ? `+${points}` : '—'}
           </span>
         </>
@@ -56,23 +59,23 @@ export default function RaceTicker({ races, d1Name, d2Name }) {
             initial={{ opacity: 0, x: -6 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.15 }}
-            className="bg-white border border-borderc px-4 py-3"
+            className="bg-white border border-borderc px-3 py-2"
           >
             {/* Circuit header */}
-            <div className="flex items-center justify-between mb-2">
-              <div className="flex items-center gap-2">
-                <span className="text-sm">{race.emoji}</span>
-                <span className="text-sm font-bold text-ink">{race.circuit}</span>
-                {race.isWet && <span className="text-xs">🌧</span>}
-                {race.safetyCar && <span className="text-[9px] text-ink-md">SC</span>}
+            <div className="flex items-center justify-between mb-1.5">
+              <div className="flex items-center gap-1.5">
+                <span className="text-xs">{race.emoji}</span>
+                <span className="text-xs font-bold text-ink">{race.circuit}</span>
+                {race.isWet && <span className="text-[10px]">🌧</span>}
+                {race.safetyCar && <span className="text-[8px] text-ink-md font-bold">SC</span>}
               </div>
-              <span className="text-[9px] text-ink-lt uppercase tracking-wide">
+              <span className="text-[8px] text-ink-lt uppercase tracking-wide">
                 {TYPE_ES[race.type] || race.type}
               </span>
             </div>
 
             {/* Driver results */}
-            <div className="space-y-1 border-t border-borderc pt-2">
+            <div className="space-y-0.5">
               <DriverResult
                 qualyPos={race.d1QualyPos}
                 racePos={race.d1RacePos}
@@ -91,9 +94,9 @@ export default function RaceTicker({ races, d1Name, d2Name }) {
 
             {/* Race total */}
             <div className="flex justify-end mt-1 pt-1 border-t border-borderc">
-              <span className="text-[10px] text-ink-md">
-                Equipo: <span className="font-bold text-ink">{race.racePoints} pts</span>
-                <span className="ml-2 text-ink-lt">({race.playerPoints} total)</span>
+              <span className="text-[9px] text-ink-md">
+                <span className="font-bold text-ink">{race.racePoints} pts</span>
+                <span className="ml-1.5 text-ink-lt">({race.playerPoints} total)</span>
               </span>
             </div>
           </motion.div>

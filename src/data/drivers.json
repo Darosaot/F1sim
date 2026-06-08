@@ -466,5 +466,17 @@
     "team": "Williams", "year": 1991, "era": "v10_v12",
     "attributes": { "pace": 88, "racecraft": 87, "consistency": 87, "wet_performance": 82, "qualifying": 87, "experience": 92, "tire_management": 86 },
     "titles": 0, "bio": "El veterano italiano. Compañero fiel de Mansell en Williams."
+  },
+  {
+    "id": "perez_2022", "name": "Sergio Pérez", "nationality": "MEX",
+    "team": "Red Bull", "year": 2022, "era": "current",
+    "attributes": { "pace": 90, "racecraft": 92, "consistency": 88, "wet_performance": 88, "qualifying": 86, "experience": 90, "tire_management": 93 },
+    "titles": 0, "bio": "Subcampeón 2023. El mejor compañero de Verstappen. Maestro en preservar neumáticos."
+  },
+  {
+    "id": "norris_2023", "name": "Lando Norris", "nationality": "GBR",
+    "team": "McLaren", "year": 2023, "era": "current",
+    "attributes": { "pace": 95, "racecraft": 92, "consistency": 90, "wet_performance": 91, "qualifying": 94, "experience": 82, "tire_management": 88 },
+    "titles": 0, "bio": "La revelación de McLaren. Velocidad de élite y gran instinto de carrera."
   }
 ]

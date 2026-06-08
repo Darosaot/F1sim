@@ -30,7 +30,7 @@
     "era": "pre_turbo", "bio": "9 títulos de constructores. Coraje inmenso. Una vida dedicada a la carrera."
   },
   {
-    "id": "balestre_jean", "name": "Flavio Briatore", "nationality": "ITA",
+    "id": "briatore_flavio_benetton", "name": "Flavio Briatore", "nationality": "ITA",
     "teams": ["Benetton", "Renault"], "peak_years": [1994, 1995, 2005, 2006],
     "attributes": { "team_management": 87, "driver_management": 90, "political_skill": 92, "budget_generation": 90, "crisis_management": 80 },
     "era": "v10_v12", "bio": "Transformó a Schumacher y Alonso en campeones. Marketing genius."
@@ -106,5 +106,23 @@
     "teams": ["Ferrari"], "peak_years": [2008, 2012],
     "attributes": { "team_management": 84, "driver_management": 84, "political_skill": 86, "budget_generation": 86, "crisis_management": 80 },
     "era": "v8", "bio": "Estuvo cerca del título con Alonso y Massa. Hoy CEO de la F1."
+  },
+  {
+    "id": "arrivabene_maurizio", "name": "Maurizio Arrivabene", "nationality": "ITA",
+    "teams": ["Ferrari"], "peak_years": [2015, 2016, 2017, 2018],
+    "attributes": { "team_management": 82, "driver_management": 85, "political_skill": 86, "budget_generation": 88, "crisis_management": 78 },
+    "era": "hybrid", "bio": "TP de Ferrari de 2015 a 2018. Gestionó los mejores años de Vettel en la Scuderia."
+  },
+  {
+    "id": "binotto_mattia", "name": "Mattia Binotto", "nationality": "ITA",
+    "teams": ["Ferrari"], "peak_years": [2019, 2020, 2021, 2022],
+    "attributes": { "team_management": 80, "driver_management": 82, "political_skill": 78, "budget_generation": 84, "crisis_management": 72 },
+    "era": "hybrid", "bio": "TP de Ferrari 2019-2022. Ingeniero brillante que pasó a liderar la Scuderia."
+  },
+  {
+    "id": "krack_mike", "name": "Mike Krack", "nationality": "LUX",
+    "teams": ["Aston Martin"], "peak_years": [2022, 2023, 2024],
+    "attributes": { "team_management": 82, "driver_management": 84, "political_skill": 78, "budget_generation": 80, "crisis_management": 80 },
+    "era": "current", "bio": "Guió a Aston Martin a su mejor temporada histórica en 2023 con Alonso."
   }
 ]
