@@ -1,0 +1,374 @@
+[
+  {
+    "id": "fangio_1954", "name": "Juan Manuel Fangio", "nationality": "ARG",
+    "team": "Maserati / Mercedes", "year": 1954, "era": "early",
+    "attributes": { "pace": 97, "racecraft": 98, "consistency": 95, "wet_performance": 88, "qualifying": 96, "experience": 99, "tire_management": 92 },
+    "titles": 5, "bio": "5 títulos mundiales. El más grande de la era clásica."
+  },
+  {
+    "id": "fangio_1957", "name": "Juan Manuel Fangio", "nationality": "ARG",
+    "team": "Maserati", "year": 1957, "era": "early",
+    "attributes": { "pace": 96, "racecraft": 99, "consistency": 94, "wet_performance": 87, "qualifying": 95, "experience": 99, "tire_management": 93 },
+    "titles": 5, "bio": "Remontada legendaria en Nürburgring 1957."
+  },
+  {
+    "id": "moss_1961", "name": "Stirling Moss", "nationality": "GBR",
+    "team": "Lotus / Cooper", "year": 1961, "era": "early",
+    "attributes": { "pace": 95, "racecraft": 96, "consistency": 88, "wet_performance": 91, "qualifying": 97, "experience": 90, "tire_management": 85 },
+    "titles": 0, "bio": "El mejor piloto sin título. Brillante y deportivo."
+  },
+  {
+    "id": "clark_1963", "name": "Jim Clark", "nationality": "GBR",
+    "team": "Lotus", "year": 1963, "era": "early",
+    "attributes": { "pace": 97, "racecraft": 95, "consistency": 93, "wet_performance": 94, "qualifying": 98, "experience": 78, "tire_management": 90 },
+    "titles": 2, "bio": "Puro talento. Dominó 1963 con una elegancia sin igual."
+  },
+  {
+    "id": "clark_1965", "name": "Jim Clark", "nationality": "GBR",
+    "team": "Lotus", "year": 1965, "era": "early",
+    "attributes": { "pace": 98, "racecraft": 96, "consistency": 95, "wet_performance": 95, "qualifying": 99, "experience": 85, "tire_management": 91 },
+    "titles": 2, "bio": "Temporada perfecta: 6 victorias de 10 carreras."
+  },
+  {
+    "id": "hill_g_1962", "name": "Graham Hill", "nationality": "GBR",
+    "team": "BRM", "year": 1962, "era": "early",
+    "attributes": { "pace": 88, "racecraft": 90, "consistency": 89, "wet_performance": 82, "qualifying": 86, "experience": 85, "tire_management": 87 },
+    "titles": 2, "bio": "Mr. Monaco. Cinco victorias en el Principado."
+  },
+  {
+    "id": "brabham_1959", "name": "Jack Brabham", "nationality": "AUS",
+    "team": "Cooper", "year": 1959, "era": "early",
+    "attributes": { "pace": 88, "racecraft": 89, "consistency": 90, "wet_performance": 80, "qualifying": 85, "experience": 82, "tire_management": 88 },
+    "titles": 3, "bio": "Técnico y piloto. El único en ganar el mundial con su propio coche."
+  },
+  {
+    "id": "surtees_1964", "name": "John Surtees", "nationality": "GBR",
+    "team": "Ferrari", "year": 1964, "era": "early",
+    "attributes": { "pace": 91, "racecraft": 90, "consistency": 87, "wet_performance": 84, "qualifying": 89, "experience": 78, "tire_management": 86 },
+    "titles": 1, "bio": "Campeón en motos y coches. Único en la historia."
+  },
+  {
+    "id": "stewart_1969", "name": "Jackie Stewart", "nationality": "GBR",
+    "team": "Tyrrell-Matra", "year": 1969, "era": "pre_turbo",
+    "attributes": { "pace": 93, "racecraft": 94, "consistency": 95, "wet_performance": 90, "qualifying": 92, "experience": 88, "tire_management": 91 },
+    "titles": 3, "bio": "El Flying Scot. Preciso, científico y devastador."
+  },
+  {
+    "id": "stewart_1971", "name": "Jackie Stewart", "nationality": "GBR",
+    "team": "Tyrrell", "year": 1971, "era": "pre_turbo",
+    "attributes": { "pace": 94, "racecraft": 95, "consistency": 96, "wet_performance": 91, "qualifying": 93, "experience": 92, "tire_management": 92 },
+    "titles": 3, "bio": "Dominó 1971 con 6 victorias en 11 carreras."
+  },
+  {
+    "id": "fittipaldi_1972", "name": "Emerson Fittipaldi", "nationality": "BRA",
+    "team": "Lotus", "year": 1972, "era": "pre_turbo",
+    "attributes": { "pace": 90, "racecraft": 88, "consistency": 91, "wet_performance": 85, "qualifying": 89, "experience": 75, "tire_management": 87 },
+    "titles": 2, "bio": "Primer brasileño campeón del mundo. Controlado y eficaz."
+  },
+  {
+    "id": "lauda_1975", "name": "Niki Lauda", "nationality": "AUT",
+    "team": "Ferrari", "year": 1975, "era": "pre_turbo",
+    "attributes": { "pace": 93, "racecraft": 91, "consistency": 97, "wet_performance": 80, "qualifying": 91, "experience": 82, "tire_management": 95 },
+    "titles": 3, "bio": "El Computador. Precisión absoluta y setup maestro."
+  },
+  {
+    "id": "lauda_1984", "name": "Niki Lauda", "nationality": "AUT",
+    "team": "McLaren", "year": 1984, "era": "turbo",
+    "attributes": { "pace": 88, "racecraft": 90, "consistency": 95, "wet_performance": 76, "qualifying": 85, "experience": 99, "tire_management": 97 },
+    "titles": 3, "bio": "Campeón por medio punto. Experiencia sobre velocidad pura."
+  },
+  {
+    "id": "hunt_1976", "name": "James Hunt", "nationality": "GBR",
+    "team": "McLaren", "year": 1976, "era": "pre_turbo",
+    "attributes": { "pace": 92, "racecraft": 88, "consistency": 78, "wet_performance": 85, "qualifying": 94, "experience": 80, "tire_management": 75 },
+    "titles": 1, "bio": "El gentleman salvaje. Rápido y sin miedo."
+  },
+  {
+    "id": "andretti_1978", "name": "Mario Andretti", "nationality": "USA",
+    "team": "Lotus", "year": 1978, "era": "pre_turbo",
+    "attributes": { "pace": 93, "racecraft": 90, "consistency": 85, "wet_performance": 84, "qualifying": 93, "experience": 92, "tire_management": 85 },
+    "titles": 1, "bio": "El único americano moderno campeón del mundo."
+  },
+  {
+    "id": "villeneuve_g_1979", "name": "Gilles Villeneuve", "nationality": "CAN",
+    "team": "Ferrari", "year": 1979, "era": "pre_turbo",
+    "attributes": { "pace": 97, "racecraft": 94, "consistency": 72, "wet_performance": 92, "qualifying": 95, "experience": 70, "tire_management": 68 },
+    "titles": 0, "bio": "El más espectacular de todos. Velocidad sin límite."
+  },
+  {
+    "id": "scheckter_1979", "name": "Jody Scheckter", "nationality": "RSA",
+    "team": "Ferrari", "year": 1979, "era": "pre_turbo",
+    "attributes": { "pace": 89, "racecraft": 88, "consistency": 90, "wet_performance": 82, "qualifying": 87, "experience": 90, "tire_management": 89 },
+    "titles": 1, "bio": "Campeón con Ferrari 1979. Sólido y consistente."
+  },
+  {
+    "id": "jones_1980", "name": "Alan Jones", "nationality": "AUS",
+    "team": "Williams", "year": 1980, "era": "pre_turbo",
+    "attributes": { "pace": 89, "racecraft": 87, "consistency": 88, "wet_performance": 83, "qualifying": 88, "experience": 88, "tire_management": 86 },
+    "titles": 1, "bio": "El primer campeón Williams. Duro y directo."
+  },
+  {
+    "id": "piquet_1981", "name": "Nelson Piquet", "nationality": "BRA",
+    "team": "Brabham", "year": 1981, "era": "pre_turbo",
+    "attributes": { "pace": 91, "racecraft": 88, "consistency": 87, "wet_performance": 80, "qualifying": 92, "experience": 82, "tire_management": 88 },
+    "titles": 3, "bio": "Tres títulos mundiales. Setup genius y velocidad pura."
+  },
+  {
+    "id": "rosberg_k_1982", "name": "Keke Rosberg", "nationality": "FIN",
+    "team": "Williams", "year": 1982, "era": "pre_turbo",
+    "attributes": { "pace": 89, "racecraft": 88, "consistency": 82, "wet_performance": 85, "qualifying": 90, "experience": 85, "tire_management": 82 },
+    "titles": 1, "bio": "Campeón 1982 con una sola victoria. Carácter inmenso."
+  },
+  {
+    "id": "prost_1984", "name": "Alain Prost", "nationality": "FRA",
+    "team": "McLaren", "year": 1984, "era": "turbo",
+    "attributes": { "pace": 94, "racecraft": 96, "consistency": 97, "wet_performance": 76, "qualifying": 92, "experience": 85, "tire_management": 97 },
+    "titles": 4, "bio": "El Profesor. Inteligencia táctica sin igual en F1."
+  },
+  {
+    "id": "prost_1989", "name": "Alain Prost", "nationality": "FRA",
+    "team": "McLaren", "year": 1989, "era": "v10_v12",
+    "attributes": { "pace": 93, "racecraft": 97, "consistency": 96, "wet_performance": 77, "qualifying": 91, "experience": 95, "tire_management": 96 },
+    "titles": 4, "bio": "Campeón 1989. La guerra fría con Senna en su cima."
+  },
+  {
+    "id": "senna_1988", "name": "Ayrton Senna", "nationality": "BRA",
+    "team": "McLaren", "year": 1988, "era": "turbo",
+    "attributes": { "pace": 99, "racecraft": 97, "consistency": 88, "wet_performance": 99, "qualifying": 99, "experience": 82, "tire_management": 80 },
+    "titles": 3, "bio": "El más rápido de todos. 1988: 8 poles de 16. Intocable."
+  },
+  {
+    "id": "senna_1991", "name": "Ayrton Senna", "nationality": "BRA",
+    "team": "McLaren", "year": 1991, "era": "v10_v12",
+    "attributes": { "pace": 98, "racecraft": 96, "consistency": 91, "wet_performance": 99, "qualifying": 98, "experience": 92, "tire_management": 82 },
+    "titles": 3, "bio": "Campeón 1991. Empujó el McLaren-Honda más allá de sus límites."
+  },
+  {
+    "id": "mansell_1992", "name": "Nigel Mansell", "nationality": "GBR",
+    "team": "Williams", "year": 1992, "era": "v10_v12",
+    "attributes": { "pace": 94, "racecraft": 90, "consistency": 85, "wet_performance": 86, "qualifying": 96, "experience": 95, "tire_management": 82 },
+    "titles": 1, "bio": "Red 5. Dominio absoluto en 1992: 9 victorias, 14 poles."
+  },
+  {
+    "id": "hill_d_1994", "name": "Damon Hill", "nationality": "GBR",
+    "team": "Williams", "year": 1994, "era": "v10_v12",
+    "attributes": { "pace": 89, "racecraft": 87, "consistency": 88, "wet_performance": 83, "qualifying": 88, "experience": 82, "tire_management": 87 },
+    "titles": 1, "bio": "Subcampeón 1994, campeón 1996. Hijo de Graham."
+  },
+  {
+    "id": "hill_d_1996", "name": "Damon Hill", "nationality": "GBR",
+    "team": "Williams", "year": 1996, "era": "v10_v12",
+    "attributes": { "pace": 90, "racecraft": 89, "consistency": 90, "wet_performance": 84, "qualifying": 89, "experience": 90, "tire_management": 88 },
+    "titles": 1, "bio": "Campeón 1996 con Williams. Perfil de piloto completo."
+  },
+  {
+    "id": "schumacher_1994", "name": "Michael Schumacher", "nationality": "DEU",
+    "team": "Benetton", "year": 1994, "era": "v10_v12",
+    "attributes": { "pace": 95, "racecraft": 92, "consistency": 94, "wet_performance": 89, "qualifying": 94, "experience": 80, "tire_management": 93 },
+    "titles": 7, "bio": "Primer título con Benetton. Agresivo y sin concesiones."
+  },
+  {
+    "id": "schumacher_2002", "name": "Michael Schumacher", "nationality": "DEU",
+    "team": "Ferrari", "year": 2002, "era": "v10_v12",
+    "attributes": { "pace": 97, "racecraft": 95, "consistency": 98, "wet_performance": 90, "qualifying": 96, "experience": 97, "tire_management": 96 },
+    "titles": 7, "bio": "El año más dominante de la historia. 11 victorias."
+  },
+  {
+    "id": "schumacher_2004", "name": "Michael Schumacher", "nationality": "DEU",
+    "team": "Ferrari", "year": 2004, "era": "v10_v12",
+    "attributes": { "pace": 96, "racecraft": 94, "consistency": 97, "wet_performance": 89, "qualifying": 95, "experience": 99, "tire_management": 95 },
+    "titles": 7, "bio": "13 victorias en 2004. La era Schumacher-Ferrari en su cima."
+  },
+  {
+    "id": "hakkinen_1998", "name": "Mika Häkkinen", "nationality": "FIN",
+    "team": "McLaren", "year": 1998, "era": "v10_v12",
+    "attributes": { "pace": 95, "racecraft": 90, "consistency": 88, "wet_performance": 86, "qualifying": 95, "experience": 88, "tire_management": 87 },
+    "titles": 2, "bio": "The Flying Finn. Velocidad bruta e instinto de carrera."
+  },
+  {
+    "id": "hakkinen_1999", "name": "Mika Häkkinen", "nationality": "FIN",
+    "team": "McLaren", "year": 1999, "era": "v10_v12",
+    "attributes": { "pace": 94, "racecraft": 91, "consistency": 89, "wet_performance": 87, "qualifying": 94, "experience": 90, "tire_management": 88 },
+    "titles": 2, "bio": "Segundo campeonato consecutivo con McLaren-Mercedes."
+  },
+  {
+    "id": "villeneuve_j_1997", "name": "Jacques Villeneuve", "nationality": "CAN",
+    "team": "Williams", "year": 1997, "era": "v10_v12",
+    "attributes": { "pace": 91, "racecraft": 88, "consistency": 87, "wet_performance": 83, "qualifying": 91, "experience": 80, "tire_management": 85 },
+    "titles": 1, "bio": "Campeón 1997. Hijo del legendario Gilles."
+  },
+  {
+    "id": "barrichello_2002", "name": "Rubens Barrichello", "nationality": "BRA",
+    "team": "Ferrari", "year": 2002, "era": "v10_v12",
+    "attributes": { "pace": 88, "racecraft": 86, "consistency": 88, "wet_performance": 82, "qualifying": 87, "experience": 92, "tire_management": 88 },
+    "titles": 0, "bio": "El mejor número 2 de la historia. Leal y rápido."
+  },
+  {
+    "id": "alonso_2005", "name": "Fernando Alonso", "nationality": "ESP",
+    "team": "Renault", "year": 2005, "era": "v10_v12",
+    "attributes": { "pace": 95, "racecraft": 97, "consistency": 95, "wet_performance": 88, "qualifying": 94, "experience": 84, "tire_management": 94 },
+    "titles": 2, "bio": "El más completo de su generación. Campeón más joven en 2005."
+  },
+  {
+    "id": "alonso_2006", "name": "Fernando Alonso", "nationality": "ESP",
+    "team": "Renault", "year": 2006, "era": "v8",
+    "attributes": { "pace": 96, "racecraft": 97, "consistency": 95, "wet_performance": 89, "qualifying": 94, "experience": 87, "tire_management": 95 },
+    "titles": 2, "bio": "Segundo mundial consecutivo. Duelo épico con Schumacher."
+  },
+  {
+    "id": "alonso_2012", "name": "Fernando Alonso", "nationality": "ESP",
+    "team": "Ferrari", "year": 2012, "era": "v8",
+    "attributes": { "pace": 95, "racecraft": 98, "consistency": 96, "wet_performance": 90, "qualifying": 92, "experience": 95, "tire_management": 96 },
+    "titles": 2, "bio": "El año de los milagros. Estuvo a punto de ganar con un coche inferior."
+  },
+  {
+    "id": "raikkonen_2007", "name": "Kimi Räikkönen", "nationality": "FIN",
+    "team": "Ferrari", "year": 2007, "era": "v8",
+    "attributes": { "pace": 95, "racecraft": 89, "consistency": 85, "wet_performance": 88, "qualifying": 93, "experience": 90, "tire_management": 84 },
+    "titles": 1, "bio": "El Iceman. Campeón por un punto en la última carrera."
+  },
+  {
+    "id": "hamilton_2007", "name": "Lewis Hamilton", "nationality": "GBR",
+    "team": "McLaren", "year": 2007, "era": "v8",
+    "attributes": { "pace": 96, "racecraft": 90, "consistency": 85, "wet_performance": 91, "qualifying": 95, "experience": 62, "tire_management": 83 },
+    "titles": 7, "bio": "Debut alucinante. A punto del título en su primera temporada."
+  },
+  {
+    "id": "hamilton_2014", "name": "Lewis Hamilton", "nationality": "GBR",
+    "team": "Mercedes", "year": 2014, "era": "hybrid",
+    "attributes": { "pace": 97, "racecraft": 93, "consistency": 92, "wet_performance": 94, "qualifying": 97, "experience": 90, "tire_management": 91 },
+    "titles": 7, "bio": "Primer título de la era híbrida. Velocidad bruta asombrosa."
+  },
+  {
+    "id": "hamilton_2019", "name": "Lewis Hamilton", "nationality": "GBR",
+    "team": "Mercedes", "year": 2019, "era": "hybrid",
+    "attributes": { "pace": 96, "racecraft": 95, "consistency": 97, "wet_performance": 94, "qualifying": 96, "experience": 99, "tire_management": 93 },
+    "titles": 7, "bio": "Cuarto campeonato con Mercedes. El maestro en su madurez."
+  },
+  {
+    "id": "hamilton_2020", "name": "Lewis Hamilton", "nationality": "GBR",
+    "team": "Mercedes", "year": 2020, "era": "hybrid",
+    "attributes": { "pace": 97, "racecraft": 95, "consistency": 96, "wet_performance": 95, "qualifying": 97, "experience": 99, "tire_management": 94 },
+    "titles": 7, "bio": "7 títulos igualando a Schumacher. Récord de victorias y poles."
+  },
+  {
+    "id": "vettel_2011", "name": "Sebastian Vettel", "nationality": "DEU",
+    "team": "Red Bull", "year": 2011, "era": "v8",
+    "attributes": { "pace": 94, "racecraft": 92, "consistency": 95, "wet_performance": 84, "qualifying": 97, "experience": 85, "tire_management": 93 },
+    "titles": 4, "bio": "Dominó 2011 desde la primera carrera. 15 victorias."
+  },
+  {
+    "id": "vettel_2013", "name": "Sebastian Vettel", "nationality": "DEU",
+    "team": "Red Bull", "year": 2013, "era": "v8",
+    "attributes": { "pace": 95, "racecraft": 93, "consistency": 96, "wet_performance": 85, "qualifying": 98, "experience": 91, "tire_management": 94 },
+    "titles": 4, "bio": "Cuatro títulos consecutivos. 13 victorias en 19 carreras."
+  },
+  {
+    "id": "button_2009", "name": "Jenson Button", "nationality": "GBR",
+    "team": "Brawn GP", "year": 2009, "era": "v8",
+    "attributes": { "pace": 88, "racecraft": 90, "consistency": 92, "wet_performance": 89, "qualifying": 87, "experience": 90, "tire_management": 94 },
+    "titles": 1, "bio": "Campeón con Brawn GP. Rey del neumático y la consistencia."
+  },
+  {
+    "id": "webber_2010", "name": "Mark Webber", "nationality": "AUS",
+    "team": "Red Bull", "year": 2010, "era": "v8",
+    "attributes": { "pace": 91, "racecraft": 88, "consistency": 85, "wet_performance": 84, "qualifying": 92, "experience": 90, "tire_management": 86 },
+    "titles": 0, "bio": "El australiano de hierro. Estaba a punto del título en 2010."
+  },
+  {
+    "id": "rosberg_n_2016", "name": "Nico Rosberg", "nationality": "DEU",
+    "team": "Mercedes", "year": 2016, "era": "hybrid",
+    "attributes": { "pace": 90, "racecraft": 87, "consistency": 91, "wet_performance": 82, "qualifying": 91, "experience": 92, "tire_management": 90 },
+    "titles": 1, "bio": "Campeón 2016. Se retiró una semana después de ganar el título."
+  },
+  {
+    "id": "verstappen_2021", "name": "Max Verstappen", "nationality": "NLD",
+    "team": "Red Bull", "year": 2021, "era": "hybrid",
+    "attributes": { "pace": 97, "racecraft": 96, "consistency": 90, "wet_performance": 93, "qualifying": 96, "experience": 88, "tire_management": 89 },
+    "titles": 4, "bio": "Primer título en la última vuelta. La nueva era comienza."
+  },
+  {
+    "id": "verstappen_2022", "name": "Max Verstappen", "nationality": "NLD",
+    "team": "Red Bull", "year": 2022, "era": "current",
+    "attributes": { "pace": 98, "racecraft": 97, "consistency": 94, "wet_performance": 94, "qualifying": 97, "experience": 91, "tire_management": 93 },
+    "titles": 4, "bio": "Segundo título. 15 victorias. Dominancia absoluta."
+  },
+  {
+    "id": "verstappen_2023", "name": "Max Verstappen", "nationality": "NLD",
+    "team": "Red Bull", "year": 2023, "era": "current",
+    "attributes": { "pace": 99, "racecraft": 98, "consistency": 97, "wet_performance": 95, "qualifying": 98, "experience": 94, "tire_management": 94 },
+    "titles": 4, "bio": "La temporada más dominante de la era moderna. 19 victorias."
+  },
+  {
+    "id": "leclerc_2022", "name": "Charles Leclerc", "nationality": "MCO",
+    "team": "Ferrari", "year": 2022, "era": "current",
+    "attributes": { "pace": 96, "racecraft": 93, "consistency": 85, "wet_performance": 87, "qualifying": 97, "experience": 82, "tire_management": 84 },
+    "titles": 0, "bio": "Vuelta a vuelta uno de los más rápidos de la parrilla."
+  },
+  {
+    "id": "norris_2024", "name": "Lando Norris", "nationality": "GBR",
+    "team": "McLaren", "year": 2024, "era": "current",
+    "attributes": { "pace": 94, "racecraft": 92, "consistency": 90, "wet_performance": 88, "qualifying": 95, "experience": 83, "tire_management": 89 },
+    "titles": 0, "bio": "El más brillante de su generación junto a Verstappen."
+  },
+  {
+    "id": "sainz_2024", "name": "Carlos Sainz", "nationality": "ESP",
+    "team": "Ferrari", "year": 2024, "era": "current",
+    "attributes": { "pace": 91, "racecraft": 91, "consistency": 92, "wet_performance": 85, "qualifying": 90, "experience": 87, "tire_management": 92 },
+    "titles": 0, "bio": "El luchador. Consistente y duro en carrera."
+  },
+  {
+    "id": "russell_2022", "name": "George Russell", "nationality": "GBR",
+    "team": "Mercedes", "year": 2022, "era": "current",
+    "attributes": { "pace": 92, "racecraft": 90, "consistency": 91, "wet_performance": 87, "qualifying": 93, "experience": 78, "tire_management": 89 },
+    "titles": 0, "bio": "El futuro de Mercedes. Preciso y técnico como Prost."
+  },
+  {
+    "id": "coulthard_1998", "name": "David Coulthard", "nationality": "GBR",
+    "team": "McLaren", "year": 1998, "era": "v10_v12",
+    "attributes": { "pace": 89, "racecraft": 88, "consistency": 87, "wet_performance": 82, "qualifying": 90, "experience": 86, "tire_management": 87 },
+    "titles": 0, "bio": "Sólido compañero de Häkkinen. Ganó 13 carreras."
+  },
+  {
+    "id": "berger_1988", "name": "Gerhard Berger", "nationality": "AUT",
+    "team": "Ferrari", "year": 1988, "era": "turbo",
+    "attributes": { "pace": 90, "racecraft": 87, "consistency": 82, "wet_performance": 83, "qualifying": 89, "experience": 82, "tire_management": 80 },
+    "titles": 0, "bio": "El austriaco veloz. Compañero fiel de Senna en McLaren."
+  },
+  {
+    "id": "piquet_1987", "name": "Nelson Piquet", "nationality": "BRA",
+    "team": "Williams", "year": 1987, "era": "turbo",
+    "attributes": { "pace": 91, "racecraft": 89, "consistency": 88, "wet_performance": 80, "qualifying": 91, "experience": 94, "tire_management": 88 },
+    "titles": 3, "bio": "Tercer título con Williams-Honda. El gran rival de Mansell."
+  },
+  {
+    "id": "mansell_1986", "name": "Nigel Mansell", "nationality": "GBR",
+    "team": "Williams", "year": 1986, "era": "turbo",
+    "attributes": { "pace": 92, "racecraft": 89, "consistency": 80, "wet_performance": 84, "qualifying": 93, "experience": 88, "tire_management": 79 },
+    "titles": 1, "bio": "El pinchazo de Adelaide 1986. A centímetros del título."
+  },
+  {
+    "id": "alboreto_1985", "name": "Michele Alboreto", "nationality": "ITA",
+    "team": "Ferrari", "year": 1985, "era": "turbo",
+    "attributes": { "pace": 89, "racecraft": 87, "consistency": 85, "wet_performance": 79, "qualifying": 87, "experience": 82, "tire_management": 83 },
+    "titles": 0, "bio": "Casi campeón con Ferrari en 1985. El último italiano cerca del título."
+  },
+  {
+    "id": "piastri_2024", "name": "Oscar Piastri", "nationality": "AUS",
+    "team": "McLaren", "year": 2024, "era": "current",
+    "attributes": { "pace": 93, "racecraft": 90, "consistency": 91, "wet_performance": 86, "qualifying": 92, "experience": 73, "tire_management": 90 },
+    "titles": 0, "bio": "La nueva perla australiana. Frío y brillante."
+  },
+  {
+    "id": "bottas_2019", "name": "Valtteri Bottas", "nationality": "FIN",
+    "team": "Mercedes", "year": 2019, "era": "hybrid",
+    "attributes": { "pace": 91, "racecraft": 86, "consistency": 88, "wet_performance": 83, "qualifying": 92, "experience": 87, "tire_management": 87 },
+    "titles": 0, "bio": "El wingman perfecto. Rápido en qualy, consistente en carrera."
+  },
+  {
+    "id": "massa_2008", "name": "Felipe Massa", "nationality": "BRA",
+    "team": "Ferrari", "year": 2008, "era": "v8",
+    "attributes": { "pace": 89, "racecraft": 87, "consistency": 85, "wet_performance": 80, "qualifying": 88, "experience": 85, "tire_management": 84 },
+    "titles": 0, "bio": "Perdió el título en la última curva de la última carrera."
+  }
+]

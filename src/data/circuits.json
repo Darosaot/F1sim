@@ -1,0 +1,222 @@
+[
+  {
+    "id": "monaco", "name": "Monaco", "country": "MCO", "emoji": "🇲🇨",
+    "type": "street",
+    "laps": 78, "distance_km": 260.3,
+    "modifiers": {
+      "downforce_weight": 0.92, "power_weight": 0.28, "racecraft_weight": 0.90,
+      "qualifying_weight": 0.85, "wet_probability": 0.22, "safety_car_probability": 0.60,
+      "overtaking_difficulty": 0.96, "reliability_penalty": 1.0
+    }
+  },
+  {
+    "id": "monza", "name": "Monza", "country": "ITA", "emoji": "🇮🇹",
+    "type": "power",
+    "laps": 53, "distance_km": 306.7,
+    "modifiers": {
+      "downforce_weight": 0.30, "power_weight": 0.95, "racecraft_weight": 0.75,
+      "qualifying_weight": 0.88, "wet_probability": 0.20, "safety_car_probability": 0.30,
+      "overtaking_difficulty": 0.40, "reliability_penalty": 0.9
+    }
+  },
+  {
+    "id": "spa", "name": "Spa-Francorchamps", "country": "BEL", "emoji": "🇧🇪",
+    "type": "power",
+    "laps": 44, "distance_km": 308.1,
+    "modifiers": {
+      "downforce_weight": 0.65, "power_weight": 0.85, "racecraft_weight": 0.82,
+      "qualifying_weight": 0.80, "wet_probability": 0.45, "safety_car_probability": 0.40,
+      "overtaking_difficulty": 0.50, "reliability_penalty": 1.0
+    }
+  },
+  {
+    "id": "silverstone", "name": "Silverstone", "country": "GBR", "emoji": "🇬🇧",
+    "type": "balanced",
+    "laps": 52, "distance_km": 306.2,
+    "modifiers": {
+      "downforce_weight": 0.72, "power_weight": 0.72, "racecraft_weight": 0.78,
+      "qualifying_weight": 0.82, "wet_probability": 0.35, "safety_car_probability": 0.35,
+      "overtaking_difficulty": 0.55, "reliability_penalty": 1.0
+    }
+  },
+  {
+    "id": "suzuka", "name": "Suzuka", "country": "JPN", "emoji": "🇯🇵",
+    "type": "high_speed",
+    "laps": 53, "distance_km": 307.5,
+    "modifiers": {
+      "downforce_weight": 0.80, "power_weight": 0.80, "racecraft_weight": 0.88,
+      "qualifying_weight": 0.90, "wet_probability": 0.30, "safety_car_probability": 0.38,
+      "overtaking_difficulty": 0.65, "reliability_penalty": 1.05
+    }
+  },
+  {
+    "id": "interlagos", "name": "Interlagos", "country": "BRA", "emoji": "🇧🇷",
+    "type": "high_speed",
+    "laps": 71, "distance_km": 305.9,
+    "modifiers": {
+      "downforce_weight": 0.75, "power_weight": 0.78, "racecraft_weight": 0.85,
+      "qualifying_weight": 0.82, "wet_probability": 0.40, "safety_car_probability": 0.45,
+      "overtaking_difficulty": 0.55, "reliability_penalty": 1.0
+    }
+  },
+  {
+    "id": "nurburgring", "name": "Nürburgring", "country": "DEU", "emoji": "🇩🇪",
+    "type": "balanced",
+    "laps": 60, "distance_km": 308.9,
+    "modifiers": {
+      "downforce_weight": 0.68, "power_weight": 0.70, "racecraft_weight": 0.80,
+      "qualifying_weight": 0.78, "wet_probability": 0.38, "safety_car_probability": 0.40,
+      "overtaking_difficulty": 0.58, "reliability_penalty": 1.0
+    }
+  },
+  {
+    "id": "melbourne", "name": "Melbourne", "country": "AUS", "emoji": "🇦🇺",
+    "type": "street",
+    "laps": 58, "distance_km": 307.6,
+    "modifiers": {
+      "downforce_weight": 0.78, "power_weight": 0.60, "racecraft_weight": 0.82,
+      "qualifying_weight": 0.80, "wet_probability": 0.20, "safety_car_probability": 0.50,
+      "overtaking_difficulty": 0.70, "reliability_penalty": 1.0
+    }
+  },
+  {
+    "id": "bahrain", "name": "Bahrain", "country": "BHR", "emoji": "🇧🇭",
+    "type": "balanced",
+    "laps": 57, "distance_km": 308.2,
+    "modifiers": {
+      "downforce_weight": 0.70, "power_weight": 0.75, "racecraft_weight": 0.78,
+      "qualifying_weight": 0.80, "wet_probability": 0.05, "safety_car_probability": 0.28,
+      "overtaking_difficulty": 0.45, "reliability_penalty": 1.0
+    }
+  },
+  {
+    "id": "budapest", "name": "Budapest", "country": "HUN", "emoji": "🇭🇺",
+    "type": "high_downforce",
+    "laps": 70, "distance_km": 305.6,
+    "modifiers": {
+      "downforce_weight": 0.90, "power_weight": 0.50, "racecraft_weight": 0.85,
+      "qualifying_weight": 0.85, "wet_probability": 0.25, "safety_car_probability": 0.32,
+      "overtaking_difficulty": 0.85, "reliability_penalty": 1.0
+    }
+  },
+  {
+    "id": "austria", "name": "Spielberg", "country": "AUT", "emoji": "🇦🇹",
+    "type": "power",
+    "laps": 71, "distance_km": 306.5,
+    "modifiers": {
+      "downforce_weight": 0.55, "power_weight": 0.85, "racecraft_weight": 0.75,
+      "qualifying_weight": 0.82, "wet_probability": 0.25, "safety_car_probability": 0.35,
+      "overtaking_difficulty": 0.50, "reliability_penalty": 0.95
+    }
+  },
+  {
+    "id": "barcelona", "name": "Barcelona", "country": "ESP", "emoji": "🇪🇸",
+    "type": "balanced",
+    "laps": 66, "distance_km": 307.2,
+    "modifiers": {
+      "downforce_weight": 0.72, "power_weight": 0.72, "racecraft_weight": 0.75,
+      "qualifying_weight": 0.88, "wet_probability": 0.12, "safety_car_probability": 0.25,
+      "overtaking_difficulty": 0.75, "reliability_penalty": 0.95
+    }
+  },
+  {
+    "id": "canada", "name": "Montreal", "country": "CAN", "emoji": "🇨🇦",
+    "type": "street",
+    "laps": 70, "distance_km": 305.3,
+    "modifiers": {
+      "downforce_weight": 0.65, "power_weight": 0.80, "racecraft_weight": 0.82,
+      "qualifying_weight": 0.80, "wet_probability": 0.30, "safety_car_probability": 0.55,
+      "overtaking_difficulty": 0.55, "reliability_penalty": 1.0
+    }
+  },
+  {
+    "id": "singapore", "name": "Singapore", "country": "SGP", "emoji": "🇸🇬",
+    "type": "street",
+    "laps": 61, "distance_km": 308.7,
+    "modifiers": {
+      "downforce_weight": 0.88, "power_weight": 0.45, "racecraft_weight": 0.90,
+      "qualifying_weight": 0.82, "wet_probability": 0.30, "safety_car_probability": 0.70,
+      "overtaking_difficulty": 0.90, "reliability_penalty": 1.1
+    }
+  },
+  {
+    "id": "austin", "name": "Austin (COTA)", "country": "USA", "emoji": "🇺🇸",
+    "type": "balanced",
+    "laps": 56, "distance_km": 308.4,
+    "modifiers": {
+      "downforce_weight": 0.72, "power_weight": 0.72, "racecraft_weight": 0.78,
+      "qualifying_weight": 0.82, "wet_probability": 0.22, "safety_car_probability": 0.35,
+      "overtaking_difficulty": 0.50, "reliability_penalty": 1.0
+    }
+  },
+  {
+    "id": "baku", "name": "Baku", "country": "AZE", "emoji": "🇦🇿",
+    "type": "street",
+    "laps": 51, "distance_km": 306.0,
+    "modifiers": {
+      "downforce_weight": 0.62, "power_weight": 0.85, "racecraft_weight": 0.82,
+      "qualifying_weight": 0.78, "wet_probability": 0.10, "safety_car_probability": 0.65,
+      "overtaking_difficulty": 0.60, "reliability_penalty": 1.1
+    }
+  },
+  {
+    "id": "saudi", "name": "Jeddah", "country": "SAU", "emoji": "🇸🇦",
+    "type": "power",
+    "laps": 50, "distance_km": 308.5,
+    "modifiers": {
+      "downforce_weight": 0.55, "power_weight": 0.90, "racecraft_weight": 0.80,
+      "qualifying_weight": 0.88, "wet_probability": 0.05, "safety_car_probability": 0.55,
+      "overtaking_difficulty": 0.65, "reliability_penalty": 1.05
+    }
+  },
+  {
+    "id": "japan_2022", "name": "Suzuka GP", "country": "JPN", "emoji": "🇯🇵",
+    "type": "high_speed",
+    "laps": 53, "distance_km": 307.5,
+    "modifiers": {
+      "downforce_weight": 0.82, "power_weight": 0.78, "racecraft_weight": 0.88,
+      "qualifying_weight": 0.90, "wet_probability": 0.32, "safety_car_probability": 0.38,
+      "overtaking_difficulty": 0.65, "reliability_penalty": 1.05
+    }
+  },
+  {
+    "id": "miami", "name": "Miami", "country": "USA", "emoji": "🇺🇸",
+    "type": "street",
+    "laps": 57, "distance_km": 308.3,
+    "modifiers": {
+      "downforce_weight": 0.72, "power_weight": 0.68, "racecraft_weight": 0.80,
+      "qualifying_weight": 0.80, "wet_probability": 0.15, "safety_car_probability": 0.45,
+      "overtaking_difficulty": 0.65, "reliability_penalty": 1.0
+    }
+  },
+  {
+    "id": "netherlands", "name": "Zandvoort", "country": "NLD", "emoji": "🇳🇱",
+    "type": "high_speed",
+    "laps": 72, "distance_km": 306.6,
+    "modifiers": {
+      "downforce_weight": 0.82, "power_weight": 0.62, "racecraft_weight": 0.82,
+      "qualifying_weight": 0.88, "wet_probability": 0.30, "safety_car_probability": 0.35,
+      "overtaking_difficulty": 0.80, "reliability_penalty": 1.0
+    }
+  },
+  {
+    "id": "mexico", "name": "Ciudad de Mexico", "country": "MEX", "emoji": "🇲🇽",
+    "type": "high_downforce",
+    "laps": 71, "distance_km": 305.4,
+    "modifiers": {
+      "downforce_weight": 0.85, "power_weight": 0.75, "racecraft_weight": 0.78,
+      "qualifying_weight": 0.85, "wet_probability": 0.10, "safety_car_probability": 0.30,
+      "overtaking_difficulty": 0.60, "reliability_penalty": 0.95
+    }
+  },
+  {
+    "id": "las_vegas", "name": "Las Vegas", "country": "USA", "emoji": "🇺🇸",
+    "type": "street",
+    "laps": 50, "distance_km": 309.9,
+    "modifiers": {
+      "downforce_weight": 0.50, "power_weight": 0.88, "racecraft_weight": 0.78,
+      "qualifying_weight": 0.85, "wet_probability": 0.05, "safety_car_probability": 0.50,
+      "overtaking_difficulty": 0.60, "reliability_penalty": 1.0
+    }
+  }
+]

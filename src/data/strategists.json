@@ -1,0 +1,86 @@
+[
+  {
+    "id": "brawn_ross_strat", "name": "Ross Brawn", "nationality": "GBR",
+    "teams": ["Benetton", "Ferrari", "Brawn GP"],
+    "peak_years": [1994, 1995, 2000, 2001, 2002, 2003, 2004, 2009],
+    "attributes": { "race_management": 99, "pit_timing": 98, "undercut_instinct": 97, "safety_car_read": 98, "pressure_decisions": 99 },
+    "era": "v10_v12", "bio": "El mejor estratega de la historia de la F1. Ninguno le supera en el muro."
+  },
+  {
+    "id": "clear_jock", "name": "Jock Clear", "nationality": "GBR",
+    "teams": ["Williams", "BAR", "Ferrari"],
+    "peak_years": [1996, 1997, 2005, 2013, 2014],
+    "attributes": { "race_management": 90, "pit_timing": 89, "undercut_instinct": 88, "safety_car_read": 88, "pressure_decisions": 87 },
+    "era": "v10_v12", "bio": "Ingeniero de carrera de Hill, Villeneuve y Räikkönen. Veterano fiable."
+  },
+  {
+    "id": "vowles_james", "name": "James Vowles", "nationality": "GBR",
+    "teams": ["Mercedes", "Williams"],
+    "peak_years": [2014, 2015, 2016, 2019, 2020],
+    "attributes": { "race_management": 93, "pit_timing": 92, "undercut_instinct": 94, "safety_car_read": 92, "pressure_decisions": 91 },
+    "era": "hybrid", "bio": "El cerebro de la estrategia Mercedes. Ahora reconstruyendo Williams."
+  },
+  {
+    "id": "schmitz_hannah", "name": "Hannah Schmitz", "nationality": "GBR",
+    "teams": ["Red Bull"],
+    "peak_years": [2010, 2011, 2012, 2013, 2021, 2022, 2023],
+    "attributes": { "race_management": 94, "pit_timing": 95, "undercut_instinct": 96, "safety_car_read": 94, "pressure_decisions": 93 },
+    "era": "v8", "bio": "Jefa de estrategia de Red Bull. Las decisiones de un segundo que ganan campeonatos."
+  },
+  {
+    "id": "lambiase_gianpiero", "name": "Gianpiero Lambiase", "nationality": "ITA",
+    "teams": ["Red Bull"],
+    "peak_years": [2021, 2022, 2023, 2024],
+    "attributes": { "race_management": 93, "pit_timing": 91, "undercut_instinct": 93, "safety_car_read": 91, "pressure_decisions": 94 },
+    "era": "current", "bio": "El ingeniero de Verstappen. La voz que lo guía hacia cada título."
+  },
+  {
+    "id": "shovlin_andrew", "name": "Andrew Shovlin", "nationality": "GBR",
+    "teams": ["Mercedes"],
+    "peak_years": [2014, 2015, 2016, 2017, 2018, 2019, 2020],
+    "attributes": { "race_management": 91, "pit_timing": 90, "undercut_instinct": 90, "safety_car_read": 88, "pressure_decisions": 90 },
+    "era": "hybrid", "bio": "Jefe de ingeniería de pista de Mercedes en su era dorada."
+  },
+  {
+    "id": "ryan_dave", "name": "Dave Ryan", "nationality": "GBR",
+    "teams": ["McLaren"],
+    "peak_years": [1988, 1989, 1998, 1999, 2007, 2008],
+    "attributes": { "race_management": 89, "pit_timing": 88, "undercut_instinct": 87, "safety_car_read": 86, "pressure_decisions": 88 },
+    "era": "turbo", "bio": "Décadas de experiencia en McLaren. Senna y Hamilton pasaron por sus manos."
+  },
+  {
+    "id": "adami_riccardo", "name": "Riccardo Adami", "nationality": "ITA",
+    "teams": ["Ferrari"],
+    "peak_years": [2010, 2011, 2012, 2013, 2014],
+    "attributes": { "race_management": 88, "pit_timing": 87, "undercut_instinct": 87, "safety_car_read": 85, "pressure_decisions": 87 },
+    "era": "v8", "bio": "Ingeniero de Vettel en Ferrari. Precisión italiana en el muro."
+  },
+  {
+    "id": "slade_mark", "name": "Mark Slade", "nationality": "GBR",
+    "teams": ["McLaren", "Renault", "Lotus"],
+    "peak_years": [2003, 2004, 2007],
+    "attributes": { "race_management": 87, "pit_timing": 85, "undercut_instinct": 86, "safety_car_read": 84, "pressure_decisions": 85 },
+    "era": "v10_v12", "bio": "Ingeniero de Räikkönen. Funcionaban con una empatía técnica perfecta."
+  },
+  {
+    "id": "michael_sam", "name": "Sam Michael", "nationality": "AUS",
+    "teams": ["Williams"],
+    "peak_years": [2004, 2005, 2006, 2007],
+    "attributes": { "race_management": 85, "pit_timing": 84, "undercut_instinct": 83, "safety_car_read": 82, "pressure_decisions": 83 },
+    "era": "v8", "bio": "Director Técnico de Williams. Extraía lo máximo de recursos limitados."
+  },
+  {
+    "id": "mekies_laurent", "name": "Laurent Mekies", "nationality": "FRA",
+    "teams": ["Ferrari", "AlphaTauri", "Racing Bulls"],
+    "peak_years": [2020, 2021, 2022, 2024],
+    "attributes": { "race_management": 87, "pit_timing": 86, "undercut_instinct": 87, "safety_car_read": 86, "pressure_decisions": 85 },
+    "era": "current", "bio": "Exdirector deportivo de Ferrari, ahora liderando Racing Bulls."
+  },
+  {
+    "id": "collins_bernie", "name": "Bernie Collins", "nationality": "GBR",
+    "teams": ["Force India", "Aston Martin"],
+    "peak_years": [2018, 2019, 2023],
+    "attributes": { "race_management": 87, "pit_timing": 88, "undercut_instinct": 89, "safety_car_read": 87, "pressure_decisions": 86 },
+    "era": "current", "bio": "Una de las mejores estrategas modernas. Referente en el análisis de carrera."
+  }
+]
