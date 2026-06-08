@@ -31,7 +31,7 @@ export default function TeamBuilder() {
       {/* Header */}
       <div className="flex items-baseline justify-between mb-3">
         <span className="text-xs font-bold uppercase tracking-widest text-ink-md">
-          Box Score · {filledCount}/11
+          PLANTILLA · {filledCount}/11
         </span>
         {filledCount === 11 && (
           <span className="font-display font-black text-3xl text-ink">{rating.toFixed(0)}</span>
@@ -50,16 +50,16 @@ export default function TeamBuilder() {
       {(driverAvg || carAvg) && (
         <div className="flex gap-4 mb-3 text-xs font-bold uppercase tracking-wide">
           {driverAvg && (
-            <span>
+            <div className="flex items-baseline gap-1">
               <span className="text-rust">{driverAvg}</span>
-              <span className="text-ink-md ml-1">Pilotos</span>
-            </span>
+              <span className="text-ink-md">Pilotos</span>
+            </div>
           )}
           {carAvg && (
-            <span>
+            <div className="flex items-baseline gap-1">
               <span className="text-ink font-black">{carAvg}</span>
-              <span className="text-ink-md ml-1">Coche</span>
-            </span>
+              <span className="text-ink-md">Coche</span>
+            </div>
           )}
         </div>
       )}

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { motion } from 'framer-motion'
 import { useGameStore } from '../stores/gameStore'
 import RaceTicker from '../components/simulation/RaceTicker'
@@ -16,6 +16,13 @@ export default function Results() {
   const { races, finalPosition, playerStats } = simulationResults
   const verdict = getVerdict(finalPosition, playerStats)
 
+  // Timer-based reveal: no dependency on callback chain from RaceTicker
+  useEffect(() => {
+    const delay = (races?.length ?? 22) * 160 + 900
+    const t = setTimeout(() => setTickerDone(true), delay)
+    return () => clearTimeout(t)
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
+
   return (
     <div className="min-h-screen bg-sand font-body flex flex-col">
 
@@ -28,7 +35,7 @@ export default function Results() {
         </div>
         <div className="flex items-center gap-2">
           <span className="text-[10px] font-bold uppercase tracking-widest text-ink-md">
-            SEED #{Math.random().toString(36).slice(2, 8).toUpperCase()}
+            CÓDIGO #{Math.random().toString(36).slice(2, 8).toUpperCase()}
           </span>
         </div>
       </header>
@@ -40,7 +47,7 @@ export default function Results() {
 
         {/* Page title + verdict */}
         <div>
-          <p className="text-xs font-bold uppercase tracking-widest text-ink-md mb-1">THE RUN</p>
+          <p className="text-xs font-bold uppercase tracking-widest text-ink-md mb-1">RESULTADOS</p>
           <h1 className="font-display font-black text-4xl uppercase text-ink">La Temporada</h1>
         </div>
 
@@ -54,7 +61,7 @@ export default function Results() {
           <p className="text-[10px] font-bold uppercase tracking-widest text-ink-md mb-2">
             RESULTADOS DE CARRERA
           </p>
-          <RaceTicker races={races} onComplete={() => setTickerDone(true)} />
+          <RaceTicker races={races} />
         </div>
 
         {/* Season chart */}
@@ -69,7 +76,7 @@ export default function Results() {
           </motion.div>
         )}
 
-        {/* Final dark banner — like 7a0 */}
+        {/* Final dark banner */}
         {tickerDone && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -89,7 +96,7 @@ export default function Results() {
               <div className="grid grid-cols-3 gap-6">
                 {[
                   { label: 'PUNTOS',    value: playerStats.points },
-                  { label: 'CONTRA',    value: playerStats.dnfs },
+                  { label: 'ABANDONS',  value: playerStats.dnfs },
                   { label: 'VICTORIAS', value: playerStats.wins },
                 ].map(({ label, value }) => (
                   <div key={label}>
@@ -116,7 +123,7 @@ export default function Results() {
 
       {/* Footer */}
       <footer className="mt-auto border-t border-borderc px-6 py-3 text-[10px] font-bold uppercase tracking-widest text-ink-md text-center">
-        F1 LEGENDS · PIT LANE DRAFT · BUILD · SIMULATE · P1 · <button onClick={resetGame} className="hover:underline">VOLVER</button>
+        F1 LEGENDS · PIT LANE DRAFT · <button onClick={resetGame} className="hover:underline">VOLVER AL INICIO</button>
       </footer>
     </div>
   )
