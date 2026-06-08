@@ -1,107 +1,159 @@
 import { motion } from 'framer-motion'
-import { buildShareUrl } from '../../utils/shareEncoder'
 import { useGameStore } from '../../stores/gameStore'
+import { buildShareUrl } from '../../utils/shareEncoder'
+import { SLOT_LABELS, getElementValue } from '../../utils/ratingEngine'
 
-const POSITION_MEDALS = { 1: '🏆', 2: '🥈', 3: '🥉' }
+const FLAG_MAP = { ITA: '🇮🇹', GBR: '🇬🇧', DEU: '🇩🇪', FRA: '🇫🇷', BRA: '🇧🇷', AUS: '🇦🇺', ESP: '🇪🇸', FIN: '🇫🇮', AUT: '🇦🇹', NLD: '🇳🇱', USA: '🇺🇸', MCO: '🇲🇨', CAN: '🇨🇦', ARG: '🇦🇷', RSA: '🇿🇦', ZAF: '🇿🇦' }
+const SLOT_KEYS = Object.keys(SLOT_LABELS)
 
 export default function ChampionshipCard({ results }) {
-  const team = useGameStore(s => s.team)
-  const era = useGameStore(s => s.era)
-  const mode = useGameStore(s => s.mode)
+  const team      = useGameStore(s => s.team)
+  const era       = useGameStore(s => s.era)
+  const mode      = useGameStore(s => s.mode)
   const resetGame = useGameStore(s => s.resetGame)
 
   if (!results) return null
   const { standings, finalPosition, playerStats } = results
 
-  function handleShare() {
+  const isWinner = finalPosition === 1
+
+  function handleShareLink() {
     const url = buildShareUrl(team, { era, mode })
-    navigator.clipboard?.writeText(url).then(() => {
-      alert('URL copiada al portapapeles 🏁')
-    })
+    navigator.clipboard?.writeText(url).then(() => alert('Enlace copiado 🏁'))
   }
 
   return (
-    <div className="space-y-4">
-      {/* Position banner */}
-      <motion.div
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ type: 'spring', stiffness: 200, damping: 18 }}
-        className="text-center py-6 rounded-xl bg-[#1a1a28] border border-[#2a2a3a]"
-      >
-        <div className="text-4xl mb-1">{POSITION_MEDALS[finalPosition] || '🏎️'}</div>
-        <div className="text-xs text-[#8888aa] uppercase tracking-widest mb-1">Posición Final</div>
-        <div className="text-5xl font-black text-[#e10600]">P{finalPosition}</div>
-        <div className="text-sm text-[#8888aa] mt-1">Campeonato de Constructores</div>
-      </motion.div>
+    <div className="space-y-5">
 
-      {/* Stats */}
-      <div className="grid grid-cols-3 gap-2">
-        {[
-          { label: 'Puntos', value: playerStats.points },
-          { label: 'Victorias', value: playerStats.wins },
-          { label: 'Podios', value: playerStats.podiums },
-        ].map(({ label, value }) => (
-          <div key={label} className="bg-[#12121a] border border-[#2a2a3a] rounded-lg p-3 text-center">
-            <div className="text-xl font-black text-white">{value}</div>
-            <div className="text-[10px] text-[#555577] uppercase tracking-wider">{label}</div>
+      {/* Share card — white with border, matches 7a0 style */}
+      <div className="bg-white border border-borderc">
+        {/* Card header */}
+        <div className="flex items-center justify-between px-4 py-3 border-b border-borderc">
+          <div>
+            <div className="font-display font-black text-base text-ink leading-none">F1 LEGENDS</div>
+            <div className="text-[9px] text-ink-md uppercase tracking-widest">PIT LANE DRAFT</div>
           </div>
-        ))}
-      </div>
-      <div className="grid grid-cols-3 gap-2">
-        {[
-          { label: 'Poles', value: playerStats.poles },
-          { label: 'DNFs', value: playerStats.dnfs },
-          { label: 'Mejor', value: `P${playerStats.bestResult}` },
-        ].map(({ label, value }) => (
-          <div key={label} className="bg-[#12121a] border border-[#2a2a3a] rounded-lg p-3 text-center">
-            <div className="text-xl font-black text-white">{value}</div>
-            <div className="text-[10px] text-[#555577] uppercase tracking-wider">{label}</div>
+          <div className="text-[10px] text-ink-md font-bold uppercase tracking-wide">
+            {finalPosition === 1 ? 'CAMPEÓN' : `P${finalPosition}`}
           </div>
-        ))}
-      </div>
-
-      {/* Standings */}
-      <div className="rounded-xl border border-[#2a2a3a] overflow-hidden">
-        <div className="px-4 py-2 bg-[#1a1a28] border-b border-[#2a2a3a]">
-          <span className="text-xs text-[#8888aa] uppercase tracking-wider">Clasificación Final</span>
         </div>
-        <div className="divide-y divide-[#1a1a28]">
+
+        {/* Big result */}
+        <div className="px-6 pt-5 pb-4 text-center border-b border-borderc">
+          <div className="font-display font-black text-xl uppercase tracking-wide text-ink-md mb-1">
+            {isWinner ? 'CAMPEÓN DEL MUNDO' : `ELIMINADO`}
+          </div>
+          <div
+            className="font-display font-black leading-none"
+            style={{ fontSize: 80, color: isWinner ? 'var(--gold)' : 'var(--ink)' }}
+          >
+            P{finalPosition}
+          </div>
+        </div>
+
+        {/* Stats grid */}
+        <div className="grid grid-cols-4 border-b border-borderc">
+          {[
+            { label: 'PUNTOS',   value: playerStats.points },
+            { label: 'VICTORIAS', value: playerStats.wins },
+            { label: 'OVERALL',  value: playerStats.points },
+            { label: 'PODIOS',   value: playerStats.podiums },
+          ].map(({ label, value }) => (
+            <div key={label} className="px-3 py-3 text-center border-r border-borderc last:border-r-0">
+              <div className="font-display font-black text-2xl text-ink">{value}</div>
+              <div className="text-[9px] font-bold uppercase tracking-widest text-ink-md">{label}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Team list */}
+        <div className="divide-y divide-borderc">
+          {SLOT_KEYS.map(key => {
+            const el = team[key]
+            if (!el) return null
+            const rating = getElementValue(el, key)
+            const isTopRated = typeof rating === 'number' && rating >= 90
+            const name = typeof el === 'number' ? `${el}/100` : el?.name
+            const nat  = el?.nationality
+            const year = el?.year
+
+            return (
+              <div
+                key={key}
+                className={`flex items-center justify-between px-4 py-2.5 ${isTopRated ? 'bg-sand-lt' : ''}`}
+              >
+                <div className="flex items-center gap-3 min-w-0">
+                  <span className="font-display font-black text-base text-ink-lt w-6 shrink-0 text-center">
+                    {SLOT_LABELS[key].emoji}
+                  </span>
+                  <span className={`text-sm font-bold text-ink truncate ${isTopRated ? 'text-rust' : ''}`}>
+                    {name}
+                  </span>
+                </div>
+                <div className="flex items-center gap-2 shrink-0">
+                  {nat && <span className="text-xs">{FLAG_MAP[nat] || ''}</span>}
+                  {year && <span className="text-[10px] font-bold text-ink-md">{year}</span>}
+                  {rating && (
+                    <span className={`font-display font-black text-base ${isTopRated ? 'text-rust' : 'text-ink-md'}`}>
+                      {rating}
+                    </span>
+                  )}
+                </div>
+              </div>
+            )
+          })}
+        </div>
+
+        <div className="text-center py-3 text-[10px] text-ink-md">
+          f1legends.netlify.app · construye el tuyo
+        </div>
+      </div>
+
+      {/* Championship standings */}
+      <div className="bg-white border border-borderc">
+        <div className="px-4 py-2 border-b border-borderc">
+          <span className="text-[10px] font-bold uppercase tracking-widest text-ink-md">
+            Clasificación Final — Constructores
+          </span>
+        </div>
+        <div className="divide-y divide-borderc">
           {standings.map((s, i) => (
             <div
               key={s.name}
-              className={`flex items-center justify-between px-4 py-2 ${s.isPlayer ? 'bg-[#1a0808]' : 'bg-[#0e0e14]'}`}
+              className={`flex items-center justify-between px-4 py-2.5 ${s.isPlayer ? 'bg-sand-lt' : ''}`}
             >
               <div className="flex items-center gap-3">
-                <span className={`text-sm font-black w-5 ${i === 0 ? 'text-yellow-400' : i === 1 ? 'text-gray-400' : i === 2 ? 'text-amber-600' : 'text-[#555577]'}`}>
+                <span className={`font-display font-black text-lg w-6 shrink-0 ${
+                  i === 0 ? 'text-[#c9a030]' : i <= 2 ? 'text-ink' : 'text-ink-lt'
+                }`}>
                   {i + 1}
                 </span>
                 {s.color && (
-                  <div className="w-2 h-4 rounded-sm" style={{ backgroundColor: s.color }} />
+                  <div className="w-1.5 h-5 rounded-sm shrink-0" style={{ backgroundColor: s.color }} />
                 )}
-                <span className={`text-xs font-semibold ${s.isPlayer ? 'text-[#e10600]' : 'text-[#aaaacc]'}`}>
-                  {s.isPlayer ? 'YOUR TEAM' : s.name}
+                <span className={`text-sm ${s.isPlayer ? 'font-black text-rust' : 'font-semibold text-ink'}`}>
+                  {s.isPlayer ? 'TU EQUIPO' : s.name}
                 </span>
               </div>
-              <span className="text-xs font-bold text-white">{s.points} pts</span>
+              <span className="font-bold text-sm text-ink">{s.points} pts</span>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Actions */}
-      <div className="flex gap-3">
+      {/* Action buttons — matching 7a0 style */}
+      <div className="flex gap-2">
         <button
-          onClick={handleShare}
-          className="flex-1 py-3 rounded-xl border border-[#2a2a3a] text-xs font-bold text-[#8888aa] hover:border-[#e10600] hover:text-white transition-all"
+          onClick={handleShareLink}
+          className="flex-1 py-3 bg-rust text-white font-display font-black text-sm uppercase tracking-widest hover:opacity-90 transition-opacity text-center"
         >
-          📤 COMPARTIR
+          COMPARTIR ENLACE
         </button>
         <button
           onClick={resetGame}
-          className="flex-1 py-3 rounded-xl bg-[#e10600] text-white text-xs font-bold uppercase tracking-wider hover:bg-red-500 transition-colors"
+          className="flex-1 py-3 border border-ink text-ink font-display font-black text-sm uppercase tracking-widest hover:bg-ink hover:text-white transition-colors text-center"
         >
-          🏎️ NUEVA PARTIDA
+          JUGAR DE NUEVO
         </button>
       </div>
     </div>

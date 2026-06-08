@@ -1,39 +1,31 @@
 import { useGameStore } from '../../stores/gameStore'
 
 export default function ModeToggle() {
-  const mode = useGameStore(s => s.mode)
+  const mode    = useGameStore(s => s.mode)
   const setMode = useGameStore(s => s.setMode)
 
   return (
-    <div className="space-y-2">
-      <div className="text-xs text-[#8888aa] uppercase tracking-wider">Dificultad</div>
-      <div className="grid grid-cols-2 gap-2">
-        <button
-          onClick={() => setMode('vip')}
-          className={`
-            px-3 py-3 rounded-lg border transition-all text-left
-            ${mode === 'vip'
-              ? 'border-[#e10600] bg-[#1a0a0a]'
-              : 'border-[#2a2a3a] bg-[#12121a] hover:border-[#444466]'
-            }
-          `}
-        >
-          <div className="text-xs font-bold text-white">🏁 Paddock VIP</div>
-          <div className="text-[10px] text-[#555577] mt-0.5">Stats visibles</div>
-        </button>
-        <button
-          onClick={() => setMode('parce_ferme')}
-          className={`
-            px-3 py-3 rounded-lg border transition-all text-left
-            ${mode === 'parce_ferme'
-              ? 'border-[#e10600] bg-[#1a0a0a]'
-              : 'border-[#2a2a3a] bg-[#12121a] hover:border-[#444466]'
-            }
-          `}
-        >
-          <div className="text-xs font-bold text-white">🔒 Parc Fermé</div>
-          <div className="text-[10px] text-[#555577] mt-0.5">Stats ocultos</div>
-        </button>
+    <div>
+      <p className="text-[10px] font-bold uppercase tracking-widest text-ink-md mb-2">
+        MODO · DIFICULTAD
+      </p>
+      <div className="flex gap-1.5">
+        {[
+          { id: 'vip',         label: 'Clásico' },
+          { id: 'parce_ferme', label: 'De memoria' },
+        ].map(m => (
+          <button
+            key={m.id}
+            onClick={() => setMode(m.id)}
+            className={`px-3 py-2 border text-xs font-bold uppercase tracking-wide transition-colors ${
+              mode === m.id
+                ? 'bg-ink text-white border-ink'
+                : 'bg-white text-ink border-borderc hover:border-ink'
+            }`}
+          >
+            {m.label}
+          </button>
+        ))}
       </div>
     </div>
   )

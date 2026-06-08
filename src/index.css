@@ -3,46 +3,42 @@
 @tailwind utilities;
 
 :root {
-  --f1-red: #e10600;
-  --f1-dark: #0a0a0f;
-  --f1-surface: #12121a;
-  --f1-border: #2a2a3a;
+  --bg:      #ede8dc;
+  --surface: #f5f1e8;
+  --white:   #ffffff;
+  --ink:     #1a1a1a;
+  --muted:   #888880;
+  --faint:   #c8c4bc;
+  --border:  #d0c8bc;
+  --rust:    #e05535;
+  --gold:    #c9a030;
+  --success: #2d8c42;
+  --garage:  #1c1c1c;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
-  background: var(--f1-dark);
-  color: #f0f0f0;
-  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Barlow', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
 }
 
-.slot-empty-pulse {
-  animation: slotPulse 2.5s ease-in-out infinite;
+h1, h2, h3, .display {
+  font-family: 'Barlow Condensed', system-ui, sans-serif;
 }
 
-@keyframes slotPulse {
-  0%, 100% { border-color: #2a2a3a; }
-  50%       { border-color: #e10600; box-shadow: 0 0 8px rgba(225, 6, 0, 0.3); }
-}
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted); }
 
-.card-gradient {
-  background: linear-gradient(135deg, var(--team-primary, #e10600) 0%, #12121a 60%);
+/* Divider */
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0;
 }
-
-.racing-stripe::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: var(--team-primary, #e10600);
-}
-
-::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: #12121a; }
-::-webkit-scrollbar-thumb { background: #2a2a3a; border-radius: 2px; }
-::-webkit-scrollbar-thumb:hover { background: #e10600; }
