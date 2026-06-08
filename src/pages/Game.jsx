@@ -56,13 +56,13 @@ export default function Game() {
           <span className="mx-1 text-ink-lt">·</span>
           <span>{modeLabel}</span>
           <span className="mx-1 text-ink-lt">·</span>
-          <span className={filledCount === 11 ? 'text-rust' : ''}>{filledCount}/11</span>
+          <span className={filledCount === 10 ? 'text-rust' : ''}>{filledCount}/10</span>
         </div>
 
         {/* Mobile progress pill */}
         <div className="flex md:hidden items-center gap-2">
-          <span className={`text-[10px] font-bold uppercase tracking-wider ${filledCount === 11 ? 'text-rust' : 'text-ink-md'}`}>
-            {filledCount}/11
+          <span className={`text-[10px] font-bold uppercase tracking-wider ${filledCount === 10 ? 'text-rust' : 'text-ink-md'}`}>
+            {filledCount}/10
           </span>
           <WildcardBar />
         </div>
@@ -95,7 +95,7 @@ export default function Game() {
                 <motion.div key="complete" initial={{ opacity: 0 }} animate={{ opacity: 1 }}
                   className="border-2 border-ink p-4">
                   <div className="text-[10px] font-bold uppercase tracking-widest text-ink-md mb-1">EQUIPO COMPLETO</div>
-                  <div className="font-display font-black text-3xl text-ink">11/11</div>
+                  <div className="font-display font-black text-3xl text-ink">10/10</div>
                 </motion.div>
               ) : (
                 <motion.div key="placeholder" initial={{ opacity: 0 }} animate={{ opacity: 1 }}
