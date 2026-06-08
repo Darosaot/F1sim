@@ -11,9 +11,24 @@ const ERAS = [
   { id: 'current',   label: 'Actual',  years: '2022+' },
 ]
 
-export default function EraSelector() {
+export default function EraSelector({ locked }) {
   const era    = useGameStore(s => s.era)
   const setEra = useGameStore(s => s.setEra)
+  const active = ERAS.find(e => e.id === era)
+
+  if (locked) {
+    return (
+      <div>
+        <p className="text-[10px] font-bold uppercase tracking-widest text-ink-lt mb-2">ERA</p>
+        <div className="flex items-center gap-2">
+          <span className="px-2.5 py-1.5 bg-ink text-white border border-ink text-[10px] font-bold uppercase tracking-wide">
+            {active?.label}
+          </span>
+          <span className="text-[9px] text-ink-lt uppercase tracking-wide">bloqueada</span>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div>

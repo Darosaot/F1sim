@@ -1,8 +1,30 @@
 import { useGameStore } from '../../stores/gameStore'
 
-export default function ModeToggle() {
+const MODES = [
+  { id: 'vip',         label: 'Clásico' },
+  { id: 'parce_ferme', label: 'De memoria' },
+]
+
+export default function ModeToggle({ locked }) {
   const mode    = useGameStore(s => s.mode)
   const setMode = useGameStore(s => s.setMode)
+  const active  = MODES.find(m => m.id === mode)
+
+  if (locked) {
+    return (
+      <div>
+        <p className="text-[10px] font-bold uppercase tracking-widest text-ink-lt mb-2">
+          MODO · DIFICULTAD
+        </p>
+        <div className="flex items-center gap-2">
+          <span className="px-3 py-2 bg-ink text-white border border-ink text-xs font-bold uppercase tracking-wide">
+            {active?.label}
+          </span>
+          <span className="text-[9px] text-ink-lt uppercase tracking-wide">bloqueado</span>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div>
@@ -10,10 +32,7 @@ export default function ModeToggle() {
         MODO · DIFICULTAD
       </p>
       <div className="flex gap-1.5">
-        {[
-          { id: 'vip',         label: 'Clásico' },
-          { id: 'parce_ferme', label: 'De memoria' },
-        ].map(m => (
+        {MODES.map(m => (
           <button
             key={m.id}
             onClick={() => setMode(m.id)}
