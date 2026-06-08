@@ -1,11 +1,10 @@
 export const SLOT_LABELS = {
-  driver1:             { label: 'Piloto 1',           emoji: '🪖', weight: 0.22 },
+  driver1:             { label: 'Piloto 1',           emoji: '🪖', weight: 0.24 },
   driver2:             { label: 'Piloto 2',           emoji: '🏎️', weight: 0.10 },
   team_principal:      { label: 'Jefe de Equipo',     emoji: '🎯', weight: 0.05 },
-  technical_director:  { label: 'Director Técnico',   emoji: '🔧', weight: 0.08 },
-  chassis:             { label: 'Chasis',              emoji: '⚙️', weight: 0.15 },
-  engine:              { label: 'Motor',               emoji: '🔋', weight: 0.14 },
-  strategist:          { label: 'Estratega',           emoji: '📡', weight: 0.08 },
+  technical_director:  { label: 'Director Técnico',   emoji: '🔧', weight: 0.10 },
+  chassis:             { label: 'Chasis',              emoji: '⚙️', weight: 0.17 },
+  engine:              { label: 'Motor',               emoji: '🔋', weight: 0.16 },
   tires:               { label: 'Neumáticos',          emoji: '🔵', weight: 0.06 },
   aero:                { label: 'Aerodinámica',        emoji: '💨', weight: 0.05 },
   budget:              { label: 'Financiación',        emoji: '💰', weight: 0.04 },
@@ -50,12 +49,6 @@ export function calculateTeamRating(team) {
     const en = team.engine.attributes
     const engineScore = (en.power * 0.40 + en.driveability * 0.25 + en.fuel_efficiency * 0.20 + en.reliability * 0.15) / 100
     score += engineScore * 100 * SLOT_LABELS.engine.weight
-    filledCount++
-  }
-  if (team.strategist) {
-    const st = team.strategist.attributes
-    const stratScore = (st.race_management * 0.30 + st.pit_timing * 0.25 + st.undercut_instinct * 0.25 + st.safety_car_read * 0.20) / 100
-    score += stratScore * 100 * SLOT_LABELS.strategist.weight
     filledCount++
   }
   if (team.tires) {

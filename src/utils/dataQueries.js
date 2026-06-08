@@ -3,7 +3,6 @@ import chassisData from '../data/chassis.json'
 import enginesData from '../data/engines.json'
 import tpData from '../data/team_principals.json'
 import tdData from '../data/technical_directors.json'
-import strategistsData from '../data/strategists.json'
 import tiresData from '../data/tires.json'
 import seasonsData from '../data/seasons.json'
 
@@ -49,7 +48,6 @@ export function resolveSeasonElements(season) {
     engine: enginesData.find(e => e.id === season.engine) || null,
     team_principal: tpData.find(t => t.id === season.tp) || null,
     technical_director: tdData.find(t => t.id === season.td) || null,
-    strategist: strategistsData.find(s => s.id === season.strategist) || null,
     tires: tiresData.find(t => t.id === season.tires) || null,
     aero: season.aero_index,
     budget: season.budget_index,

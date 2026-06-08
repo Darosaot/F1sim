@@ -6,7 +6,7 @@ const SLOT_KEYS = Object.keys(SLOT_LABELS)
 // Driver vs Car split for attack/defense equivalent
 const DRIVER_KEYS  = ['driver1', 'driver2']
 const CAR_KEYS     = ['chassis', 'engine', 'aero', 'tires', 'reliability']
-const MGMT_KEYS    = ['team_principal', 'technical_director', 'strategist', 'budget']
+const MGMT_KEYS    = ['team_principal', 'technical_director', 'budget']
 
 function avg(team, keys) {
   const vals = keys.map(k => {
@@ -31,7 +31,7 @@ export default function TeamBuilder() {
       {/* Header */}
       <div className="flex items-baseline justify-between mb-3">
         <span className="text-xs font-bold uppercase tracking-widest text-ink-md">
-          PLANTILLA · {filledCount}/11
+          PLANTILLA · {filledCount}/10
         </span>
         {filledCount === 11 && (
           <span className="font-display font-black text-3xl text-ink">{rating.toFixed(0)}</span>
@@ -42,7 +42,7 @@ export default function TeamBuilder() {
       <div className="h-0.5 bg-borderc mb-3">
         <div
           className="h-full bg-ink transition-all duration-500"
-          style={{ width: `${(filledCount / 11) * 100}%` }}
+          style={{ width: `${(filledCount / 10) * 100}%` }}
         />
       </div>
 
@@ -89,7 +89,6 @@ export default function TeamBuilder() {
                    : key === 'technical_director' ? 'TD'
                    : key === 'chassis'          ? 'CAR'
                    : key === 'engine'           ? 'ENG'
-                   : key === 'strategist'       ? 'STRAT'
                    : key === 'tires'            ? 'TYRES'
                    : key === 'aero'             ? 'AERO'
                    : key === 'budget'           ? 'BDGT'

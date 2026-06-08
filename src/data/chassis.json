@@ -318,5 +318,105 @@
     "id": "ferrari_sf23_2023", "name": "Ferrari SF-23", "team": "Ferrari", "year": 2023, "era": "current",
     "attributes": { "downforce": 91, "mechanical_grip": 90, "drag_efficiency": 89, "reliability": 86, "weight_distribution": 90 },
     "bio": "Un Ferrari que brilló en circuitos específicos pero no pudo con Red Bull."
+  },
+  {
+    "id": "maserati_250f_1957", "name": "Maserati 250F", "team": "Maserati", "year": 1957, "era": "early",
+    "attributes": { "downforce": 50, "mechanical_grip": 82, "drag_efficiency": 75, "reliability": 79, "weight_distribution": 77 },
+    "bio": "El coche de carreras más hermoso jamás construido. Fangio lo llevó a su quinto y último título mundial."
+  },
+  {
+    "id": "eagle_t1g_1967", "name": "Eagle T1G", "team": "Eagle", "year": 1967, "era": "pre_turbo",
+    "attributes": { "downforce": 60, "mechanical_grip": 81, "drag_efficiency": 83, "reliability": 70, "weight_distribution": 78 },
+    "bio": "Dan Gurney ganó el GP de Bélgica con él. El único americano que ganó un GP con un coche de su propia construcción."
+  },
+  {
+    "id": "wolf_wr1_1977", "name": "Wolf WR1", "team": "Wolf Racing", "year": 1977, "era": "pre_turbo",
+    "attributes": { "downforce": 73, "mechanical_grip": 81, "drag_efficiency": 78, "reliability": 77, "weight_distribution": 82 },
+    "bio": "Ganó en su primera carrera con Scheckter en Argentina 1977. Un milagro de Harvey Postlethwaite."
+  },
+  {
+    "id": "shadow_dn8_1977", "name": "Shadow DN8", "team": "Shadow", "year": 1977, "era": "pre_turbo",
+    "attributes": { "downforce": 67, "mechanical_grip": 74, "drag_efficiency": 74, "reliability": 70, "weight_distribution": 74 },
+    "bio": "El Shadow negro de Alan Jones. Su victoria en Austria 1977 fue la primera de muchas que le esperaban."
+  },
+  {
+    "id": "ligier_js11_1979", "name": "Ligier JS11", "team": "Ligier", "year": 1979, "era": "pre_turbo",
+    "attributes": { "downforce": 86, "mechanical_grip": 85, "drag_efficiency": 80, "reliability": 77, "weight_distribution": 84 },
+    "bio": "Dominó las primeras 4 carreras de 1979. Laffite y Depailler fueron imbatibles al inicio de temporada."
+  },
+  {
+    "id": "toleman_tg184_1984", "name": "Toleman TG184", "team": "Toleman", "year": 1984, "era": "turbo",
+    "attributes": { "downforce": 78, "mechanical_grip": 77, "drag_efficiency": 72, "reliability": 68, "weight_distribution": 78 },
+    "bio": "Senna lo convirtió en un misil bajo la lluvia de Mónaco. Prost lo paró con la bandera roja."
+  },
+  {
+    "id": "arrows_a18_1997", "name": "Arrows A18", "team": "Arrows", "year": 1997, "era": "v10_v12",
+    "attributes": { "downforce": 78, "mechanical_grip": 77, "drag_efficiency": 76, "reliability": 70, "weight_distribution": 77 },
+    "bio": "Hill casi ganó en Hungría 1997. Una vuelta más y la historia de Arrows sería completamente diferente."
+  },
+  {
+    "id": "stewart_sf3_1999", "name": "Stewart SF-3", "team": "Stewart Grand Prix", "year": 1999, "era": "v10_v12",
+    "attributes": { "downforce": 78, "mechanical_grip": 79, "drag_efficiency": 77, "reliability": 77, "weight_distribution": 79 },
+    "bio": "Herbert ganó en el caos del diluvio de Nürburgring 1999. El momento cumbre de Stewart GP."
+  },
+  {
+    "id": "sauber_c20_2001", "name": "Sauber C20", "team": "Sauber", "year": 2001, "era": "v10_v12",
+    "attributes": { "downforce": 75, "mechanical_grip": 75, "drag_efficiency": 73, "reliability": 80, "weight_distribution": 76 },
+    "bio": "El coche del debut de Räikkönen. Sauber había encontrado un diamante en bruto de Finland."
+  },
+  {
+    "id": "minardi_m01_1999", "name": "Minardi M01", "team": "Minardi", "year": 1999, "era": "v10_v12",
+    "attributes": { "downforce": 60, "mechanical_grip": 62, "drag_efficiency": 62, "reliability": 70, "weight_distribution": 64 },
+    "bio": "El coche más lento de la parrilla, pero sin él no habrían nacido muchos futuros campeones del mundo."
+  },
+  {
+    "id": "jaguar_r4_2003", "name": "Jaguar R4", "team": "Jaguar Racing", "year": 2003, "era": "v10_v12",
+    "attributes": { "downforce": 75, "mechanical_grip": 75, "drag_efficiency": 73, "reliability": 73, "weight_distribution": 75 },
+    "bio": "Webber extraía el máximo de un equipo millonario pero sin rumbo técnico claro. El potencial nunca llegó."
+  },
+  {
+    "id": "bar_006_2004", "name": "BAR 006", "team": "BAR Honda", "year": 2004, "era": "v10_v12",
+    "attributes": { "downforce": 85, "mechanical_grip": 84, "drag_efficiency": 82, "reliability": 82, "weight_distribution": 84 },
+    "bio": "Button logró 10 podios y el subcampeonato estuvo en juego. El mejor BAR de la historia."
+  },
+  {
+    "id": "toyota_tf105_2005", "name": "Toyota TF105", "team": "Toyota", "year": 2005, "era": "v10_v12",
+    "attributes": { "downforce": 80, "mechanical_grip": 79, "drag_efficiency": 78, "reliability": 82, "weight_distribution": 79 },
+    "bio": "Toyota en su momento de máximo rendimiento. Varios podios, pero la victoria nunca llegó."
+  },
+  {
+    "id": "toro_rosso_str3_2008", "name": "Toro Rosso STR3", "team": "Toro Rosso", "year": 2008, "era": "v8",
+    "attributes": { "downforce": 79, "mechanical_grip": 79, "drag_efficiency": 78, "reliability": 77, "weight_distribution": 79 },
+    "bio": "Vettel tomó pole, lideró y ganó en Monza con solo 21 años. El nacimiento de una leyenda."
+  },
+  {
+    "id": "bmw_sauber_f108_2008", "name": "BMW Sauber F1.08", "team": "BMW Sauber", "year": 2008, "era": "v8",
+    "attributes": { "downforce": 85, "mechanical_grip": 85, "drag_efficiency": 83, "reliability": 81, "weight_distribution": 85 },
+    "bio": "Kubica ganó en Canadá. Con un poco más de suerte, pudo haber peleado el campeonato del mundo."
+  },
+  {
+    "id": "force_india_vjm02_2009", "name": "Force India VJM02", "team": "Force India", "year": 2009, "era": "v8",
+    "attributes": { "downforce": 81, "mechanical_grip": 79, "drag_efficiency": 84, "reliability": 77, "weight_distribution": 80 },
+    "bio": "Fisichella en pole en Spa. Force India rompió todos los pronósticos con un coche extraordinariamente rápido."
+  },
+  {
+    "id": "force_india_vjm09_2016", "name": "Force India VJM09", "team": "Force India", "year": 2016, "era": "hybrid",
+    "attributes": { "downforce": 82, "mechanical_grip": 81, "drag_efficiency": 84, "reliability": 81, "weight_distribution": 82 },
+    "bio": "Cuartos en constructores con el cuarto presupuesto. El milagro técnico de un equipo sin recursos."
+  },
+  {
+    "id": "haas_vf18_2018", "name": "Haas VF-18", "team": "Haas", "year": 2018, "era": "hybrid",
+    "attributes": { "downforce": 79, "mechanical_grip": 78, "drag_efficiency": 78, "reliability": 70, "weight_distribution": 78 },
+    "bio": "Velocidad en el primer sector, problemas en carrera. El eterno dilema de Haas con la puesta a punto."
+  },
+  {
+    "id": "alpha_tauri_at01_2020", "name": "AlphaTauri AT01", "team": "AlphaTauri", "year": 2020, "era": "hybrid",
+    "attributes": { "downforce": 77, "mechanical_grip": 77, "drag_efficiency": 79, "reliability": 79, "weight_distribution": 78 },
+    "bio": "Gasly ganó en Monza. Una victoria que llegó de la nada y cambió para siempre la historia de Gasly."
+  },
+  {
+    "id": "racing_point_rp20_2020", "name": "Racing Point RP20", "team": "Racing Point", "year": 2020, "era": "hybrid",
+    "attributes": { "downforce": 90, "mechanical_grip": 88, "drag_efficiency": 87, "reliability": 84, "weight_distribution": 88 },
+    "bio": "La Mercedes rosa. Perez ganó en Sakhir. El coche más controvertido y polémico de la era."
   }
 ]

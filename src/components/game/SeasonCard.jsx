@@ -5,7 +5,7 @@ import ElementItem from './ElementItem'
 
 const CARD_SLOTS = [
   'driver1', 'driver2', 'team_principal', 'technical_director',
-  'chassis', 'engine', 'strategist', 'tires', 'aero', 'budget', 'reliability',
+  'chassis', 'engine', 'tires', 'aero', 'budget', 'reliability',
 ]
 
 export default function SeasonCard() {
@@ -16,10 +16,10 @@ export default function SeasonCard() {
   if (!currentCard) return null
 
   const { season, driver1, driver2, chassis, engine, team_principal,
-          technical_director, strategist, tires, aero, budget, reliability } = currentCard
+          technical_director, tires, aero, budget, reliability } = currentCard
 
   const colors   = getTeamColors(season.team)
-  const elements = { driver1, driver2, team_principal, technical_director, chassis, engine, strategist, tires, aero, budget, reliability }
+  const elements = { driver1, driver2, team_principal, technical_director, chassis, engine, tires, aero, budget, reliability }
 
   return (
     <AnimatePresence mode="wait">

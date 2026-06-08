@@ -47,7 +47,6 @@ const SLOT_SHORT = {
   technical_director: 'TD',
   chassis:            'CAR',
   engine:             'ENG',
-  strategist:         'STRAT',
   tires:              'TYRES',
   aero:               'AERO',
   budget:             'BDGT',

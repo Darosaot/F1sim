@@ -6,7 +6,6 @@ export function encodeTeam(team, config) {
     td: team.technical_director?.id,
     ch: team.chassis?.id,
     en: team.engine?.id,
-    st: team.strategist?.id,
     ti: team.tires?.id,
     ae: team.aero,
     bu: team.budget,
