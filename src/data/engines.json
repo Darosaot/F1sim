@@ -184,5 +184,53 @@
     "years_available": [2006, 2007, 2008, 2009, 2010],
     "attributes": { "power": 86, "driveability": 86, "fuel_efficiency": 83, "reliability": 84, "deployment_mode": 79 },
     "bio": "El V8 Renault al inicio de la era. Alonso ganó dos títulos con él."
+  },
+  {
+    "id": "maserati_250f_engine_1957", "name": "Maserati A6GCS 2.5L Straight-6", "supplier": "Maserati", "era": "early",
+    "years_available": [1954, 1955, 1956, 1957],
+    "attributes": { "power": 74, "driveability": 72, "fuel_efficiency": 55, "reliability": 76, "deployment_mode": 60 },
+    "bio": "Sonido inconfundible de seis en línea. Llevó a Fangio a su quinto y último título mundial en Nürburgring."
+  },
+  {
+    "id": "weslake_v12_1967", "name": "Weslake V12 3.0L", "supplier": "Weslake", "era": "pre_turbo",
+    "years_available": [1966, 1967],
+    "attributes": { "power": 78, "driveability": 70, "fuel_efficiency": 66, "reliability": 66, "deployment_mode": 68 },
+    "bio": "El V12 inglés que ganó en Bélgica 1967 con Gurney. Potente pero muy frágil e impredecible."
+  },
+  {
+    "id": "hart_415t_1984", "name": "Hart 415T 1.5L Turbo 4-cyl", "supplier": "Hart", "era": "turbo",
+    "years_available": [1983, 1984, 1985],
+    "attributes": { "power": 82, "driveability": 70, "fuel_efficiency": 60, "reliability": 66, "deployment_mode": 66 },
+    "bio": "Motor cliente accesible para equipos sin fábrica propia. Senna lo explotó hasta el límite en Mónaco 1984."
+  },
+  {
+    "id": "yamaha_ox11a_1997", "name": "Yamaha OX11A V10 3.0L", "supplier": "Yamaha", "era": "v10_v12",
+    "years_available": [1996, 1997],
+    "attributes": { "power": 82, "driveability": 80, "fuel_efficiency": 75, "reliability": 72, "deployment_mode": 72 },
+    "bio": "El motor japonés que nunca alcanzó su potencial en F1. Hill casi ganó con él en Hungría 1997."
+  },
+  {
+    "id": "ford_cosworth_cr_v10", "name": "Ford Cosworth CR V10 3.0L", "supplier": "Ford/Cosworth", "era": "v10_v12",
+    "years_available": [1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004],
+    "attributes": { "power": 84, "driveability": 84, "fuel_efficiency": 78, "reliability": 80, "deployment_mode": 78 },
+    "bio": "El sucesor del legendario DFV para la era moderna. Alimentó a Stewart, Jaguar, Minardi y otros equipos cliente."
+  },
+  {
+    "id": "honda_ra004e_2004", "name": "Honda RA004E V10 3.0L", "supplier": "Honda", "era": "v10_v12",
+    "years_available": [2003, 2004, 2005],
+    "attributes": { "power": 87, "driveability": 83, "fuel_efficiency": 80, "reliability": 82, "deployment_mode": 80 },
+    "bio": "El mejor motor Honda de la era V10. Button logró 10 podios con él durante la temporada 2004."
+  },
+  {
+    "id": "toyota_rv8_2005", "name": "Toyota RV8 V10 3.0L", "supplier": "Toyota", "era": "v10_v12",
+    "years_available": [2004, 2005],
+    "attributes": { "power": 86, "driveability": 84, "fuel_efficiency": 81, "reliability": 83, "deployment_mode": 78 },
+    "bio": "Motor propio de Toyota con enormes recursos pero sin la victoria prometida. El eterno segundo."
+  },
+  {
+    "id": "bmw_p86_2008", "name": "BMW P86/8 V8 2.4L", "supplier": "BMW", "era": "v8",
+    "years_available": [2007, 2008, 2009],
+    "attributes": { "power": 91, "driveability": 86, "fuel_efficiency": 82, "reliability": 83, "deployment_mode": 82 },
+    "bio": "El motor con el que Kubica ganó en Canadá 2008. Potente y fiable. BMW salió de la F1 al año siguiente."
   }
 ]

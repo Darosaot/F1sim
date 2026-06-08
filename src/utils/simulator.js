@@ -75,7 +75,6 @@ export function simulateSeason(team) {
   const d2Attrs  = team.driver2?.attributes  ?? { ...DEFAULT_DRIVER, pace: 65 }
   const chAttrs  = team.chassis?.attributes  ?? DEFAULT_CHASSIS
   const enAttrs  = team.engine?.attributes   ?? DEFAULT_ENGINE
-  const stAttrs  = team.strategist?.attributes ?? { race_management: 70, pit_timing: 70, undercut_instinct: 70, safety_car_read: 70 }
   const tdAttrs  = team.technical_director?.attributes ?? { design_genius: 70, innovation: 70, development_speed: 70, detail_obsession: 70 }
   const tiAttrs  = team.tires?.attributes    ?? { peak_grip: 70, durability: 70, thermal_window: 70, wet_performance: 70 }
   const aeroVal  = team.aero      ?? 70
@@ -89,13 +88,11 @@ export function simulateSeason(team) {
   }
   const effEn = { ...enAttrs }
 
-  // Strategy bonus — reduced so rivals stay competitive
-  const stratBonus = (stAttrs.race_management * 0.4 + stAttrs.pit_timing * 0.3 + stAttrs.undercut_instinct * 0.3) / 100 * 3
   const tdBonus    = tdAttrs.design_genius / 100 * 2
   const tireBonus  = (tiAttrs.peak_grip * 0.4 + tiAttrs.thermal_window * 0.3 + tiAttrs.durability * 0.3) / 100 * 2
   const budgetBonus= budgetVal / 100 * 1.5
   const relBonus   = relVal / 100 * 1.5
-  const teamBonus  = stratBonus + tdBonus + tireBonus + budgetBonus + relBonus
+  const teamBonus  = tdBonus + tireBonus + budgetBonus + relBonus
 
   // Rivals: each team has 2 drivers (D1 slightly stronger than D2)
   const rivals = RIVAL_TEAMS.map(r => ({
@@ -119,8 +116,6 @@ export function simulateSeason(team) {
     const c  = circuit.modifiers
     const isWet = Math.random() < c.wet_probability
     const safetyCar = Math.random() < c.safety_car_probability
-    const scBonus = safetyCar ? stAttrs.safety_car_read / 100 * 3 : 0
-
     // --- QUALIFYING ---
     const d1QualyBase = calculateDriverQualyPerf(d1Attrs, effCh, effEn, circuit)
     const d2QualyBase = calculateDriverQualyPerf(d2Attrs, effCh, effEn, circuit)
@@ -148,12 +143,12 @@ export function simulateSeason(team) {
 
     const d1RaceBase = d1DNF ? 0
       : (calculateDriverRacePerf(d1Attrs, effCh, effEn, circuit, isWet)
-        + teamBonus + scBonus
+        + teamBonus
         + gridBonus(d1GridPos, c.overtaking_difficulty)) * rng(0.84, 1.16)
 
     const d2RaceBase = d2DNF ? 0
       : (calculateDriverRacePerf(d2Attrs, effCh, effEn, circuit, isWet)
-        + teamBonus + scBonus
+        + teamBonus
         + gridBonus(d2GridPos, c.overtaking_difficulty)) * rng(0.84, 1.16)
 
     const rivalRaceScores = rivals.flatMap(r => [

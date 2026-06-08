@@ -8,7 +8,6 @@ const EMPTY_TEAM = {
   technical_director: null,
   chassis: null,
   engine: null,
-  strategist: null,
   tires: null,
   aero: null,
   budget: null,

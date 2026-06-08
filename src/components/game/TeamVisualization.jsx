@@ -6,7 +6,7 @@ const LAYOUT = [
   ['driver1', 'driver2'],
   ['team_principal', 'technical_director'],
   ['chassis', 'engine'],
-  ['strategist', 'tires', 'aero'],
+  ['tires', 'aero'],
   ['budget', 'reliability'],
 ]
 
@@ -17,7 +17,6 @@ const SHORT = {
   technical_director: 'TD',
   chassis:            'CAR',
   engine:             'ENG',
-  strategist:         'STRAT',
   tires:              'TYRES',
   aero:               'AERO',
   budget:             'BDGT',

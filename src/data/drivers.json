@@ -478,5 +478,125 @@
     "team": "McLaren", "year": 2023, "era": "current",
     "attributes": { "pace": 95, "racecraft": 92, "consistency": 90, "wet_performance": 91, "qualifying": 94, "experience": 82, "tire_management": 88 },
     "titles": 0, "bio": "La revelación de McLaren. Velocidad de élite y gran instinto de carrera."
+  },
+  {
+    "id": "gurney_1967", "name": "Dan Gurney", "nationality": "USA",
+    "team": "Eagle", "year": 1967, "era": "pre_turbo",
+    "attributes": { "pace": 91, "racecraft": 90, "consistency": 84, "wet_performance": 82, "qualifying": 90, "experience": 86, "tire_management": 84 },
+    "titles": 0, "bio": "El único americano en ganar un GP con un coche diseñado y construido por él mismo. Bélgica 1967."
+  },
+  {
+    "id": "laffite_1979", "name": "Jacques Laffite", "nationality": "FRA",
+    "team": "Ligier", "year": 1979, "era": "pre_turbo",
+    "attributes": { "pace": 88, "racecraft": 87, "consistency": 85, "wet_performance": 82, "qualifying": 86, "experience": 84, "tire_management": 84 },
+    "titles": 0, "bio": "El corazón de Ligier. Tres victorias en 1979. El piloto más cercano a dar a Francia el campeonato."
+  },
+  {
+    "id": "depailler_1979", "name": "Patrick Depailler", "nationality": "FRA",
+    "team": "Ligier", "year": 1979, "era": "pre_turbo",
+    "attributes": { "pace": 87, "racecraft": 86, "consistency": 82, "wet_performance": 80, "qualifying": 86, "experience": 82, "tire_management": 81 },
+    "titles": 0, "bio": "Dos victorias con Ligier en 1979. Rápido y combativo. Muerto trágicamente en Hockenheim en 1980."
+  },
+  {
+    "id": "senna_1984", "name": "Ayrton Senna", "nationality": "BRA",
+    "team": "Toleman", "year": 1984, "era": "turbo",
+    "attributes": { "pace": 95, "racecraft": 92, "consistency": 76, "wet_performance": 99, "qualifying": 96, "experience": 60, "tire_management": 70 },
+    "titles": 3, "bio": "Toleman 1984: la lluvia de Mónaco que reveló al genio al mundo. Prost lo paró con la bandera roja."
+  },
+  {
+    "id": "alonso_2001", "name": "Fernando Alonso", "nationality": "ESP",
+    "team": "Minardi", "year": 2001, "era": "v10_v12",
+    "attributes": { "pace": 89, "racecraft": 88, "consistency": 82, "wet_performance": 80, "qualifying": 88, "experience": 60, "tire_management": 80 },
+    "titles": 2, "bio": "El debut de un futuro bicampeón en el equipo más humilde de la parrilla. El mundo aún no lo sabía."
+  },
+  {
+    "id": "herbert_1999", "name": "Johnny Herbert", "nationality": "GBR",
+    "team": "Stewart Grand Prix", "year": 1999, "era": "v10_v12",
+    "attributes": { "pace": 86, "racecraft": 87, "consistency": 85, "wet_performance": 86, "qualifying": 83, "experience": 90, "tire_management": 86 },
+    "titles": 0, "bio": "Victoria en el caos de Nürburgring 1999. El momento más inesperado y emotivo de la temporada."
+  },
+  {
+    "id": "webber_2003", "name": "Mark Webber", "nationality": "AUS",
+    "team": "Jaguar Racing", "year": 2003, "era": "v10_v12",
+    "attributes": { "pace": 88, "racecraft": 87, "consistency": 84, "wet_performance": 82, "qualifying": 87, "experience": 72, "tire_management": 83 },
+    "titles": 0, "bio": "Revelación en Jaguar. Talento enorme atrapado en un equipo sin dirección. El futuro se lo daría Red Bull."
+  },
+  {
+    "id": "button_2004", "name": "Jenson Button", "nationality": "GBR",
+    "team": "BAR Honda", "year": 2004, "era": "v10_v12",
+    "attributes": { "pace": 87, "racecraft": 87, "consistency": 88, "wet_performance": 83, "qualifying": 87, "experience": 80, "tire_management": 89 },
+    "titles": 1, "bio": "10 podios en 2004 con BAR. El subcampeonato se le escapó por los pelos. Su gran revelación."
+  },
+  {
+    "id": "schumacher_r_2005", "name": "Ralf Schumacher", "nationality": "DEU",
+    "team": "Toyota", "year": 2005, "era": "v10_v12",
+    "attributes": { "pace": 87, "racecraft": 84, "consistency": 85, "wet_performance": 81, "qualifying": 86, "experience": 87, "tire_management": 84 },
+    "titles": 0, "bio": "El Schumacher menos famoso. Sólido y consistente, nunca logró la victoria esperada con Toyota."
+  },
+  {
+    "id": "trulli_2005", "name": "Jarno Trulli", "nationality": "ITA",
+    "team": "Toyota", "year": 2005, "era": "v10_v12",
+    "attributes": { "pace": 87, "racecraft": 83, "consistency": 84, "wet_performance": 79, "qualifying": 91, "experience": 85, "tire_management": 82 },
+    "titles": 0, "bio": "El rey de la clasificación. Sus sábados eran perfectos; los domingos, otro cuento."
+  },
+  {
+    "id": "kubica_2008", "name": "Robert Kubica", "nationality": "POL",
+    "team": "BMW Sauber", "year": 2008, "era": "v8",
+    "attributes": { "pace": 93, "racecraft": 91, "consistency": 89, "wet_performance": 85, "qualifying": 91, "experience": 78, "tire_management": 88 },
+    "titles": 0, "bio": "Victoria en Canadá 2008. Pudo haber peleado el mundial. El accidente de 2011 truncó una carrera extraordinaria."
+  },
+  {
+    "id": "heidfeld_2008", "name": "Nick Heidfeld", "nationality": "DEU",
+    "team": "BMW Sauber", "year": 2008, "era": "v8",
+    "attributes": { "pace": 87, "racecraft": 86, "consistency": 88, "wet_performance": 82, "qualifying": 85, "experience": 85, "tire_management": 87 },
+    "titles": 0, "bio": "El rey de los podios sin victorias. Fiable, rápido y siempre cerca pero nunca el primero."
+  },
+  {
+    "id": "vettel_2008", "name": "Sebastian Vettel", "nationality": "DEU",
+    "team": "Toro Rosso", "year": 2008, "era": "v8",
+    "attributes": { "pace": 91, "racecraft": 89, "consistency": 85, "wet_performance": 86, "qualifying": 95, "experience": 70, "tire_management": 84 },
+    "titles": 4, "bio": "Monza 2008: pole, vuelta rápida, victoria. Un chico de 21 años que ya era leyenda."
+  },
+  {
+    "id": "fisichella_2009", "name": "Giancarlo Fisichella", "nationality": "ITA",
+    "team": "Force India", "year": 2009, "era": "v8",
+    "attributes": { "pace": 84, "racecraft": 84, "consistency": 85, "wet_performance": 83, "qualifying": 86, "experience": 95, "tire_management": 85 },
+    "titles": 0, "bio": "Pole en Spa con Force India 2009. La sorpresa del año y el canto del cisne de una gran carrera."
+  },
+  {
+    "id": "hulkenberg_2016", "name": "Nico Hülkenberg", "nationality": "DEU",
+    "team": "Force India", "year": 2016, "era": "hybrid",
+    "attributes": { "pace": 90, "racecraft": 88, "consistency": 89, "wet_performance": 83, "qualifying": 91, "experience": 86, "tire_management": 87 },
+    "titles": 0, "bio": "El mejor de su generación sin un podio en F1. Velocidad de top team en un coche de midfield."
+  },
+  {
+    "id": "perez_2016", "name": "Sergio Pérez", "nationality": "MEX",
+    "team": "Force India", "year": 2016, "era": "hybrid",
+    "attributes": { "pace": 88, "racecraft": 90, "consistency": 87, "wet_performance": 85, "qualifying": 83, "experience": 84, "tire_management": 92 },
+    "titles": 0, "bio": "Años épicos con Force India. Extraía siempre lo máximo de un presupuesto mínimo."
+  },
+  {
+    "id": "gasly_2020", "name": "Pierre Gasly", "nationality": "FRA",
+    "team": "AlphaTauri", "year": 2020, "era": "hybrid",
+    "attributes": { "pace": 89, "racecraft": 88, "consistency": 85, "wet_performance": 82, "qualifying": 88, "experience": 78, "tire_management": 85 },
+    "titles": 0, "bio": "Victoria milagrosa en Monza 2020. La redención más emotiva de toda la era híbrida."
+  },
+  {
+    "id": "grosjean_2018", "name": "Romain Grosjean", "nationality": "FRA",
+    "team": "Haas", "year": 2018, "era": "hybrid",
+    "attributes": { "pace": 87, "racecraft": 82, "consistency": 78, "wet_performance": 82, "qualifying": 86, "experience": 85, "tire_management": 78 },
+    "titles": 0, "bio": "Capaz de brillantez absoluta y errores imperdonables. El piloto más impredecible del paddock."
+  },
+  {
+    "id": "magnussen_2018", "name": "Kevin Magnussen", "nationality": "DEN",
+    "team": "Haas", "year": 2018, "era": "hybrid",
+    "attributes": { "pace": 87, "racecraft": 84, "consistency": 82, "wet_performance": 83, "qualifying": 85, "experience": 82, "tire_management": 81 },
+    "titles": 0, "bio": "Duro, agresivo y sin disculpas. Junto a Grosjean, la dupla más controvertida del paddock."
+  },
+  {
+    "id": "stroll_2020", "name": "Lance Stroll", "nationality": "CAN",
+    "team": "Racing Point", "year": 2020, "era": "hybrid",
+    "attributes": { "pace": 83, "racecraft": 82, "consistency": 82, "wet_performance": 84, "qualifying": 81, "experience": 78, "tire_management": 82 },
+    "titles": 0, "bio": "Hijo del dueño del equipo. Sorprendió con la pole en Monza bajo la lluvia. Mejor de lo que la gente cree."
   }
 ]
