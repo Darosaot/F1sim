@@ -28,7 +28,11 @@ function getTopAttrs(element, slotKey) {
 export default function ElementItem({ slotKey, element, showStats }) {
   const pickElement   = useGameStore(s => s.pickElement)
   const team          = useGameStore(s => s.team)
-  const alreadyFilled = team[slotKey] !== null && team[slotKey] !== undefined
+  // Drivers share a pool of 2 slots — only disabled when both are taken
+  const alreadyFilled = (slotKey === 'driver1' || slotKey === 'driver2')
+    ? (team.driver1 !== null && team.driver1 !== undefined &&
+       team.driver2 !== null && team.driver2 !== undefined)
+    : (team[slotKey] !== null && team[slotKey] !== undefined)
 
   const rating      = getElementValue(element, slotKey)
   const isNumeric   = typeof element === 'number'

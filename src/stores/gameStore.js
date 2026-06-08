@@ -69,7 +69,16 @@ export const useGameStore = create((set, get) => ({
 
   pickElement: (slotKey, element) => {
     const team = { ...get().team }
-    team[slotKey] = element
+
+    // Drivers are a shared pool — fill whichever slot is open
+    let actualSlot = slotKey
+    if (slotKey === 'driver1' || slotKey === 'driver2') {
+      if (team.driver1 === null || team.driver1 === undefined) actualSlot = 'driver1'
+      else if (team.driver2 === null || team.driver2 === undefined) actualSlot = 'driver2'
+      else return // both full, nothing to do
+    }
+
+    team[actualSlot] = element
     const allFilled = SLOT_KEYS.every(k => team[k] !== null && team[k] !== undefined)
     set({
       team,
@@ -77,7 +86,6 @@ export const useGameStore = create((set, get) => ({
       phase: allFilled ? 'complete' : 'drafting',
     })
     if (!allFilled) {
-      // auto-roll next card
       setTimeout(() => get().rollCard(), 300)
     }
   },
