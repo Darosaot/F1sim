@@ -20,6 +20,7 @@ export const useGameStore = create((set, get) => ({
   // Config
   era: 'all',
   mode: 'vip',
+  draftDifficulty: 'hard',
 
   // Phase: 'setup' | 'drafting' | 'complete' | 'results'
   phase: 'setup',
@@ -39,6 +40,7 @@ export const useGameStore = create((set, get) => ({
   // ---- Config actions ----
   setEra: (era) => set({ era }),
   setMode: (mode) => set({ mode }),
+  setDraftDifficulty: (draftDifficulty) => set({ draftDifficulty }),
 
   // ---- Game flow ----
   startGame: () => {
@@ -55,8 +57,8 @@ export const useGameStore = create((set, get) => ({
   },
 
   rollCard: () => {
-    const { era, usedSeasonIds } = get()
-    const season = getRandomSeason(era, usedSeasonIds)
+    const { era, usedSeasonIds, draftDifficulty } = get()
+    const season = getRandomSeason(era, usedSeasonIds, draftDifficulty)
     if (!season) return
     const resolved = resolveSeasonElements(season)
     set({

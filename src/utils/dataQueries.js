@@ -33,11 +33,33 @@ export function getFilteredSeasons(era) {
   return seasonsData.filter(s => matchesEra(s, era))
 }
 
-export function getRandomSeason(era, excludeIds = []) {
+function weightedRandom(items, weightFn) {
+  const weights = items.map(weightFn)
+  const total = weights.reduce((a, b) => a + b, 0)
+  let r = Math.random() * total
+  for (let i = 0; i < items.length; i++) {
+    r -= weights[i]
+    if (r <= 0) return items[i]
+  }
+  return items[items.length - 1]
+}
+
+// difficulty: 'hard' | 'medium' | 'easy'
+// hard    → team-equal probability (every team equally likely, random year within team)
+// medium  → weighted by budget_index^1.5 (better teams moderately more likely)
+// easy    → weighted by budget_index^3   (top teams heavily favoured)
+export function getRandomSeason(era, excludeIds = [], difficulty = 'hard') {
   const filtered = getFilteredSeasons(era).filter(s => !excludeIds.includes(s.id))
   if (filtered.length === 0) return null
 
-  // Group by team so each team has equal probability regardless of how many seasons it has
+  if (difficulty === 'easy') {
+    return weightedRandom(filtered, s => Math.pow(Math.max(1, s.budget_index ?? 50), 3))
+  }
+  if (difficulty === 'medium') {
+    return weightedRandom(filtered, s => Math.pow(Math.max(1, s.budget_index ?? 50), 1.5))
+  }
+
+  // Hard: team-equal probability — each team equally likely regardless of seasons count
   const byTeam = {}
   for (const s of filtered) {
     if (!byTeam[s.team]) byTeam[s.team] = []
