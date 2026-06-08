@@ -36,7 +36,16 @@ export function getFilteredSeasons(era) {
 export function getRandomSeason(era, excludeIds = []) {
   const filtered = getFilteredSeasons(era).filter(s => !excludeIds.includes(s.id))
   if (filtered.length === 0) return null
-  return filtered[Math.floor(Math.random() * filtered.length)]
+
+  // Group by team so each team has equal probability regardless of how many seasons it has
+  const byTeam = {}
+  for (const s of filtered) {
+    if (!byTeam[s.team]) byTeam[s.team] = []
+    byTeam[s.team].push(s)
+  }
+  const teams = Object.values(byTeam)
+  const randomTeam = teams[Math.floor(Math.random() * teams.length)]
+  return randomTeam[Math.floor(Math.random() * randomTeam.length)]
 }
 
 export function resolveSeasonElements(season) {

@@ -1,0 +1,231 @@
+{
+  "_comment": "Maps Ergast constructorId + year range to game engine ID. Engine must exist in src/data/engines.json or scripts/lib/new_engines.js",
+  "ferrari":      [
+    {"from":1950,"to":1960,"engine":"ferrari_375_engine_1951"},
+    {"from":1961,"to":1974,"engine":"ferrari_v12_1965"},
+    {"from":1975,"to":1980,"engine":"ferrari_312t_engine_1975"},
+    {"from":1981,"to":1995,"engine":"ferrari_v12_1990"},
+    {"from":1996,"to":1999,"engine":"ferrari_043_1996"},
+    {"from":2000,"to":2003,"engine":"ferrari_049_2000"},
+    {"from":2004,"to":2005,"engine":"ferrari_052_2004"},
+    {"from":2006,"to":2013,"engine":"ferrari_056_v8_2006"},
+    {"from":2014,"to":2016,"engine":"ferrari_059_4_2015"},
+    {"from":2017,"to":2018,"engine":"ferrari_059_5_2017"},
+    {"from":2019,"to":2021,"engine":"ferrari_v6h_2019"},
+    {"from":2022,"to":2025,"engine":"ferrari_066_12_2022"}
+  ],
+  "mclaren":      [
+    {"from":1966,"to":1983,"engine":"ford_dfv_1967"},
+    {"from":1984,"to":1987,"engine":"tag_porsche_tte_1984"},
+    {"from":1988,"to":1992,"engine":"honda_ra168e_1988"},
+    {"from":1993,"to":1993,"engine":"ford_cosworth_cr_v10"},
+    {"from":1994,"to":1995,"engine":"peugeot_a14_1994"},
+    {"from":1996,"to":2006,"engine":"mercedes_v10_mclaren"},
+    {"from":2007,"to":2014,"engine":"mercedes_fo110_2010"},
+    {"from":2015,"to":2017,"engine":"honda_ra615h_2015"},
+    {"from":2018,"to":2020,"engine":"renault_rs27_2010"},
+    {"from":2021,"to":2025,"engine":"mercedes_m13_2022"}
+  ],
+  "williams":     [
+    {"from":1977,"to":1983,"engine":"ford_dfv_1967"},
+    {"from":1984,"to":1987,"engine":"honda_ra166e_1986"},
+    {"from":1988,"to":1988,"engine":"judd_cv_1988"},
+    {"from":1989,"to":1997,"engine":"renault_rs5_1992"},
+    {"from":1998,"to":1999,"engine":"mecachrome_v10"},
+    {"from":2000,"to":2005,"engine":"bmw_v10_2000"},
+    {"from":2006,"to":2011,"engine":"cosworth_ca_2010"},
+    {"from":2012,"to":2013,"engine":"renault_rs27_2010"},
+    {"from":2014,"to":2025,"engine":"mercedes_m13_2022"}
+  ],
+  "red_bull":     [
+    {"from":2005,"to":2005,"engine":"ford_cosworth_cr_v10"},
+    {"from":2006,"to":2013,"engine":"renault_rs27_2010"},
+    {"from":2014,"to":2018,"engine":"renault_re14_2014"},
+    {"from":2019,"to":2020,"engine":"honda_ra618h_2019"},
+    {"from":2021,"to":2021,"engine":"honda_ra620h_2021"},
+    {"from":2022,"to":2025,"engine":"rbpth001_2023"}
+  ],
+  "mercedes":     [
+    {"from":2010,"to":2013,"engine":"mercedes_fo110_2010"},
+    {"from":2014,"to":2013,"engine":"mercedes_pu106a_2014"},
+    {"from":2014,"to":2014,"engine":"mercedes_pu106a_2014"},
+    {"from":2015,"to":2015,"engine":"mercedes_pu106b_2015"},
+    {"from":2016,"to":2021,"engine":"mercedes_pu106c_2016"},
+    {"from":2022,"to":2025,"engine":"mercedes_m13_2022"}
+  ],
+  "renault":      [
+    {"from":1977,"to":1985,"engine":"renault_ef_1983"},
+    {"from":2002,"to":2010,"engine":"renault_rs26_2006_v8"},
+    {"from":2016,"to":2018,"engine":"renault_re14_2014"},
+    {"from":2019,"to":2020,"engine":"renault_e_tech_2021"}
+  ],
+  "alpine":       [
+    {"from":2021,"to":2021,"engine":"renault_e_tech_2021"},
+    {"from":2022,"to":2025,"engine":"renault_e_tech_2022"}
+  ],
+  "lotus":        [
+    {"from":1958,"to":1966,"engine":"climax_fwmv_1963"},
+    {"from":1967,"to":1983,"engine":"ford_dfv_1967"}
+  ],
+  "lotus_f1":     [
+    {"from":2012,"to":2015,"engine":"renault_re14_2014"}
+  ],
+  "lotus_renault": [
+    {"from":2011,"to":2011,"engine":"renault_rs26_2006_v8"}
+  ],
+  "lotus_racing": [
+    {"from":2010,"to":2011,"engine":"cosworth_ca_2010"}
+  ],
+  "benetton":     [
+    {"from":1986,"to":1993,"engine":"ford_dfv_1967"},
+    {"from":1994,"to":1995,"engine":"ford_zetec_1994"},
+    {"from":1996,"to":1997,"engine":"renault_rs5_1992"},
+    {"from":1998,"to":2001,"engine":"mugen_ho_v10"}
+  ],
+  "brabham":      [
+    {"from":1963,"to":1986,"engine":"ford_dfv_1967"},
+    {"from":1987,"to":1988,"engine":"honda_ra166e_1986"},
+    {"from":1989,"to":1992,"engine":"ford_dfv_1967"}
+  ],
+  "tyrrell":      [
+    {"from":1970,"to":1997,"engine":"ford_dfv_1967"}
+  ],
+  "jordan":       [
+    {"from":1991,"to":1994,"engine":"ford_dfv_1967"},
+    {"from":1995,"to":1998,"engine":"peugeot_a14_1994"},
+    {"from":1999,"to":2000,"engine":"mugen_ho_v10"},
+    {"from":2001,"to":2004,"engine":"honda_ra004e_2004"}
+  ],
+  "bar":          [
+    {"from":1999,"to":1999,"engine":"mecachrome_v10"},
+    {"from":2000,"to":2001,"engine":"honda_ra100e_1990"},
+    {"from":2002,"to":2005,"engine":"honda_ra004e_2004"}
+  ],
+  "honda":        [
+    {"from":2006,"to":2008,"engine":"honda_ra006e_2006"}
+  ],
+  "toyota":       [
+    {"from":2002,"to":2009,"engine":"toyota_rv8_2005"}
+  ],
+  "bmw_sauber":   [
+    {"from":2006,"to":2009,"engine":"bmw_p86_2008"}
+  ],
+  "sauber":       [
+    {"from":1993,"to":1997,"engine":"ford_cosworth_cr_v10"},
+    {"from":1998,"to":2005,"engine":"ferrari_056_v8_2006"},
+    {"from":2010,"to":2013,"engine":"ferrari_056_v8_2006"},
+    {"from":2014,"to":2015,"engine":"ferrari_059_4_2015"},
+    {"from":2016,"to":2018,"engine":"ferrari_059_5_2017"},
+    {"from":2019,"to":2025,"engine":"ferrari_v6h_2019"}
+  ],
+  "alfa":         [
+    {"from":2019,"to":2021,"engine":"ferrari_v6h_2019"},
+    {"from":2022,"to":2023,"engine":"ferrari_066_12_2022"}
+  ],
+  "force_india":  [
+    {"from":2008,"to":2009,"engine":"mercedes_fo110_2009"},
+    {"from":2010,"to":2018,"engine":"mercedes_fo110_2010"}
+  ],
+  "racing_point": [
+    {"from":2019,"to":2020,"engine":"mercedes_m09_2020"}
+  ],
+  "aston_martin": [
+    {"from":2021,"to":2025,"engine":"mercedes_m13_2022"}
+  ],
+  "alphatauri":   [
+    {"from":2020,"to":2021,"engine":"honda_ra620h_2021"},
+    {"from":2022,"to":2023,"engine":"rbpth001_2023"}
+  ],
+  "rb":           [
+    {"from":2024,"to":2025,"engine":"rbpth001_2023"}
+  ],
+  "toro_rosso":   [
+    {"from":2006,"to":2013,"engine":"ferrari_056_v8_2006"},
+    {"from":2014,"to":2018,"engine":"renault_re14_2014"},
+    {"from":2019,"to":2019,"engine":"honda_ra618h_2019"}
+  ],
+  "haas":         [
+    {"from":2016,"to":2021,"engine":"ferrari_v6h_2019"},
+    {"from":2022,"to":2025,"engine":"ferrari_066_12_2022"}
+  ],
+  "minardi":      [
+    {"from":1985,"to":1996,"engine":"ford_dfv_1967"},
+    {"from":1997,"to":1998,"engine":"ford_cosworth_cr_v10"},
+    {"from":1999,"to":2001,"engine":"ford_cosworth_cr_v10"},
+    {"from":2002,"to":2005,"engine":"ford_cosworth_cr_v10"}
+  ],
+  "jaguar":       [
+    {"from":2000,"to":2004,"engine":"ford_cosworth_cr_v10"}
+  ],
+  "stewart":      [
+    {"from":1997,"to":1999,"engine":"ford_cosworth_cr_v10"}
+  ],
+  "arrows":       [
+    {"from":1977,"to":1996,"engine":"ford_dfv_1967"},
+    {"from":1997,"to":1997,"engine":"yamaha_ox11a_1997"},
+    {"from":1998,"to":2002,"engine":"ford_cosworth_cr_v10"}
+  ],
+  "wolf":         [
+    {"from":1977,"to":1979,"engine":"ford_dfv_1967"}
+  ],
+  "shadow":       [
+    {"from":1973,"to":1979,"engine":"ford_dfv_1967"}
+  ],
+  "march":        [
+    {"from":1970,"to":1992,"engine":"ford_dfv_1967"}
+  ],
+  "ligier":       [
+    {"from":1976,"to":1996,"engine":"ford_dfv_1967"}
+  ],
+  "toleman":      [
+    {"from":1981,"to":1985,"engine":"hart_415t_1984"}
+  ],
+  "cooper":       [
+    {"from":1959,"to":1968,"engine":"climax_fwmv_1963"}
+  ],
+  "brm":          [
+    {"from":1950,"to":1977,"engine":"brm_p56_1962"}
+  ],
+  "vanwall":      [
+    {"from":1954,"to":1960,"engine":"ford_dfv_1967"}
+  ],
+  "eagle":        [
+    {"from":1966,"to":1968,"engine":"weslake_v12_1967"}
+  ],
+  "brawn":        [
+    {"from":2009,"to":2009,"engine":"mercedes_fo110_2009"}
+  ],
+  "maserati":     [
+    {"from":1950,"to":1960,"engine":"maserati_250f_engine_1957"}
+  ],
+  "caterham":     [
+    {"from":2012,"to":2014,"engine":"renault_rs27_2010"}
+  ],
+  "hrt":          [
+    {"from":2010,"to":2012,"engine":"cosworth_ca_2010"}
+  ],
+  "virgin":       [
+    {"from":2010,"to":2011,"engine":"cosworth_ca_2010"}
+  ],
+  "marussia":     [
+    {"from":2012,"to":2014,"engine":"cosworth_ca_2010"}
+  ],
+  "manor":        [
+    {"from":2015,"to":2016,"engine":"ferrari_059_4_2015"}
+  ],
+  "super_aguri":  [
+    {"from":2006,"to":2008,"engine":"honda_ra006e_2006"}
+  ],
+  "spyker":       [
+    {"from":2007,"to":2007,"engine":"ferrari_056_v8_2006"}
+  ],
+  "midland":      [
+    {"from":2006,"to":2006,"engine":"toyota_rv8_2005"}
+  ],
+  "prost":        [
+    {"from":1997,"to":2001,"engine":"ford_cosworth_cr_v10"}
+  ],
+  "lola":         [
+    {"from":1962,"to":1997,"engine":"ford_dfv_1967"}
+  ]
+}

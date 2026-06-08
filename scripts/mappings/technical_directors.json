@@ -1,0 +1,82 @@
+{
+  "ferrari":      [
+    {"from":1984,"to":1989,"td":"barnard_john"},
+    {"from":1994,"to":2006,"td":"byrne_rory"},
+    {"from":2007,"to":2015,"td":"costa_aldo"},
+    {"from":2016,"to":2019,"td":"binotto_mattia_td"},
+    {"from":2020,"to":2021,"td":"allison_james"},
+    {"from":2022,"to":2025,"td":"cardile_enrico"}
+  ],
+  "mclaren":      [
+    {"from":1984,"to":1989,"td":"barnard_john"},
+    {"from":1990,"to":2014,"td":"prodromou_peter"},
+    {"from":2019,"to":2025,"td":"key_james"}
+  ],
+  "williams":     [
+    {"from":1977,"to":2012,"td":"head_patrick"}
+  ],
+  "red_bull":     [
+    {"from":2006,"to":2023,"td":"newey_adrian"},
+    {"from":2022,"to":2025,"td":"wache_pierre"}
+  ],
+  "mercedes":     [
+    {"from":2010,"to":2025,"td":"allison_james"}
+  ],
+  "renault":      [
+    {"from":2002,"to":2007,"td":"gascoyne_mike"}
+  ],
+  "lotus":        [
+    {"from":1958,"to":1982,"td":"chapman_colin_td"}
+  ],
+  "benetton":     [
+    {"from":1986,"to":2001,"td":"brawn_ross_td"}
+  ],
+  "brabham":      [
+    {"from":1963,"to":1988,"td":"murray_gordon"}
+  ],
+  "jordan":       [
+    {"from":1991,"to":2004,"td":"anderson_gary"}
+  ],
+  "sauber":       [
+    {"from":1993,"to":2009,"td":"rampf_willy"}
+  ],
+  "bmw_sauber":   [
+    {"from":2006,"to":2009,"td":"rampf_willy"}
+  ],
+  "force_india":  [
+    {"from":2008,"to":2018,"td":"green_andrew"}
+  ],
+  "racing_point": [
+    {"from":2019,"to":2020,"td":"green_andrew"}
+  ],
+  "aston_martin": [
+    {"from":2021,"to":2024,"td":"fallows_dan"}
+  ],
+  "bar":          [
+    {"from":1999,"to":2005,"td":"willis_geoff"}
+  ],
+  "jaguar":       [
+    {"from":2000,"to":2004,"td":"anderson_gary"}
+  ],
+  "stewart":      [
+    {"from":1997,"to":1999,"td":"anderson_gary"}
+  ],
+  "brawn":        [
+    {"from":2009,"to":2009,"td":"brawn_ross_td"}
+  ],
+  "tyrrell":      [
+    {"from":1970,"to":1997,"td":null}
+  ],
+  "ligier":       [
+    {"from":1976,"to":1996,"td":"ducarouge_gerard"}
+  ],
+  "wolf":         [
+    {"from":1977,"to":1979,"td":"postlethwaite_harvey"}
+  ],
+  "maserati":     [
+    {"from":1950,"to":1957,"td":"alfieri_giulio"}
+  ],
+  "cooper":       [
+    {"from":1959,"to":1968,"td":"cooper_john"}
+  ]
+}
