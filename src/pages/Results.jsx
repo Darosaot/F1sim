@@ -13,7 +13,7 @@ export default function Results() {
 
   if (!simulationResults) return null
 
-  const { races, d1FinalPos, d2FinalPos, constructorPos, d1Stats, d2Stats, d1Name, d2Name } = simulationResults
+  const { races, d1FinalPos, d2FinalPos, constructorPos, d1Stats, d2Stats, d1Name, d2Name, rivalYear } = simulationResults
   const verdict = getVerdict(d1FinalPos, d2FinalPos, constructorPos)
 
   useEffect(() => {
@@ -44,6 +44,11 @@ export default function Results() {
         <div>
           <p className="text-xs font-bold uppercase tracking-widest text-ink-md mb-1">RESULTADOS</p>
           <h1 className="font-display font-black text-4xl uppercase text-ink">La Temporada</h1>
+          {rivalYear && (
+            <p className="text-[11px] font-bold uppercase tracking-widest text-ink-lt mt-1">
+              vs campo {rivalYear}
+            </p>
+          )}
         </div>
 
         {/* Verdict */}
