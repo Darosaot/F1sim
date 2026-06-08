@@ -42,7 +42,7 @@ export default function RaceTicker({ races, d1Name, d2Name }) {
     let i = 0
     const iv = setInterval(() => {
       if (i >= races.length) { clearInterval(iv); return }
-      setVisible(prev => [...prev, races[i]])
+      setVisible(prev => [...prev, { ...races[i], raceNumber: i + 1 }])
       i++
     }, 200)
     return () => clearInterval(iv)
@@ -64,6 +64,9 @@ export default function RaceTicker({ races, d1Name, d2Name }) {
             {/* Circuit header */}
             <div className="flex items-center justify-between mb-1.5">
               <div className="flex items-center gap-1.5">
+                <span className="text-[8px] font-bold text-ink-lt w-8 shrink-0">
+                  R{race.raceNumber}/{races?.length ?? 22}
+                </span>
                 <span className="text-xs">{race.emoji}</span>
                 <span className="text-xs font-bold text-ink">{race.circuit}</span>
                 {race.isWet && <span className="text-[10px]">🌧</span>}
