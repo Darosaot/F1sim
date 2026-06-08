@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const STAGE_LABELS = {
@@ -11,6 +11,8 @@ const STAGE_LABELS = {
 export default function RaceTicker({ races, onComplete }) {
   const [visible, setVisible] = useState([])
   const [done,    setDone]    = useState(false)
+  const onCompleteRef = useRef(onComplete)
+  useEffect(() => { onCompleteRef.current = onComplete }, [onComplete])
 
   useEffect(() => {
     let i = 0
@@ -18,14 +20,14 @@ export default function RaceTicker({ races, onComplete }) {
       if (i >= races.length) {
         clearInterval(iv)
         setDone(true)
-        setTimeout(onComplete, 600)
+        setTimeout(() => onCompleteRef.current(), 600)
         return
       }
       setVisible(prev => [...prev, races[i]])
       i++
     }, 160)
     return () => clearInterval(iv)
-  }, [races, onComplete])
+  }, [races])
 
   return (
     <div className="space-y-px">

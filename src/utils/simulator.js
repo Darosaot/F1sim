@@ -59,10 +59,10 @@ function isDNF(team) {
 export function simulateSeason(team) {
   const seasonCircuits = [...circuits].sort(() => Math.random() - 0.5).slice(0, 22)
 
-  // Rival rating range: 50–90
+  // Rival rating range: 62–98, spread so competition feels real
   const rivals = RIVAL_TEAMS.map((r, i) => ({
     ...r,
-    rating: rng(52, 88),
+    rating: rng(62 + i * 1.5, 92 + i * 0.5),
     points: 0,
     wins: 0,
     podiums: 0,
@@ -79,7 +79,7 @@ export function simulateSeason(team) {
 
   for (const circuit of seasonCircuits) {
     const playerPerf = calculateRacePerf(team, circuit)
-    const playerVariance = rng(0.88, 1.12)
+    const playerVariance = rng(0.82, 1.18)
     let playerScore = playerPerf * playerVariance
 
     const isWet = Math.random() < circuit.modifiers.wet_probability
@@ -102,7 +102,7 @@ export function simulateSeason(team) {
 
     const rivalScores = rivals.map(r => ({
       ...r,
-      raceScore: r.rating * rng(0.85, 1.15),
+      raceScore: r.rating * rng(0.80, 1.20),
     }))
 
     const allEntries = [
