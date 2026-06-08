@@ -159,8 +159,8 @@ export default function Home() {
 
             {/* Stats bar */}
             <div className="text-xs text-ink-md pt-2">
-              <span className="font-bold text-ink">60+</span> pilotos ·{' '}
-              <span className="font-bold text-ink">50+</span> temporadas ·{' '}
+              <span className="font-bold text-ink">1900+</span> pilotos ·{' '}
+              <span className="font-bold text-ink">1000+</span> temporadas ·{' '}
               <span className="font-bold text-ink">11</span> slots ·{' '}
               <span className="font-bold text-ink">22</span> circuitos
             </div>
