@@ -84,7 +84,7 @@ export default function Home() {
 
             <p className="text-sm text-ink-md leading-relaxed mb-6 max-w-sm">
               Tira el dado: te toca un equipo y temporada. Elige uno de sus elementos,
-              completa los 11 slots y simula — ¿puede tu equipo ganar el campeonato?
+              completa los 10 slots y simula — ¿puede tu equipo ganar el campeonato?
             </p>
 
             <motion.button
@@ -206,7 +206,7 @@ export default function Home() {
             <div className="text-xs text-ink-md pt-2">
               <span className="font-bold text-ink">1900+</span> pilotos ·{' '}
               <span className="font-bold text-ink">1000+</span> temporadas ·{' '}
-              <span className="font-bold text-ink">11</span> slots ·{' '}
+              <span className="font-bold text-ink">10</span> slots ·{' '}
               <span className="font-bold text-ink">22</span> circuitos
             </div>
           </div>
