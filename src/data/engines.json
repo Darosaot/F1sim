@@ -1,236 +1,2622 @@
 [
   {
-    "id": "alfa_158_engine_1950", "name": "Alfa Romeo 159 Supercharged", "supplier": "Alfa Romeo", "era": "early",
-    "years_available": [1950, 1951],
-    "attributes": { "power": 72, "driveability": 65, "fuel_efficiency": 45, "reliability": 75, "deployment_mode": 60 },
+    "id": "alfa_158_engine_1950",
+    "name": "Alfa Romeo 159 Supercharged",
+    "supplier": "Alfa Romeo",
+    "era": "early",
+    "years_available": [
+      1950,
+      1951
+    ],
+    "attributes": {
+      "power": 72,
+      "driveability": 65,
+      "fuel_efficiency": 45,
+      "reliability": 75,
+      "deployment_mode": 60
+    },
     "bio": "Motor sobrealimentado de 1.5L. Dominó los primeros dos mundiales."
   },
   {
-    "id": "ferrari_375_engine_1951", "name": "Ferrari Tipo 375 4.5L", "supplier": "Ferrari", "era": "early",
-    "years_available": [1951, 1952],
-    "attributes": { "power": 70, "driveability": 70, "fuel_efficiency": 55, "reliability": 80, "deployment_mode": 62 },
+    "id": "ferrari_375_engine_1951",
+    "name": "Ferrari Tipo 375 4.5L",
+    "supplier": "Ferrari",
+    "era": "early",
+    "years_available": [
+      1951,
+      1952
+    ],
+    "attributes": {
+      "power": 70,
+      "driveability": 70,
+      "fuel_efficiency": 55,
+      "reliability": 80,
+      "deployment_mode": 62
+    },
     "bio": "V12 atmosférico de 4.5L. La respuesta de Ferrari a los supercharged."
   },
   {
-    "id": "climax_fwmv_1963", "name": "Coventry Climax FWMV V8", "supplier": "Coventry Climax", "era": "early",
-    "years_available": [1962, 1963, 1964, 1965],
-    "attributes": { "power": 68, "driveability": 78, "fuel_efficiency": 70, "reliability": 82, "deployment_mode": 68 },
+    "id": "climax_fwmv_1963",
+    "name": "Coventry Climax FWMV V8",
+    "supplier": "Coventry Climax",
+    "era": "early",
+    "years_available": [
+      1962,
+      1963,
+      1964,
+      1965
+    ],
+    "attributes": {
+      "power": 68,
+      "driveability": 78,
+      "fuel_efficiency": 70,
+      "reliability": 82,
+      "deployment_mode": 68
+    },
     "bio": "El motor de los campeones de los 60. Ligero y fiable."
   },
   {
-    "id": "brm_p56_1962", "name": "BRM P56 V8 1.5L", "supplier": "BRM", "era": "early",
-    "years_available": [1962, 1963, 1964, 1965],
-    "attributes": { "power": 67, "driveability": 72, "fuel_efficiency": 68, "reliability": 74, "deployment_mode": 65 },
+    "id": "brm_p56_1962",
+    "name": "BRM P56 V8 1.5L",
+    "supplier": "BRM",
+    "era": "early",
+    "years_available": [
+      1962,
+      1963,
+      1964,
+      1965
+    ],
+    "attributes": {
+      "power": 67,
+      "driveability": 72,
+      "fuel_efficiency": 68,
+      "reliability": 74,
+      "deployment_mode": 65
+    },
     "bio": "El motor del campeonato de Hill 1962."
   },
   {
-    "id": "ford_dfv_1967", "name": "Ford Cosworth DFV 3.0L V8", "supplier": "Ford/Cosworth", "era": "pre_turbo",
-    "years_available": [1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983],
-    "attributes": { "power": 76, "driveability": 88, "fuel_efficiency": 78, "reliability": 86, "deployment_mode": 76 },
+    "id": "ford_dfv_1967",
+    "name": "Ford Cosworth DFV 3.0L V8",
+    "supplier": "Ford/Cosworth",
+    "era": "pre_turbo",
+    "years_available": [
+      1967,
+      1968,
+      1969,
+      1970,
+      1971,
+      1972,
+      1973,
+      1974,
+      1975,
+      1976,
+      1977,
+      1978,
+      1979,
+      1980,
+      1981,
+      1982,
+      1983
+    ],
+    "attributes": {
+      "power": 76,
+      "driveability": 88,
+      "fuel_efficiency": 78,
+      "reliability": 86,
+      "deployment_mode": 76
+    },
     "bio": "El motor que democratizó la F1. 155 victorias en 16 años. Legendario."
   },
   {
-    "id": "ferrari_312t_engine_1975", "name": "Ferrari 312T Flat-12 3.0L", "supplier": "Ferrari", "era": "pre_turbo",
-    "years_available": [1975, 1976, 1977, 1978, 1979, 1980],
-    "attributes": { "power": 80, "driveability": 82, "fuel_efficiency": 72, "reliability": 83, "deployment_mode": 74 },
+    "id": "ferrari_312t_engine_1975",
+    "name": "Ferrari 312T Flat-12 3.0L",
+    "supplier": "Ferrari",
+    "era": "pre_turbo",
+    "years_available": [
+      1975,
+      1976,
+      1977,
+      1978,
+      1979,
+      1980
+    ],
+    "attributes": {
+      "power": 80,
+      "driveability": 82,
+      "fuel_efficiency": 72,
+      "reliability": 83,
+      "deployment_mode": 74
+    },
     "bio": "El flat-12 Ferrari. Potente pero con problemas de efecto suelo."
   },
   {
-    "id": "renault_ef_1983", "name": "Renault EF4 1.5L Turbo V6", "supplier": "Renault", "era": "turbo",
-    "years_available": [1983, 1984, 1985, 1986],
-    "attributes": { "power": 90, "driveability": 68, "fuel_efficiency": 55, "reliability": 65, "deployment_mode": 72 },
+    "id": "renault_ef_1983",
+    "name": "Renault EF4 1.5L Turbo V6",
+    "supplier": "Renault",
+    "era": "turbo",
+    "years_available": [
+      1983,
+      1984,
+      1985,
+      1986
+    ],
+    "attributes": {
+      "power": 90,
+      "driveability": 68,
+      "fuel_efficiency": 55,
+      "reliability": 65,
+      "deployment_mode": 72
+    },
     "bio": "El primer turbo en F1. Potencia de 750+ CV pero turbo-lag brutal."
   },
   {
-    "id": "honda_ra168e_1988", "name": "Honda RA168E 1.5L Turbo V6", "supplier": "Honda", "era": "turbo",
-    "years_available": [1988],
-    "attributes": { "power": 97, "driveability": 82, "fuel_efficiency": 68, "reliability": 90, "deployment_mode": 88 },
+    "id": "honda_ra168e_1988",
+    "name": "Honda RA168E 1.5L Turbo V6",
+    "supplier": "Honda",
+    "era": "turbo",
+    "years_available": [
+      1988
+    ],
+    "attributes": {
+      "power": 97,
+      "driveability": 82,
+      "fuel_efficiency": 68,
+      "reliability": 90,
+      "deployment_mode": 88
+    },
     "bio": "El motor más potente de la era turbo. Hasta 900CV en qualy. Imbatible."
   },
   {
-    "id": "honda_ra166e_1986", "name": "Honda RA166E 1.5L Turbo V6", "supplier": "Honda", "era": "turbo",
-    "years_available": [1986, 1987],
-    "attributes": { "power": 95, "driveability": 78, "fuel_efficiency": 60, "reliability": 82, "deployment_mode": 84 },
+    "id": "honda_ra166e_1986",
+    "name": "Honda RA166E 1.5L Turbo V6",
+    "supplier": "Honda",
+    "era": "turbo",
+    "years_available": [
+      1986,
+      1987
+    ],
+    "attributes": {
+      "power": 95,
+      "driveability": 78,
+      "fuel_efficiency": 60,
+      "reliability": 82,
+      "deployment_mode": 84
+    },
     "bio": "Williams-Honda en su cima. 750CV en carrera, más en qualy."
   },
   {
-    "id": "tag_porsche_tte_1984", "name": "TAG-Porsche TTE P01 V6 Turbo", "supplier": "Porsche/TAG", "era": "turbo",
-    "years_available": [1983, 1984, 1985, 1986, 1987],
-    "attributes": { "power": 91, "driveability": 84, "fuel_efficiency": 65, "reliability": 86, "deployment_mode": 82 },
+    "id": "tag_porsche_tte_1984",
+    "name": "TAG-Porsche TTE P01 V6 Turbo",
+    "supplier": "Porsche/TAG",
+    "era": "turbo",
+    "years_available": [
+      1983,
+      1984,
+      1985,
+      1986,
+      1987
+    ],
+    "attributes": {
+      "power": 91,
+      "driveability": 84,
+      "fuel_efficiency": 65,
+      "reliability": 86,
+      "deployment_mode": 82
+    },
     "bio": "El motor secreto de McLaren. Prost ganó 3 títulos con él."
   },
   {
-    "id": "honda_ra100e_1990", "name": "Honda RA100E 3.5L V10", "supplier": "Honda", "era": "v10_v12",
-    "years_available": [1989, 1990, 1991, 1992],
-    "attributes": { "power": 91, "driveability": 86, "fuel_efficiency": 80, "reliability": 85, "deployment_mode": 84 },
+    "id": "honda_ra100e_1990",
+    "name": "Honda RA100E 3.5L V10",
+    "supplier": "Honda",
+    "era": "v10_v12",
+    "years_available": [
+      1989,
+      1990,
+      1991,
+      1992
+    ],
+    "attributes": {
+      "power": 91,
+      "driveability": 86,
+      "fuel_efficiency": 80,
+      "reliability": 85,
+      "deployment_mode": 84
+    },
     "bio": "El V10 Honda que llevó a Senna a tres títulos. Alta tecnología."
   },
   {
-    "id": "renault_rs5_1992", "name": "Renault RS5 3.5L V10", "supplier": "Renault", "era": "v10_v12",
-    "years_available": [1989, 1990, 1991, 1992, 1993, 1994, 1995],
-    "attributes": { "power": 88, "driveability": 90, "fuel_efficiency": 83, "reliability": 88, "deployment_mode": 85 },
+    "id": "renault_rs5_1992",
+    "name": "Renault RS5 3.5L V10",
+    "supplier": "Renault",
+    "era": "v10_v12",
+    "years_available": [
+      1989,
+      1990,
+      1991,
+      1992,
+      1993,
+      1994,
+      1995
+    ],
+    "attributes": {
+      "power": 88,
+      "driveability": 90,
+      "fuel_efficiency": 83,
+      "reliability": 88,
+      "deployment_mode": 85
+    },
     "bio": "Williams-Renault en su era dorada. Mansell, Hill, Prost campeones."
   },
   {
-    "id": "ferrari_043_1996", "name": "Ferrari Tipo 043 V10 3.0L", "supplier": "Ferrari", "era": "v10_v12",
-    "years_available": [1995, 1996, 1997],
-    "attributes": { "power": 86, "driveability": 84, "fuel_efficiency": 80, "reliability": 82, "deployment_mode": 78 },
+    "id": "ferrari_043_1996",
+    "name": "Ferrari Tipo 043 V10 3.0L",
+    "supplier": "Ferrari",
+    "era": "v10_v12",
+    "years_available": [
+      1995,
+      1996,
+      1997
+    ],
+    "attributes": {
+      "power": 86,
+      "driveability": 84,
+      "fuel_efficiency": 80,
+      "reliability": 82,
+      "deployment_mode": 78
+    },
     "bio": "El motor Ferrari en su transición a la era Schumacher."
   },
   {
-    "id": "ferrari_049_2000", "name": "Ferrari Tipo 049 V10 3.0L", "supplier": "Ferrari", "era": "v10_v12",
-    "years_available": [2000],
-    "attributes": { "power": 90, "driveability": 88, "fuel_efficiency": 83, "reliability": 88, "deployment_mode": 82 },
+    "id": "ferrari_049_2000",
+    "name": "Ferrari Tipo 049 V10 3.0L",
+    "supplier": "Ferrari",
+    "era": "v10_v12",
+    "years_available": [
+      2000
+    ],
+    "attributes": {
+      "power": 90,
+      "driveability": 88,
+      "fuel_efficiency": 83,
+      "reliability": 88,
+      "deployment_mode": 82
+    },
     "bio": "El motor del primer campeonato Schumacher-Ferrari."
   },
   {
-    "id": "ferrari_052_2004", "name": "Ferrari Tipo 052 V10 3.0L", "supplier": "Ferrari", "era": "v10_v12",
-    "years_available": [2003, 2004],
-    "attributes": { "power": 96, "driveability": 91, "fuel_efficiency": 85, "reliability": 93, "deployment_mode": 87 },
+    "id": "ferrari_052_2004",
+    "name": "Ferrari Tipo 052 V10 3.0L",
+    "supplier": "Ferrari",
+    "era": "v10_v12",
+    "years_available": [
+      2003,
+      2004
+    ],
+    "attributes": {
+      "power": 96,
+      "driveability": 91,
+      "fuel_efficiency": 85,
+      "reliability": 93,
+      "deployment_mode": 87
+    },
     "bio": "El motor de la era de oro. Potencia, fiabilidad y entrega perfecta."
   },
   {
-    "id": "renault_rs23_2005", "name": "Renault RS23 V10 3.0L", "supplier": "Renault", "era": "v10_v12",
-    "years_available": [2004, 2005],
-    "attributes": { "power": 91, "driveability": 90, "fuel_efficiency": 86, "reliability": 90, "deployment_mode": 84 },
+    "id": "renault_rs23_2005",
+    "name": "Renault RS23 V10 3.0L",
+    "supplier": "Renault",
+    "era": "v10_v12",
+    "years_available": [
+      2004,
+      2005
+    ],
+    "attributes": {
+      "power": 91,
+      "driveability": 90,
+      "fuel_efficiency": 86,
+      "reliability": 90,
+      "deployment_mode": 84
+    },
     "bio": "El motor que rompió el monopolio Ferrari. Alonso campeón."
   },
   {
-    "id": "ferrari_056_v8_2006", "name": "Ferrari 056 V8 2.4L", "supplier": "Ferrari", "era": "v8",
-    "years_available": [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013],
-    "attributes": { "power": 88, "driveability": 88, "fuel_efficiency": 84, "reliability": 88, "deployment_mode": 82 },
+    "id": "ferrari_056_v8_2006",
+    "name": "Ferrari 056 V8 2.4L",
+    "supplier": "Ferrari",
+    "era": "v8",
+    "years_available": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013
+    ],
+    "attributes": {
+      "power": 88,
+      "driveability": 88,
+      "fuel_efficiency": 84,
+      "reliability": 88,
+      "deployment_mode": 82
+    },
     "bio": "El motor de la era V8 Ferrari. Competitivo a lo largo de toda la era."
   },
   {
-    "id": "renault_rs27_2010", "name": "Renault RS27 V8 2.4L", "supplier": "Renault", "era": "v8",
-    "years_available": [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013],
-    "attributes": { "power": 87, "driveability": 87, "fuel_efficiency": 83, "reliability": 85, "deployment_mode": 80 },
+    "id": "renault_rs27_2010",
+    "name": "Renault RS27 V8 2.4L",
+    "supplier": "Renault",
+    "era": "v8",
+    "years_available": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013
+    ],
+    "attributes": {
+      "power": 87,
+      "driveability": 87,
+      "fuel_efficiency": 83,
+      "reliability": 85,
+      "deployment_mode": 80
+    },
     "bio": "Motor de Red Bull en sus cuatro títulos consecutivos."
   },
   {
-    "id": "mercedes_fo110_2010", "name": "Mercedes FO 110Y V8 2.4L", "supplier": "Mercedes", "era": "v8",
-    "years_available": [2010, 2011, 2012, 2013],
-    "attributes": { "power": 89, "driveability": 88, "fuel_efficiency": 85, "reliability": 86, "deployment_mode": 82 },
+    "id": "mercedes_fo110_2010",
+    "name": "Mercedes FO 110Y V8 2.4L",
+    "supplier": "Mercedes",
+    "era": "v8",
+    "years_available": [
+      2010,
+      2011,
+      2012,
+      2013
+    ],
+    "attributes": {
+      "power": 89,
+      "driveability": 88,
+      "fuel_efficiency": 85,
+      "reliability": 86,
+      "deployment_mode": 82
+    },
     "bio": "El mejor V8 de la era. McLaren con este motor ganó el título 2008."
   },
   {
-    "id": "mercedes_pu106a_2014", "name": "Mercedes PU106A Hybrid V6 1.6L", "supplier": "Mercedes", "era": "hybrid",
-    "years_available": [2014],
-    "attributes": { "power": 97, "driveability": 85, "fuel_efficiency": 94, "reliability": 83, "deployment_mode": 95 },
+    "id": "mercedes_pu106a_2014",
+    "name": "Mercedes PU106A Hybrid V6 1.6L",
+    "supplier": "Mercedes",
+    "era": "hybrid",
+    "years_available": [
+      2014
+    ],
+    "attributes": {
+      "power": 97,
+      "driveability": 85,
+      "fuel_efficiency": 94,
+      "reliability": 83,
+      "deployment_mode": 95
+    },
     "bio": "El motor que cambió todo. 160CV extra del MGU-H. Ventaja masiva."
   },
   {
-    "id": "mercedes_pu106c_2016", "name": "Mercedes PU106C Hybrid V6 1.6L", "supplier": "Mercedes", "era": "hybrid",
-    "years_available": [2015, 2016, 2017],
-    "attributes": { "power": 98, "driveability": 88, "fuel_efficiency": 95, "reliability": 88, "deployment_mode": 96 },
+    "id": "mercedes_pu106c_2016",
+    "name": "Mercedes PU106C Hybrid V6 1.6L",
+    "supplier": "Mercedes",
+    "era": "hybrid",
+    "years_available": [
+      2015,
+      2016,
+      2017
+    ],
+    "attributes": {
+      "power": 98,
+      "driveability": 88,
+      "fuel_efficiency": 95,
+      "reliability": 88,
+      "deployment_mode": 96
+    },
     "bio": "El motor de la dominación Mercedes. 4 títulos consecutivos."
   },
   {
-    "id": "mercedes_m09_2020", "name": "Mercedes M09 EQ Performance V6 1.6L", "supplier": "Mercedes", "era": "hybrid",
-    "years_available": [2019, 2020, 2021],
-    "attributes": { "power": 99, "driveability": 91, "fuel_efficiency": 96, "reliability": 92, "deployment_mode": 97 },
+    "id": "mercedes_m09_2020",
+    "name": "Mercedes M09 EQ Performance V6 1.6L",
+    "supplier": "Mercedes",
+    "era": "hybrid",
+    "years_available": [
+      2019,
+      2020,
+      2021
+    ],
+    "attributes": {
+      "power": 99,
+      "driveability": 91,
+      "fuel_efficiency": 96,
+      "reliability": 92,
+      "deployment_mode": 97
+    },
     "bio": "El motor más poderoso de la era híbrida. Hamilton 7 títulos."
   },
   {
-    "id": "ferrari_059_4_2015", "name": "Ferrari 059/4 V6 1.6L Hybrid", "supplier": "Ferrari", "era": "hybrid",
-    "years_available": [2015, 2016, 2017],
-    "attributes": { "power": 92, "driveability": 87, "fuel_efficiency": 90, "reliability": 84, "deployment_mode": 88 },
+    "id": "ferrari_059_4_2015",
+    "name": "Ferrari 059/4 V6 1.6L Hybrid",
+    "supplier": "Ferrari",
+    "era": "hybrid",
+    "years_available": [
+      2015,
+      2016,
+      2017
+    ],
+    "attributes": {
+      "power": 92,
+      "driveability": 87,
+      "fuel_efficiency": 90,
+      "reliability": 84,
+      "deployment_mode": 88
+    },
     "bio": "Ferrari recorta la distancia con Mercedes. Vettel compite."
   },
   {
-    "id": "honda_ra620h_2021", "name": "Honda RA620H V6 1.6L Hybrid", "supplier": "Honda", "era": "hybrid",
-    "years_available": [2020, 2021],
-    "attributes": { "power": 97, "driveability": 89, "fuel_efficiency": 93, "reliability": 89, "deployment_mode": 93 },
+    "id": "honda_ra620h_2021",
+    "name": "Honda RA620H V6 1.6L Hybrid",
+    "supplier": "Honda",
+    "era": "hybrid",
+    "years_available": [
+      2020,
+      2021
+    ],
+    "attributes": {
+      "power": 97,
+      "driveability": 89,
+      "fuel_efficiency": 93,
+      "reliability": 89,
+      "deployment_mode": 93
+    },
     "bio": "El regalo de despedida de Honda. Motor que dio a Verstappen su primer título."
   },
   {
-    "id": "rbpth001_2023", "name": "Honda RBPTH001 V6 1.6L Hybrid", "supplier": "Honda/RBPT", "era": "current",
-    "years_available": [2022, 2023, 2024],
-    "attributes": { "power": 98, "driveability": 92, "fuel_efficiency": 95, "reliability": 93, "deployment_mode": 96 },
+    "id": "rbpth001_2023",
+    "name": "Honda RBPTH001 V6 1.6L Hybrid",
+    "supplier": "Honda/RBPT",
+    "era": "current",
+    "years_available": [
+      2022,
+      2023,
+      2024
+    ],
+    "attributes": {
+      "power": 98,
+      "driveability": 92,
+      "fuel_efficiency": 95,
+      "reliability": 93,
+      "deployment_mode": 96
+    },
     "bio": "El motor de la era Verstappen. Potencia y fiabilidad combinadas."
   },
   {
-    "id": "ferrari_066_12_2022", "name": "Ferrari 066/12 V6 1.6L Hybrid", "supplier": "Ferrari", "era": "current",
-    "years_available": [2022, 2023, 2024],
-    "attributes": { "power": 95, "driveability": 89, "fuel_efficiency": 91, "reliability": 85, "deployment_mode": 90 },
+    "id": "ferrari_066_12_2022",
+    "name": "Ferrari 066/12 V6 1.6L Hybrid",
+    "supplier": "Ferrari",
+    "era": "current",
+    "years_available": [
+      2022,
+      2023,
+      2024
+    ],
+    "attributes": {
+      "power": 95,
+      "driveability": 89,
+      "fuel_efficiency": 91,
+      "reliability": 85,
+      "deployment_mode": 90
+    },
     "bio": "El mejor motor de Ferrari de la era híbrida. Competitivo pero con fallos."
   },
   {
-    "id": "mercedes_pu106b_2015", "name": "Mercedes PU106B Hybrid V6 1.6L", "supplier": "Mercedes", "era": "hybrid",
-    "years_available": [2015, 2016],
-    "attributes": { "power": 97, "driveability": 91, "fuel_efficiency": 93, "reliability": 93, "deployment_mode": 95 },
+    "id": "mercedes_pu106b_2015",
+    "name": "Mercedes PU106B Hybrid V6 1.6L",
+    "supplier": "Mercedes",
+    "era": "hybrid",
+    "years_available": [
+      2015,
+      2016
+    ],
+    "attributes": {
+      "power": 97,
+      "driveability": 91,
+      "fuel_efficiency": 93,
+      "reliability": 93,
+      "deployment_mode": 95
+    },
     "bio": "El motor de la dominación total. Hamilton y Rosberg campeones con él."
   },
   {
-    "id": "ferrari_059_5_2017", "name": "Ferrari 059/5 V6 1.6L Hybrid", "supplier": "Ferrari", "era": "hybrid",
-    "years_available": [2017, 2018, 2019],
-    "attributes": { "power": 93, "driveability": 90, "fuel_efficiency": 88, "reliability": 88, "deployment_mode": 89 },
+    "id": "ferrari_059_5_2017",
+    "name": "Ferrari 059/5 V6 1.6L Hybrid",
+    "supplier": "Ferrari",
+    "era": "hybrid",
+    "years_available": [
+      2017,
+      2018,
+      2019
+    ],
+    "attributes": {
+      "power": 93,
+      "driveability": 90,
+      "fuel_efficiency": 88,
+      "reliability": 88,
+      "deployment_mode": 89
+    },
     "bio": "El motor Ferrari que desafió a Mercedes. Potente en rectas pero frágil a veces."
   },
   {
-    "id": "renault_re40_1983", "name": "Renault RE40 Turbo V6 1.5L", "supplier": "Renault", "era": "turbo",
-    "years_available": [1983, 1984],
-    "attributes": { "power": 88, "driveability": 76, "fuel_efficiency": 72, "reliability": 74, "deployment_mode": 70 },
+    "id": "renault_re40_1983",
+    "name": "Renault RE40 Turbo V6 1.5L",
+    "supplier": "Renault",
+    "era": "turbo",
+    "years_available": [
+      1983,
+      1984
+    ],
+    "attributes": {
+      "power": 88,
+      "driveability": 76,
+      "fuel_efficiency": 72,
+      "reliability": 74,
+      "deployment_mode": 70
+    },
     "bio": "El turbo Renault en su mejor versión. Prost luchó por el título en 1983."
   },
   {
-    "id": "mercedes_fo110_2009", "name": "Mercedes FO 110X V8 2.4L", "supplier": "Mercedes", "era": "v8",
-    "years_available": [2007, 2008, 2009],
-    "attributes": { "power": 88, "driveability": 87, "fuel_efficiency": 84, "reliability": 85, "deployment_mode": 80 },
+    "id": "mercedes_fo110_2009",
+    "name": "Mercedes FO 110X V8 2.4L",
+    "supplier": "Mercedes",
+    "era": "v8",
+    "years_available": [
+      2007,
+      2008,
+      2009
+    ],
+    "attributes": {
+      "power": 88,
+      "driveability": 87,
+      "fuel_efficiency": 84,
+      "reliability": 85,
+      "deployment_mode": 80
+    },
     "bio": "El motor Mercedes que impulsó a Brawn GP a su título histórico."
   },
   {
-    "id": "renault_rs26_2006_v8", "name": "Renault RS26 V8 2.4L", "supplier": "Renault", "era": "v8",
-    "years_available": [2006, 2007, 2008, 2009, 2010],
-    "attributes": { "power": 86, "driveability": 86, "fuel_efficiency": 83, "reliability": 84, "deployment_mode": 79 },
+    "id": "renault_rs26_2006_v8",
+    "name": "Renault RS26 V8 2.4L",
+    "supplier": "Renault",
+    "era": "v8",
+    "years_available": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010
+    ],
+    "attributes": {
+      "power": 86,
+      "driveability": 86,
+      "fuel_efficiency": 83,
+      "reliability": 84,
+      "deployment_mode": 79
+    },
     "bio": "El V8 Renault al inicio de la era. Alonso ganó dos títulos con él."
   },
   {
-    "id": "maserati_250f_engine_1957", "name": "Maserati A6GCS 2.5L Straight-6", "supplier": "Maserati", "era": "early",
-    "years_available": [1954, 1955, 1956, 1957],
-    "attributes": { "power": 74, "driveability": 72, "fuel_efficiency": 55, "reliability": 76, "deployment_mode": 60 },
+    "id": "maserati_250f_engine_1957",
+    "name": "Maserati A6GCS 2.5L Straight-6",
+    "supplier": "Maserati",
+    "era": "early",
+    "years_available": [
+      1954,
+      1955,
+      1956,
+      1957
+    ],
+    "attributes": {
+      "power": 74,
+      "driveability": 72,
+      "fuel_efficiency": 55,
+      "reliability": 76,
+      "deployment_mode": 60
+    },
     "bio": "Sonido inconfundible de seis en línea. Llevó a Fangio a su quinto y último título mundial en Nürburgring."
   },
   {
-    "id": "weslake_v12_1967", "name": "Weslake V12 3.0L", "supplier": "Weslake", "era": "pre_turbo",
-    "years_available": [1966, 1967],
-    "attributes": { "power": 78, "driveability": 70, "fuel_efficiency": 66, "reliability": 66, "deployment_mode": 68 },
+    "id": "weslake_v12_1967",
+    "name": "Weslake V12 3.0L",
+    "supplier": "Weslake",
+    "era": "pre_turbo",
+    "years_available": [
+      1966,
+      1967
+    ],
+    "attributes": {
+      "power": 78,
+      "driveability": 70,
+      "fuel_efficiency": 66,
+      "reliability": 66,
+      "deployment_mode": 68
+    },
     "bio": "El V12 inglés que ganó en Bélgica 1967 con Gurney. Potente pero muy frágil e impredecible."
   },
   {
-    "id": "hart_415t_1984", "name": "Hart 415T 1.5L Turbo 4-cyl", "supplier": "Hart", "era": "turbo",
-    "years_available": [1983, 1984, 1985],
-    "attributes": { "power": 82, "driveability": 70, "fuel_efficiency": 60, "reliability": 66, "deployment_mode": 66 },
+    "id": "hart_415t_1984",
+    "name": "Hart 415T 1.5L Turbo 4-cyl",
+    "supplier": "Hart",
+    "era": "turbo",
+    "years_available": [
+      1983,
+      1984,
+      1985
+    ],
+    "attributes": {
+      "power": 82,
+      "driveability": 70,
+      "fuel_efficiency": 60,
+      "reliability": 66,
+      "deployment_mode": 66
+    },
     "bio": "Motor cliente accesible para equipos sin fábrica propia. Senna lo explotó hasta el límite en Mónaco 1984."
   },
   {
-    "id": "yamaha_ox11a_1997", "name": "Yamaha OX11A V10 3.0L", "supplier": "Yamaha", "era": "v10_v12",
-    "years_available": [1996, 1997],
-    "attributes": { "power": 82, "driveability": 80, "fuel_efficiency": 75, "reliability": 72, "deployment_mode": 72 },
+    "id": "yamaha_ox11a_1997",
+    "name": "Yamaha OX11A V10 3.0L",
+    "supplier": "Yamaha",
+    "era": "v10_v12",
+    "years_available": [
+      1996,
+      1997
+    ],
+    "attributes": {
+      "power": 82,
+      "driveability": 80,
+      "fuel_efficiency": 75,
+      "reliability": 72,
+      "deployment_mode": 72
+    },
     "bio": "El motor japonés que nunca alcanzó su potencial en F1. Hill casi ganó con él en Hungría 1997."
   },
   {
-    "id": "ford_cosworth_cr_v10", "name": "Ford Cosworth CR V10 3.0L", "supplier": "Ford/Cosworth", "era": "v10_v12",
-    "years_available": [1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004],
-    "attributes": { "power": 84, "driveability": 84, "fuel_efficiency": 78, "reliability": 80, "deployment_mode": 78 },
+    "id": "ford_cosworth_cr_v10",
+    "name": "Ford Cosworth CR V10 3.0L",
+    "supplier": "Ford/Cosworth",
+    "era": "v10_v12",
+    "years_available": [
+      1997,
+      1998,
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004
+    ],
+    "attributes": {
+      "power": 84,
+      "driveability": 84,
+      "fuel_efficiency": 78,
+      "reliability": 80,
+      "deployment_mode": 78
+    },
     "bio": "El sucesor del legendario DFV para la era moderna. Alimentó a Stewart, Jaguar, Minardi y otros equipos cliente."
   },
   {
-    "id": "honda_ra004e_2004", "name": "Honda RA004E V10 3.0L", "supplier": "Honda", "era": "v10_v12",
-    "years_available": [2003, 2004, 2005],
-    "attributes": { "power": 87, "driveability": 83, "fuel_efficiency": 80, "reliability": 82, "deployment_mode": 80 },
+    "id": "honda_ra004e_2004",
+    "name": "Honda RA004E V10 3.0L",
+    "supplier": "Honda",
+    "era": "v10_v12",
+    "years_available": [
+      2003,
+      2004,
+      2005
+    ],
+    "attributes": {
+      "power": 87,
+      "driveability": 83,
+      "fuel_efficiency": 80,
+      "reliability": 82,
+      "deployment_mode": 80
+    },
     "bio": "El mejor motor Honda de la era V10. Button logró 10 podios con él durante la temporada 2004."
   },
   {
-    "id": "toyota_rv8_2005", "name": "Toyota RV8 V10 3.0L", "supplier": "Toyota", "era": "v10_v12",
-    "years_available": [2004, 2005],
-    "attributes": { "power": 86, "driveability": 84, "fuel_efficiency": 81, "reliability": 83, "deployment_mode": 78 },
+    "id": "toyota_rv8_2005",
+    "name": "Toyota RV8 V10 3.0L",
+    "supplier": "Toyota",
+    "era": "v10_v12",
+    "years_available": [
+      2004,
+      2005
+    ],
+    "attributes": {
+      "power": 86,
+      "driveability": 84,
+      "fuel_efficiency": 81,
+      "reliability": 83,
+      "deployment_mode": 78
+    },
     "bio": "Motor propio de Toyota con enormes recursos pero sin la victoria prometida. El eterno segundo."
   },
   {
-    "id": "bmw_p86_2008", "name": "BMW P86/8 V8 2.4L", "supplier": "BMW", "era": "v8",
-    "years_available": [2007, 2008, 2009],
-    "attributes": { "power": 91, "driveability": 86, "fuel_efficiency": 82, "reliability": 83, "deployment_mode": 82 },
+    "id": "bmw_p86_2008",
+    "name": "BMW P86/8 V8 2.4L",
+    "supplier": "BMW",
+    "era": "v8",
+    "years_available": [
+      2007,
+      2008,
+      2009
+    ],
+    "attributes": {
+      "power": 91,
+      "driveability": 86,
+      "fuel_efficiency": 82,
+      "reliability": 83,
+      "deployment_mode": 82
+    },
     "bio": "El motor con el que Kubica ganó en Canadá 2008. Potente y fiable. BMW salió de la F1 al año siguiente."
+  },
+  {
+    "id": "offenhauser_45_l4",
+    "name": "Offenhauser 4.5 L4",
+    "supplier": "Offenhauser",
+    "era": "early",
+    "years_available": [
+      1950,
+      1951,
+      1952,
+      1953,
+      1954,
+      1955,
+      1956,
+      1957,
+      1958,
+      1959,
+      1960
+    ],
+    "attributes": {
+      "power": 60,
+      "driveability": 58,
+      "fuel_efficiency": 53,
+      "reliability": 57,
+      "deployment_mode": 40
+    },
+    "bio": "Offenhauser 4.5 L4 engine."
+  },
+  {
+    "id": "talbot_lago_23cv_45_l6",
+    "name": "Talbot 23CV 4.5 L6",
+    "supplier": "Talbot Lago",
+    "era": "early",
+    "years_available": [
+      1950,
+      1951
+    ],
+    "attributes": {
+      "power": 58,
+      "driveability": 57,
+      "fuel_efficiency": 50,
+      "reliability": 49,
+      "deployment_mode": 44
+    },
+    "bio": "Talbot 23CV 4.5 L6 engine."
+  },
+  {
+    "id": "era_15_l6_s",
+    "name": "ERA 1.5 L6 S",
+    "supplier": "Era",
+    "era": "early",
+    "years_available": [
+      1950,
+      1951
+    ],
+    "attributes": {
+      "power": 62,
+      "driveability": 55,
+      "fuel_efficiency": 53,
+      "reliability": 50,
+      "deployment_mode": 45
+    },
+    "bio": "ERA 1.5 L6 S engine."
+  },
+  {
+    "id": "gordini_15c_15_l4_s",
+    "name": "Gordini 15C 1.5 L4 S",
+    "supplier": "Gordini",
+    "era": "early",
+    "years_available": [
+      1950,
+      1951,
+      1952
+    ],
+    "attributes": {
+      "power": 58,
+      "driveability": 57,
+      "fuel_efficiency": 50,
+      "reliability": 51,
+      "deployment_mode": 41
+    },
+    "bio": "Gordini 15C 1.5 L4 S engine."
+  },
+  {
+    "id": "alta_15_l4_s",
+    "name": "Alta 1.5 L4 S",
+    "supplier": "Alta",
+    "era": "early",
+    "years_available": [
+      1950,
+      1951
+    ],
+    "attributes": {
+      "power": 65,
+      "driveability": 58,
+      "fuel_efficiency": 50,
+      "reliability": 54,
+      "deployment_mode": 44
+    },
+    "bio": "Alta 1.5 L4 S engine."
+  },
+  {
+    "id": "jap_11_v2",
+    "name": "JAP 1.1 V2",
+    "supplier": "Jap",
+    "era": "early",
+    "years_available": [
+      1950
+    ],
+    "attributes": {
+      "power": 61,
+      "driveability": 58,
+      "fuel_efficiency": 52,
+      "reliability": 51,
+      "deployment_mode": 40
+    },
+    "bio": "JAP 1.1 V2 engine."
+  },
+  {
+    "id": "offenhauser_30_l4_s",
+    "name": "Offenhauser 3.0 L4 S",
+    "supplier": "Offenhauser",
+    "era": "early",
+    "years_available": [
+      1950
+    ],
+    "attributes": {
+      "power": 59,
+      "driveability": 53,
+      "fuel_efficiency": 46,
+      "reliability": 51,
+      "deployment_mode": 45
+    },
+    "bio": "Offenhauser 3.0 L4 S engine."
+  },
+  {
+    "id": "alfa_romeo_158_15_l8_s",
+    "name": "Alfa Romeo 158 1.5 L8 S",
+    "supplier": "Alfa Romeo",
+    "era": "early",
+    "years_available": [
+      1951
+    ],
+    "attributes": {
+      "power": 59,
+      "driveability": 57,
+      "fuel_efficiency": 49,
+      "reliability": 49,
+      "deployment_mode": 47
+    },
+    "bio": "Alfa Romeo 158 1.5 L8 S engine."
+  },
+  {
+    "id": "alta_f2_20_l4",
+    "name": "Alta F2 2.0 L4",
+    "supplier": "Alta",
+    "era": "early",
+    "years_available": [
+      1951,
+      1952
+    ],
+    "attributes": {
+      "power": 66,
+      "driveability": 58,
+      "fuel_efficiency": 48,
+      "reliability": 52,
+      "deployment_mode": 47
+    },
+    "bio": "Alta F2 2.0 L4 engine."
+  },
+  {
+    "id": "osca_4500_45_v12",
+    "name": "OSCA 4500 4.5 V12",
+    "supplier": "Osca",
+    "era": "early",
+    "years_available": [
+      1951
+    ],
+    "attributes": {
+      "power": 63,
+      "driveability": 59,
+      "fuel_efficiency": 47,
+      "reliability": 52,
+      "deployment_mode": 40
+    },
+    "bio": "OSCA 4500 4.5 V12 engine."
+  },
+  {
+    "id": "veritas_20_l6",
+    "name": "Veritas 2.0 L6",
+    "supplier": "Veritas",
+    "era": "early",
+    "years_available": [
+      1951,
+      1952,
+      1953
+    ],
+    "attributes": {
+      "power": 64,
+      "driveability": 57,
+      "fuel_efficiency": 51,
+      "reliability": 56,
+      "deployment_mode": 42
+    },
+    "bio": "Veritas 2.0 L6 engine."
+  },
+  {
+    "id": "kuchen_20_v8",
+    "name": "Küchen 2.0 V8",
+    "supplier": "Kuchen",
+    "era": "early",
+    "years_available": [
+      1952
+    ],
+    "attributes": {
+      "power": 62,
+      "driveability": 57,
+      "fuel_efficiency": 53,
+      "reliability": 56,
+      "deployment_mode": 44
+    },
+    "bio": "Küchen 2.0 V8 engine."
+  },
+  {
+    "id": "bristol_bs1_20_l6",
+    "name": "Bristol BS1 2.0 L6",
+    "supplier": "Bristol",
+    "era": "early",
+    "years_available": [
+      1952,
+      1954,
+      1955,
+      1956
+    ],
+    "attributes": {
+      "power": 63,
+      "driveability": 55,
+      "fuel_efficiency": 52,
+      "reliability": 52,
+      "deployment_mode": 43
+    },
+    "bio": "Bristol BS1 2.0 L6 engine."
+  },
+  {
+    "id": "bmw_328_20_l6",
+    "name": "BMW 328 2.0 L6",
+    "supplier": "Bmw",
+    "era": "early",
+    "years_available": [
+      1952,
+      1953,
+      1954
+    ],
+    "attributes": {
+      "power": 63,
+      "driveability": 57,
+      "fuel_efficiency": 48,
+      "reliability": 53,
+      "deployment_mode": 46
+    },
+    "bio": "BMW 328 2.0 L6 engine."
+  },
+  {
+    "id": "lea_francis_20_l4",
+    "name": "Lea Francis 2.0 L4",
+    "supplier": "Lea Francis",
+    "era": "early",
+    "years_available": [
+      1952,
+      1953,
+      1954
+    ],
+    "attributes": {
+      "power": 60,
+      "driveability": 52,
+      "fuel_efficiency": 51,
+      "reliability": 53,
+      "deployment_mode": 45
+    },
+    "bio": "Lea Francis 2.0 L4 engine."
+  },
+  {
+    "id": "osca_2000_20_l6",
+    "name": "OSCA 2000 2.0 L6",
+    "supplier": "Osca",
+    "era": "early",
+    "years_available": [
+      1952,
+      1953
+    ],
+    "attributes": {
+      "power": 62,
+      "driveability": 53,
+      "fuel_efficiency": 49,
+      "reliability": 49,
+      "deployment_mode": 43
+    },
+    "bio": "OSCA 2000 2.0 L6 engine."
+  },
+  {
+    "id": "gordini_20_20_l6",
+    "name": "Gordini 20 2.0 L6",
+    "supplier": "Gordini",
+    "era": "early",
+    "years_available": [
+      1952,
+      1953
+    ],
+    "attributes": {
+      "power": 60,
+      "driveability": 56,
+      "fuel_efficiency": 47,
+      "reliability": 52,
+      "deployment_mode": 41
+    },
+    "bio": "Gordini 20 2.0 L6 engine."
+  },
+  {
+    "id": "bpm_20_l4",
+    "name": "BPM 2.0 L4",
+    "supplier": "Bpm",
+    "era": "early",
+    "years_available": [
+      1952
+    ],
+    "attributes": {
+      "power": 59,
+      "driveability": 53,
+      "fuel_efficiency": 46,
+      "reliability": 49,
+      "deployment_mode": 46
+    },
+    "bio": "BPM 2.0 L4 engine."
+  },
+  {
+    "id": "butterworth_20_f4",
+    "name": "Butterworth 2.0 F4",
+    "supplier": "Butterworth",
+    "era": "early",
+    "years_available": [
+      1952
+    ],
+    "attributes": {
+      "power": 65,
+      "driveability": 59,
+      "fuel_efficiency": 47,
+      "reliability": 51,
+      "deployment_mode": 42
+    },
+    "bio": "Butterworth 2.0 F4 engine."
+  },
+  {
+    "id": "alta_gp_25_l4",
+    "name": "Alta GP 2.5 L4",
+    "supplier": "Alta",
+    "era": "early",
+    "years_available": [
+      1953,
+      1954,
+      1955,
+      1956,
+      1957,
+      1958,
+      1959
+    ],
+    "attributes": {
+      "power": 61,
+      "driveability": 57,
+      "fuel_efficiency": 49,
+      "reliability": 49,
+      "deployment_mode": 47
+    },
+    "bio": "Alta GP 2.5 L4 engine."
+  },
+  {
+    "id": "emw_6_20_l6",
+    "name": "EMW 6 2.0 L6",
+    "supplier": "Emw",
+    "era": "early",
+    "years_available": [
+      1953
+    ],
+    "attributes": {
+      "power": 65,
+      "driveability": 54,
+      "fuel_efficiency": 50,
+      "reliability": 49,
+      "deployment_mode": 40
+    },
+    "bio": "EMW 6 2.0 L6 engine."
+  },
+  {
+    "id": "mercedes_m196_25_l8",
+    "name": "Mercedes M196 2.5 L8",
+    "supplier": "Mercedes",
+    "era": "early",
+    "years_available": [
+      1954,
+      1955
+    ],
+    "attributes": {
+      "power": 63,
+      "driveability": 60,
+      "fuel_efficiency": 51,
+      "reliability": 51,
+      "deployment_mode": 45
+    },
+    "bio": "Mercedes M196 2.5 L8 engine."
+  },
+  {
+    "id": "gordini_23_25_l6",
+    "name": "Gordini 23 2.5 L6",
+    "supplier": "Gordini",
+    "era": "early",
+    "years_available": [
+      1954,
+      1955,
+      1956
+    ],
+    "attributes": {
+      "power": 62,
+      "driveability": 54,
+      "fuel_efficiency": 51,
+      "reliability": 55,
+      "deployment_mode": 40
+    },
+    "bio": "Gordini 23 2.5 L6 engine."
+  },
+  {
+    "id": "lancia_ds50_25_v8",
+    "name": "Lancia DS50 2.5 V8",
+    "supplier": "Lancia",
+    "era": "early",
+    "years_available": [
+      1954
+    ],
+    "attributes": {
+      "power": 65,
+      "driveability": 53,
+      "fuel_efficiency": 53,
+      "reliability": 52,
+      "deployment_mode": 46
+    },
+    "bio": "Lancia DS50 2.5 V8 engine."
+  },
+  {
+    "id": "ferrari_555_25_l4",
+    "name": "Ferrari 555 2.5 L4",
+    "supplier": "Ferrari",
+    "era": "early",
+    "years_available": [
+      1955
+    ],
+    "attributes": {
+      "power": 59,
+      "driveability": 55,
+      "fuel_efficiency": 46,
+      "reliability": 52,
+      "deployment_mode": 39
+    },
+    "bio": "Ferrari 555 2.5 L4 engine."
+  },
+  {
+    "id": "maserati_4clt_25_l4",
+    "name": "Maserati 4CLT 2.5 L4",
+    "supplier": "Maserati",
+    "era": "early",
+    "years_available": [
+      1955
+    ],
+    "attributes": {
+      "power": 65,
+      "driveability": 53,
+      "fuel_efficiency": 47,
+      "reliability": 54,
+      "deployment_mode": 41
+    },
+    "bio": "Maserati 4CLT 2.5 L4 engine."
+  },
+  {
+    "id": "bugatti_25_l8",
+    "name": "Bugatti 2.5 L8",
+    "supplier": "Bugatti",
+    "era": "early",
+    "years_available": [
+      1956
+    ],
+    "attributes": {
+      "power": 59,
+      "driveability": 58,
+      "fuel_efficiency": 52,
+      "reliability": 56,
+      "deployment_mode": 44
+    },
+    "bio": "Bugatti 2.5 L8 engine."
+  },
+  {
+    "id": "bristol_bs2_22_l6",
+    "name": "Bristol BS2 2.2 L6",
+    "supplier": "Bristol",
+    "era": "early",
+    "years_available": [
+      1957
+    ],
+    "attributes": {
+      "power": 59,
+      "driveability": 59,
+      "fuel_efficiency": 49,
+      "reliability": 56,
+      "deployment_mode": 40
+    },
+    "bio": "Bristol BS2 2.2 L6 engine."
+  },
+  {
+    "id": "porsche_547_3_15_f4",
+    "name": "Porsche 547/3 1.5 F4",
+    "supplier": "Porsche",
+    "era": "early",
+    "years_available": [
+      1957,
+      1958,
+      1959,
+      1960,
+      1961,
+      1963,
+      1964
+    ],
+    "attributes": {
+      "power": 63,
+      "driveability": 54,
+      "fuel_efficiency": 49,
+      "reliability": 52,
+      "deployment_mode": 42
+    },
+    "bio": "Porsche 547/3 1.5 F4 engine."
+  },
+  {
+    "id": "climax_fpf_15_l4",
+    "name": "Climax FPF 1.5 L4",
+    "supplier": "Climax",
+    "era": "early",
+    "years_available": [
+      1958,
+      1959,
+      1961,
+      1962
+    ],
+    "attributes": {
+      "power": 81,
+      "driveability": 77,
+      "fuel_efficiency": 66,
+      "reliability": 70,
+      "deployment_mode": 57
+    },
+    "bio": "Climax FPF 1.5 L4 engine."
+  },
+  {
+    "id": "osca_372_15_l4",
+    "name": "OSCA 372 1.5 L4",
+    "supplier": "Osca",
+    "era": "early",
+    "years_available": [
+      1958
+    ],
+    "attributes": {
+      "power": 59,
+      "driveability": 58,
+      "fuel_efficiency": 52,
+      "reliability": 50,
+      "deployment_mode": 44
+    },
+    "bio": "OSCA 372 1.5 L4 engine."
+  },
+  {
+    "id": "maserati_250f1_25_l6",
+    "name": "Maserati 250F1 2.5 L6",
+    "supplier": "Maserati",
+    "era": "early",
+    "years_available": [
+      1959
+    ],
+    "attributes": {
+      "power": 58,
+      "driveability": 60,
+      "fuel_efficiency": 47,
+      "reliability": 50,
+      "deployment_mode": 41
+    },
+    "bio": "Maserati 250F1 2.5 L6 engine."
+  },
+  {
+    "id": "aston_martin_rb6_25_l6",
+    "name": "Aston Martin RB6 2.5 L6",
+    "supplier": "Aston Martin",
+    "era": "early",
+    "years_available": [
+      1959,
+      1960
+    ],
+    "attributes": {
+      "power": 65,
+      "driveability": 54,
+      "fuel_efficiency": 47,
+      "reliability": 54,
+      "deployment_mode": 47
+    },
+    "bio": "Aston Martin RB6 2.5 L6 engine."
+  },
+  {
+    "id": "maserati_250s_25_l4",
+    "name": "Maserati 250S 2.5 L4",
+    "supplier": "Maserati",
+    "era": "early",
+    "years_available": [
+      1959,
+      1960
+    ],
+    "attributes": {
+      "power": 65,
+      "driveability": 56,
+      "fuel_efficiency": 47,
+      "reliability": 55,
+      "deployment_mode": 45
+    },
+    "bio": "Maserati 250S 2.5 L4 engine."
+  },
+  {
+    "id": "scarab_25_l4",
+    "name": "Scarab 2.5 L4",
+    "supplier": "Scarab",
+    "era": "early",
+    "years_available": [
+      1960
+    ],
+    "attributes": {
+      "power": 64,
+      "driveability": 59,
+      "fuel_efficiency": 46,
+      "reliability": 53,
+      "deployment_mode": 40
+    },
+    "bio": "Scarab 2.5 L4 engine."
+  },
+  {
+    "id": "maserati_tipo_6_15_l4",
+    "name": "Maserati Tipo 6 1.5 L4",
+    "supplier": "Maserati",
+    "era": "early",
+    "years_available": [
+      1961
+    ],
+    "attributes": {
+      "power": 61,
+      "driveability": 59,
+      "fuel_efficiency": 52,
+      "reliability": 52,
+      "deployment_mode": 46
+    },
+    "bio": "Maserati Tipo 6 1.5 L4 engine."
+  },
+  {
+    "id": "alfa_romeo_giulietta_15_l4",
+    "name": "Alfa Romeo Giulietta 1.5 L4",
+    "supplier": "Alfa Romeo",
+    "era": "early",
+    "years_available": [
+      1961,
+      1962,
+      1963,
+      1965
+    ],
+    "attributes": {
+      "power": 61,
+      "driveability": 56,
+      "fuel_efficiency": 52,
+      "reliability": 55,
+      "deployment_mode": 42
+    },
+    "bio": "Alfa Romeo Giulietta 1.5 L4 engine."
+  },
+  {
+    "id": "climax_fwmv_15_v8",
+    "name": "Climax FWMV 1.5 V8",
+    "supplier": "Climax",
+    "era": "early",
+    "years_available": [
+      1962,
+      1964
+    ],
+    "attributes": {
+      "power": 62,
+      "driveability": 61,
+      "fuel_efficiency": 53,
+      "reliability": 58,
+      "deployment_mode": 44
+    },
+    "bio": "Climax FWMV 1.5 V8 engine."
+  },
+  {
+    "id": "brm_p56_15_v8",
+    "name": "BRM P56 1.5 V8",
+    "supplier": "Brm",
+    "era": "early",
+    "years_available": [
+      1962,
+      1963,
+      1964
+    ],
+    "attributes": {
+      "power": 60,
+      "driveability": 52,
+      "fuel_efficiency": 46,
+      "reliability": 55,
+      "deployment_mode": 46
+    },
+    "bio": "BRM P56 1.5 V8 engine."
+  },
+  {
+    "id": "de_tomaso_15_f8",
+    "name": "De Tomaso 1.5 F8",
+    "supplier": "De Tomaso",
+    "era": "early",
+    "years_available": [
+      1962
+    ],
+    "attributes": {
+      "power": 65,
+      "driveability": 59,
+      "fuel_efficiency": 46,
+      "reliability": 56,
+      "deployment_mode": 44
+    },
+    "bio": "De Tomaso 1.5 F8 engine."
+  },
+  {
+    "id": "ats_100_15_v8",
+    "name": "ATS 100 1.5 V8",
+    "supplier": "Ats",
+    "era": "early",
+    "years_available": [
+      1963,
+      1964
+    ],
+    "attributes": {
+      "power": 59,
+      "driveability": 55,
+      "fuel_efficiency": 49,
+      "reliability": 52,
+      "deployment_mode": 42
+    },
+    "bio": "ATS 100 1.5 V8 engine."
+  },
+  {
+    "id": "ford_109e_15_l4",
+    "name": "Ford 109E 1.5 L4",
+    "supplier": "Ford",
+    "era": "early",
+    "years_available": [
+      1963
+    ],
+    "attributes": {
+      "power": 60,
+      "driveability": 59,
+      "fuel_efficiency": 48,
+      "reliability": 52,
+      "deployment_mode": 43
+    },
+    "bio": "Ford 109E 1.5 L4 engine."
+  },
+  {
+    "id": "ferrari_178_15_v6",
+    "name": "Ferrari 178 1.5 V6",
+    "supplier": "Ferrari",
+    "era": "early",
+    "years_available": [
+      1963
+    ],
+    "attributes": {
+      "power": 62,
+      "driveability": 55,
+      "fuel_efficiency": 47,
+      "reliability": 53,
+      "deployment_mode": 46
+    },
+    "bio": "Ferrari 178 1.5 V6 engine."
+  },
+  {
+    "id": "honda_ra271e_15_v12",
+    "name": "Honda RA271E 1.5 V12",
+    "supplier": "Honda",
+    "era": "early",
+    "years_available": [
+      1964
+    ],
+    "attributes": {
+      "power": 62,
+      "driveability": 53,
+      "fuel_efficiency": 51,
+      "reliability": 49,
+      "deployment_mode": 43
+    },
+    "bio": "Honda RA271E 1.5 V12 engine."
+  },
+  {
+    "id": "honda_ra272e_15_v12",
+    "name": "Honda RA272E 1.5 V12",
+    "supplier": "Honda",
+    "era": "early",
+    "years_available": [
+      1965
+    ],
+    "attributes": {
+      "power": 68,
+      "driveability": 63,
+      "fuel_efficiency": 57,
+      "reliability": 61,
+      "deployment_mode": 50
+    },
+    "bio": "Honda RA272E 1.5 V12 engine."
+  },
+  {
+    "id": "honda_ra273e_30_v12",
+    "name": "Honda RA273E 3.0 V12",
+    "supplier": "Honda",
+    "era": "pre_turbo",
+    "years_available": [
+      1966,
+      1967,
+      1968
+    ],
+    "attributes": {
+      "power": 59,
+      "driveability": 52,
+      "fuel_efficiency": 50,
+      "reliability": 51,
+      "deployment_mode": 45
+    },
+    "bio": "Honda RA273E 3.0 V12 engine."
+  },
+  {
+    "id": "ford_cosworth_sca_10_l4",
+    "name": "Ford Cosworth SCA 1.0 L4",
+    "supplier": "Ford",
+    "era": "pre_turbo",
+    "years_available": [
+      1966
+    ],
+    "attributes": {
+      "power": 64,
+      "driveability": 54,
+      "fuel_efficiency": 49,
+      "reliability": 56,
+      "deployment_mode": 42
+    },
+    "bio": "Ford Cosworth SCA 1.0 L4 engine."
+  },
+  {
+    "id": "climax_fpe_30_v8",
+    "name": "Climax FPE 3.0 V8",
+    "supplier": "Climax",
+    "era": "pre_turbo",
+    "years_available": [
+      1966
+    ],
+    "attributes": {
+      "power": 61,
+      "driveability": 58,
+      "fuel_efficiency": 51,
+      "reliability": 53,
+      "deployment_mode": 40
+    },
+    "bio": "Climax FPE 3.0 V8 engine."
+  },
+  {
+    "id": "ford_cosworth_fva_16_l4",
+    "name": "Ford Cosworth FVA 1.6 L4",
+    "supplier": "Ford",
+    "era": "pre_turbo",
+    "years_available": [
+      1967,
+      1969
+    ],
+    "attributes": {
+      "power": 61,
+      "driveability": 59,
+      "fuel_efficiency": 50,
+      "reliability": 56,
+      "deployment_mode": 45
+    },
+    "bio": "Ford Cosworth FVA 1.6 L4 engine."
+  },
+  {
+    "id": "climax_fpf_28_l4",
+    "name": "Climax FPF 2.8 L4",
+    "supplier": "Climax",
+    "era": "pre_turbo",
+    "years_available": [
+      1967,
+      1969
+    ],
+    "attributes": {
+      "power": 61,
+      "driveability": 59,
+      "fuel_efficiency": 53,
+      "reliability": 53,
+      "deployment_mode": 45
+    },
+    "bio": "Climax FPF 2.8 L4 engine."
+  },
+  {
+    "id": "ford_cosworth_dfv_30_v8",
+    "name": "Ford Cosworth DFV 3.0 V8",
+    "supplier": "Ford",
+    "era": "pre_turbo",
+    "years_available": [
+      1968,
+      1969,
+      1970,
+      1971,
+      1972,
+      1973,
+      1974,
+      1975,
+      1976,
+      1977,
+      1978,
+      1979,
+      1980,
+      1981,
+      1982,
+      1983
+    ],
+    "attributes": {
+      "power": 60,
+      "driveability": 49,
+      "fuel_efficiency": 50,
+      "reliability": 49,
+      "deployment_mode": 41
+    },
+    "bio": "Ford Cosworth DFV 3.0 V8 engine."
+  },
+  {
+    "id": "repco_620_30_v8",
+    "name": "Repco 620 3.0 V8",
+    "supplier": "Repco",
+    "era": "pre_turbo",
+    "years_available": [
+      1968
+    ],
+    "attributes": {
+      "power": 59,
+      "driveability": 55,
+      "fuel_efficiency": 52,
+      "reliability": 50,
+      "deployment_mode": 47
+    },
+    "bio": "Repco 620 3.0 V8 engine."
+  },
+  {
+    "id": "maserati_10_f1_30_v12",
+    "name": "Maserati 10/F1 3.0 V12",
+    "supplier": "Maserati",
+    "era": "pre_turbo",
+    "years_available": [
+      1969
+    ],
+    "attributes": {
+      "power": 65,
+      "driveability": 59,
+      "fuel_efficiency": 47,
+      "reliability": 55,
+      "deployment_mode": 41
+    },
+    "bio": "Maserati 10/F1 3.0 V12 engine."
+  },
+  {
+    "id": "bmw_m12_1_16_l4",
+    "name": "BMW M12/1 1.6 L4",
+    "supplier": "Bmw",
+    "era": "pre_turbo",
+    "years_available": [
+      1969
+    ],
+    "attributes": {
+      "power": 62,
+      "driveability": 55,
+      "fuel_efficiency": 51,
+      "reliability": 49,
+      "deployment_mode": 44
+    },
+    "bio": "BMW M12/1 1.6 L4 engine."
+  },
+  {
+    "id": "matra_ms12_30_v12",
+    "name": "Matra MS12 3.0 V12",
+    "supplier": "Matra",
+    "era": "pre_turbo",
+    "years_available": [
+      1970
+    ],
+    "attributes": {
+      "power": 69,
+      "driveability": 61,
+      "fuel_efficiency": 51,
+      "reliability": 54,
+      "deployment_mode": 48
+    },
+    "bio": "Matra MS12 3.0 V12 engine."
+  },
+  {
+    "id": "matra_ms71_30_v12",
+    "name": "Matra MS71 3.0 V12",
+    "supplier": "Matra",
+    "era": "pre_turbo",
+    "years_available": [
+      1971
+    ],
+    "attributes": {
+      "power": 63,
+      "driveability": 63,
+      "fuel_efficiency": 55,
+      "reliability": 56,
+      "deployment_mode": 42
+    },
+    "bio": "Matra MS71 3.0 V12 engine."
+  },
+  {
+    "id": "matra_ms72_30_v12",
+    "name": "Matra MS72 3.0 V12",
+    "supplier": "Matra",
+    "era": "pre_turbo",
+    "years_available": [
+      1972
+    ],
+    "attributes": {
+      "power": 59,
+      "driveability": 58,
+      "fuel_efficiency": 51,
+      "reliability": 54,
+      "deployment_mode": 43
+    },
+    "bio": "Matra MS72 3.0 V12 engine."
+  },
+  {
+    "id": "tecno_series_p_30_f12",
+    "name": "Tecno Series-P 3.0 F12",
+    "supplier": "Tecno",
+    "era": "pre_turbo",
+    "years_available": [
+      1972,
+      1973
+    ],
+    "attributes": {
+      "power": 62,
+      "driveability": 58,
+      "fuel_efficiency": 51,
+      "reliability": 51,
+      "deployment_mode": 44
+    },
+    "bio": "Tecno Series-P 3.0 F12 engine."
+  },
+  {
+    "id": "alfa_romeo_115_12_30_f12",
+    "name": "Alfa Romeo 115-12 3.0 F12",
+    "supplier": "Alfa Romeo",
+    "era": "pre_turbo",
+    "years_available": [
+      1979
+    ],
+    "attributes": {
+      "power": 58,
+      "driveability": 57,
+      "fuel_efficiency": 49,
+      "reliability": 50,
+      "deployment_mode": 45
+    },
+    "bio": "Alfa Romeo 115-12 3.0 F12 engine."
+  },
+  {
+    "id": "alfa_romeo_1260_30_v12",
+    "name": "Alfa Romeo 1260 3.0 V12",
+    "supplier": "Alfa Romeo",
+    "era": "pre_turbo",
+    "years_available": [
+      1980,
+      1981,
+      1982
+    ],
+    "attributes": {
+      "power": 51,
+      "driveability": 42,
+      "fuel_efficiency": 38,
+      "reliability": 42,
+      "deployment_mode": 38
+    },
+    "bio": "Alfa Romeo 1260 3.0 V12 engine."
+  },
+  {
+    "id": "alfa_romeo_890t_15_v8_t",
+    "name": "Alfa Romeo 890T 1.5 V8 T",
+    "supplier": "Alfa Romeo",
+    "era": "turbo",
+    "years_available": [
+      1983,
+      1984,
+      1985,
+      1986,
+      1987
+    ],
+    "attributes": {
+      "power": 72,
+      "driveability": 52,
+      "fuel_efficiency": 44,
+      "reliability": 58,
+      "deployment_mode": 50
+    },
+    "bio": "Alfa Romeo 890T 1.5 V8 T engine."
+  },
+  {
+    "id": "honda_ra163e_15_v6_t",
+    "name": "Honda RA163E 1.5 V6 T",
+    "supplier": "Honda",
+    "era": "turbo",
+    "years_available": [
+      1983
+    ],
+    "attributes": {
+      "power": 70,
+      "driveability": 46,
+      "fuel_efficiency": 36,
+      "reliability": 49,
+      "deployment_mode": 42
+    },
+    "bio": "Honda RA163E 1.5 V6 T engine."
+  },
+  {
+    "id": "bmw_m12_13_15_l4_t",
+    "name": "BMW M12/13 1.5 L4 T",
+    "supplier": "Bmw",
+    "era": "turbo",
+    "years_available": [
+      1983,
+      1984
+    ],
+    "attributes": {
+      "power": 66,
+      "driveability": 48,
+      "fuel_efficiency": 43,
+      "reliability": 52,
+      "deployment_mode": 42
+    },
+    "bio": "BMW M12/13 1.5 L4 T engine."
+  },
+  {
+    "id": "renault_ef4b_15_v6_t",
+    "name": "Renault EF4B 1.5 V6 T",
+    "supplier": "Renault",
+    "era": "turbo",
+    "years_available": [
+      1984,
+      1985
+    ],
+    "attributes": {
+      "power": 84,
+      "driveability": 63,
+      "fuel_efficiency": 57,
+      "reliability": 67,
+      "deployment_mode": 56
+    },
+    "bio": "Renault EF4B 1.5 V6 T engine."
+  },
+  {
+    "id": "hart_415t_15_l4_t",
+    "name": "Hart 415T 1.5 L4 T",
+    "supplier": "Hart",
+    "era": "turbo",
+    "years_available": [
+      1984,
+      1985
+    ],
+    "attributes": {
+      "power": 63,
+      "driveability": 47,
+      "fuel_efficiency": 42,
+      "reliability": 55,
+      "deployment_mode": 46
+    },
+    "bio": "Hart 415T 1.5 L4 T engine."
+  },
+  {
+    "id": "zakspeed_1500_4_15_l4_t",
+    "name": "Zakspeed 1500/4 1.5 L4 T",
+    "supplier": "Zakspeed",
+    "era": "turbo",
+    "years_available": [
+      1985,
+      1986,
+      1987,
+      1988
+    ],
+    "attributes": {
+      "power": 70,
+      "driveability": 45,
+      "fuel_efficiency": 37,
+      "reliability": 54,
+      "deployment_mode": 45
+    },
+    "bio": "Zakspeed 1500/4 1.5 L4 T engine."
+  },
+  {
+    "id": "renault_ef15b_15_v6_t",
+    "name": "Renault EF15B 1.5 V6 T",
+    "supplier": "Renault",
+    "era": "turbo",
+    "years_available": [
+      1986
+    ],
+    "attributes": {
+      "power": 87,
+      "driveability": 61,
+      "fuel_efficiency": 57,
+      "reliability": 73,
+      "deployment_mode": 61
+    },
+    "bio": "Renault EF15B 1.5 V6 T engine."
+  },
+  {
+    "id": "motori_moderni_tipo_615_90_15_v6_t",
+    "name": "Motori Moderni Tipo 615-90 1.5 V6 T",
+    "supplier": "Motori Moderni",
+    "era": "turbo",
+    "years_available": [
+      1986
+    ],
+    "attributes": {
+      "power": 65,
+      "driveability": 48,
+      "fuel_efficiency": 39,
+      "reliability": 53,
+      "deployment_mode": 45
+    },
+    "bio": "Motori Moderni Tipo 615-90 1.5 V6 T engine."
+  },
+  {
+    "id": "honda_ra166e_15_v6_t",
+    "name": "Honda RA166E 1.5 V6 T",
+    "supplier": "Honda",
+    "era": "turbo",
+    "years_available": [
+      1987
+    ],
+    "attributes": {
+      "power": 86,
+      "driveability": 61,
+      "fuel_efficiency": 57,
+      "reliability": 70,
+      "deployment_mode": 57
+    },
+    "bio": "Honda RA166E 1.5 V6 T engine."
+  },
+  {
+    "id": "ford_cosworth_dfz_35_v8",
+    "name": "Ford Cosworth DFZ 3.5 V8",
+    "supplier": "Ford",
+    "era": "turbo",
+    "years_available": [
+      1987,
+      1988
+    ],
+    "attributes": {
+      "power": 52,
+      "driveability": 45,
+      "fuel_efficiency": 42,
+      "reliability": 39,
+      "deployment_mode": 35
+    },
+    "bio": "Ford Cosworth DFZ 3.5 V8 engine."
+  },
+  {
+    "id": "honda_ra168e_15_v6_t",
+    "name": "Honda RA168E 1.5 V6 T",
+    "supplier": "Honda",
+    "era": "turbo",
+    "years_available": [
+      1988
+    ],
+    "attributes": {
+      "power": 79,
+      "driveability": 63,
+      "fuel_efficiency": 56,
+      "reliability": 69,
+      "deployment_mode": 57
+    },
+    "bio": "Honda RA168E 1.5 V6 T engine."
+  },
+  {
+    "id": "osella_890t_15_v8_t",
+    "name": "Osella 890T 1.5 V8 T",
+    "supplier": "Osella",
+    "era": "turbo",
+    "years_available": [
+      1988
+    ],
+    "attributes": {
+      "power": 64,
+      "driveability": 49,
+      "fuel_efficiency": 40,
+      "reliability": 51,
+      "deployment_mode": 42
+    },
+    "bio": "Osella 890T 1.5 V8 T engine."
+  },
+  {
+    "id": "ford_cosworth_dfr_35_v8",
+    "name": "Ford Cosworth DFR 3.5 V8",
+    "supplier": "Ford",
+    "era": "v10_v12",
+    "years_available": [
+      1989,
+      1990,
+      1991
+    ],
+    "attributes": {
+      "power": 48,
+      "driveability": 42,
+      "fuel_efficiency": 32,
+      "reliability": 42,
+      "deployment_mode": 33
+    },
+    "bio": "Ford Cosworth DFR 3.5 V8 engine."
+  },
+  {
+    "id": "judd_cv_35_v8",
+    "name": "Judd CV 3.5 V8",
+    "supplier": "Judd",
+    "era": "v10_v12",
+    "years_available": [
+      1989,
+      1990
+    ],
+    "attributes": {
+      "power": 70,
+      "driveability": 61,
+      "fuel_efficiency": 54,
+      "reliability": 60,
+      "deployment_mode": 45
+    },
+    "bio": "Judd CV 3.5 V8 engine."
+  },
+  {
+    "id": "yamaha_ox88_35_v8",
+    "name": "Yamaha OX88 3.5 V8",
+    "supplier": "Yamaha",
+    "era": "v10_v12",
+    "years_available": [
+      1989
+    ],
+    "attributes": {
+      "power": 61,
+      "driveability": 54,
+      "fuel_efficiency": 47,
+      "reliability": 53,
+      "deployment_mode": 44
+    },
+    "bio": "Yamaha OX88 3.5 V8 engine."
+  },
+  {
+    "id": "lamborghini_3512_35_v12",
+    "name": "Lamborghini 3512 3.5 V12",
+    "supplier": "Lamborghini",
+    "era": "v10_v12",
+    "years_available": [
+      1990,
+      1991,
+      1992,
+      1993
+    ],
+    "attributes": {
+      "power": 64,
+      "driveability": 55,
+      "fuel_efficiency": 50,
+      "reliability": 55,
+      "deployment_mode": 45
+    },
+    "bio": "Lamborghini 3512 3.5 V12 engine."
+  },
+  {
+    "id": "judd_ev_35_v8",
+    "name": "Judd EV 3.5 V8",
+    "supplier": "Judd",
+    "era": "v10_v12",
+    "years_available": [
+      1990,
+      1991
+    ],
+    "attributes": {
+      "power": 64,
+      "driveability": 62,
+      "fuel_efficiency": 52,
+      "reliability": 54,
+      "deployment_mode": 44
+    },
+    "bio": "Judd EV 3.5 V8 engine."
+  },
+  {
+    "id": "life_f35_35_w12",
+    "name": "Life F35 3.5 W12",
+    "supplier": "Life",
+    "era": "v10_v12",
+    "years_available": [
+      1990
+    ],
+    "attributes": {
+      "power": 64,
+      "driveability": 56,
+      "fuel_efficiency": 48,
+      "reliability": 50,
+      "deployment_mode": 42
+    },
+    "bio": "Life F35 3.5 W12 engine."
+  },
+  {
+    "id": "judd_gv_35_v10",
+    "name": "Judd GV 3.5 V10",
+    "supplier": "Judd",
+    "era": "v10_v12",
+    "years_available": [
+      1991,
+      1992
+    ],
+    "attributes": {
+      "power": 66,
+      "driveability": 56,
+      "fuel_efficiency": 50,
+      "reliability": 55,
+      "deployment_mode": 40
+    },
+    "bio": "Judd GV 3.5 V10 engine."
+  },
+  {
+    "id": "ilmor_2175a_35_v10",
+    "name": "Ilmor 2175A 3.5 V10",
+    "supplier": "Ilmor",
+    "era": "v10_v12",
+    "years_available": [
+      1991,
+      1993,
+      1994
+    ],
+    "attributes": {
+      "power": 45,
+      "driveability": 39,
+      "fuel_efficiency": 38,
+      "reliability": 35,
+      "deployment_mode": 33
+    },
+    "bio": "Ilmor 2175A 3.5 V10 engine."
+  },
+  {
+    "id": "ferrari_037_35_v12",
+    "name": "Ferrari 037 3.5 V12",
+    "supplier": "Ferrari",
+    "era": "v10_v12",
+    "years_available": [
+      1992
+    ],
+    "attributes": {
+      "power": 57,
+      "driveability": 52,
+      "fuel_efficiency": 41,
+      "reliability": 43,
+      "deployment_mode": 38
+    },
+    "bio": "Ferrari 037 3.5 V12 engine."
+  },
+  {
+    "id": "ford_hba5_35_v8",
+    "name": "Ford HBA5 3.5 V8",
+    "supplier": "Ford",
+    "era": "v10_v12",
+    "years_available": [
+      1992
+    ],
+    "attributes": {
+      "power": 61,
+      "driveability": 58,
+      "fuel_efficiency": 47,
+      "reliability": 53,
+      "deployment_mode": 40
+    },
+    "bio": "Ford HBA5 3.5 V8 engine."
+  },
+  {
+    "id": "mugen_honda_mf_351h_35_v10",
+    "name": "Mugen-Honda MF-351H 3.5 V10",
+    "supplier": "Mugen Honda",
+    "era": "v10_v12",
+    "years_available": [
+      1992
+    ],
+    "attributes": {
+      "power": 64,
+      "driveability": 61,
+      "fuel_efficiency": 55,
+      "reliability": 56,
+      "deployment_mode": 46
+    },
+    "bio": "Mugen-Honda MF-351H 3.5 V10 engine."
+  },
+  {
+    "id": "mugen_honda_mf_351hb_35_v10",
+    "name": "Mugen-Honda MF-351HB 3.5 V10",
+    "supplier": "Mugen Honda",
+    "era": "v10_v12",
+    "years_available": [
+      1993
+    ],
+    "attributes": {
+      "power": 59,
+      "driveability": 50,
+      "fuel_efficiency": 43,
+      "reliability": 48,
+      "deployment_mode": 41
+    },
+    "bio": "Mugen-Honda MF-351HB 3.5 V10 engine."
+  },
+  {
+    "id": "ford_hbd6_35_v8",
+    "name": "Ford HBD6 3.5 V8",
+    "supplier": "Ford",
+    "era": "v10_v12",
+    "years_available": [
+      1993,
+      1994
+    ],
+    "attributes": {
+      "power": 70,
+      "driveability": 67,
+      "fuel_efficiency": 58,
+      "reliability": 58,
+      "deployment_mode": 50
+    },
+    "bio": "Ford HBD6 3.5 V8 engine."
+  },
+  {
+    "id": "ford_hbe7_8_35_v8",
+    "name": "Ford HBE7/8 3.5 V8",
+    "supplier": "Ford",
+    "era": "v10_v12",
+    "years_available": [
+      1994
+    ],
+    "attributes": {
+      "power": 56,
+      "driveability": 55,
+      "fuel_efficiency": 44,
+      "reliability": 51,
+      "deployment_mode": 43
+    },
+    "bio": "Ford HBE7/8 3.5 V8 engine."
+  },
+  {
+    "id": "mugen_honda_mf_351hc_35_v10",
+    "name": "Mugen-Honda MF-351HC 3.5 V10",
+    "supplier": "Mugen Honda",
+    "era": "v10_v12",
+    "years_available": [
+      1994
+    ],
+    "attributes": {
+      "power": 64,
+      "driveability": 56,
+      "fuel_efficiency": 50,
+      "reliability": 53,
+      "deployment_mode": 47
+    },
+    "bio": "Mugen-Honda MF-351HC 3.5 V10 engine."
+  },
+  {
+    "id": "ford_hbf7_8_35_v8",
+    "name": "Ford HBF7/8 3.5 V8",
+    "supplier": "Ford",
+    "era": "v10_v12",
+    "years_available": [
+      1994
+    ],
+    "attributes": {
+      "power": 50,
+      "driveability": 46,
+      "fuel_efficiency": 38,
+      "reliability": 40,
+      "deployment_mode": 31
+    },
+    "bio": "Ford HBF7/8 3.5 V8 engine."
+  },
+  {
+    "id": "hart_830_30_v8",
+    "name": "Hart 830 3.0 V8",
+    "supplier": "Hart",
+    "era": "v10_v12",
+    "years_available": [
+      1995,
+      1996
+    ],
+    "attributes": {
+      "power": 63,
+      "driveability": 59,
+      "fuel_efficiency": 51,
+      "reliability": 52,
+      "deployment_mode": 46
+    },
+    "bio": "Hart 830 3.0 V8 engine."
+  },
+  {
+    "id": "ford_ed_30_v8",
+    "name": "Ford ED 3.0 V8",
+    "supplier": "Ford",
+    "era": "v10_v12",
+    "years_available": [
+      1995
+    ],
+    "attributes": {
+      "power": 59,
+      "driveability": 57,
+      "fuel_efficiency": 53,
+      "reliability": 50,
+      "deployment_mode": 45
+    },
+    "bio": "Ford ED 3.0 V8 engine."
+  },
+  {
+    "id": "ford_edb_30_v8",
+    "name": "Ford EDB 3.0 V8",
+    "supplier": "Ford",
+    "era": "v10_v12",
+    "years_available": [
+      1995
+    ],
+    "attributes": {
+      "power": 65,
+      "driveability": 55,
+      "fuel_efficiency": 50,
+      "reliability": 50,
+      "deployment_mode": 44
+    },
+    "bio": "Ford EDB 3.0 V8 engine."
+  },
+  {
+    "id": "ford_edc_30_v8",
+    "name": "Ford EDC 3.0 V8",
+    "supplier": "Ford",
+    "era": "v10_v12",
+    "years_available": [
+      1995
+    ],
+    "attributes": {
+      "power": 60,
+      "driveability": 54,
+      "fuel_efficiency": 47,
+      "reliability": 55,
+      "deployment_mode": 41
+    },
+    "bio": "Ford EDC 3.0 V8 engine."
+  },
+  {
+    "id": "ford_edd_30_v8",
+    "name": "Ford EDD 3.0 V8",
+    "supplier": "Ford",
+    "era": "v10_v12",
+    "years_available": [
+      1995
+    ],
+    "attributes": {
+      "power": 63,
+      "driveability": 59,
+      "fuel_efficiency": 51,
+      "reliability": 54,
+      "deployment_mode": 43
+    },
+    "bio": "Ford EDD 3.0 V8 engine."
+  },
+  {
+    "id": "ford_eca_zetec_r_30_v8",
+    "name": "Ford ECA Zetec-R 3.0 V8",
+    "supplier": "Ford",
+    "era": "v10_v12",
+    "years_available": [
+      1996
+    ],
+    "attributes": {
+      "power": 64,
+      "driveability": 55,
+      "fuel_efficiency": 49,
+      "reliability": 55,
+      "deployment_mode": 43
+    },
+    "bio": "Ford ECA Zetec-R 3.0 V8 engine."
+  },
+  {
+    "id": "ford_jd_zetec_r_30_v10",
+    "name": "Ford JD Zetec-R 3.0 V10",
+    "supplier": "Ford",
+    "era": "v10_v12",
+    "years_available": [
+      1998
+    ],
+    "attributes": {
+      "power": 60,
+      "driveability": 56,
+      "fuel_efficiency": 52,
+      "reliability": 54,
+      "deployment_mode": 45
+    },
+    "bio": "Ford JD Zetec-R 3.0 V10 engine."
+  },
+  {
+    "id": "toyota_rvx_05_30_v10",
+    "name": "Toyota RVX-05 3.0 V10",
+    "supplier": "Toyota",
+    "era": "v10_v12",
+    "years_available": [
+      2005
+    ],
+    "attributes": {
+      "power": 62,
+      "driveability": 52,
+      "fuel_efficiency": 49,
+      "reliability": 52,
+      "deployment_mode": 38
+    },
+    "bio": "Toyota RVX-05 3.0 V10 engine."
+  },
+  {
+    "id": "renault_rs27_2011_24_v8",
+    "name": "Renault RS27-2011 2.4 V8",
+    "supplier": "Renault",
+    "era": "v8",
+    "years_available": [
+      2011
+    ],
+    "attributes": {
+      "power": 73,
+      "driveability": 65,
+      "fuel_efficiency": 58,
+      "reliability": 66,
+      "deployment_mode": 53
+    },
+    "bio": "Renault RS27-2011 2.4 V8 engine."
+  },
+  {
+    "id": "ferrari_059_3_16_v6_t_h",
+    "name": "Ferrari 059/3 1.6 V6 T H",
+    "supplier": "Ferrari",
+    "era": "hybrid",
+    "years_available": [
+      2015
+    ],
+    "attributes": {
+      "power": 54,
+      "driveability": 47,
+      "fuel_efficiency": 47,
+      "reliability": 50,
+      "deployment_mode": 39
+    },
+    "bio": "Ferrari 059/3 1.6 V6 T H engine."
+  },
+  {
+    "id": "ferrari_064_16_v6_t_h",
+    "name": "Ferrari 064 1.6 V6 T H",
+    "supplier": "Ferrari",
+    "era": "hybrid",
+    "years_available": [
+      2019
+    ],
+    "attributes": {
+      "power": 58,
+      "driveability": 59,
+      "fuel_efficiency": 48,
+      "reliability": 51,
+      "deployment_mode": 45
+    },
+    "bio": "Ferrari 064 1.6 V6 T H engine."
+  },
+  {
+    "id": "ferrari_065_16_v6_t_h",
+    "name": "Ferrari 065 1.6 V6 T H",
+    "supplier": "Ferrari",
+    "era": "hybrid",
+    "years_available": [
+      2020
+    ],
+    "attributes": {
+      "power": 64,
+      "driveability": 54,
+      "fuel_efficiency": 48,
+      "reliability": 53,
+      "deployment_mode": 40
+    },
+    "bio": "Ferrari 065 1.6 V6 T H engine."
+  },
+  {
+    "id": "ferrari_065_6_16_v6_t_h",
+    "name": "Ferrari 065/6 1.6 V6 T H",
+    "supplier": "Ferrari",
+    "era": "hybrid",
+    "years_available": [
+      2021
+    ],
+    "attributes": {
+      "power": 54,
+      "driveability": 56,
+      "fuel_efficiency": 47,
+      "reliability": 51,
+      "deployment_mode": 43
+    },
+    "bio": "Ferrari 065/6 1.6 V6 T H engine."
+  },
+  {
+    "id": "ferrari_066_7_16_v6_t_h",
+    "name": "Ferrari 066/7 1.6 V6 T H",
+    "supplier": "Ferrari",
+    "era": "current",
+    "years_available": [
+      2022
+    ],
+    "attributes": {
+      "power": 71,
+      "driveability": 59,
+      "fuel_efficiency": 58,
+      "reliability": 58,
+      "deployment_mode": 51
+    },
+    "bio": "Ferrari 066/7 1.6 V6 T H engine."
+  },
+  {
+    "id": "ferrari_066_10_16_v6_t_h",
+    "name": "Ferrari 066/10 1.6 V6 T H",
+    "supplier": "Ferrari",
+    "era": "current",
+    "years_available": [
+      2023
+    ],
+    "attributes": {
+      "power": 55,
+      "driveability": 53,
+      "fuel_efficiency": 43,
+      "reliability": 47,
+      "deployment_mode": 40
+    },
+    "bio": "Ferrari 066/10 1.6 V6 T H engine."
   }
 ]
