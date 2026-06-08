@@ -1,10 +1,47 @@
-import { motion } from 'framer-motion'
 import { useGameStore } from '../../stores/gameStore'
 import { buildShareUrl } from '../../utils/shareEncoder'
 import { SLOT_LABELS, getElementValue } from '../../utils/ratingEngine'
 
 const FLAG_MAP = { ITA: '🇮🇹', GBR: '🇬🇧', DEU: '🇩🇪', FRA: '🇫🇷', BRA: '🇧🇷', AUS: '🇦🇺', ESP: '🇪🇸', FIN: '🇫🇮', AUT: '🇦🇹', NLD: '🇳🇱', USA: '🇺🇸', MCO: '🇲🇨', CAN: '🇨🇦', ARG: '🇦🇷', RSA: '🇿🇦', ZAF: '🇿🇦' }
 const SLOT_KEYS = Object.keys(SLOT_LABELS)
+
+function StandingsTable({ title, rows, showTeam }) {
+  return (
+    <div className="bg-white border border-borderc">
+      <div className="px-4 py-2 border-b border-borderc">
+        <span className="text-[10px] font-bold uppercase tracking-widest text-ink-md">{title}</span>
+      </div>
+      <div className="divide-y divide-borderc">
+        {rows.slice(0, 12).map((s, i) => (
+          <div
+            key={`${s.name}-${i}`}
+            className={`flex items-center justify-between px-4 py-2.5 ${s.isPlayer ? 'bg-sand-lt' : ''}`}
+          >
+            <div className="flex items-center gap-3 min-w-0">
+              <span className={`font-display font-black text-lg w-6 shrink-0 ${
+                i === 0 ? 'text-[#c9a030]' : i <= 2 ? 'text-ink' : 'text-ink-lt'
+              }`}>
+                {i + 1}
+              </span>
+              {s.color && (
+                <div className="w-1.5 h-5 rounded-sm shrink-0" style={{ backgroundColor: s.color }} />
+              )}
+              <div className="min-w-0">
+                <span className={`text-sm block truncate ${s.isPlayer ? 'font-black text-rust' : 'font-semibold text-ink'}`}>
+                  {s.isPlayer ? (showTeam ? 'TU EQUIPO' : s.name) : s.name}
+                </span>
+                {showTeam && !s.isPlayer && (
+                  <span className="text-[9px] text-ink-lt block truncate">{s.team}</span>
+                )}
+              </div>
+            </div>
+            <span className="font-bold text-sm text-ink shrink-0 ml-2">{s.points} pts</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
 
 export default function ChampionshipCard({ results }) {
   const team      = useGameStore(s => s.team)
@@ -13,9 +50,7 @@ export default function ChampionshipCard({ results }) {
   const resetGame = useGameStore(s => s.resetGame)
 
   if (!results) return null
-  const { standings, finalPosition, playerStats } = results
-
-  const isWinner = finalPosition === 1
+  const { driverStandings, constructorStandings, d1FinalPos, d2FinalPos, constructorPos, d1Name, d2Name, playerStats } = results
 
   function handleShareLink() {
     const url = buildShareUrl(team, { era, mode })
@@ -25,48 +60,34 @@ export default function ChampionshipCard({ results }) {
   return (
     <div className="space-y-5">
 
-      {/* Share card — white with border, matches 7a0 style */}
+      {/* Share card */}
       <div className="bg-white border border-borderc">
-        {/* Card header */}
         <div className="flex items-center justify-between px-4 py-3 border-b border-borderc">
           <div>
             <div className="font-display font-black text-base text-ink leading-none">F1 LEGENDS</div>
             <div className="text-[9px] text-ink-md uppercase tracking-widest">PIT LANE DRAFT</div>
           </div>
           <div className="text-[10px] text-ink-md font-bold uppercase tracking-wide">
-            {finalPosition === 1 ? 'CAMPEÓN' : `P${finalPosition}`}
+            P{d1FinalPos} · CONSTRUCTORES P{constructorPos}
           </div>
         </div>
 
-        {/* Big result */}
-        <div className="px-6 pt-5 pb-4 text-center border-b border-borderc">
-          <div className="font-display font-black text-xl uppercase tracking-wide text-ink-md mb-1">
-            {isWinner ? 'CAMPEÓN DEL MUNDO' : `ELIMINADO`}
-          </div>
-          <div
-            className="font-display font-black leading-none"
-            style={{ fontSize: 80, color: isWinner ? 'var(--gold)' : 'var(--ink)' }}
-          >
-            P{finalPosition}
-          </div>
-        </div>
-
-        {/* Stats grid */}
-        <div className="grid grid-cols-4 border-b border-borderc">
+        {/* Summary positions */}
+        <div className="grid grid-cols-3 border-b border-borderc divide-x divide-borderc">
           {[
-            { label: 'PUNTOS',   value: playerStats.points },
-            { label: 'VICTORIAS', value: playerStats.wins },
-            { label: 'OVERALL',  value: playerStats.points },
-            { label: 'PODIOS',   value: playerStats.podiums },
-          ].map(({ label, value }) => (
-            <div key={label} className="px-3 py-3 text-center border-r border-borderc last:border-r-0">
-              <div className="font-display font-black text-2xl text-ink">{value}</div>
-              <div className="text-[9px] font-bold uppercase tracking-widest text-ink-md">{label}</div>
+            { label: d1Name,         value: `P${d1FinalPos}`,      sub: 'Piloto 1' },
+            { label: d2Name,         value: `P${d2FinalPos}`,      sub: 'Piloto 2' },
+            { label: 'CONSTRUCTORES', value: `P${constructorPos}`, sub: `${playerStats.points} pts` },
+          ].map(({ label, value, sub }) => (
+            <div key={label} className="px-3 py-4 text-center">
+              <div className="font-display font-black text-3xl text-ink leading-none">{value}</div>
+              <div className="text-[9px] font-bold uppercase tracking-widest text-ink-md mt-1 truncate">{label}</div>
+              <div className="text-[9px] text-ink-lt">{sub}</div>
             </div>
           ))}
         </div>
 
-        {/* Team list */}
+        {/* Team composition */}
         <div className="divide-y divide-borderc">
           {SLOT_KEYS.map(key => {
             const el = team[key]
@@ -93,7 +114,7 @@ export default function ChampionshipCard({ results }) {
                 <div className="flex items-center gap-2 shrink-0">
                   {nat && <span className="text-xs">{FLAG_MAP[nat] || ''}</span>}
                   {year && <span className="text-[10px] font-bold text-ink-md">{year}</span>}
-                  {rating && (
+                  {rating > 0 && (
                     <span className={`font-display font-black text-base ${isTopRated ? 'text-rust' : 'text-ink-md'}`}>
                       {rating}
                     </span>
@@ -109,39 +130,21 @@ export default function ChampionshipCard({ results }) {
         </div>
       </div>
 
-      {/* Championship standings */}
-      <div className="bg-white border border-borderc">
-        <div className="px-4 py-2 border-b border-borderc">
-          <span className="text-[10px] font-bold uppercase tracking-widest text-ink-md">
-            Clasificación Final — Constructores
-          </span>
-        </div>
-        <div className="divide-y divide-borderc">
-          {standings.map((s, i) => (
-            <div
-              key={s.name}
-              className={`flex items-center justify-between px-4 py-2.5 ${s.isPlayer ? 'bg-sand-lt' : ''}`}
-            >
-              <div className="flex items-center gap-3">
-                <span className={`font-display font-black text-lg w-6 shrink-0 ${
-                  i === 0 ? 'text-[#c9a030]' : i <= 2 ? 'text-ink' : 'text-ink-lt'
-                }`}>
-                  {i + 1}
-                </span>
-                {s.color && (
-                  <div className="w-1.5 h-5 rounded-sm shrink-0" style={{ backgroundColor: s.color }} />
-                )}
-                <span className={`text-sm ${s.isPlayer ? 'font-black text-rust' : 'font-semibold text-ink'}`}>
-                  {s.isPlayer ? 'TU EQUIPO' : s.name}
-                </span>
-              </div>
-              <span className="font-bold text-sm text-ink">{s.points} pts</span>
-            </div>
-          ))}
-        </div>
-      </div>
+      {/* Drivers' standings */}
+      <StandingsTable
+        title="Clasificación Final — Pilotos"
+        rows={driverStandings ?? []}
+        showTeam={true}
+      />
 
-      {/* Action buttons — matching 7a0 style */}
+      {/* Constructors' standings */}
+      <StandingsTable
+        title="Clasificación Final — Constructores"
+        rows={constructorStandings ?? []}
+        showTeam={false}
+      />
+
+      {/* Actions */}
       <div className="flex gap-2">
         <button
           onClick={handleShareLink}

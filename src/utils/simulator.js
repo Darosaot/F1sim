@@ -1,141 +1,206 @@
 import circuits from '../data/circuits.json'
 
-const POINTS = [25, 18, 15, 12, 10, 8, 6, 4, 2, 1, 0, 0]
+const POINTS = [25, 18, 15, 12, 10, 8, 6, 4, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
 const RIVAL_TEAMS = [
-  { name: 'McLaren Rivals', color: '#ff8000' },
-  { name: 'Ferrari Rivals', color: '#dc0000' },
-  { name: 'Mercedes Rivals', color: '#27f4d2' },
-  { name: 'Red Bull Rivals', color: '#3671c6' },
-  { name: 'Williams Rivals', color: '#00a3e0' },
-  { name: 'Alpine', color: '#0090d0' },
-  { name: 'Aston Martin', color: '#006f62' },
-  { name: 'Haas', color: '#e8002d' },
-  { name: 'AlphaTauri', color: '#2b4562' },
-  { name: 'Kick Sauber', color: '#52e252' },
+  { name: 'McLaren',      color: '#ff8000', d1: 'Norris',      d2: 'Piastri',    rating: 96 },
+  { name: 'Ferrari',      color: '#dc0000', d1: 'Leclerc',     d2: 'Sainz',      rating: 93 },
+  { name: 'Mercedes',     color: '#27f4d2', d1: 'Hamilton',    d2: 'Russell',    rating: 91 },
+  { name: 'Red Bull',     color: '#3671c6', d1: 'Verstappen',  d2: 'Pérez',      rating: 98 },
+  { name: 'Williams',     color: '#00a3e0', d1: 'Albon',       d2: 'Colapinto',  rating: 82 },
+  { name: 'Alpine',       color: '#0090d0', d1: 'Gasly',       d2: 'Ocon',       rating: 84 },
+  { name: 'Aston Martin', color: '#006f62', d1: 'Alonso',      d2: 'Stroll',     rating: 87 },
+  { name: 'Haas',         color: '#e8002d', d1: 'Hülkenberg',  d2: 'Magnussen',  rating: 80 },
+  { name: 'RB',           color: '#2b4562', d1: 'Tsunoda',     d2: 'Lawson',     rating: 83 },
+  { name: 'Kick Sauber',  color: '#52e252', d1: 'Bottas',      d2: 'Zhou',       rating: 79 },
 ]
 
 function rng(min = 0, max = 1) {
   return min + Math.random() * (max - min)
 }
 
-function calculateRacePerf(team, circuit) {
+function calculateDriverRacePerf(driverAttrs, chassisAttrs, engineAttrs, circuit, isWet) {
   const c = circuit.modifiers
-  const d1 = team.driver1?.attributes ?? { pace: 75, racecraft: 75, consistency: 75, wet_performance: 75 }
-  const d2 = team.driver2?.attributes ?? { pace: 65, racecraft: 65, consistency: 65, wet_performance: 65 }
-  const ch = team.chassis?.attributes ?? { downforce: 70, mechanical_grip: 70, drag_efficiency: 70, weight_distribution: 70 }
-  const en = team.engine?.attributes ?? { power: 70, driveability: 70, fuel_efficiency: 70, reliability: 70 }
-  const st = team.strategist?.attributes ?? { race_management: 70, pit_timing: 70, undercut_instinct: 70, safety_car_read: 70 }
-  const ti = team.tires?.attributes ?? { peak_grip: 70, durability: 70, thermal_window: 70, wet_performance: 70 }
-  const td = team.technical_director?.attributes ?? { design_genius: 70, innovation: 70, development_speed: 70, detail_obsession: 70 }
-  const tp = team.team_principal?.attributes ?? { team_management: 70, driver_management: 70, political_skill: 70, crisis_management: 70 }
-  const aero = team.aero ?? 70
-  const budget = team.budget ?? 70
-  const reliability = team.reliability ?? 70
+  const d = driverAttrs
+  const ch = chassisAttrs
+  const en = engineAttrs
 
-  const aeroPart = (ch.downforce * c.downforce_weight + aero * 0.3)
+  const aeroPart  = ch.downforce * c.downforce_weight
   const powerPart = en.power * c.power_weight
-  const driverPart = (d1.pace * 0.6 + d1.racecraft * 0.4) * c.racecraft_weight
-  const consistencyBonus = d1.consistency / 100 * 8
-  const engineReliab = en.reliability / 100 * 5
-  const stratBonus = (st.race_management * 0.4 + st.pit_timing * 0.3 + st.undercut_instinct * 0.3) / 100 * 10
-  const tdBonus = td.design_genius / 100 * 8
-  const tiresBonus = (ti.peak_grip * 0.4 + ti.thermal_window * 0.3 + ti.durability * 0.3) / 100 * 8
-  const budgetBonus = budget / 100 * 5
-  const d2Bonus = (d2.pace * 0.5 + d2.racecraft * 0.5) / 100 * 6
+  const drvPart   = (d.pace * 0.6 + d.racecraft * 0.4) * c.racecraft_weight
 
-  const base = (aeroPart + powerPart + driverPart) / 3
+  const base = (aeroPart + powerPart + drvPart) / 3
 
-  return base + consistencyBonus + engineReliab + stratBonus + tdBonus + tiresBonus + budgetBonus + d2Bonus
+  const wetMult = isWet ? (d.wet_performance / 80) : 1
+  const consistBonus = d.consistency / 100 * 6
+  const expBonus = d.experience / 100 * 4
+  const tireMgmt = d.tire_management / 100 * 4
+
+  return (base + consistBonus + expBonus + tireMgmt) * wetMult
 }
 
-function isDNF(team) {
-  const relEngine = team.engine?.attributes?.reliability ?? 78
-  const relChassis = team.reliability ?? 78
-  const combined = (relEngine + relChassis) / 2
-  const dnfProb = Math.max(0.02, (100 - combined) / 100 * 0.18)
-  return Math.random() < dnfProb
+function calculateDriverQualyPerf(driverAttrs, chassisAttrs, engineAttrs, circuit) {
+  const c = circuit.modifiers
+  const d = driverAttrs
+  const ch = chassisAttrs
+  const en = engineAttrs
+
+  const base = (d.qualifying * c.qualifying_weight
+    + d.pace * 0.4
+    + ch.downforce * 0.3
+    + en.power * 0.3) / 2.5
+
+  return base * rng(0.94, 1.06)
 }
+
+function gridBonus(gridPos, overtakingDifficulty) {
+  if (gridPos === 1)  return 10
+  if (gridPos <= 3)   return 5
+  if (gridPos <= 6)   return 1
+  if (gridPos <= 10)  return -3 * overtakingDifficulty
+  if (gridPos <= 15)  return -6 * overtakingDifficulty
+  return -9 * overtakingDifficulty
+}
+
+function isDNF(reliabilityAttr, chassisReliability) {
+  const combined = (reliabilityAttr + chassisReliability) / 2
+  const prob = Math.max(0.02, (100 - combined) / 100 * 0.16)
+  return Math.random() < prob
+}
+
+const DEFAULT_DRIVER  = { pace: 75, racecraft: 75, consistency: 75, wet_performance: 75, qualifying: 75, experience: 75, tire_management: 75 }
+const DEFAULT_CHASSIS = { downforce: 70, mechanical_grip: 70, drag_efficiency: 70, reliability: 70, weight_distribution: 70 }
+const DEFAULT_ENGINE  = { power: 70, driveability: 70, fuel_efficiency: 70, reliability: 70, deployment_mode: 70 }
 
 export function simulateSeason(team) {
   const seasonCircuits = [...circuits].sort(() => Math.random() - 0.5).slice(0, 22)
 
-  // Rivals rated in the same scale as calculated player performance (~60-130)
-  // Spread from midfield (~80) to frontrunners (~115) to create realistic competition
-  const rivals = RIVAL_TEAMS.map((r, i) => ({
+  const d1Attrs  = team.driver1?.attributes  ?? DEFAULT_DRIVER
+  const d2Attrs  = team.driver2?.attributes  ?? { ...DEFAULT_DRIVER, pace: 65 }
+  const chAttrs  = team.chassis?.attributes  ?? DEFAULT_CHASSIS
+  const enAttrs  = team.engine?.attributes   ?? DEFAULT_ENGINE
+  const stAttrs  = team.strategist?.attributes ?? { race_management: 70, pit_timing: 70, undercut_instinct: 70, safety_car_read: 70 }
+  const tdAttrs  = team.technical_director?.attributes ?? { design_genius: 70, innovation: 70, development_speed: 70, detail_obsession: 70 }
+  const tiAttrs  = team.tires?.attributes    ?? { peak_grip: 70, durability: 70, thermal_window: 70, wet_performance: 70 }
+  const aeroVal  = team.aero      ?? 70
+  const budgetVal= team.budget    ?? 70
+  const relVal   = team.reliability ?? 70
+
+  // Effective chassis with aero/budget boost
+  const effCh = {
+    ...chAttrs,
+    downforce: (chAttrs.downforce * 0.7 + aeroVal * 0.3),
+  }
+  const effEn = { ...enAttrs }
+
+  // Strategy bonus (affects both drivers equally)
+  const stratBonus = (stAttrs.race_management * 0.4 + stAttrs.pit_timing * 0.3 + stAttrs.undercut_instinct * 0.3) / 100 * 8
+  const tdBonus    = tdAttrs.design_genius / 100 * 6
+  const tireBonus  = (tiAttrs.peak_grip * 0.4 + tiAttrs.thermal_window * 0.3 + tiAttrs.durability * 0.3) / 100 * 6
+  const budgetBonus= budgetVal / 100 * 4
+  const relBonus   = relVal / 100 * 4
+  const teamBonus  = stratBonus + tdBonus + tireBonus + budgetBonus + relBonus
+
+  // Rivals: each team has 2 drivers (D1 slightly stronger than D2)
+  const rivals = RIVAL_TEAMS.map(r => ({
     ...r,
-    rating: rng(78 + i * 2.5, 108 + i * 1.5),
+    d1Rating: r.rating * rng(0.95, 1.08),
+    d2Rating: r.rating * rng(0.82, 0.97),
+    d1Points: 0, d1Wins: 0, d1Podiums: 0,
+    d2Points: 0, d2Wins: 0, d2Podiums: 0,
     points: 0,
-    wins: 0,
-    podiums: 0,
   }))
 
-  const playerTeamName = team.chassis?.team || 'Your Team'
-  let playerPoints = 0
-  let playerWins = 0
-  let playerPodiums = 0
-  let playerPoles = 0
-  let playerDNFs = 0
+  let playerD1Points = 0, playerD2Points = 0
+  let playerD1Wins = 0, playerD2Wins = 0
+  let playerD1Podiums = 0, playerD2Podiums = 0
+  let playerD1Poles = 0, playerD2Poles = 0
+  let playerD1DNFs = 0, playerD2DNFs = 0
 
   const races = []
 
   for (const circuit of seasonCircuits) {
-    const playerPerf = calculateRacePerf(team, circuit)
-    const playerVariance = rng(0.82, 1.18)
-    let playerScore = playerPerf * playerVariance
+    const c  = circuit.modifiers
+    const isWet = Math.random() < c.wet_probability
+    const safetyCar = Math.random() < c.safety_car_probability
+    const scBonus = safetyCar ? stAttrs.safety_car_read / 100 * 3 : 0
 
-    const isWet = Math.random() < circuit.modifiers.wet_probability
-    if (isWet) {
-      const wetFactor = (team.driver1?.attributes?.wet_performance ?? 75) / 75
-      playerScore *= wetFactor
-    }
+    // --- QUALIFYING ---
+    const d1QualyBase = calculateDriverQualyPerf(d1Attrs, effCh, effEn, circuit)
+    const d2QualyBase = calculateDriverQualyPerf(d2Attrs, effCh, effEn, circuit)
 
-    const safetyCar = Math.random() < circuit.modifiers.safety_car_probability
-    if (safetyCar) {
-      const stratBonus = (team.strategist?.attributes?.safety_car_read ?? 70) / 100 * 4
-      playerScore += stratBonus
-    }
+    const rivalQualyScores = rivals.flatMap(r => [
+      { name: r.d1, team: r.name, color: r.color, score: r.d1Rating * rng(0.90, 1.10), isPlayer: false },
+      { name: r.d2, team: r.name, color: r.color, score: r.d2Rating * rng(0.90, 1.10), isPlayer: false },
+    ])
 
-    const dnf = isDNF(team)
-    if (dnf) {
-      playerScore = 0
-      playerDNFs++
-    }
+    const allQualyEntries = [
+      { name: team.driver1?.name ?? 'Piloto 1', team: 'Tu Equipo', score: d1QualyBase, isPlayer: true, isD1: true },
+      { name: team.driver2?.name ?? 'Piloto 2', team: 'Tu Equipo', score: d2QualyBase, isPlayer: true, isD1: false },
+      ...rivalQualyScores,
+    ].sort((a, b) => b.score - a.score)
 
-    const rivalScores = rivals.map(r => ({
-      ...r,
-      raceScore: r.rating * rng(0.82, 1.18),
-    }))
+    const d1GridPos = allQualyEntries.findIndex(e => e.isPlayer && e.isD1) + 1
+    const d2GridPos = allQualyEntries.findIndex(e => e.isPlayer && !e.isD1) + 1
 
-    const allEntries = [
-      { name: 'Your Team', score: playerScore, isPlayer: true },
-      ...rivalScores.map(r => ({ name: r.name, score: r.raceScore, isPlayer: false, color: r.color })),
-    ]
+    if (d1GridPos === 1) playerD1Poles++
+    if (d2GridPos === 1) playerD2Poles++
 
-    allEntries.sort((a, b) => b.score - a.score)
+    // --- RACE ---
+    const d1DNF = isDNF(enAttrs.reliability, relVal)
+    const d2DNF = isDNF(enAttrs.reliability, relVal)
 
-    const playerPos = allEntries.findIndex(e => e.isPlayer) + 1
-    const racePoints = dnf ? 0 : (POINTS[playerPos - 1] || 0)
+    const d1RaceBase = d1DNF ? 0
+      : (calculateDriverRacePerf(d1Attrs, effCh, effEn, circuit, isWet)
+        + teamBonus + scBonus
+        + gridBonus(d1GridPos, c.overtaking_difficulty)) * rng(0.84, 1.16)
 
-    // Pole position (best qualifying)
-    const isPole = !dnf && (playerScore === Math.max(...allEntries.map(e => e.score * rng(0.97, 1.03))))
-    if (isPole) playerPoles++
+    const d2RaceBase = d2DNF ? 0
+      : (calculateDriverRacePerf(d2Attrs, effCh, effEn, circuit, isWet)
+        + teamBonus + scBonus
+        + gridBonus(d2GridPos, c.overtaking_difficulty)) * rng(0.84, 1.16)
 
-    playerPoints += racePoints
-    if (playerPos === 1 && !dnf) playerWins++
-    if (playerPos <= 3 && !dnf) playerPodiums++
+    const rivalRaceScores = rivals.flatMap(r => [
+      { name: r.d1, team: r.name, color: r.color, teamRef: r, isD1: true,  score: r.d1Rating * rng(0.82, 1.18), isPlayer: false },
+      { name: r.d2, team: r.name, color: r.color, teamRef: r, isD1: false, score: r.d2Rating * rng(0.82, 1.18), isPlayer: false },
+    ])
+
+    const allRaceEntries = [
+      { name: team.driver1?.name ?? 'Piloto 1', team: 'Tu Equipo', score: d1RaceBase, isPlayer: true, isD1: true,  dnf: d1DNF },
+      { name: team.driver2?.name ?? 'Piloto 2', team: 'Tu Equipo', score: d2RaceBase, isPlayer: true, isD1: false, dnf: d2DNF },
+      ...rivalRaceScores,
+    ].sort((a, b) => b.score - a.score)
+
+    const d1RacePos = allRaceEntries.findIndex(e => e.isPlayer && e.isD1) + 1
+    const d2RacePos = allRaceEntries.findIndex(e => e.isPlayer && !e.isD1) + 1
+
+    const d1RacePoints = d1DNF ? 0 : (POINTS[d1RacePos - 1] || 0)
+    const d2RacePoints = d2DNF ? 0 : (POINTS[d2RacePos - 1] || 0)
+
+    playerD1Points += d1RacePoints
+    playerD2Points += d2RacePoints
+    if (!d1DNF && d1RacePos === 1) playerD1Wins++
+    if (!d2DNF && d2RacePos === 1) playerD2Wins++
+    if (!d1DNF && d1RacePos <= 3) playerD1Podiums++
+    if (!d2DNF && d2RacePos <= 3) playerD2Podiums++
+    if (d1DNF) playerD1DNFs++
+    if (d2DNF) playerD2DNFs++
 
     // Award rival points
-    let rivalIdx = 0
-    for (const entry of allEntries) {
-      if (!entry.isPlayer) {
-        const r = rivals.find(r => r.name === entry.name)
-        if (r) {
-          r.points += POINTS[allEntries.indexOf(entry)] || 0
-          if (allEntries.indexOf(entry) === 0) r.wins++
-          if (allEntries.indexOf(entry) < 3) r.podiums++
+    for (const entry of allRaceEntries) {
+      if (!entry.isPlayer && entry.teamRef) {
+        const pts = POINTS[allRaceEntries.indexOf(entry)] || 0
+        if (entry.isD1) {
+          entry.teamRef.d1Points += pts
+          if (allRaceEntries.indexOf(entry) === 0) entry.teamRef.d1Wins++
+          if (allRaceEntries.indexOf(entry) < 3)  entry.teamRef.d1Podiums++
+        } else {
+          entry.teamRef.d2Points += pts
+          if (allRaceEntries.indexOf(entry) === 0) entry.teamRef.d2Wins++
+          if (allRaceEntries.indexOf(entry) < 3)  entry.teamRef.d2Podiums++
         }
+        entry.teamRef.points += pts
       }
-      rivalIdx++
     }
 
     races.push({
@@ -143,64 +208,103 @@ export function simulateSeason(team) {
       country: circuit.country,
       emoji: circuit.emoji,
       type: circuit.type,
-      playerPos,
-      racePoints,
       isWet,
       safetyCar,
-      dnf,
-      isPole,
-      playerPoints: playerPoints,
+      // Driver 1
+      d1QualyPos: d1GridPos,
+      d1RacePos,
+      d1Points: d1RacePoints,
+      d1Dnf: d1DNF,
+      // Driver 2
+      d2QualyPos: d2GridPos,
+      d2RacePos,
+      d2Points: d2RacePoints,
+      d2Dnf: d2DNF,
+      // Combined (for chart)
+      racePoints: d1RacePoints + d2RacePoints,
+      playerPoints: playerD1Points + playerD2Points,
     })
   }
 
-  const standingsRivals = rivals.map(r => ({
-    name: r.name,
-    color: r.color,
-    points: Math.round(r.points),
-    wins: r.wins,
-    podiums: r.podiums,
-    isPlayer: false,
-  }))
+  // --- STANDINGS ---
+  const d1Name = team.driver1?.name ?? 'Piloto 1'
+  const d2Name = team.driver2?.name ?? 'Piloto 2'
 
-  const allStandings = [
-    {
-      name: 'Your Team',
-      color: '#e10600',
-      points: Math.round(playerPoints),
-      wins: playerWins,
-      podiums: playerPodiums,
-      isPlayer: true,
-    },
-    ...standingsRivals,
+  // Driver standings (22 drivers)
+  const driverStandings = [
+    { name: d1Name, team: 'Tu Equipo', points: Math.round(playerD1Points), wins: playerD1Wins, podiums: playerD1Podiums, isPlayer: true, isD1: true, color: '#e05535' },
+    { name: d2Name, team: 'Tu Equipo', points: Math.round(playerD2Points), wins: playerD2Wins, podiums: playerD2Podiums, isPlayer: true, isD1: false, color: '#e05535' },
+    ...rivals.flatMap(r => [
+      { name: r.d1, team: r.name, points: Math.round(r.d1Points), wins: r.d1Wins, podiums: r.d1Podiums, isPlayer: false, color: r.color },
+      { name: r.d2, team: r.name, points: Math.round(r.d2Points), wins: r.d2Wins, podiums: r.d2Podiums, isPlayer: false, color: r.color },
+    ]),
   ].sort((a, b) => b.points - a.points)
 
-  const finalPosition = allStandings.findIndex(s => s.isPlayer) + 1
+  // Constructor standings (11 teams)
+  const constructorStandings = [
+    {
+      name: 'Tu Equipo',
+      color: '#e05535',
+      points: Math.round(playerD1Points + playerD2Points),
+      wins: playerD1Wins + playerD2Wins,
+      isPlayer: true,
+    },
+    ...rivals.map(r => ({
+      name: r.name,
+      color: r.color,
+      points: Math.round(r.points),
+      wins: r.d1Wins + r.d2Wins,
+      isPlayer: false,
+    })),
+  ].sort((a, b) => b.points - a.points)
+
+  const d1FinalPos    = driverStandings.findIndex(d => d.isPlayer && d.isD1) + 1
+  const d2FinalPos    = driverStandings.findIndex(d => d.isPlayer && !d.isD1) + 1
+  const constructorPos = constructorStandings.findIndex(s => s.isPlayer) + 1
 
   return {
     races,
-    standings: allStandings,
-    finalPosition,
+    driverStandings,
+    constructorStandings,
+    // Legacy field (kept for ChampionshipCard compat)
+    standings: constructorStandings,
+    d1FinalPos,
+    d2FinalPos,
+    constructorPos,
+    finalPosition: d1FinalPos,
+    d1Name,
+    d2Name,
     playerStats: {
-      points: Math.round(playerPoints),
-      wins: playerWins,
-      podiums: playerPodiums,
-      poles: playerPoles,
-      dnfs: playerDNFs,
-      bestResult: Math.min(...races.map(r => r.playerPos)),
+      points: Math.round(playerD1Points + playerD2Points),
+      wins:   playerD1Wins + playerD2Wins,
+      podiums: playerD1Podiums + playerD2Podiums,
+      poles:  playerD1Poles + playerD2Poles,
+      dnfs:   playerD1DNFs + playerD2DNFs,
+      bestResult: Math.min(...races.map(r => Math.min(r.d1RacePos, r.d2RacePos))),
+    },
+    d1Stats: {
+      points: Math.round(playerD1Points),
+      wins: playerD1Wins,
+      podiums: playerD1Podiums,
+      poles: playerD1Poles,
+      dnfs: playerD1DNFs,
+    },
+    d2Stats: {
+      points: Math.round(playerD2Points),
+      wins: playerD2Wins,
+      podiums: playerD2Podiums,
+      poles: playerD2Poles,
+      dnfs: playerD2DNFs,
     },
   }
 }
 
-export function getVerdict(finalPosition, playerStats, team) {
-  const { wins, points, dnfs } = playerStats
-  if (finalPosition === 1) {
-    if (wins >= 15) return '🏆 DOMINACIÓN TOTAL. Eres el equipo de la era.'
-    if (wins >= 10) return '🏆 ¡CAMPEONES! Una temporada brillante.'
-    return '🏆 ¡CAMPEONES! Victoria en el último suspiro.'
-  }
-  if (finalPosition === 2) return '🥈 Subcampeones. Estuvisteis tan cerca...'
-  if (finalPosition === 3) return '🥉 Tercer puesto. Un año sólido, pero algo faltó.'
-  if (finalPosition <= 5) return `${finalPosition}° lugar. Potencial desaprovechado.`
-  if (dnfs > 4) return `${finalPosition}° lugar. La fiabilidad os hundió.`
-  return `${finalPosition}° lugar. Hay margen de mejora en la selección.`
+export function getVerdict(d1Pos, d2Pos, constructorPos) {
+  if (d1Pos === 1) return '🏆 ¡CAMPEÓN DE PILOTOS! Dominio absoluto.'
+  if (constructorPos === 1 && d1Pos <= 3) return '🏆 ¡CAMPEONES DE CONSTRUCTORES! La mejor escudería.'
+  if (constructorPos === 1) return '🏆 ¡CAMPEONES DE CONSTRUCTORES! Victoria colectiva.'
+  if (d1Pos <= 3 && constructorPos <= 3) return '🥇 Podio en ambos campeonatos. Temporada brillante.'
+  if (d1Pos <= 5) return `🥈 P${d1Pos} en el campeonato. Muy cerca de lo más alto.`
+  if (constructorPos <= 3) return `🥉 P${constructorPos} constructores. Buen trabajo de equipo.`
+  return `P${d1Pos} pilotos · P${constructorPos} constructores. Hay margen de mejora.`
 }
