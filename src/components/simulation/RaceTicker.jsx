@@ -44,7 +44,7 @@ export default function RaceTicker({ races, d1Name, d2Name }) {
       if (i >= races.length) { clearInterval(iv); return }
       setVisible(prev => [...prev, { ...races[i], raceNumber: i + 1 }])
       i++
-    }, 200)
+    }, 400)
     return () => clearInterval(iv)
   }, [races])
 

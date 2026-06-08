@@ -17,7 +17,7 @@ export default function Results() {
   const verdict = getVerdict(d1FinalPos, d2FinalPos, constructorPos)
 
   useEffect(() => {
-    const delay = (races?.length ?? 22) * 160 + 900
+    const delay = (races?.length ?? 22) * 400 + 900
     const t = setTimeout(() => setTickerDone(true), delay)
     return () => clearTimeout(t)
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
