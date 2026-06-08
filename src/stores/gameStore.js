@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { getRandomSeason, resolveSeasonElements } from '../utils/dataQueries'
+import { getRandomSeason, getFilteredSeasons, resolveSeasonElements } from '../utils/dataQueries'
 
 const EMPTY_TEAM = {
   driver1: null,
@@ -82,11 +82,36 @@ export const useGameStore = create((set, get) => ({
     }
   },
 
+  // Re-roll any team (original wildcard)
   useWildcard: () => {
     const { wildcards } = get()
     if (wildcards <= 0) return
     set({ wildcards: wildcards - 1, currentCard: null })
     setTimeout(() => get().rollCard(), 300)
+  },
+
+  // Re-roll keeping the same team, just a different season year
+  useWildcardSameTeam: () => {
+    const { wildcards, era, usedSeasonIds, currentCard } = get()
+    if (wildcards <= 0 || !currentCard) return
+    const teamName = currentCard.season.team
+    const all = getFilteredSeasons(era).filter(
+      s => s.team === teamName && !usedSeasonIds.includes(s.id)
+    )
+    if (all.length === 0) {
+      // Fallback: roll any team
+      set({ wildcards: wildcards - 1, currentCard: null })
+      setTimeout(() => get().rollCard(), 300)
+      return
+    }
+    const season = all[Math.floor(Math.random() * all.length)]
+    const resolved = resolveSeasonElements(season)
+    set({
+      wildcards: wildcards - 1,
+      currentCard: resolved,
+      usedSeasonIds: [...usedSeasonIds, season.id],
+      rollCount: get().rollCount + 1,
+    })
   },
 
   setSimulationResults: (results) => {
