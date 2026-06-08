@@ -68,7 +68,7 @@ const DEFAULT_DRIVER  = { pace: 75, racecraft: 75, consistency: 75, wet_performa
 const DEFAULT_CHASSIS = { downforce: 70, mechanical_grip: 70, drag_efficiency: 70, reliability: 70, weight_distribution: 70 }
 const DEFAULT_ENGINE  = { power: 70, driveability: 70, fuel_efficiency: 70, reliability: 70, deployment_mode: 70 }
 
-export function simulateSeason(team) {
+export function simulateSeason(team, prebuiltRivals = null) {
   const seasonCircuits = [...circuits].sort(() => Math.random() - 0.5).slice(0, 22)
 
   const d1Attrs  = team.driver1?.attributes  ?? DEFAULT_DRIVER
@@ -94,14 +94,19 @@ export function simulateSeason(team) {
   const relBonus   = relVal / 100 * 1.5
   const teamBonus  = tdBonus + tireBonus + budgetBonus + relBonus
 
-  // Rivals: each team has 2 drivers (D1 slightly stronger than D2)
-  const rivals = RIVAL_TEAMS.map(r => ({
-    ...r,
-    d1Rating: r.rating * rng(0.95, 1.08),
-    d2Rating: r.rating * rng(0.82, 0.97),
+  // Rivals: prebuilt (year-based) or default fixed grid
+  const rivalPool = prebuiltRivals ?? RIVAL_TEAMS.map(r => ({
+    name: r.name, color: r.color, d1: r.d1, d2: r.d2,
+    d1Rating: r.rating,
+    d2Rating: r.rating * 0.90,
     d1Points: 0, d1Wins: 0, d1Podiums: 0,
     d2Points: 0, d2Wins: 0, d2Podiums: 0,
     points: 0,
+  }))
+  const rivals = rivalPool.map(r => ({
+    ...r,
+    d1Rating: r.d1Rating * rng(0.96, 1.06),
+    d2Rating: r.d2Rating * rng(0.93, 1.04),
   }))
 
   let playerD1Points = 0, playerD2Points = 0

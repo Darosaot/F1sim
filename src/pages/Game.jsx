@@ -8,10 +8,12 @@ import WildcardBar from '../components/game/WildcardBar'
 import EraSelector from '../components/ui/EraSelector'
 import ModeToggle from '../components/ui/ModeToggle'
 import { simulateSeason } from '../utils/simulator'
+import { buildRivalsForYear } from '../utils/rivalBuilder'
 
 export default function Game() {
   const phase               = useGameStore(s => s.phase)
   const team                = useGameStore(s => s.team)
+  const rivalYear           = useGameStore(s => s.rivalYear)
   const era                 = useGameStore(s => s.era)
   const mode                = useGameStore(s => s.mode)
   const rollCount           = useGameStore(s => s.rollCount)
@@ -27,7 +29,8 @@ export default function Game() {
   const modeLabel = mode === 'vip' ? 'CLÁSICO' : 'MEMORIA'
 
   function handleSimulate() {
-    setSimulationResults(simulateSeason(team))
+    const rivals = buildRivalsForYear(rivalYear)
+    setSimulationResults({ ...simulateSeason(team, rivals), rivalYear })
   }
 
   return (

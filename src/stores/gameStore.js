@@ -22,6 +22,7 @@ export const useGameStore = create((set, get) => ({
   era: 'all',
   mode: 'vip',
   draftDifficulty: 'hard',
+  rivalYear: 2024,
 
   // Phase: 'setup' | 'drafting' | 'complete' | 'results'
   phase: 'setup',
@@ -42,6 +43,7 @@ export const useGameStore = create((set, get) => ({
   setEra: (era) => set({ era }),
   setMode: (mode) => set({ mode }),
   setDraftDifficulty: (draftDifficulty) => set({ draftDifficulty }),
+  setRivalYear: (rivalYear) => set({ rivalYear }),
 
   // ---- Game flow ----
   startGame: () => {

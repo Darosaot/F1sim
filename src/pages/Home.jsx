@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { useGameStore } from '../stores/gameStore'
+import { getAvailableRivalYears } from '../utils/rivalBuilder'
 
 const STEPS = [
   { n: '01', icon: '🎲', title: 'TIRA',      desc: 'Obtén un equipo y temporada aleatorio' },
@@ -18,14 +19,28 @@ const ERAS = [
   { id: 'current',   label: 'Era Actual',         years: '2022+' },
 ]
 
+const ERA_GROUPS = [
+  { label: 'Actual (2022+)',      range: [2022, 2099] },
+  { label: 'Híbrida (2014–21)',   range: [2014, 2021] },
+  { label: 'V8 (2006–13)',        range: [2006, 2013] },
+  { label: 'V10 / V12 (1989–05)', range: [1989, 2005] },
+  { label: 'Turbo (1983–88)',     range: [1983, 1988] },
+  { label: 'Pre-Turbo (1966–82)', range: [1966, 1982] },
+  { label: 'Clásica (1950–65)',   range: [1950, 1965] },
+]
+
+const ALL_RIVAL_YEARS = getAvailableRivalYears()
+
 export default function Home() {
   const startGame         = useGameStore(s => s.startGame)
   const era               = useGameStore(s => s.era)
   const mode              = useGameStore(s => s.mode)
   const draftDifficulty   = useGameStore(s => s.draftDifficulty)
+  const rivalYear         = useGameStore(s => s.rivalYear)
   const setEra            = useGameStore(s => s.setEra)
   const setMode           = useGameStore(s => s.setMode)
   const setDraftDifficulty = useGameStore(s => s.setDraftDifficulty)
+  const setRivalYear      = useGameStore(s => s.setRivalYear)
 
   return (
     <div className="min-h-screen bg-sand font-body">
@@ -155,6 +170,36 @@ export default function Home() {
                   </button>
                 ))}
               </div>
+            </div>
+
+            {/* Rival year selector */}
+            <div>
+              <p className="text-xs font-bold uppercase tracking-widest text-ink-md mb-2">
+                RIVALES · TEMPORADA
+              </p>
+              <div className="relative">
+                <select
+                  value={rivalYear}
+                  onChange={e => setRivalYear(Number(e.target.value))}
+                  className="w-full px-3 py-2.5 border border-borderc bg-white text-sm font-bold text-ink appearance-none cursor-pointer hover:border-ink transition-colors focus:outline-none focus:border-ink"
+                >
+                  {ERA_GROUPS.map(group => {
+                    const years = ALL_RIVAL_YEARS.filter(y => y >= group.range[0] && y <= group.range[1])
+                    if (years.length === 0) return null
+                    return (
+                      <optgroup key={group.label} label={group.label}>
+                        {years.map(y => (
+                          <option key={y} value={y}>{y}</option>
+                        ))}
+                      </optgroup>
+                    )
+                  })}
+                </select>
+                <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-ink-lt text-xs">▼</div>
+              </div>
+              <p className="text-[10px] text-ink-lt mt-1">
+                Compite contra los equipos y pilotos reales de esa temporada
+              </p>
             </div>
 
             {/* Stats bar */}
