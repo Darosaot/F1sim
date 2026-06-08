@@ -45,12 +45,13 @@ function calculateDriverQualyPerf(driverAttrs, chassisAttrs, engineAttrs, circui
   const ch = chassisAttrs
   const en = engineAttrs
 
-  const base = (d.qualifying * c.qualifying_weight
-    + d.pace * 0.4
-    + ch.downforce * 0.3
-    + en.power * 0.3) / 2.5
+  // Scale to match rivals' rating range (~79-130)
+  const base = d.qualifying * c.qualifying_weight * 0.5
+    + d.pace * 0.2
+    + ch.downforce * 0.15
+    + en.power * 0.15
 
-  return base * rng(0.94, 1.06)
+  return base * rng(0.90, 1.10)
 }
 
 function gridBonus(gridPos, overtakingDifficulty) {

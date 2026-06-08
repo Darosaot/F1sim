@@ -15,23 +15,23 @@ function StandingsTable({ title, rows, showTeam }) {
         {rows.slice(0, 12).map((s, i) => (
           <div
             key={`${s.name}-${i}`}
-            className={`flex items-center justify-between px-4 py-2.5 ${s.isPlayer ? 'bg-sand-lt' : ''}`}
+            className={`flex items-center justify-between px-4 py-2 ${s.isPlayer ? 'bg-sand-lt' : ''}`}
           >
-            <div className="flex items-center gap-3 min-w-0">
-              <span className={`font-display font-black text-lg w-6 shrink-0 ${
+            <div className="flex items-center gap-2 min-w-0 flex-1">
+              <span className={`font-display font-black text-base w-5 shrink-0 ${
                 i === 0 ? 'text-[#c9a030]' : i <= 2 ? 'text-ink' : 'text-ink-lt'
               }`}>
                 {i + 1}
               </span>
               {s.color && (
-                <div className="w-1.5 h-5 rounded-sm shrink-0" style={{ backgroundColor: s.color }} />
+                <div className="w-1 h-4 rounded-sm shrink-0" style={{ backgroundColor: s.color }} />
               )}
-              <div className="min-w-0">
-                <span className={`text-sm block truncate ${s.isPlayer ? 'font-black text-rust' : 'font-semibold text-ink'}`}>
-                  {s.isPlayer ? (showTeam ? 'TU EQUIPO' : s.name) : s.name}
+              <div className="min-w-0 flex-1">
+                <span className={`text-sm block ${s.isPlayer ? 'font-black text-rust' : 'font-semibold text-ink'}`}>
+                  {s.name}
                 </span>
-                {showTeam && !s.isPlayer && (
-                  <span className="text-[9px] text-ink-lt block truncate">{s.team}</span>
+                {showTeam && s.team && (
+                  <span className="text-[9px] text-ink-lt block">{s.team}</span>
                 )}
               </div>
             </div>

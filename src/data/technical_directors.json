@@ -88,5 +88,17 @@
     "teams": ["Wolf", "Ferrari", "Tyrrell", "Honda"], "peak_years": [1977, 1979, 1985],
     "attributes": { "design_genius": 87, "innovation": 85, "development_speed": 86, "detail_obsession": 86, "aerodynamic_vision": 83 },
     "era": "pre_turbo", "bio": "El Wolf WR1 victoriosa en su primera carrera. Versátil y brillante."
+  },
+  {
+    "id": "binotto_mattia_td", "name": "Mattia Binotto (TD)", "nationality": "ITA",
+    "teams": ["Ferrari"], "peak_years": [2016, 2017, 2018],
+    "attributes": { "design_genius": 85, "innovation": 84, "development_speed": 86, "detail_obsession": 88, "aerodynamic_vision": 82 },
+    "era": "hybrid", "bio": "Ingeniero de motores convertido en Director Técnico Ferrari. Lideró el retorno competitivo."
+  },
+  {
+    "id": "fallows_dan", "name": "Dan Fallows", "nationality": "GBR",
+    "teams": ["Red Bull", "Aston Martin"], "peak_years": [2022, 2023, 2024],
+    "attributes": { "design_genius": 90, "innovation": 89, "development_speed": 88, "detail_obsession": 91, "aerodynamic_vision": 92 },
+    "era": "current", "bio": "Jefe de aerodinámica de Red Bull durante los años de Newey. Pasó a dirigir Aston Martin."
   }
 ]
