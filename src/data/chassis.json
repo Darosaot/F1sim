@@ -203,5 +203,120 @@
     "id": "ferrari_sf24_2024", "name": "Ferrari SF-24", "team": "Ferrari", "year": 2024, "era": "current",
     "attributes": { "downforce": 92, "mechanical_grip": 92, "drag_efficiency": 91, "reliability": 89, "weight_distribution": 92 },
     "bio": "Un coche competitivo que mostró el resurgir de Ferrari."
+  },
+  {
+    "id": "ferrari_f2003", "name": "Ferrari F2003-GA", "team": "Ferrari", "year": 2003, "era": "v10_v12",
+    "attributes": { "downforce": 90, "mechanical_grip": 92, "drag_efficiency": 88, "reliability": 93, "weight_distribution": 91 },
+    "bio": "La máquina que aplastó 2003. Dedicada a Gianni Agnelli."
+  },
+  {
+    "id": "mclaren_mp4_17_2003", "name": "McLaren MP4/17D", "team": "McLaren", "year": 2003, "era": "v10_v12",
+    "attributes": { "downforce": 88, "mechanical_grip": 90, "drag_efficiency": 87, "reliability": 85, "weight_distribution": 88 },
+    "bio": "El arma de Räikkönen en 2003. Rápido pero no tan fiable como el Ferrari."
+  },
+  {
+    "id": "ferrari_sf70h_2017", "name": "Ferrari SF70H", "team": "Ferrari", "year": 2017, "era": "hybrid",
+    "attributes": { "downforce": 91, "mechanical_grip": 90, "drag_efficiency": 86, "reliability": 87, "weight_distribution": 90 },
+    "bio": "El Ferrari de la pelea con Hamilton. Vettel lideró durante gran parte del año."
+  },
+  {
+    "id": "ferrari_sf71h_2018", "name": "Ferrari SF71H", "team": "Ferrari", "year": 2018, "era": "hybrid",
+    "attributes": { "downforce": 92, "mechanical_grip": 91, "drag_efficiency": 87, "reliability": 86, "weight_distribution": 91 },
+    "bio": "El Ferrari más rápido del período híbrido. Errores del piloto costaron el título."
+  },
+  {
+    "id": "ferrari_sf90_2019", "name": "Ferrari SF90", "team": "Ferrari", "year": 2019, "era": "hybrid",
+    "attributes": { "downforce": 90, "mechanical_grip": 89, "drag_efficiency": 85, "reliability": 83, "weight_distribution": 88 },
+    "bio": "Leclerc brilló en clasificación. Motor potente pero gestión de carrera inconsistente."
+  },
+  {
+    "id": "mercedes_w06_2015", "name": "Mercedes W06 Hybrid", "team": "Mercedes", "year": 2015, "era": "hybrid",
+    "attributes": { "downforce": 89, "mechanical_grip": 91, "drag_efficiency": 92, "reliability": 93, "weight_distribution": 92 },
+    "bio": "El W06. Hamilton dominó con 10 victorias. Perfección técnica de Mercedes."
+  },
+  {
+    "id": "mercedes_w08_2017", "name": "Mercedes W08 EQ Power+", "team": "Mercedes", "year": 2017, "era": "hybrid",
+    "attributes": { "downforce": 90, "mechanical_grip": 91, "drag_efficiency": 91, "reliability": 92, "weight_distribution": 92 },
+    "bio": "Mercedes respondió a Ferrari. Hamilton ganó el título en México."
+  },
+  {
+    "id": "mercedes_w09_2018", "name": "Mercedes W09 EQ Power+", "team": "Mercedes", "year": 2018, "era": "hybrid",
+    "attributes": { "downforce": 91, "mechanical_grip": 92, "drag_efficiency": 91, "reliability": 91, "weight_distribution": 91 },
+    "bio": "Quinto título consecutivo de constructores. Hamilton dominó la segunda mitad."
+  },
+  {
+    "id": "red_bull_rb5_2009", "name": "Red Bull RB5", "team": "Red Bull", "year": 2009, "era": "v8",
+    "attributes": { "downforce": 88, "mechanical_grip": 87, "drag_efficiency": 85, "reliability": 82, "weight_distribution": 87 },
+    "bio": "El primer gran Red Bull. Vettel ganó 4 carreras. Newey comenzando su era."
+  },
+  {
+    "id": "red_bull_rb8_2012", "name": "Red Bull RB8", "team": "Red Bull", "year": 2012, "era": "v8",
+    "attributes": { "downforce": 92, "mechanical_grip": 91, "drag_efficiency": 88, "reliability": 87, "weight_distribution": 90 },
+    "bio": "Vettel ganó los últimos 7 grandes premios. Cuarto título en el último momento."
+  },
+  {
+    "id": "aston_martin_amr23", "name": "Aston Martin AMR23", "team": "Aston Martin", "year": 2023, "era": "current",
+    "attributes": { "downforce": 88, "mechanical_grip": 87, "drag_efficiency": 86, "reliability": 88, "weight_distribution": 87 },
+    "bio": "Comienzo de temporada brillante. Alonso en el podio repetidamente."
+  },
+  {
+    "id": "williams_fw09_1984", "name": "Williams FW09B", "team": "Williams", "year": 1984, "era": "turbo",
+    "attributes": { "downforce": 82, "mechanical_grip": 83, "drag_efficiency": 80, "reliability": 78, "weight_distribution": 81 },
+    "bio": "Williams con Honda turbo. El inicio de su segunda era gloriosa."
+  },
+  {
+    "id": "brm_p57_1962", "name": "BRM P57", "team": "BRM", "year": 1962, "era": "early",
+    "attributes": { "downforce": 50, "mechanical_grip": 58, "drag_efficiency": 55, "reliability": 74, "weight_distribution": 62 },
+    "bio": "El único campeonato de BRM. Graham Hill campeón con este monoplaza."
+  },
+  {
+    "id": "mclaren_mp4_12_1997", "name": "McLaren MP4/12", "team": "McLaren", "year": 1997, "era": "v10_v12",
+    "attributes": { "downforce": 86, "mechanical_grip": 88, "drag_efficiency": 86, "reliability": 84, "weight_distribution": 86 },
+    "bio": "McLaren en transición. Coulthard y Häkkinen preparando el 1998."
+  },
+  {
+    "id": "mclaren_mcl35_2020", "name": "McLaren MCL35", "team": "McLaren", "year": 2020, "era": "hybrid",
+    "attributes": { "downforce": 87, "mechanical_grip": 87, "drag_efficiency": 86, "reliability": 87, "weight_distribution": 86 },
+    "bio": "Tercer puesto en constructores. Sainz y Norris mostraron el renacimiento de McLaren."
+  },
+  {
+    "id": "red_bull_rb16b_2021", "name": "Red Bull RB16B", "team": "Red Bull", "year": 2021, "era": "hybrid",
+    "attributes": { "downforce": 92, "mechanical_grip": 91, "drag_efficiency": 89, "reliability": 88, "weight_distribution": 91 },
+    "bio": "El coche que rompió la hegemonía Mercedes. Verstappen campeón en la última vuelta."
+  },
+  {
+    "id": "lotus_49b_1968", "name": "Lotus 49B", "team": "Lotus", "year": 1968, "era": "pre_turbo",
+    "attributes": { "downforce": 64, "mechanical_grip": 83, "drag_efficiency": 80, "reliability": 68, "weight_distribution": 85 },
+    "bio": "El 49B con alerones. Primera temporada con downforce real en F1."
+  },
+  {
+    "id": "ferrari_312_1970", "name": "Ferrari 312B", "team": "Ferrari", "year": 1970, "era": "pre_turbo",
+    "attributes": { "downforce": 66, "mechanical_grip": 84, "drag_efficiency": 77, "reliability": 78, "weight_distribution": 83 },
+    "bio": "El flat-12 Ferrari de 1970. Ickx luchó por el título hasta la última carrera."
+  },
+  {
+    "id": "mclaren_m23_1974", "name": "McLaren M23", "team": "McLaren", "year": 1974, "era": "pre_turbo",
+    "attributes": { "downforce": 74, "mechanical_grip": 82, "drag_efficiency": 79, "reliability": 80, "weight_distribution": 82 },
+    "bio": "Fittipaldi campeón con el M23. Un coche versátil y equilibrado."
+  },
+  {
+    "id": "mclaren_mp4_2c_1985", "name": "McLaren MP4/2C", "team": "McLaren", "year": 1985, "era": "turbo",
+    "attributes": { "downforce": 87, "mechanical_grip": 88, "drag_efficiency": 87, "reliability": 83, "weight_distribution": 90 },
+    "bio": "Prost campeón 1985. La máquina de McLaren-TAG continuaba imparable."
+  },
+  {
+    "id": "williams_fw08c_1983", "name": "Williams FW08C", "team": "Williams", "year": 1983, "era": "turbo",
+    "attributes": { "downforce": 80, "mechanical_grip": 82, "drag_efficiency": 81, "reliability": 79, "weight_distribution": 83 },
+    "bio": "Rosberg y el Ford DFV ante los turbos. El último título sin turbo hasta 2009."
+  },
+  {
+    "id": "benetton_b195_1995", "name": "Benetton B195", "team": "Benetton", "year": 1995, "era": "v10_v12",
+    "attributes": { "downforce": 89, "mechanical_grip": 90, "drag_efficiency": 88, "reliability": 85, "weight_distribution": 90 },
+    "bio": "Segundo título consecutivo de Schumacher. Dominó con elegancia."
+  },
+  {
+    "id": "ferrari_sf23_2023", "name": "Ferrari SF-23", "team": "Ferrari", "year": 2023, "era": "current",
+    "attributes": { "downforce": 91, "mechanical_grip": 90, "drag_efficiency": 89, "reliability": 86, "weight_distribution": 90 },
+    "bio": "Un Ferrari que brilló en circuitos específicos pero no pudo con Red Bull."
   }
 ]

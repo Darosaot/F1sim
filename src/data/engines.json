@@ -154,5 +154,35 @@
     "years_available": [2022, 2023, 2024],
     "attributes": { "power": 95, "driveability": 89, "fuel_efficiency": 91, "reliability": 85, "deployment_mode": 90 },
     "bio": "El mejor motor de Ferrari de la era híbrida. Competitivo pero con fallos."
+  },
+  {
+    "id": "mercedes_pu106b_2015", "name": "Mercedes PU106B Hybrid V6 1.6L", "supplier": "Mercedes", "era": "hybrid",
+    "years_available": [2015, 2016],
+    "attributes": { "power": 97, "driveability": 91, "fuel_efficiency": 93, "reliability": 93, "deployment_mode": 95 },
+    "bio": "El motor de la dominación total. Hamilton y Rosberg campeones con él."
+  },
+  {
+    "id": "ferrari_059_5_2017", "name": "Ferrari 059/5 V6 1.6L Hybrid", "supplier": "Ferrari", "era": "hybrid",
+    "years_available": [2017, 2018, 2019],
+    "attributes": { "power": 93, "driveability": 90, "fuel_efficiency": 88, "reliability": 88, "deployment_mode": 89 },
+    "bio": "El motor Ferrari que desafió a Mercedes. Potente en rectas pero frágil a veces."
+  },
+  {
+    "id": "renault_re40_1983", "name": "Renault RE40 Turbo V6 1.5L", "supplier": "Renault", "era": "turbo",
+    "years_available": [1983, 1984],
+    "attributes": { "power": 88, "driveability": 76, "fuel_efficiency": 72, "reliability": 74, "deployment_mode": 70 },
+    "bio": "El turbo Renault en su mejor versión. Prost luchó por el título en 1983."
+  },
+  {
+    "id": "mercedes_fo110_2009", "name": "Mercedes FO 110X V8 2.4L", "supplier": "Mercedes", "era": "v8",
+    "years_available": [2007, 2008, 2009],
+    "attributes": { "power": 88, "driveability": 87, "fuel_efficiency": 84, "reliability": 85, "deployment_mode": 80 },
+    "bio": "El motor Mercedes que impulsó a Brawn GP a su título histórico."
+  },
+  {
+    "id": "renault_rs26_2006_v8", "name": "Renault RS26 V8 2.4L", "supplier": "Renault", "era": "v8",
+    "years_available": [2006, 2007, 2008, 2009, 2010],
+    "attributes": { "power": 86, "driveability": 86, "fuel_efficiency": 83, "reliability": 84, "deployment_mode": 79 },
+    "bio": "El V8 Renault al inicio de la era. Alonso ganó dos títulos con él."
   }
 ]
