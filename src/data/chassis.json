@@ -15163,5 +15163,320 @@
       "weight_distribution": 44
     },
     "bio": "Williams 2024 chassis."
+  },
+  {
+    "id": "aston_martin_amr25_2025",
+    "name": "Aston Martin AMR25",
+    "team": "Aston Martin",
+    "year": 2025,
+    "era": "current",
+    "attributes": {
+      "downforce": 58,
+      "mechanical_grip": 53,
+      "drag_efficiency": 55,
+      "reliability": 53,
+      "weight_distribution": 51
+    },
+    "bio": "Aston Martin 2025 chassis."
+  },
+  {
+    "id": "williams_fw47_2025",
+    "name": "Williams FW47",
+    "team": "Williams",
+    "year": 2025,
+    "era": "current",
+    "attributes": {
+      "downforce": 71,
+      "mechanical_grip": 67,
+      "drag_efficiency": 62,
+      "reliability": 62,
+      "weight_distribution": 62
+    },
+    "bio": "Williams 2025 chassis."
+  },
+  {
+    "id": "alpine_a525_2025",
+    "name": "Alpine A525",
+    "team": "Alpine",
+    "year": 2025,
+    "era": "current",
+    "attributes": {
+      "downforce": 44,
+      "mechanical_grip": 40,
+      "drag_efficiency": 41,
+      "reliability": 44,
+      "weight_distribution": 41
+    },
+    "bio": "Alpine 2025 chassis."
+  },
+  {
+    "id": "mclaren_mcl39_2025",
+    "name": "McLaren MCL39",
+    "team": "McLaren",
+    "year": 2025,
+    "era": "current",
+    "attributes": {
+      "downforce": 89,
+      "mechanical_grip": 83,
+      "drag_efficiency": 81,
+      "reliability": 78,
+      "weight_distribution": 78
+    },
+    "bio": "McLaren 2025 chassis."
+  },
+  {
+    "id": "mercedes_f1_w16_2025",
+    "name": "Mercedes F1 W16",
+    "team": "Mercedes",
+    "year": 2025,
+    "era": "current",
+    "attributes": {
+      "downforce": 82,
+      "mechanical_grip": 80,
+      "drag_efficiency": 75,
+      "reliability": 79,
+      "weight_distribution": 76
+    },
+    "bio": "Mercedes 2025 chassis."
+  },
+  {
+    "id": "haas_vf_25_2025",
+    "name": "Haas VF-25",
+    "team": "Haas",
+    "year": 2025,
+    "era": "current",
+    "attributes": {
+      "downforce": 57,
+      "mechanical_grip": 50,
+      "drag_efficiency": 49,
+      "reliability": 51,
+      "weight_distribution": 48
+    },
+    "bio": "Haas 2025 chassis."
+  },
+  {
+    "id": "red_bull_rb21_2025",
+    "name": "Red Bull RB21",
+    "team": "Red Bull",
+    "year": 2025,
+    "era": "current",
+    "attributes": {
+      "downforce": 80,
+      "mechanical_grip": 71,
+      "drag_efficiency": 69,
+      "reliability": 74,
+      "weight_distribution": 74
+    },
+    "bio": "Red Bull 2025 chassis."
+  },
+  {
+    "id": "ferrari_sf_25_2025",
+    "name": "Ferrari SF-25",
+    "team": "Ferrari",
+    "year": 2025,
+    "era": "current",
+    "attributes": {
+      "downforce": 73,
+      "mechanical_grip": 69,
+      "drag_efficiency": 65,
+      "reliability": 67,
+      "weight_distribution": 69
+    },
+    "bio": "Ferrari 2025 chassis."
+  },
+  {
+    "id": "kick_sauber_c45_2025",
+    "name": "Kick Sauber C45",
+    "team": "Sauber",
+    "year": 2025,
+    "era": "current",
+    "attributes": {
+      "downforce": 49,
+      "mechanical_grip": 47,
+      "drag_efficiency": 47,
+      "reliability": 45,
+      "weight_distribution": 44
+    },
+    "bio": "Sauber 2025 chassis."
+  },
+  {
+    "id": "racing_bulls_vcarb_02_2025",
+    "name": "Racing Bulls VCARB 02",
+    "team": "VCARB",
+    "year": 2025,
+    "era": "current",
+    "attributes": {
+      "downforce": 66,
+      "mechanical_grip": 61,
+      "drag_efficiency": 58,
+      "reliability": 58,
+      "weight_distribution": 61
+    },
+    "bio": "VCARB 2025 chassis."
+  },
+  {
+    "id": "aston_martin_amr26_2026",
+    "name": "Aston Martin AMR26",
+    "team": "Aston Martin",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "downforce": 42,
+      "mechanical_grip": 41,
+      "drag_efficiency": 40,
+      "reliability": 39,
+      "weight_distribution": 41
+    },
+    "bio": "Aston Martin 2026 chassis."
+  },
+  {
+    "id": "williams_fw48_2026",
+    "name": "Williams FW48",
+    "team": "Williams",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "downforce": 55,
+      "mechanical_grip": 49,
+      "drag_efficiency": 47,
+      "reliability": 50,
+      "weight_distribution": 52
+    },
+    "bio": "Williams 2026 chassis."
+  },
+  {
+    "id": "audi_r26_2026",
+    "name": "Audi R26",
+    "team": "Audi",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "downforce": 48,
+      "mechanical_grip": 46,
+      "drag_efficiency": 43,
+      "reliability": 46,
+      "weight_distribution": 44
+    },
+    "bio": "Audi 2026 chassis."
+  },
+  {
+    "id": "alpine_a526_2026",
+    "name": "Alpine A526",
+    "team": "Alpine",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "downforce": 66,
+      "mechanical_grip": 67,
+      "drag_efficiency": 64,
+      "reliability": 65,
+      "weight_distribution": 62
+    },
+    "bio": "Alpine 2026 chassis."
+  },
+  {
+    "id": "cadillac_ca01_2026",
+    "name": "Cadillac CA01",
+    "team": "Cadillac",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "downforce": 45,
+      "mechanical_grip": 41,
+      "drag_efficiency": 39,
+      "reliability": 42,
+      "weight_distribution": 37
+    },
+    "bio": "Cadillac 2026 chassis."
+  },
+  {
+    "id": "mclaren_mcl40_2026",
+    "name": "McLaren MCL40",
+    "team": "McLaren",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "downforce": 81,
+      "mechanical_grip": 72,
+      "drag_efficiency": 70,
+      "reliability": 70,
+      "weight_distribution": 70
+    },
+    "bio": "McLaren 2026 chassis."
+  },
+  {
+    "id": "mercedes_f1_w17_2026",
+    "name": "Mercedes F1 W17",
+    "team": "Mercedes",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "downforce": 90,
+      "mechanical_grip": 80,
+      "drag_efficiency": 80,
+      "reliability": 80,
+      "weight_distribution": 78
+    },
+    "bio": "Mercedes 2026 chassis."
+  },
+  {
+    "id": "red_bull_rb22_2026",
+    "name": "Red Bull RB22",
+    "team": "Red Bull",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "downforce": 73,
+      "mechanical_grip": 71,
+      "drag_efficiency": 66,
+      "reliability": 67,
+      "weight_distribution": 65
+    },
+    "bio": "Red Bull 2026 chassis."
+  },
+  {
+    "id": "ferrari_sf_26_2026",
+    "name": "Ferrari SF-26",
+    "team": "Ferrari",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "downforce": 81,
+      "mechanical_grip": 78,
+      "drag_efficiency": 74,
+      "reliability": 75,
+      "weight_distribution": 77
+    },
+    "bio": "Ferrari 2026 chassis."
+  },
+  {
+    "id": "haas_vf_26_2026",
+    "name": "Haas VF-26",
+    "team": "Haas",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "downforce": 59,
+      "mechanical_grip": 59,
+      "drag_efficiency": 52,
+      "reliability": 56,
+      "weight_distribution": 55
+    },
+    "bio": "Haas 2026 chassis."
+  },
+  {
+    "id": "racing_bulls_vcarb_03_2026",
+    "name": "Racing Bulls VCARB 03",
+    "team": "VCARB",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "downforce": 61,
+      "mechanical_grip": 61,
+      "drag_efficiency": 55,
+      "reliability": 58,
+      "weight_distribution": 56
+    },
+    "bio": "VCARB 2026 chassis."
   }
 ]

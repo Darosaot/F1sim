@@ -27,7 +27,7 @@ fs.mkdirSync(GEN_DIR, { recursive: true })
 
 // ── CLI args ─────────────────────────────────────────────────────────────────
 const args = process.argv.slice(2)
-let fromYear = 1950, toYear = 2024
+let fromYear = 1950, toYear = 2026
 const yearIdx = args.indexOf('--year')
 if (yearIdx !== -1) { fromYear = toYear = parseInt(args[yearIdx + 1]) }
 const fromIdx = args.indexOf('--from')

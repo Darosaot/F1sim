@@ -33476,5 +33476,803 @@
     },
     "titles": 0,
     "bio": "Logan Sargeant, 2024 season."
+  },
+  {
+    "id": "alonso_2025",
+    "name": "Fernando Alonso",
+    "nationality": "ESP",
+    "team": "Aston Martin",
+    "year": 2025,
+    "era": "current",
+    "attributes": {
+      "pace": 69,
+      "racecraft": 74,
+      "consistency": 67,
+      "wet_performance": 65,
+      "qualifying": 67,
+      "experience": 99,
+      "tire_management": 57
+    },
+    "titles": 2,
+    "bio": "Fernando Alonso, 2025 season."
+  },
+  {
+    "id": "stroll_2025",
+    "name": "Lance Stroll",
+    "nationality": "CAN",
+    "team": "Aston Martin",
+    "year": 2025,
+    "era": "current",
+    "attributes": {
+      "pace": 45,
+      "racecraft": 45,
+      "consistency": 46,
+      "wet_performance": 55,
+      "qualifying": 46,
+      "experience": 85,
+      "tire_management": 50
+    },
+    "titles": 0,
+    "bio": "Lance Stroll, 2025 season."
+  },
+  {
+    "id": "albon_2025",
+    "name": "Alexander Albon",
+    "nationality": "THA",
+    "team": "Williams",
+    "year": 2025,
+    "era": "current",
+    "attributes": {
+      "pace": 45,
+      "racecraft": 45,
+      "consistency": 46,
+      "wet_performance": 55,
+      "qualifying": 45,
+      "experience": 85,
+      "tire_management": 51
+    },
+    "titles": 0,
+    "bio": "Alexander Albon, 2025 season."
+  },
+  {
+    "id": "jr_2025",
+    "name": "Carlos Sainz Jr.",
+    "nationality": "ESP",
+    "team": "Williams",
+    "year": 2025,
+    "era": "current",
+    "attributes": {
+      "pace": 47,
+      "racecraft": 50,
+      "consistency": 53,
+      "wet_performance": 56,
+      "qualifying": 48,
+      "experience": 85,
+      "tire_management": 52
+    },
+    "titles": 0,
+    "bio": "Carlos Sainz Jr., 2025 season."
+  },
+  {
+    "id": "gasly_2025",
+    "name": "Pierre Gasly",
+    "nationality": "FRA",
+    "team": "Alpine",
+    "year": 2025,
+    "era": "current",
+    "attributes": {
+      "pace": 46,
+      "racecraft": 46,
+      "consistency": 47,
+      "wet_performance": 55,
+      "qualifying": 45,
+      "experience": 85,
+      "tire_management": 51
+    },
+    "titles": 0,
+    "bio": "Pierre Gasly, 2025 season."
+  },
+  {
+    "id": "colapinto_2025",
+    "name": "Franco Colapinto",
+    "nationality": "ARG",
+    "team": "Alpine",
+    "year": 2025,
+    "era": "current",
+    "attributes": {
+      "pace": 45,
+      "racecraft": 45,
+      "consistency": 45,
+      "wet_performance": 55,
+      "qualifying": 45,
+      "experience": 56,
+      "tire_management": 50
+    },
+    "titles": 0,
+    "bio": "Franco Colapinto, 2025 season."
+  },
+  {
+    "id": "norris_2025",
+    "name": "Lando Norris",
+    "nationality": "GBR",
+    "team": "McLaren",
+    "year": 2025,
+    "era": "current",
+    "attributes": {
+      "pace": 62,
+      "racecraft": 67,
+      "consistency": 66,
+      "wet_performance": 61,
+      "qualifying": 65,
+      "experience": 93,
+      "tire_management": 62
+    },
+    "titles": 1,
+    "bio": "Lando Norris, 2025 season."
+  },
+  {
+    "id": "piastri_2025",
+    "name": "Oscar Piastri",
+    "nationality": "AUS",
+    "team": "McLaren",
+    "year": 2025,
+    "era": "current",
+    "attributes": {
+      "pace": 59,
+      "racecraft": 66,
+      "consistency": 67,
+      "wet_performance": 59,
+      "qualifying": 55,
+      "experience": 70,
+      "tire_management": 63
+    },
+    "titles": 0,
+    "bio": "Oscar Piastri, 2025 season."
+  },
+  {
+    "id": "antonelli_2025",
+    "name": "Kimi Antonelli",
+    "nationality": "ITA",
+    "team": "Mercedes",
+    "year": 2025,
+    "era": "current",
+    "attributes": {
+      "pace": 64,
+      "racecraft": 67,
+      "consistency": 63,
+      "wet_performance": 60,
+      "qualifying": 61,
+      "experience": 55,
+      "tire_management": 74
+    },
+    "titles": 0,
+    "bio": "Kimi Antonelli, 2025 season."
+  },
+  {
+    "id": "russell_2025",
+    "name": "George Russell",
+    "nationality": "GBR",
+    "team": "Mercedes",
+    "year": 2025,
+    "era": "current",
+    "attributes": {
+      "pace": 50,
+      "racecraft": 53,
+      "consistency": 55,
+      "wet_performance": 56,
+      "qualifying": 52,
+      "experience": 85,
+      "tire_management": 57
+    },
+    "titles": 0,
+    "bio": "George Russell, 2025 season."
+  },
+  {
+    "id": "ocon_2025",
+    "name": "Esteban Ocon",
+    "nationality": "FRA",
+    "team": "Haas",
+    "year": 2025,
+    "era": "current",
+    "attributes": {
+      "pace": 46,
+      "racecraft": 46,
+      "consistency": 47,
+      "wet_performance": 55,
+      "qualifying": 45,
+      "experience": 85,
+      "tire_management": 51
+    },
+    "titles": 0,
+    "bio": "Esteban Ocon, 2025 season."
+  },
+  {
+    "id": "bearman_2025",
+    "name": "Oliver Bearman",
+    "nationality": "GBR",
+    "team": "Haas",
+    "year": 2025,
+    "era": "current",
+    "attributes": {
+      "pace": 45,
+      "racecraft": 45,
+      "consistency": 46,
+      "wet_performance": 55,
+      "qualifying": 45,
+      "experience": 56,
+      "tire_management": 50
+    },
+    "titles": 0,
+    "bio": "Oliver Bearman, 2025 season."
+  },
+  {
+    "id": "verstappen_2025",
+    "name": "Max Verstappen",
+    "nationality": "NLD",
+    "team": "Red Bull",
+    "year": 2025,
+    "era": "current",
+    "attributes": {
+      "pace": 99,
+      "racecraft": 99,
+      "consistency": 88,
+      "wet_performance": 76,
+      "qualifying": 93,
+      "experience": 99,
+      "tire_management": 71
+    },
+    "titles": 4,
+    "bio": "Max Verstappen, 2025 season."
+  },
+  {
+    "id": "tsunoda_2025",
+    "name": "Yuki Tsunoda",
+    "nationality": "JPN",
+    "team": "Red Bull",
+    "year": 2025,
+    "era": "current",
+    "attributes": {
+      "pace": 45,
+      "racecraft": 45,
+      "consistency": 45,
+      "wet_performance": 55,
+      "qualifying": 45,
+      "experience": 82,
+      "tire_management": 51
+    },
+    "titles": 0,
+    "bio": "Yuki Tsunoda, 2025 season."
+  },
+  {
+    "id": "leclerc_2025",
+    "name": "Charles Leclerc",
+    "nationality": "MCO",
+    "team": "Ferrari",
+    "year": 2025,
+    "era": "current",
+    "attributes": {
+      "pace": 53,
+      "racecraft": 57,
+      "consistency": 63,
+      "wet_performance": 56,
+      "qualifying": 63,
+      "experience": 85,
+      "tire_management": 56
+    },
+    "titles": 0,
+    "bio": "Charles Leclerc, 2025 season."
+  },
+  {
+    "id": "hamilton_2025",
+    "name": "Lewis Hamilton",
+    "nationality": "GBR",
+    "team": "Ferrari",
+    "year": 2025,
+    "era": "current",
+    "attributes": {
+      "pace": 99,
+      "racecraft": 99,
+      "consistency": 88,
+      "wet_performance": 75,
+      "qualifying": 99,
+      "experience": 99,
+      "tire_management": 72
+    },
+    "titles": 7,
+    "bio": "Lewis Hamilton, 2025 season."
+  },
+  {
+    "id": "bortoleto_2025",
+    "name": "Gabriel Bortoleto",
+    "nationality": "BRA",
+    "team": "Sauber",
+    "year": 2025,
+    "era": "current",
+    "attributes": {
+      "pace": 45,
+      "racecraft": 45,
+      "consistency": 45,
+      "wet_performance": 55,
+      "qualifying": 45,
+      "experience": 55,
+      "tire_management": 50
+    },
+    "titles": 0,
+    "bio": "Gabriel Bortoleto, 2025 season."
+  },
+  {
+    "id": "hulkenberg_2025",
+    "name": "Nico Hülkenberg",
+    "nationality": "DEU",
+    "team": "Sauber",
+    "year": 2025,
+    "era": "current",
+    "attributes": {
+      "pace": 45,
+      "racecraft": 45,
+      "consistency": 46,
+      "wet_performance": 55,
+      "qualifying": 45,
+      "experience": 85,
+      "tire_management": 51
+    },
+    "titles": 0,
+    "bio": "Nico Hülkenberg, 2025 season."
+  },
+  {
+    "id": "hadjar_2025",
+    "name": "Isack Hadjar",
+    "nationality": "FRA",
+    "team": "VCARB",
+    "year": 2025,
+    "era": "current",
+    "attributes": {
+      "pace": 45,
+      "racecraft": 47,
+      "consistency": 49,
+      "wet_performance": 55,
+      "qualifying": 45,
+      "experience": 55,
+      "tire_management": 50
+    },
+    "titles": 0,
+    "bio": "Isack Hadjar, 2025 season."
+  },
+  {
+    "id": "lawson_2025",
+    "name": "Liam Lawson",
+    "nationality": "NZL",
+    "team": "VCARB",
+    "year": 2025,
+    "era": "current",
+    "attributes": {
+      "pace": 45,
+      "racecraft": 45,
+      "consistency": 46,
+      "wet_performance": 55,
+      "qualifying": 45,
+      "experience": 59,
+      "tire_management": 50
+    },
+    "titles": 0,
+    "bio": "Liam Lawson, 2025 season."
+  },
+  {
+    "id": "alonso_2026",
+    "name": "Fernando Alonso",
+    "nationality": "ESP",
+    "team": "Aston Martin",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "pace": 69,
+      "racecraft": 74,
+      "consistency": 67,
+      "wet_performance": 65,
+      "qualifying": 67,
+      "experience": 99,
+      "tire_management": 57
+    },
+    "titles": 2,
+    "bio": "Fernando Alonso, 2026 season."
+  },
+  {
+    "id": "stroll_2026",
+    "name": "Lance Stroll",
+    "nationality": "CAN",
+    "team": "Aston Martin",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "pace": 45,
+      "racecraft": 45,
+      "consistency": 46,
+      "wet_performance": 55,
+      "qualifying": 46,
+      "experience": 85,
+      "tire_management": 50
+    },
+    "titles": 0,
+    "bio": "Lance Stroll, 2026 season."
+  },
+  {
+    "id": "albon_2026",
+    "name": "Alexander Albon",
+    "nationality": "THA",
+    "team": "Williams",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "pace": 45,
+      "racecraft": 45,
+      "consistency": 46,
+      "wet_performance": 55,
+      "qualifying": 45,
+      "experience": 85,
+      "tire_management": 51
+    },
+    "titles": 0,
+    "bio": "Alexander Albon, 2026 season."
+  },
+  {
+    "id": "jr_2026",
+    "name": "Carlos Sainz Jr.",
+    "nationality": "ESP",
+    "team": "Williams",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "pace": 47,
+      "racecraft": 50,
+      "consistency": 53,
+      "wet_performance": 56,
+      "qualifying": 48,
+      "experience": 85,
+      "tire_management": 52
+    },
+    "titles": 0,
+    "bio": "Carlos Sainz Jr., 2026 season."
+  },
+  {
+    "id": "bortoleto_2026",
+    "name": "Gabriel Bortoleto",
+    "nationality": "BRA",
+    "team": "Audi",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "pace": 45,
+      "racecraft": 45,
+      "consistency": 45,
+      "wet_performance": 55,
+      "qualifying": 45,
+      "experience": 55,
+      "tire_management": 50
+    },
+    "titles": 0,
+    "bio": "Gabriel Bortoleto, 2026 season."
+  },
+  {
+    "id": "hulkenberg_2026",
+    "name": "Nico Hülkenberg",
+    "nationality": "DEU",
+    "team": "Audi",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "pace": 45,
+      "racecraft": 45,
+      "consistency": 46,
+      "wet_performance": 55,
+      "qualifying": 45,
+      "experience": 85,
+      "tire_management": 51
+    },
+    "titles": 0,
+    "bio": "Nico Hülkenberg, 2026 season."
+  },
+  {
+    "id": "gasly_2026",
+    "name": "Pierre Gasly",
+    "nationality": "FRA",
+    "team": "Alpine",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "pace": 46,
+      "racecraft": 46,
+      "consistency": 47,
+      "wet_performance": 55,
+      "qualifying": 45,
+      "experience": 85,
+      "tire_management": 51
+    },
+    "titles": 0,
+    "bio": "Pierre Gasly, 2026 season."
+  },
+  {
+    "id": "colapinto_2026",
+    "name": "Franco Colapinto",
+    "nationality": "ARG",
+    "team": "Alpine",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "pace": 45,
+      "racecraft": 45,
+      "consistency": 45,
+      "wet_performance": 55,
+      "qualifying": 45,
+      "experience": 56,
+      "tire_management": 50
+    },
+    "titles": 0,
+    "bio": "Franco Colapinto, 2026 season."
+  },
+  {
+    "id": "perez_2026",
+    "name": "Sergio Pérez",
+    "nationality": "MEX",
+    "team": "Cadillac",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "pace": 47,
+      "racecraft": 51,
+      "consistency": 54,
+      "wet_performance": 56,
+      "qualifying": 46,
+      "experience": 85,
+      "tire_management": 54
+    },
+    "titles": 0,
+    "bio": "Sergio Pérez, 2026 season."
+  },
+  {
+    "id": "bottas_2026",
+    "name": "Valtteri Bottas",
+    "nationality": "FIN",
+    "team": "Cadillac",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "pace": 51,
+      "racecraft": 56,
+      "consistency": 60,
+      "wet_performance": 56,
+      "qualifying": 55,
+      "experience": 85,
+      "tire_management": 57
+    },
+    "titles": 0,
+    "bio": "Valtteri Bottas, 2026 season."
+  },
+  {
+    "id": "norris_2026",
+    "name": "Lando Norris",
+    "nationality": "GBR",
+    "team": "McLaren",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "pace": 62,
+      "racecraft": 67,
+      "consistency": 66,
+      "wet_performance": 61,
+      "qualifying": 65,
+      "experience": 93,
+      "tire_management": 62
+    },
+    "titles": 1,
+    "bio": "Lando Norris, 2026 season."
+  },
+  {
+    "id": "piastri_2026",
+    "name": "Oscar Piastri",
+    "nationality": "AUS",
+    "team": "McLaren",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "pace": 59,
+      "racecraft": 66,
+      "consistency": 67,
+      "wet_performance": 59,
+      "qualifying": 55,
+      "experience": 70,
+      "tire_management": 63
+    },
+    "titles": 0,
+    "bio": "Oscar Piastri, 2026 season."
+  },
+  {
+    "id": "antonelli_2026",
+    "name": "Kimi Antonelli",
+    "nationality": "ITA",
+    "team": "Mercedes",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "pace": 64,
+      "racecraft": 67,
+      "consistency": 63,
+      "wet_performance": 60,
+      "qualifying": 61,
+      "experience": 55,
+      "tire_management": 74
+    },
+    "titles": 0,
+    "bio": "Kimi Antonelli, 2026 season."
+  },
+  {
+    "id": "russell_2026",
+    "name": "George Russell",
+    "nationality": "GBR",
+    "team": "Mercedes",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "pace": 50,
+      "racecraft": 53,
+      "consistency": 55,
+      "wet_performance": 56,
+      "qualifying": 52,
+      "experience": 85,
+      "tire_management": 57
+    },
+    "titles": 0,
+    "bio": "George Russell, 2026 season."
+  },
+  {
+    "id": "hadjar_2026",
+    "name": "Isack Hadjar",
+    "nationality": "FRA",
+    "team": "Red Bull",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "pace": 45,
+      "racecraft": 47,
+      "consistency": 49,
+      "wet_performance": 55,
+      "qualifying": 45,
+      "experience": 55,
+      "tire_management": 50
+    },
+    "titles": 0,
+    "bio": "Isack Hadjar, 2026 season."
+  },
+  {
+    "id": "verstappen_2026",
+    "name": "Max Verstappen",
+    "nationality": "NLD",
+    "team": "Red Bull",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "pace": 99,
+      "racecraft": 99,
+      "consistency": 88,
+      "wet_performance": 76,
+      "qualifying": 93,
+      "experience": 99,
+      "tire_management": 71
+    },
+    "titles": 4,
+    "bio": "Max Verstappen, 2026 season."
+  },
+  {
+    "id": "leclerc_2026",
+    "name": "Charles Leclerc",
+    "nationality": "MCO",
+    "team": "Ferrari",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "pace": 53,
+      "racecraft": 57,
+      "consistency": 63,
+      "wet_performance": 56,
+      "qualifying": 63,
+      "experience": 85,
+      "tire_management": 56
+    },
+    "titles": 0,
+    "bio": "Charles Leclerc, 2026 season."
+  },
+  {
+    "id": "hamilton_2026",
+    "name": "Lewis Hamilton",
+    "nationality": "GBR",
+    "team": "Ferrari",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "pace": 99,
+      "racecraft": 99,
+      "consistency": 88,
+      "wet_performance": 75,
+      "qualifying": 99,
+      "experience": 99,
+      "tire_management": 72
+    },
+    "titles": 7,
+    "bio": "Lewis Hamilton, 2026 season."
+  },
+  {
+    "id": "ocon_2026",
+    "name": "Esteban Ocon",
+    "nationality": "FRA",
+    "team": "Haas",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "pace": 46,
+      "racecraft": 46,
+      "consistency": 47,
+      "wet_performance": 55,
+      "qualifying": 45,
+      "experience": 85,
+      "tire_management": 51
+    },
+    "titles": 0,
+    "bio": "Esteban Ocon, 2026 season."
+  },
+  {
+    "id": "bearman_2026",
+    "name": "Oliver Bearman",
+    "nationality": "GBR",
+    "team": "Haas",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "pace": 45,
+      "racecraft": 45,
+      "consistency": 46,
+      "wet_performance": 55,
+      "qualifying": 45,
+      "experience": 56,
+      "tire_management": 50
+    },
+    "titles": 0,
+    "bio": "Oliver Bearman, 2026 season."
+  },
+  {
+    "id": "lindblad_2026",
+    "name": "Arvid Lindblad",
+    "nationality": "GBR",
+    "team": "VCARB",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "pace": 45,
+      "racecraft": 45,
+      "consistency": 46,
+      "wet_performance": 55,
+      "qualifying": 45,
+      "experience": 47,
+      "tire_management": 50
+    },
+    "titles": 0,
+    "bio": "Arvid Lindblad, 2026 season."
+  },
+  {
+    "id": "lawson_2026",
+    "name": "Liam Lawson",
+    "nationality": "NZL",
+    "team": "VCARB",
+    "year": 2026,
+    "era": "current",
+    "attributes": {
+      "pace": 45,
+      "racecraft": 45,
+      "consistency": 46,
+      "wet_performance": 55,
+      "qualifying": 45,
+      "experience": 59,
+      "tire_management": 50
+    },
+    "titles": 0,
+    "bio": "Liam Lawson, 2026 season."
   }
 ]

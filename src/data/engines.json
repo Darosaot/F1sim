@@ -2618,5 +2618,90 @@
       "deployment_mode": 40
     },
     "bio": "Ferrari 066/10 1.6 V6 T H engine."
+  },
+  {
+    "id": "honda_ra626h_16_v6_t_h",
+    "name": "Honda RA626H 1.6 V6 T H",
+    "supplier": "Honda",
+    "era": "current",
+    "years_available": [
+      2026
+    ],
+    "attributes": {
+      "power": 51,
+      "driveability": 51,
+      "fuel_efficiency": 40,
+      "reliability": 49,
+      "deployment_mode": 35
+    },
+    "bio": "Honda RA626H 1.6 V6 T H engine."
+  },
+  {
+    "id": "mercedes_amg_f1_m17_16_v6_t_h",
+    "name": "Mercedes-AMG F1 M17 1.6 V6 T H",
+    "supplier": "Mercedes",
+    "era": "current",
+    "years_available": [
+      2026
+    ],
+    "attributes": {
+      "power": 66,
+      "driveability": 54,
+      "fuel_efficiency": 52,
+      "reliability": 56,
+      "deployment_mode": 40
+    },
+    "bio": "Mercedes-AMG F1 M17 1.6 V6 T H engine."
+  },
+  {
+    "id": "audi_afr_26_hybrid_16_v6_t_h",
+    "name": "Audi AFR 26 Hybrid 1.6 V6 T H",
+    "supplier": "Audi",
+    "era": "current",
+    "years_available": [
+      2026
+    ],
+    "attributes": {
+      "power": 62,
+      "driveability": 54,
+      "fuel_efficiency": 50,
+      "reliability": 51,
+      "deployment_mode": 43
+    },
+    "bio": "Audi AFR 26 Hybrid 1.6 V6 T H engine."
+  },
+  {
+    "id": "ferrari_067_6_16_v6_t_h",
+    "name": "Ferrari 067/6 1.6 V6 T H",
+    "supplier": "Ferrari",
+    "era": "current",
+    "years_available": [
+      2026
+    ],
+    "attributes": {
+      "power": 47,
+      "driveability": 44,
+      "fuel_efficiency": 40,
+      "reliability": 46,
+      "deployment_mode": 32
+    },
+    "bio": "Ferrari 067/6 1.6 V6 T H engine."
+  },
+  {
+    "id": "red_bull_ford_dm01_16_v6_t_h",
+    "name": "Red Bull Ford DM01 1.6 V6 T H",
+    "supplier": "Red Bull Ford",
+    "era": "current",
+    "years_available": [
+      2026
+    ],
+    "attributes": {
+      "power": 81,
+      "driveability": 72,
+      "fuel_efficiency": 64,
+      "reliability": 66,
+      "deployment_mode": 58
+    },
+    "bio": "Red Bull Ford DM01 1.6 V6 T H engine."
   }
 ]
