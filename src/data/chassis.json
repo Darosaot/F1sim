@@ -1,0 +1,207 @@
+[
+  {
+    "id": "alfa_158_1950", "name": "Alfa Romeo 158 Alfetta", "team": "Alfa Romeo", "year": 1950, "era": "early",
+    "attributes": { "downforce": 55, "mechanical_grip": 78, "drag_efficiency": 62, "reliability": 82, "weight_distribution": 70 },
+    "bio": "El coche que dominó la primera temporada de F1."
+  },
+  {
+    "id": "ferrari_500_1952", "name": "Ferrari 500 F2", "team": "Ferrari", "year": 1952, "era": "early",
+    "attributes": { "downforce": 50, "mechanical_grip": 80, "drag_efficiency": 70, "reliability": 88, "weight_distribution": 72 },
+    "bio": "Dominó 1952 y 1953. El inicio de la leyenda Ferrari."
+  },
+  {
+    "id": "vanwall_vw_1958", "name": "Vanwall VW", "team": "Vanwall", "year": 1958, "era": "early",
+    "attributes": { "downforce": 52, "mechanical_grip": 76, "drag_efficiency": 78, "reliability": 72, "weight_distribution": 75 },
+    "bio": "Primera victoria del Campeonato de Constructores."
+  },
+  {
+    "id": "cooper_t51_1959", "name": "Cooper T51", "team": "Cooper", "year": 1959, "era": "early",
+    "attributes": { "downforce": 48, "mechanical_grip": 77, "drag_efficiency": 80, "reliability": 80, "weight_distribution": 82 },
+    "bio": "Revolucionó el diseño con el motor en posición central trasera."
+  },
+  {
+    "id": "lotus_25_1963", "name": "Lotus 25", "team": "Lotus", "year": 1963, "era": "early",
+    "attributes": { "downforce": 58, "mechanical_grip": 85, "drag_efficiency": 85, "reliability": 70, "weight_distribution": 88 },
+    "bio": "El primer monoplaza de estructura monocasco. Revolución pura."
+  },
+  {
+    "id": "lotus_49_1967", "name": "Lotus 49", "team": "Lotus", "year": 1967, "era": "pre_turbo",
+    "attributes": { "downforce": 62, "mechanical_grip": 84, "drag_efficiency": 82, "reliability": 68, "weight_distribution": 87 },
+    "bio": "Primer coche con el Ford DFV como elemento estructural."
+  },
+  {
+    "id": "tyrrell_003_1971", "name": "Tyrrell 003", "team": "Tyrrell", "year": 1971, "era": "pre_turbo",
+    "attributes": { "downforce": 68, "mechanical_grip": 83, "drag_efficiency": 80, "reliability": 82, "weight_distribution": 83 },
+    "bio": "Stewart ganó 1971 con este coche. Diseño impecable."
+  },
+  {
+    "id": "lotus_72_1972", "name": "Lotus 72", "team": "Lotus", "year": 1972, "era": "pre_turbo",
+    "attributes": { "downforce": 72, "mechanical_grip": 85, "drag_efficiency": 82, "reliability": 73, "weight_distribution": 88 },
+    "bio": "La cuña alada. Un diseño que adelantó su tiempo."
+  },
+  {
+    "id": "ferrari_312t_1975", "name": "Ferrari 312T", "team": "Ferrari", "year": 1975, "era": "pre_turbo",
+    "attributes": { "downforce": 76, "mechanical_grip": 87, "drag_efficiency": 78, "reliability": 85, "weight_distribution": 90 },
+    "bio": "La T de transmisión transversal. Lauda ganó el mundial con él."
+  },
+  {
+    "id": "ferrari_312t2_1976", "name": "Ferrari 312T2", "team": "Ferrari", "year": 1976, "era": "pre_turbo",
+    "attributes": { "downforce": 78, "mechanical_grip": 88, "drag_efficiency": 77, "reliability": 83, "weight_distribution": 89 },
+    "bio": "El coche del accidente de Lauda. Siguen ganando con Hunt."
+  },
+  {
+    "id": "lotus_78_1977", "name": "Lotus 78", "team": "Lotus", "year": 1977, "era": "pre_turbo",
+    "attributes": { "downforce": 85, "mechanical_grip": 87, "drag_efficiency": 80, "reliability": 74, "weight_distribution": 86 },
+    "bio": "El efecto suelo. Chapman cambió la aerodinámica para siempre."
+  },
+  {
+    "id": "lotus_79_1978", "name": "Lotus 79", "team": "Lotus", "year": 1978, "era": "pre_turbo",
+    "attributes": { "downforce": 90, "mechanical_grip": 90, "drag_efficiency": 83, "reliability": 73, "weight_distribution": 88 },
+    "bio": "Ground effect en su máxima expresión. Andretti campeón."
+  },
+  {
+    "id": "ferrari_312t4_1979", "name": "Ferrari 312T4", "team": "Ferrari", "year": 1979, "era": "pre_turbo",
+    "attributes": { "downforce": 87, "mechanical_grip": 89, "drag_efficiency": 79, "reliability": 86, "weight_distribution": 87 },
+    "bio": "Scheckter campeón. Ferrari dominó con el efecto suelo."
+  },
+  {
+    "id": "williams_fw07_1980", "name": "Williams FW07", "team": "Williams", "year": 1980, "era": "pre_turbo",
+    "attributes": { "downforce": 88, "mechanical_grip": 88, "drag_efficiency": 82, "reliability": 82, "weight_distribution": 87 },
+    "bio": "Jones campeón con el FW07. Williams como potencia."
+  },
+  {
+    "id": "brabham_bt49_1981", "name": "Brabham BT49C", "team": "Brabham", "year": 1981, "era": "pre_turbo",
+    "attributes": { "downforce": 85, "mechanical_grip": 85, "drag_efficiency": 83, "reliability": 80, "weight_distribution": 86 },
+    "bio": "Piquet campeón con el BT49. Dominio técnico de Gordon Murray."
+  },
+  {
+    "id": "mclaren_mp4_2_1984", "name": "McLaren MP4/2", "team": "McLaren", "year": 1984, "era": "turbo",
+    "attributes": { "downforce": 88, "mechanical_grip": 89, "drag_efficiency": 88, "reliability": 86, "weight_distribution": 91 },
+    "bio": "Prost y Lauda ganaron 12 de 16 carreras. Máquina perfecta."
+  },
+  {
+    "id": "williams_fw11_1986", "name": "Williams FW11", "team": "Williams", "year": 1986, "era": "turbo",
+    "attributes": { "downforce": 87, "mechanical_grip": 88, "drag_efficiency": 86, "reliability": 80, "weight_distribution": 89 },
+    "bio": "El FW11 con Honda turbo. Mansell y Piquet en guerra."
+  },
+  {
+    "id": "mclaren_mp4_4_1988", "name": "McLaren MP4/4", "team": "McLaren", "year": 1988, "era": "turbo",
+    "attributes": { "downforce": 93, "mechanical_grip": 92, "drag_efficiency": 92, "reliability": 89, "weight_distribution": 94 },
+    "bio": "El coche más dominante en la historia de F1. 15 de 16 carreras ganadas."
+  },
+  {
+    "id": "ferrari_641_1990", "name": "Ferrari 641", "team": "Ferrari", "year": 1990, "era": "v10_v12",
+    "attributes": { "downforce": 89, "mechanical_grip": 90, "drag_efficiency": 87, "reliability": 85, "weight_distribution": 91 },
+    "bio": "Prost a punto del título. Ferrari casi iguala a McLaren."
+  },
+  {
+    "id": "mclaren_mp4_6_1991", "name": "McLaren MP4/6", "team": "McLaren", "year": 1991, "era": "v10_v12",
+    "attributes": { "downforce": 90, "mechanical_grip": 90, "drag_efficiency": 89, "reliability": 86, "weight_distribution": 92 },
+    "bio": "Senna a los mandos. 7 victorias y tercer campeonato."
+  },
+  {
+    "id": "williams_fw14b_1992", "name": "Williams FW14B", "team": "Williams", "year": 1992, "era": "v10_v12",
+    "attributes": { "downforce": 94, "mechanical_grip": 95, "drag_efficiency": 93, "reliability": 87, "weight_distribution": 93 },
+    "bio": "Suspensión activa + control de tracción. El coche del futuro."
+  },
+  {
+    "id": "williams_fw15c_1993", "name": "Williams FW15C", "team": "Williams", "year": 1993, "era": "v10_v12",
+    "attributes": { "downforce": 93, "mechanical_grip": 94, "drag_efficiency": 92, "reliability": 88, "weight_distribution": 92 },
+    "bio": "Prost dominó con el FW15C antes de que se banearan las ayudas."
+  },
+  {
+    "id": "benetton_b194_1994", "name": "Benetton B194", "team": "Benetton", "year": 1994, "era": "v10_v12",
+    "attributes": { "downforce": 88, "mechanical_grip": 89, "drag_efficiency": 87, "reliability": 82, "weight_distribution": 90 },
+    "bio": "El primer campeonato de Schumacher. Controvertido y rápido."
+  },
+  {
+    "id": "williams_fw18_1996", "name": "Williams FW18", "team": "Williams", "year": 1996, "era": "v10_v12",
+    "attributes": { "downforce": 91, "mechanical_grip": 92, "drag_efficiency": 89, "reliability": 90, "weight_distribution": 91 },
+    "bio": "Damon Hill campeón. El último gran dominio de Williams."
+  },
+  {
+    "id": "mclaren_mp4_13_1998", "name": "McLaren MP4/13", "team": "McLaren", "year": 1998, "era": "v10_v12",
+    "attributes": { "downforce": 92, "mechanical_grip": 93, "drag_efficiency": 91, "reliability": 86, "weight_distribution": 93 },
+    "bio": "Häkkinen campeón. El retorno de McLaren a la cima."
+  },
+  {
+    "id": "ferrari_f1_2000", "name": "Ferrari F1-2000", "team": "Ferrari", "year": 2000, "era": "v10_v12",
+    "attributes": { "downforce": 91, "mechanical_grip": 92, "drag_efficiency": 90, "reliability": 90, "weight_distribution": 92 },
+    "bio": "El primer título de Schumacher con Ferrari. La era comienza."
+  },
+  {
+    "id": "ferrari_f2002", "name": "Ferrari F2002", "team": "Ferrari", "year": 2002, "era": "v10_v12",
+    "attributes": { "downforce": 94, "mechanical_grip": 95, "drag_efficiency": 93, "reliability": 93, "weight_distribution": 95 },
+    "bio": "Considerado uno de los mejores F1 jamás construidos. Imbatible."
+  },
+  {
+    "id": "ferrari_f2004", "name": "Ferrari F2004", "team": "Ferrari", "year": 2004, "era": "v10_v12",
+    "attributes": { "downforce": 95, "mechanical_grip": 96, "drag_efficiency": 94, "reliability": 94, "weight_distribution": 96 },
+    "bio": "13 victorias en 18 carreras. El Ferrari más dominante de todos."
+  },
+  {
+    "id": "renault_r25_2005", "name": "Renault R25", "team": "Renault", "year": 2005, "era": "v10_v12",
+    "attributes": { "downforce": 90, "mechanical_grip": 91, "drag_efficiency": 90, "reliability": 89, "weight_distribution": 91 },
+    "bio": "Alonso rompe la era Schumacher. Un coche equilibrado y rápido."
+  },
+  {
+    "id": "renault_r26_2006", "name": "Renault R26", "team": "Renault", "year": 2006, "era": "v8",
+    "attributes": { "downforce": 89, "mechanical_grip": 90, "drag_efficiency": 89, "reliability": 87, "weight_distribution": 90 },
+    "bio": "Alonso su segundo consecutivo. Duelo épico con Ferrari."
+  },
+  {
+    "id": "mclaren_mp4_23_2008", "name": "McLaren MP4-23", "team": "McLaren", "year": 2008, "era": "v8",
+    "attributes": { "downforce": 90, "mechanical_grip": 91, "drag_efficiency": 89, "reliability": 85, "weight_distribution": 90 },
+    "bio": "Hamilton campeón en la última vuelta de Brasil. Drama puro."
+  },
+  {
+    "id": "brawn_bgp001_2009", "name": "Brawn BGP 001", "team": "Brawn GP", "year": 2009, "era": "v8",
+    "attributes": { "downforce": 91, "mechanical_grip": 91, "drag_efficiency": 95, "reliability": 86, "weight_distribution": 92 },
+    "bio": "El doble difusor. La historia más romántica de la F1 moderna."
+  },
+  {
+    "id": "red_bull_rb6_2010", "name": "Red Bull RB6", "team": "Red Bull", "year": 2010, "era": "v8",
+    "attributes": { "downforce": 93, "mechanical_grip": 92, "drag_efficiency": 90, "reliability": 83, "weight_distribution": 93 },
+    "bio": "El primer campeonato de Vettel. Newey en estado de gracia."
+  },
+  {
+    "id": "red_bull_rb7_2011", "name": "Red Bull RB7", "team": "Red Bull", "year": 2011, "era": "v8",
+    "attributes": { "downforce": 95, "mechanical_grip": 94, "drag_efficiency": 91, "reliability": 86, "weight_distribution": 94 },
+    "bio": "15 victorias con Vettel. Dominio total de principio a fin."
+  },
+  {
+    "id": "red_bull_rb9_2013", "name": "Red Bull RB9", "team": "Red Bull", "year": 2013, "era": "v8",
+    "attributes": { "downforce": 95, "mechanical_grip": 95, "drag_efficiency": 91, "reliability": 88, "weight_distribution": 94 },
+    "bio": "13 victorias consecutivas al final. Cuarto título de Vettel."
+  },
+  {
+    "id": "mercedes_w05_2014", "name": "Mercedes W05 Hybrid", "team": "Mercedes", "year": 2014, "era": "hybrid",
+    "attributes": { "downforce": 89, "mechanical_grip": 90, "drag_efficiency": 92, "reliability": 86, "weight_distribution": 91 },
+    "bio": "El cambio de era. Hamilton campeón con el coche más avanzado."
+  },
+  {
+    "id": "mercedes_w07_2016", "name": "Mercedes W07 Hybrid", "team": "Mercedes", "year": 2016, "era": "hybrid",
+    "attributes": { "downforce": 93, "mechanical_grip": 93, "drag_efficiency": 93, "reliability": 90, "weight_distribution": 93 },
+    "bio": "El más rápido de la era híbrida hasta ese momento. Rosberg campeón."
+  },
+  {
+    "id": "mercedes_w11_2020", "name": "Mercedes W11 EQ Performance", "team": "Mercedes", "year": 2020, "era": "hybrid",
+    "attributes": { "downforce": 96, "mechanical_grip": 95, "drag_efficiency": 95, "reliability": 92, "weight_distribution": 95 },
+    "bio": "El mejor coche de la era híbrida. Hamilton igualó a Schumacher."
+  },
+  {
+    "id": "red_bull_rb19_2023", "name": "Red Bull RB19", "team": "Red Bull", "year": 2023, "era": "current",
+    "attributes": { "downforce": 97, "mechanical_grip": 97, "drag_efficiency": 95, "reliability": 94, "weight_distribution": 97 },
+    "bio": "19 victorias en 22 carreras. El coche más dominante de la era moderna."
+  },
+  {
+    "id": "mclaren_mcl38_2024", "name": "McLaren MCL38", "team": "McLaren", "year": 2024, "era": "current",
+    "attributes": { "downforce": 93, "mechanical_grip": 94, "drag_efficiency": 93, "reliability": 91, "weight_distribution": 93 },
+    "bio": "McLaren regresó a la cima. El mejor coche del segundo semestre 2024."
+  },
+  {
+    "id": "ferrari_sf24_2024", "name": "Ferrari SF-24", "team": "Ferrari", "year": 2024, "era": "current",
+    "attributes": { "downforce": 92, "mechanical_grip": 92, "drag_efficiency": 91, "reliability": 89, "weight_distribution": 92 },
+    "bio": "Un coche competitivo que mostró el resurgir de Ferrari."
+  }
+]

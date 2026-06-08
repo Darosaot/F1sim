@@ -1,0 +1,62 @@
+[
+  {
+    "id": "dunlop_classic", "name": "Dunlop Racing", "supplier": "Dunlop",
+    "era": "early", "years": [1950, 1977],
+    "attributes": { "peak_grip": 62, "durability": 55, "thermal_window": 60, "wet_performance": 68, "compound_versatility": 60 },
+    "bio": "Los neumáticos de los años 50-70. Tecnología de la época con sus limitaciones."
+  },
+  {
+    "id": "continental_racing", "name": "Continental F1", "supplier": "Continental",
+    "era": "early", "years": [1954, 1958],
+    "attributes": { "peak_grip": 60, "durability": 58, "thermal_window": 58, "wet_performance": 65, "compound_versatility": 58 },
+    "bio": "Equipó a Mercedes en 1954-55. Alta tecnología alemana."
+  },
+  {
+    "id": "firestone_f1", "name": "Firestone Firehawk", "supplier": "Firestone",
+    "era": "pre_turbo", "years": [1966, 1974],
+    "attributes": { "peak_grip": 68, "durability": 62, "thermal_window": 65, "wet_performance": 70, "compound_versatility": 65 },
+    "bio": "Rival de Goodyear en los 60s. Algunas victorias notables."
+  },
+  {
+    "id": "goodyear_eagle", "name": "Goodyear Eagle", "supplier": "Goodyear",
+    "era": "pre_turbo", "years": [1965, 1998],
+    "attributes": { "peak_grip": 78, "durability": 75, "thermal_window": 72, "wet_performance": 76, "compound_versatility": 78 },
+    "bio": "El monopolio de los 80s y 90s. Confiable, pero pocas sorpresas."
+  },
+  {
+    "id": "michelin_classic", "name": "Michelin Radial (1977-84)", "supplier": "Michelin",
+    "era": "pre_turbo", "years": [1977, 1984],
+    "attributes": { "peak_grip": 82, "durability": 70, "thermal_window": 75, "wet_performance": 80, "compound_versatility": 80 },
+    "bio": "Revolucionó con el neumático radial. Ligero y con máximo grip."
+  },
+  {
+    "id": "yokohama_f1", "name": "Yokohama A008", "supplier": "Yokohama",
+    "era": "turbo", "years": [1987, 1988],
+    "attributes": { "peak_grip": 72, "durability": 65, "thermal_window": 68, "wet_performance": 72, "compound_versatility": 68 },
+    "bio": "Breve aparición en la era turbo. Solo para equipos pequeños."
+  },
+  {
+    "id": "michelin_modern", "name": "Michelin Sport (2001-06)", "supplier": "Michelin",
+    "era": "v10_v12", "years": [2001, 2006],
+    "attributes": { "peak_grip": 90, "durability": 82, "thermal_window": 84, "wet_performance": 88, "compound_versatility": 90 },
+    "bio": "Alonso ganó con Michelin. Superó a Bridgestone en circuitos seleccionados."
+  },
+  {
+    "id": "bridgestone_potenza", "name": "Bridgestone Potenza", "supplier": "Bridgestone",
+    "era": "v10_v12", "years": [1997, 2010],
+    "attributes": { "peak_grip": 88, "durability": 85, "thermal_window": 82, "wet_performance": 82, "compound_versatility": 86 },
+    "bio": "Proveedor único de 2007-2010. Schumacher prefería Bridgestone."
+  },
+  {
+    "id": "pirelli_2011", "name": "Pirelli P Zero (2011-18)", "supplier": "Pirelli",
+    "era": "v8", "years": [2011, 2018],
+    "attributes": { "peak_grip": 84, "durability": 68, "thermal_window": 76, "wet_performance": 80, "compound_versatility": 85 },
+    "bio": "La era del gestionado de neumáticos. 3 paradas por carrera, degradación elevada."
+  },
+  {
+    "id": "pirelli_2022", "name": "Pirelli P Zero 18\" (2022-pres)", "supplier": "Pirelli",
+    "era": "current", "years": [2022, 2025],
+    "attributes": { "peak_grip": 88, "durability": 80, "thermal_window": 82, "wet_performance": 83, "compound_versatility": 88 },
+    "bio": "Neumáticos de 18 pulgadas para los coches de efecto suelo. Mayor consistencia."
+  }
+]
