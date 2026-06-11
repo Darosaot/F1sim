@@ -33,7 +33,7 @@ export default function TeamBuilder() {
         <span className="text-xs font-bold uppercase tracking-widest text-ink-md">
           PLANTILLA · {filledCount}/10
         </span>
-        {filledCount === 11 && (
+        {filledCount === 10 && (
           <span className="font-display font-black text-3xl text-ink">{rating.toFixed(0)}</span>
         )}
       </div>

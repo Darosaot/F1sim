@@ -14,7 +14,7 @@ const ERA_RANGES = {
   v10:        [1989, 2005],
   v8:         [2006, 2013],
   hybrid:     [2014, 2021],
-  current:    [2022, 2025],
+  current:    [2022, 2026],
 }
 
 function matchesEra(item, era) {
@@ -83,6 +83,23 @@ export function resolveSeasonElements(season) {
     aero: season.aero_index,
     budget: season.budget_index,
     reliability: season.reliability_index,
+  }
+}
+
+// Resolve a decoded share payload (IDs) back to full element objects
+export function resolveSharedTeam(p) {
+  if (!p) return null
+  return {
+    driver1:            driversData.find(d => d.id === p.d1) ?? null,
+    driver2:            driversData.find(d => d.id === p.d2) ?? null,
+    team_principal:     tpData.find(t => t.id === p.tp) ?? null,
+    technical_director: tdData.find(t => t.id === p.td) ?? null,
+    chassis:            chassisData.find(c => c.id === p.ch) ?? null,
+    engine:             enginesData.find(e => e.id === p.en) ?? null,
+    tires:              tiresData.find(t => t.id === p.ti) ?? null,
+    aero:               typeof p.ae === 'number' ? p.ae : null,
+    budget:             typeof p.bu === 'number' ? p.bu : null,
+    reliability:        typeof p.re === 'number' ? p.re : null,
   }
 }
 

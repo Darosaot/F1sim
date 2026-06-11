@@ -56,6 +56,8 @@ export default function Game() {
           <span className="mx-1 text-ink-lt">·</span>
           <span>{modeLabel}</span>
           <span className="mx-1 text-ink-lt">·</span>
+          <span>VS {rivalYear}</span>
+          <span className="mx-1 text-ink-lt">·</span>
           <span className={filledCount === 10 ? 'text-rust' : ''}>{filledCount}/10</span>
         </div>
 

@@ -12,8 +12,15 @@ export function encodeTeam(team, config) {
     re: team.reliability,
     era: config?.era || 'all',
     mode: config?.mode || 'vip',
+    ry: config?.rivalYear,
   }
   return btoa(JSON.stringify(payload))
+}
+
+export function getSharedTeamFromUrl() {
+  const match = window.location.hash.match(/#share=(.+)$/)
+  if (!match) return null
+  return decodeTeam(match[1])
 }
 
 export function decodeTeam(hash) {
