@@ -1,26 +1,31 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import { useGameStore } from '../stores/gameStore'
 import RaceTicker from '../components/simulation/RaceTicker'
 import SeasonChart from '../components/simulation/SeasonChart'
 import ChampionshipCard from '../components/results/ChampionshipCard'
+import SeasonHighlights from '../components/results/SeasonHighlights'
 import { getVerdict } from '../utils/simulator'
+import { getActiveSynergies } from '../utils/synergies'
 
 export default function Results() {
   const simulationResults = useGameStore(s => s.simulationResults)
+  const team              = useGameStore(s => s.team)
   const resetGame         = useGameStore(s => s.resetGame)
   const [tickerDone, setTickerDone] = useState(false)
+  const shareCode = useMemo(() => Math.random().toString(36).slice(2, 8).toUpperCase(), [])
+
+  useEffect(() => {
+    if (!simulationResults) return
+    const delay = (simulationResults.races?.length ?? 22) * 400 + 900
+    const t = setTimeout(() => setTickerDone(true), delay)
+    return () => clearTimeout(t)
+  }, [simulationResults])
 
   if (!simulationResults) return null
 
   const { races, d1FinalPos, d2FinalPos, constructorPos, d1Stats, d2Stats, d1Name, d2Name, rivalYear } = simulationResults
   const verdict = getVerdict(d1FinalPos, d2FinalPos, constructorPos)
-
-  useEffect(() => {
-    const delay = (races?.length ?? 22) * 400 + 900
-    const t = setTimeout(() => setTickerDone(true), delay)
-    return () => clearTimeout(t)
-  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className="min-h-screen bg-sand font-body flex flex-col">
@@ -33,7 +38,7 @@ export default function Results() {
           <span className="font-display font-black text-2xl text-ink">P1</span>
         </div>
         <span className="text-[10px] font-bold uppercase tracking-widest text-ink-md">
-          CÓDIGO #{Math.random().toString(36).slice(2, 8).toUpperCase()}
+          CÓDIGO #{shareCode}
         </span>
       </header>
 
@@ -73,6 +78,21 @@ export default function Results() {
             <div className="bg-white border border-borderc p-4">
               <SeasonChart races={races} />
             </div>
+          </motion.div>
+        )}
+
+        {/* Highlights + synergies + real history */}
+        {tickerDone && (
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.05 }}>
+            <SeasonHighlights
+              races={races}
+              d1Name={d1Name}
+              d2Name={d2Name}
+              playerStats={simulationResults.playerStats}
+              constructorPos={constructorPos}
+              rivalYear={rivalYear}
+              synergies={getActiveSynergies(team)}
+            />
           </motion.div>
         )}
 

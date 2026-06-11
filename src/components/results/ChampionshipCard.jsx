@@ -2,7 +2,14 @@ import { useGameStore } from '../../stores/gameStore'
 import { buildShareUrl } from '../../utils/shareEncoder'
 import { SLOT_LABELS, getElementValue } from '../../utils/ratingEngine'
 
-const FLAG_MAP = { ITA: '🇮🇹', GBR: '🇬🇧', DEU: '🇩🇪', FRA: '🇫🇷', BRA: '🇧🇷', AUS: '🇦🇺', ESP: '🇪🇸', FIN: '🇫🇮', AUT: '🇦🇹', NLD: '🇳🇱', USA: '🇺🇸', MCO: '🇲🇨', CAN: '🇨🇦', ARG: '🇦🇷', RSA: '🇿🇦', ZAF: '🇿🇦' }
+const FLAG_MAP = {
+  ITA: '🇮🇹', GBR: '🇬🇧', DEU: '🇩🇪', FRA: '🇫🇷', BRA: '🇧🇷', AUS: '🇦🇺', ESP: '🇪🇸',
+  FIN: '🇫🇮', AUT: '🇦🇹', NLD: '🇳🇱', USA: '🇺🇸', MCO: '🇲🇨', CAN: '🇨🇦', ARG: '🇦🇷',
+  RSA: '🇿🇦', ZAF: '🇿🇦', JPN: '🇯🇵', MEX: '🇲🇽', NZL: '🇳🇿', CHE: '🇨🇭', BEL: '🇧🇪',
+  SWE: '🇸🇪', RUS: '🇷🇺', IRL: '🇮🇪', DNK: '🇩🇰', DEN: '🇩🇰', THA: '🇹🇭', VEN: '🇻🇪',
+  COL: '🇨🇴', POL: '🇵🇱', PRT: '🇵🇹', CHL: '🇨🇱', IND: '🇮🇳', CHN: '🇨🇳', MYS: '🇲🇾',
+  HUN: '🇭🇺', IDN: '🇮🇩',
+}
 const SLOT_KEYS = Object.keys(SLOT_LABELS)
 
 function StandingsTable({ title, rows, showTeam }) {
@@ -47,13 +54,14 @@ export default function ChampionshipCard({ results }) {
   const team      = useGameStore(s => s.team)
   const era       = useGameStore(s => s.era)
   const mode      = useGameStore(s => s.mode)
+  const rivalYear = useGameStore(s => s.rivalYear)
   const resetGame = useGameStore(s => s.resetGame)
 
   if (!results) return null
   const { driverStandings, constructorStandings, d1FinalPos, d2FinalPos, constructorPos, d1Name, d2Name, playerStats } = results
 
   function handleShareLink() {
-    const url = buildShareUrl(team, { era, mode })
+    const url = buildShareUrl(team, { era, mode, rivalYear })
     navigator.clipboard?.writeText(url).then(() => alert('Enlace copiado 🏁'))
   }
 

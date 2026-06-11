@@ -35,14 +35,17 @@ function DriverResult({ qualyPos, racePos, points, dnf, name }) {
 
 export default function RaceTicker({ races, d1Name, d2Name }) {
   const [visible, setVisible] = useState([])
+  const [done, setDone] = useState(false)
 
   useEffect(() => {
     setVisible([])
-    if (!races?.length) return
+    setDone(false)
+    if (!races?.length) { setDone(true); return }
     let i = 0
     let cancelled = false
     const iv = setInterval(() => {
-      if (cancelled || i >= races.length) { clearInterval(iv); return }
+      if (cancelled) { clearInterval(iv); return }
+      if (i >= races.length) { clearInterval(iv); setDone(true); return }
       const race = races[i]
       if (!race?.circuit) { i++; return }
       setVisible(prev => [...prev, { ...race, raceNumber: i + 1 }])
@@ -51,7 +54,7 @@ export default function RaceTicker({ races, d1Name, d2Name }) {
     return () => { cancelled = true; clearInterval(iv) }
   }, [races])
 
-  const isRunning = visible.length < (races?.length ?? 0)
+  const isRunning = !done
 
   return (
     <div className="space-y-px">

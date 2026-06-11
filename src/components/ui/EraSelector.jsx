@@ -1,7 +1,7 @@
 import { useGameStore } from '../../stores/gameStore'
 
 const ERAS = [
-  { id: 'all',       label: 'Todo',    years: '1950–2025' },
+  { id: 'all',       label: 'Todo',    years: '1950–2026' },
   { id: 'early',     label: 'Clásica', years: '1950–65' },
   { id: 'pre_turbo', label: 'Pre-T.',  years: '1966–82' },
   { id: 'turbo',     label: 'Turbo',   years: '1983–88' },

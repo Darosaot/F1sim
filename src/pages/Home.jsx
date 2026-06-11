@@ -9,7 +9,7 @@ const STEPS = [
 ]
 
 const ERAS = [
-  { id: 'all',       label: 'Toda la historia', years: '1950–2025' },
+  { id: 'all',       label: 'Toda la historia', years: '1950–2026' },
   { id: 'early',     label: 'Era Clásica',       years: '1950–65' },
   { id: 'pre_turbo', label: 'Pre-Turbo',          years: '1966–82' },
   { id: 'turbo',     label: 'Era Turbo',          years: '1983–88' },
@@ -62,7 +62,7 @@ export default function Home() {
           {/* Left — headline */}
           <div>
             <p className="text-xs font-bold uppercase tracking-widest text-ink-md mb-3">
-              PIT LANE DRAFT · 1950 — 2025
+              PIT LANE DRAFT · 1950 — 2026
             </p>
 
             <div className="flex items-end gap-2 mb-1 leading-none">

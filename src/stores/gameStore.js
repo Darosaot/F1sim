@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { getRandomSeason, getFilteredSeasons, resolveSeasonElements } from '../utils/dataQueries'
+import { getRandomSeason, getFilteredSeasons, resolveSeasonElements, resolveSharedTeam } from '../utils/dataQueries'
 
 // undefined = not yet picked; null = slot unavailable for this team (auto-skipped)
 const EMPTY_TEAM = {
@@ -166,6 +166,26 @@ export const useGameStore = create((set, get) => ({
 
   setSimulationResults: (results) => {
     set({ simulationResults: results, phase: 'results' })
+  },
+
+  // Load a team from a shared URL — jumps straight to 'complete' so the
+  // receiver can simulate the season with the shared lineup
+  loadSharedTeam: (payload) => {
+    const team = resolveSharedTeam(payload)
+    if (!team) return false
+    const hasAny = Object.values(team).some(v => v !== null)
+    if (!hasAny) return false
+    set({
+      team,
+      era: payload.era || 'all',
+      mode: payload.mode || 'vip',
+      rivalYear: payload.ry || 2024,
+      phase: 'complete',
+      currentCard: null,
+      wildcards: 0,
+      simulationResults: null,
+    })
+    return true
   },
 
   resetGame: () => {
