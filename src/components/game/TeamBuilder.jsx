@@ -1,5 +1,6 @@
 import { useGameStore } from '../../stores/gameStore'
 import { SLOT_LABELS, calculateTeamRating, getElementValue } from '../../utils/ratingEngine'
+import { getActiveSynergies } from '../../utils/synergies'
 
 const SLOT_KEYS = Object.keys(SLOT_LABELS)
 
@@ -25,6 +26,7 @@ export default function TeamBuilder() {
 
   const driverAvg = avg(team, DRIVER_KEYS)
   const carAvg    = avg(team, CAR_KEYS)
+  const synergies = getActiveSynergies(team)
 
   return (
     <div className="flex flex-col h-full">
@@ -61,6 +63,19 @@ export default function TeamBuilder() {
               <span className="text-ink-md">Coche</span>
             </div>
           )}
+        </div>
+      )}
+
+      {/* Active synergies */}
+      {synergies.length > 0 && (
+        <div className="mb-3 space-y-1">
+          {synergies.map(s => (
+            <div key={s.id} className="flex items-center gap-1.5 text-[10px]" title={s.desc}>
+              <span>{s.emoji}</span>
+              <span className="font-bold text-ink uppercase tracking-wide">{s.label}</span>
+              <span className="text-rust font-black ml-auto">+{s.bonus}</span>
+            </div>
+          ))}
         </div>
       )}
 

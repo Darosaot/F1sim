@@ -4,10 +4,13 @@ import { useGameStore } from '../stores/gameStore'
 import RaceTicker from '../components/simulation/RaceTicker'
 import SeasonChart from '../components/simulation/SeasonChart'
 import ChampionshipCard from '../components/results/ChampionshipCard'
+import SeasonHighlights from '../components/results/SeasonHighlights'
 import { getVerdict } from '../utils/simulator'
+import { getActiveSynergies } from '../utils/synergies'
 
 export default function Results() {
   const simulationResults = useGameStore(s => s.simulationResults)
+  const team              = useGameStore(s => s.team)
   const resetGame         = useGameStore(s => s.resetGame)
   const [tickerDone, setTickerDone] = useState(false)
   const shareCode = useMemo(() => Math.random().toString(36).slice(2, 8).toUpperCase(), [])
@@ -75,6 +78,21 @@ export default function Results() {
             <div className="bg-white border border-borderc p-4">
               <SeasonChart races={races} />
             </div>
+          </motion.div>
+        )}
+
+        {/* Highlights + synergies + real history */}
+        {tickerDone && (
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.05 }}>
+            <SeasonHighlights
+              races={races}
+              d1Name={d1Name}
+              d2Name={d2Name}
+              playerStats={simulationResults.playerStats}
+              constructorPos={constructorPos}
+              rivalYear={rivalYear}
+              synergies={getActiveSynergies(team)}
+            />
           </motion.div>
         )}
 

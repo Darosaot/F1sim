@@ -1,0 +1,525 @@
+{
+  "1950": {
+    "driver": "Nino Farina",
+    "driverTeam": "Alfa Romeo",
+    "driverPoints": 30
+  },
+  "1951": {
+    "driver": "Juan Manuel Fangio",
+    "driverTeam": "Alfa Romeo",
+    "driverPoints": 31
+  },
+  "1952": {
+    "driver": "Alberto Ascari",
+    "driverTeam": "Ferrari",
+    "driverPoints": 36
+  },
+  "1953": {
+    "driver": "Alberto Ascari",
+    "driverTeam": "Ferrari",
+    "driverPoints": 34.5
+  },
+  "1954": {
+    "driver": "Juan Manuel Fangio",
+    "driverTeam": "Mercedes",
+    "driverPoints": 42
+  },
+  "1955": {
+    "driver": "Juan Manuel Fangio",
+    "driverTeam": "Mercedes",
+    "driverPoints": 40
+  },
+  "1956": {
+    "driver": "Juan Manuel Fangio",
+    "driverTeam": "Ferrari",
+    "driverPoints": 30
+  },
+  "1957": {
+    "driver": "Juan Manuel Fangio",
+    "driverTeam": "Maserati",
+    "driverPoints": 40
+  },
+  "1958": {
+    "driver": "Mike Hawthorn",
+    "driverTeam": "Ferrari",
+    "driverPoints": 42,
+    "constructor": "Vanwall",
+    "constructorPoints": 48
+  },
+  "1959": {
+    "driver": "Jack Brabham",
+    "driverTeam": "Cooper",
+    "driverPoints": 31,
+    "constructor": "Cooper",
+    "constructorPoints": 40
+  },
+  "1960": {
+    "driver": "Jack Brabham",
+    "driverTeam": "Cooper",
+    "driverPoints": 43,
+    "constructor": "Cooper",
+    "constructorPoints": 48
+  },
+  "1961": {
+    "driver": "Phil Hill",
+    "driverTeam": "Ferrari",
+    "driverPoints": 34,
+    "constructor": "Ferrari",
+    "constructorPoints": 40
+  },
+  "1962": {
+    "driver": "Graham Hill",
+    "driverTeam": "BRM",
+    "driverPoints": 42,
+    "constructor": "BRM",
+    "constructorPoints": 42
+  },
+  "1963": {
+    "driver": "Jim Clark",
+    "driverTeam": "Lotus",
+    "driverPoints": 54,
+    "constructor": "Lotus",
+    "constructorPoints": 54
+  },
+  "1964": {
+    "driver": "John Surtees",
+    "driverTeam": "Ferrari",
+    "driverPoints": 40,
+    "constructor": "Ferrari",
+    "constructorPoints": 45
+  },
+  "1965": {
+    "driver": "Jim Clark",
+    "driverTeam": "Lotus",
+    "driverPoints": 54,
+    "constructor": "Lotus",
+    "constructorPoints": 54
+  },
+  "1966": {
+    "driver": "Jack Brabham",
+    "driverTeam": "Brabham",
+    "driverPoints": 42,
+    "constructor": "Brabham",
+    "constructorPoints": 42
+  },
+  "1967": {
+    "driver": "Denny Hulme",
+    "driverTeam": "Brabham",
+    "driverPoints": 51,
+    "constructor": "Brabham",
+    "constructorPoints": 63
+  },
+  "1968": {
+    "driver": "Graham Hill",
+    "driverTeam": "Lotus",
+    "driverPoints": 48,
+    "constructor": "Lotus",
+    "constructorPoints": 62
+  },
+  "1969": {
+    "driver": "Jackie Stewart",
+    "driverTeam": "Matra",
+    "driverPoints": 63,
+    "constructor": "Matra",
+    "constructorPoints": 66
+  },
+  "1970": {
+    "driver": "Jochen Rindt",
+    "driverTeam": "Lotus",
+    "driverPoints": 45,
+    "constructor": "Lotus",
+    "constructorPoints": 59
+  },
+  "1971": {
+    "driver": "Jackie Stewart",
+    "driverTeam": "Tyrrell",
+    "driverPoints": 62,
+    "constructor": "Tyrrell",
+    "constructorPoints": 73
+  },
+  "1972": {
+    "driver": "Emerson Fittipaldi",
+    "driverTeam": "Lotus",
+    "driverPoints": 61,
+    "constructor": "Lotus",
+    "constructorPoints": 61
+  },
+  "1973": {
+    "driver": "Jackie Stewart",
+    "driverTeam": "Tyrrell",
+    "driverPoints": 71,
+    "constructor": "Lotus",
+    "constructorPoints": 92
+  },
+  "1974": {
+    "driver": "Emerson Fittipaldi",
+    "driverTeam": "McLaren",
+    "driverPoints": 55,
+    "constructor": "McLaren",
+    "constructorPoints": 73
+  },
+  "1975": {
+    "driver": "Niki Lauda",
+    "driverTeam": "Ferrari",
+    "driverPoints": 64.5,
+    "constructor": "Ferrari",
+    "constructorPoints": 72.5
+  },
+  "1976": {
+    "driver": "James Hunt",
+    "driverTeam": "McLaren",
+    "driverPoints": 69,
+    "constructor": "Ferrari",
+    "constructorPoints": 83
+  },
+  "1977": {
+    "driver": "Niki Lauda",
+    "driverTeam": "Ferrari",
+    "driverPoints": 72,
+    "constructor": "Ferrari",
+    "constructorPoints": 95
+  },
+  "1978": {
+    "driver": "Mario Andretti",
+    "driverTeam": "Lotus",
+    "driverPoints": 64,
+    "constructor": "Lotus",
+    "constructorPoints": 86
+  },
+  "1979": {
+    "driver": "Jody Scheckter",
+    "driverTeam": "Ferrari",
+    "driverPoints": 51,
+    "constructor": "Ferrari",
+    "constructorPoints": 113
+  },
+  "1980": {
+    "driver": "Alan Jones",
+    "driverTeam": "Williams",
+    "driverPoints": 67,
+    "constructor": "Williams",
+    "constructorPoints": 120
+  },
+  "1981": {
+    "driver": "Nelson Piquet",
+    "driverTeam": "Brabham",
+    "driverPoints": 50,
+    "constructor": "Williams",
+    "constructorPoints": 95
+  },
+  "1982": {
+    "driver": "Keke Rosberg",
+    "driverTeam": "Williams",
+    "driverPoints": 44,
+    "constructor": "Ferrari",
+    "constructorPoints": 74
+  },
+  "1983": {
+    "driver": "Nelson Piquet",
+    "driverTeam": "Brabham",
+    "driverPoints": 59,
+    "constructor": "Ferrari",
+    "constructorPoints": 89
+  },
+  "1984": {
+    "driver": "Niki Lauda",
+    "driverTeam": "McLaren",
+    "driverPoints": 72,
+    "constructor": "McLaren",
+    "constructorPoints": 143.5
+  },
+  "1985": {
+    "driver": "Alain Prost",
+    "driverTeam": "McLaren",
+    "driverPoints": 73,
+    "constructor": "McLaren",
+    "constructorPoints": 90
+  },
+  "1986": {
+    "driver": "Alain Prost",
+    "driverTeam": "McLaren",
+    "driverPoints": 72,
+    "constructor": "Williams",
+    "constructorPoints": 141
+  },
+  "1987": {
+    "driver": "Nelson Piquet",
+    "driverTeam": "Williams",
+    "driverPoints": 73,
+    "constructor": "Williams",
+    "constructorPoints": 137
+  },
+  "1988": {
+    "driver": "Ayrton Senna",
+    "driverTeam": "McLaren",
+    "driverPoints": 90,
+    "constructor": "McLaren",
+    "constructorPoints": 199
+  },
+  "1989": {
+    "driver": "Alain Prost",
+    "driverTeam": "McLaren",
+    "driverPoints": 76,
+    "constructor": "McLaren",
+    "constructorPoints": 141
+  },
+  "1990": {
+    "driver": "Ayrton Senna",
+    "driverTeam": "McLaren",
+    "driverPoints": 78,
+    "constructor": "McLaren",
+    "constructorPoints": 121
+  },
+  "1991": {
+    "driver": "Ayrton Senna",
+    "driverTeam": "McLaren",
+    "driverPoints": 96,
+    "constructor": "McLaren",
+    "constructorPoints": 139
+  },
+  "1992": {
+    "driver": "Nigel Mansell",
+    "driverTeam": "Williams",
+    "driverPoints": 108,
+    "constructor": "Williams",
+    "constructorPoints": 164
+  },
+  "1993": {
+    "driver": "Alain Prost",
+    "driverTeam": "Williams",
+    "driverPoints": 99,
+    "constructor": "Williams",
+    "constructorPoints": 168
+  },
+  "1994": {
+    "driver": "Michael Schumacher",
+    "driverTeam": "Benetton",
+    "driverPoints": 92,
+    "constructor": "Williams",
+    "constructorPoints": 118
+  },
+  "1995": {
+    "driver": "Michael Schumacher",
+    "driverTeam": "Benetton",
+    "driverPoints": 102,
+    "constructor": "Benetton",
+    "constructorPoints": 137
+  },
+  "1996": {
+    "driver": "Damon Hill",
+    "driverTeam": "Williams",
+    "driverPoints": 97,
+    "constructor": "Williams",
+    "constructorPoints": 175
+  },
+  "1997": {
+    "driver": "Jacques Villeneuve",
+    "driverTeam": "Williams",
+    "driverPoints": 81,
+    "constructor": "Williams",
+    "constructorPoints": 123
+  },
+  "1998": {
+    "driver": "Mika Häkkinen",
+    "driverTeam": "McLaren",
+    "driverPoints": 100,
+    "constructor": "McLaren",
+    "constructorPoints": 156
+  },
+  "1999": {
+    "driver": "Mika Häkkinen",
+    "driverTeam": "McLaren",
+    "driverPoints": 76,
+    "constructor": "Ferrari",
+    "constructorPoints": 128
+  },
+  "2000": {
+    "driver": "Michael Schumacher",
+    "driverTeam": "Ferrari",
+    "driverPoints": 108,
+    "constructor": "Ferrari",
+    "constructorPoints": 170
+  },
+  "2001": {
+    "driver": "Michael Schumacher",
+    "driverTeam": "Ferrari",
+    "driverPoints": 123,
+    "constructor": "Ferrari",
+    "constructorPoints": 179
+  },
+  "2002": {
+    "driver": "Michael Schumacher",
+    "driverTeam": "Ferrari",
+    "driverPoints": 144,
+    "constructor": "Ferrari",
+    "constructorPoints": 221
+  },
+  "2003": {
+    "driver": "Michael Schumacher",
+    "driverTeam": "Ferrari",
+    "driverPoints": 93,
+    "constructor": "Ferrari",
+    "constructorPoints": 158
+  },
+  "2004": {
+    "driver": "Michael Schumacher",
+    "driverTeam": "Ferrari",
+    "driverPoints": 148,
+    "constructor": "Ferrari",
+    "constructorPoints": 262
+  },
+  "2005": {
+    "driver": "Fernando Alonso",
+    "driverTeam": "Renault",
+    "driverPoints": 133,
+    "constructor": "Renault",
+    "constructorPoints": 191
+  },
+  "2006": {
+    "driver": "Fernando Alonso",
+    "driverTeam": "Renault",
+    "driverPoints": 134,
+    "constructor": "Renault",
+    "constructorPoints": 206
+  },
+  "2007": {
+    "driver": "Kimi Räikkönen",
+    "driverTeam": "Ferrari",
+    "driverPoints": 110,
+    "constructor": "Ferrari",
+    "constructorPoints": 204
+  },
+  "2008": {
+    "driver": "Lewis Hamilton",
+    "driverTeam": "McLaren",
+    "driverPoints": 98,
+    "constructor": "Ferrari",
+    "constructorPoints": 172
+  },
+  "2009": {
+    "driver": "Jenson Button",
+    "driverTeam": "Brawn",
+    "driverPoints": 95,
+    "constructor": "Brawn",
+    "constructorPoints": 172
+  },
+  "2010": {
+    "driver": "Sebastian Vettel",
+    "driverTeam": "Red Bull",
+    "driverPoints": 256,
+    "constructor": "Red Bull",
+    "constructorPoints": 498
+  },
+  "2011": {
+    "driver": "Sebastian Vettel",
+    "driverTeam": "Red Bull",
+    "driverPoints": 392,
+    "constructor": "Red Bull",
+    "constructorPoints": 650
+  },
+  "2012": {
+    "driver": "Sebastian Vettel",
+    "driverTeam": "Red Bull",
+    "driverPoints": 281,
+    "constructor": "Red Bull",
+    "constructorPoints": 460
+  },
+  "2013": {
+    "driver": "Sebastian Vettel",
+    "driverTeam": "Red Bull",
+    "driverPoints": 397,
+    "constructor": "Red Bull",
+    "constructorPoints": 596
+  },
+  "2014": {
+    "driver": "Lewis Hamilton",
+    "driverTeam": "Mercedes",
+    "driverPoints": 384,
+    "constructor": "Mercedes",
+    "constructorPoints": 701
+  },
+  "2015": {
+    "driver": "Lewis Hamilton",
+    "driverTeam": "Mercedes",
+    "driverPoints": 381,
+    "constructor": "Mercedes",
+    "constructorPoints": 703
+  },
+  "2016": {
+    "driver": "Nico Rosberg",
+    "driverTeam": "Mercedes",
+    "driverPoints": 385,
+    "constructor": "Mercedes",
+    "constructorPoints": 765
+  },
+  "2017": {
+    "driver": "Lewis Hamilton",
+    "driverTeam": "Mercedes",
+    "driverPoints": 363,
+    "constructor": "Mercedes",
+    "constructorPoints": 668
+  },
+  "2018": {
+    "driver": "Lewis Hamilton",
+    "driverTeam": "Mercedes",
+    "driverPoints": 408,
+    "constructor": "Mercedes",
+    "constructorPoints": 655
+  },
+  "2019": {
+    "driver": "Lewis Hamilton",
+    "driverTeam": "Mercedes",
+    "driverPoints": 413,
+    "constructor": "Mercedes",
+    "constructorPoints": 739
+  },
+  "2020": {
+    "driver": "Lewis Hamilton",
+    "driverTeam": "Mercedes",
+    "driverPoints": 347,
+    "constructor": "Mercedes",
+    "constructorPoints": 573
+  },
+  "2021": {
+    "driver": "Max Verstappen",
+    "driverTeam": "Red Bull",
+    "driverPoints": 395.5,
+    "constructor": "Mercedes",
+    "constructorPoints": 613.5
+  },
+  "2022": {
+    "driver": "Max Verstappen",
+    "driverTeam": "Red Bull",
+    "driverPoints": 454,
+    "constructor": "Red Bull",
+    "constructorPoints": 759
+  },
+  "2023": {
+    "driver": "Max Verstappen",
+    "driverTeam": "Red Bull",
+    "driverPoints": 575,
+    "constructor": "Red Bull",
+    "constructorPoints": 860
+  },
+  "2024": {
+    "driver": "Max Verstappen",
+    "driverTeam": "Red Bull",
+    "driverPoints": 437,
+    "constructor": "McLaren",
+    "constructorPoints": 666
+  },
+  "2025": {
+    "driver": "Lando Norris",
+    "driverTeam": "McLaren",
+    "driverPoints": 423,
+    "constructor": "McLaren",
+    "constructorPoints": 833
+  },
+  "2026": {
+    "driver": "Kimi Antonelli",
+    "driverTeam": "Mercedes",
+    "driverPoints": 156,
+    "constructor": "Mercedes",
+    "constructorPoints": 244
+  }
+}

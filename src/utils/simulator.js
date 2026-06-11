@@ -1,4 +1,5 @@
 import circuits from '../data/circuits.json'
+import { getSynergyBonus } from './synergies'
 
 const POINTS = [25, 18, 15, 12, 10, 8, 6, 4, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
@@ -92,7 +93,8 @@ export function simulateSeason(team, prebuiltRivals = null) {
   const tireBonus  = (tiAttrs.peak_grip * 0.4 + tiAttrs.thermal_window * 0.3 + tiAttrs.durability * 0.3) / 100 * 2
   const budgetBonus= budgetVal / 100 * 1.5
   const relBonus   = relVal / 100 * 1.5
-  const teamBonus  = tdBonus + tireBonus + budgetBonus + relBonus
+  const synergyBonus = getSynergyBonus(team)
+  const teamBonus  = tdBonus + tireBonus + budgetBonus + relBonus + synergyBonus
 
   // Rivals: prebuilt (year-based) or default fixed grid
   const rivalPool = prebuiltRivals ?? RIVAL_TEAMS.map(r => ({
