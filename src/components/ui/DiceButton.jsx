@@ -3,10 +3,10 @@ import { useGameStore } from '../../stores/gameStore'
 
 export default function DiceButton() {
   const rollCard    = useGameStore(s => s.rollCard)
-  const currentCard = useGameStore(s => s.currentCard)
-  const rollCount   = useGameStore(s => s.rollCount)
+  const currentCards = useGameStore(s => s.currentCards)
+  const rollCount    = useGameStore(s => s.rollCount)
 
-  if (currentCard) return null
+  if (currentCards.length > 0) return null
 
   return (
     <motion.button

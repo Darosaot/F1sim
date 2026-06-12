@@ -1,6 +1,8 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useGameStore } from '../../stores/gameStore'
 import { SLOT_LABELS, getElementValue } from '../../utils/ratingEngine'
+import DriverModal from '../ui/DriverModal'
 
 const ATTR_ES = {
   pace:                'Ritmo',
@@ -61,6 +63,7 @@ function getTopAttrs(element, slotKey) {
 }
 
 export default function ElementItem({ slotKey, element, showStats }) {
+  const [showModal, setShowModal] = useState(false)
   const pickElement   = useGameStore(s => s.pickElement)
   const team          = useGameStore(s => s.team)
   // Drivers share a pool of 2 slots — only disabled when both are taken
@@ -71,6 +74,7 @@ export default function ElementItem({ slotKey, element, showStats }) {
 
   const rating      = getElementValue(element, slotKey)
   const isNumeric   = typeof element === 'number'
+  const hasModal    = (slotKey === 'driver1' || slotKey === 'driver2' || slotKey === 'team_principal' || slotKey === 'technical_director') && !isNumeric && element?.attributes
   const displayName = isNumeric
     ? (showStats ? `${element}/100` : '—')
     : element?.name || '—'
@@ -106,6 +110,15 @@ export default function ElementItem({ slotKey, element, showStats }) {
               {subLabel && (
                 <span className="text-[10px] text-ink-lt shrink-0">{subLabel}</span>
               )}
+              {hasModal && (
+                <button
+                  onClick={(e) => { e.stopPropagation(); setShowModal(true) }}
+                  className="text-[9px] text-ink-lt hover:text-rust font-bold transition-colors ml-1"
+                  title="Ver perfil completo"
+                >
+                  ⓘ
+                </button>
+              )}
             </div>
 
             {/* Compact inline attribute chips */}
@@ -138,6 +151,9 @@ export default function ElementItem({ slotKey, element, showStats }) {
           )}
         </div>
       </div>
+      {showModal && (
+        <DriverModal element={element} slotKey={slotKey} onClose={() => setShowModal(false)} />
+      )}
     </motion.button>
   )
 }

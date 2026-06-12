@@ -23,7 +23,7 @@ export default function Game() {
   const wildcards             = useGameStore(s => s.wildcards)
   const resetGame             = useGameStore(s => s.resetGame)
   const filledCount         = useGameStore(s => s.getFilledCount())
-  const currentCard         = useGameStore(s => s.currentCard)
+  const currentCards        = useGameStore(s => s.currentCards)
 
   const eraLabel = { all: 'TODA LA HISTORIA', early: '1950–65', pre_turbo: '1966–82', turbo: '1983–88', v10: 'V10 1989–05', v8: 'V8 2006–13', hybrid: 'HÍBRIDA 2014–21', current: 'ACTUAL 2022+' }[era]
   const modeLabel = mode === 'vip' ? 'CLÁSICO' : 'MEMORIA'
@@ -91,7 +91,7 @@ export default function Game() {
           {/* Season card / placeholder / complete */}
           <div className="flex-1 p-4 flex flex-col gap-4">
             <AnimatePresence mode="wait">
-              {currentCard ? (
+              {currentCards.length > 0 ? (
                 <SeasonCard key="card" />
               ) : phase === 'complete' ? (
                 <motion.div key="complete" initial={{ opacity: 0 }} animate={{ opacity: 1 }}
@@ -110,7 +110,7 @@ export default function Game() {
             </AnimatePresence>
 
             {/* Re-roll buttons */}
-            {currentCard && wildcards > 0 && (
+            {currentCards.length > 0 && wildcards > 0 && (
               <div>
                 <p className="text-[10px] font-bold uppercase tracking-widest text-ink-md mb-2">
                   ¿NO CONVENCE? NUEVO TIRO · {wildcards} RESTANTES
@@ -133,7 +133,7 @@ export default function Game() {
             )}
 
             {/* Roll count */}
-            {rollCount > 0 && phase !== 'complete' && !currentCard && (
+            {rollCount > 0 && phase !== 'complete' && currentCards.length === 0 && (
               <div className="text-center text-[10px] text-ink-lt">Tirada #{rollCount}</div>
             )}
           </div>

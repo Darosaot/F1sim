@@ -69,6 +69,27 @@ const DEFAULT_DRIVER  = { pace: 75, racecraft: 75, consistency: 75, wet_performa
 const DEFAULT_CHASSIS = { downforce: 70, mechanical_grip: 70, drag_efficiency: 70, reliability: 70, weight_distribution: 70 }
 const DEFAULT_ENGINE  = { power: 70, driveability: 70, fuel_efficiency: 70, reliability: 70, deployment_mode: 70 }
 
+function computeHeadline(d1Dnf, d2Dnf, d1RacePos, d2RacePos, d1QualyPos, d2QualyPos, isWet, safetyCar, d1Name, d2Name) {
+  if (d1Dnf && d2Dnf) return `⚠️ Fin de semana negro — abandonan los dos pilotos`
+  if (d1Dnf) return `💥 ${d1Name} abandona con fallo mecánico`
+  if (d2Dnf) return `💥 ${d2Name} abandona con fallo mecánico`
+  const winner = d1RacePos === 1 ? d1Name : d2RacePos === 1 ? d2Name : null
+  if (winner) {
+    const winnerQualyPos = winner === d1Name ? d1QualyPos : d2QualyPos
+    if (isWet) return `🌧️ ${winner} domina bajo la lluvia`
+    if (winnerQualyPos === 1) return `🏆 Pole y victoria para ${winner}`
+    const gain = winnerQualyPos - 1
+    if (gain >= 8) return `🔥 ${winner} — remontada épica de P${winnerQualyPos} a victoria`
+    if (gain >= 4) return `⚡ ${winner} — remontada de P${winnerQualyPos} a victoria`
+    return `🏆 Victoria para ${winner}`
+  }
+  if (!d1Dnf && !d2Dnf && d1RacePos <= 3 && d2RacePos <= 3) return `🥇 Doble podio del equipo`
+  const poleDriver = d1QualyPos === 1 ? d1Name : d2QualyPos === 1 ? d2Name : null
+  if (poleDriver) return `⚡ Pole position para ${poleDriver}`
+  if (safetyCar) return `🚨 Safety car — el campo se reagrupa`
+  return null
+}
+
 export function simulateSeason(team, prebuiltRivals = null) {
   const seasonCircuits = [...circuits].sort(() => Math.random() - 0.5).slice(0, 22)
 
@@ -119,7 +140,11 @@ export function simulateSeason(team, prebuiltRivals = null) {
 
   const races = []
 
-  for (const circuit of seasonCircuits) {
+  const d1Name = team.driver1?.name ?? 'Piloto 1'
+  const d2Name = team.driver2?.name ?? 'Piloto 2'
+
+  for (let raceIdx = 0; raceIdx < seasonCircuits.length; raceIdx++) {
+    const circuit = seasonCircuits[raceIdx]
     const c  = circuit.modifiers
     const isWet = Math.random() < c.wet_probability
     const safetyCar = Math.random() < c.safety_car_probability
@@ -133,8 +158,8 @@ export function simulateSeason(team, prebuiltRivals = null) {
     ])
 
     const allQualyEntries = [
-      { name: team.driver1?.name ?? 'Piloto 1', team: 'Tu Equipo', score: d1QualyBase, isPlayer: true, isD1: true },
-      { name: team.driver2?.name ?? 'Piloto 2', team: 'Tu Equipo', score: d2QualyBase, isPlayer: true, isD1: false },
+      { name: d1Name, team: 'Tu Equipo', score: d1QualyBase, isPlayer: true, isD1: true },
+      { name: d2Name, team: 'Tu Equipo', score: d2QualyBase, isPlayer: true, isD1: false },
       ...rivalQualyScores,
     ].sort((a, b) => b.score - a.score)
 
@@ -148,14 +173,19 @@ export function simulateSeason(team, prebuiltRivals = null) {
     const d1DNF = isDNF(enAttrs.reliability, relVal)
     const d2DNF = isDNF(enAttrs.reliability, relVal)
 
+    // Car develops throughout season — TD innovation drives the improvement from race 10 onward
+    const devBonus = raceIdx >= 9
+      ? (tdAttrs.innovation / 100) * (raceIdx - 9) * 0.12
+      : 0
+
     const d1RaceBase = d1DNF ? 0
       : (calculateDriverRacePerf(d1Attrs, effCh, effEn, circuit, isWet)
-        + teamBonus
+        + teamBonus + devBonus
         + gridBonus(d1GridPos, c.overtaking_difficulty)) * rng(0.84, 1.16)
 
     const d2RaceBase = d2DNF ? 0
       : (calculateDriverRacePerf(d2Attrs, effCh, effEn, circuit, isWet)
-        + teamBonus
+        + teamBonus + devBonus
         + gridBonus(d2GridPos, c.overtaking_difficulty)) * rng(0.84, 1.16)
 
     const rivalRaceScores = rivals.flatMap(r => [
@@ -164,8 +194,8 @@ export function simulateSeason(team, prebuiltRivals = null) {
     ])
 
     const allRaceEntries = [
-      { name: team.driver1?.name ?? 'Piloto 1', team: 'Tu Equipo', score: d1RaceBase, isPlayer: true, isD1: true,  dnf: d1DNF },
-      { name: team.driver2?.name ?? 'Piloto 2', team: 'Tu Equipo', score: d2RaceBase, isPlayer: true, isD1: false, dnf: d2DNF },
+      { name: d1Name, team: 'Tu Equipo', score: d1RaceBase, isPlayer: true, isD1: true,  dnf: d1DNF },
+      { name: d2Name, team: 'Tu Equipo', score: d2RaceBase, isPlayer: true, isD1: false, dnf: d2DNF },
       ...rivalRaceScores,
     ].sort((a, b) => b.score - a.score)
 
@@ -221,12 +251,11 @@ export function simulateSeason(team, prebuiltRivals = null) {
       // Combined (for chart)
       racePoints: d1RacePoints + d2RacePoints,
       playerPoints: playerD1Points + playerD2Points,
+      headline: computeHeadline(d1DNF, d2DNF, d1RacePos, d2RacePos, d1GridPos, d2GridPos, isWet, safetyCar, d1Name, d2Name),
     })
   }
 
   // --- STANDINGS ---
-  const d1Name = team.driver1?.name ?? 'Piloto 1'
-  const d2Name = team.driver2?.name ?? 'Piloto 2'
 
   // Driver standings (22 drivers)
   const driverStandings = [
@@ -266,6 +295,7 @@ export function simulateSeason(team, prebuiltRivals = null) {
     constructorStandings,
     // Legacy field (kept for ChampionshipCard compat)
     standings: constructorStandings,
+    developmentBonusApplied: true,
     d1FinalPos,
     d2FinalPos,
     constructorPos,
