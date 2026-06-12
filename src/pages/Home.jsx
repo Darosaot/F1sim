@@ -1,6 +1,8 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useGameStore } from '../stores/gameStore'
 import { getAvailableRivalYears } from '../utils/rivalBuilder'
+import { loadHistory } from '../hooks/useGameHistory'
 
 const STEPS = [
   { n: '01', icon: '🎲', title: 'TIRA',      desc: 'Obtén un equipo y temporada aleatorio' },
@@ -32,6 +34,7 @@ const ERA_GROUPS = [
 const ALL_RIVAL_YEARS = getAvailableRivalYears()
 
 export default function Home() {
+  const [history] = useState(() => loadHistory())
   const startGame         = useGameStore(s => s.startGame)
   const era               = useGameStore(s => s.era)
   const mode              = useGameStore(s => s.mode)
@@ -214,6 +217,29 @@ export default function Home() {
 
         {/* Divider */}
         <hr className="divider my-10" />
+
+        {history.length > 0 && (
+          <div className="mb-8">
+            <p className="text-[10px] font-bold uppercase tracking-widest text-ink-md mb-3">ÚLTIMAS PARTIDAS</p>
+            <div className="border border-borderc bg-white divide-y divide-borderc">
+              {history.map((entry, i) => (
+                <div key={i} className="flex items-center gap-3 px-4 py-2 text-xs">
+                  <span className="text-ink-lt shrink-0 w-14">
+                    {new Date(entry.date).toLocaleDateString('es-ES', { day: 'numeric', month: 'short' })}
+                  </span>
+                  <span className="font-semibold text-ink truncate flex-1 min-w-0">
+                    {entry.d1Name} · {entry.d2Name}
+                  </span>
+                  <span className={`font-display font-black shrink-0 ${entry.constructorPos <= 3 ? 'text-rust' : 'text-ink'}`}>
+                    P{entry.constructorPos}
+                  </span>
+                  <span className="text-ink-lt shrink-0">{entry.points} pts</span>
+                  <span className="text-[9px] text-ink-lt shrink-0 uppercase tracking-wide">vs {entry.rivalYear}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Steps */}
         <div className="grid grid-cols-3 gap-px bg-borderc border border-borderc">

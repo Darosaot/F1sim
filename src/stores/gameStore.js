@@ -29,7 +29,7 @@ export const useGameStore = create((set, get) => ({
 
   // Draft state
   wildcards: 3,
-  currentCard: null,
+  currentCards: [],
   usedSeasonIds: [],
   rollCount: 0,
 
@@ -50,7 +50,7 @@ export const useGameStore = create((set, get) => ({
     set({
       phase: 'drafting',
       wildcards: 3,
-      currentCard: null,
+      currentCards: [],
       usedSeasonIds: [],
       rollCount: 0,
       team: { ...EMPTY_TEAM },
@@ -74,35 +74,36 @@ export const useGameStore = create((set, get) => ({
       aero: 'aero', budget: 'budget', reliability: 'reliability',
     }
 
-    // Try up to 15 draws to find a card with at least one pickable slot.
-    // Cards that have nothing to offer are still consumed (added to usedIds).
     const newUsedIds = [...usedSeasonIds]
-    let season = null, resolved = null
+    const cards = []
 
-    for (let attempt = 0; attempt < 15; attempt++) {
-      const candidate = getRandomSeason(era, newUsedIds, draftDifficulty)
-      if (!candidate) break
-      const r = resolveSeasonElements(candidate)
-      newUsedIds.push(candidate.id)
-
-      const hasPickable = unfilledSlots.some(slot => {
-        const val = r[SLOT_FIELD[slot]]
-        return val !== null && val !== undefined
-      })
-
-      if (hasPickable) { season = candidate; resolved = r; break }
+    // Draw up to 3 cards, each requiring ≥1 pickable slot
+    for (let cardNum = 0; cardNum < 3; cardNum++) {
+      let picked = null
+      for (let attempt = 0; attempt < 15 && !picked; attempt++) {
+        const candidate = getRandomSeason(era, newUsedIds, draftDifficulty)
+        if (!candidate) break
+        const r = resolveSeasonElements(candidate)
+        newUsedIds.push(candidate.id)
+        const hasPickable = unfilledSlots.some(slot => {
+          const val = r[SLOT_FIELD[slot]]
+          return val !== null && val !== undefined
+        })
+        if (hasPickable) picked = r
+      }
+      if (picked) cards.push(picked)
     }
 
-    if (!season) {
+    if (cards.length === 0) {
       // Truly stuck — auto-skip all remaining null slots and complete
       const newTeam = { ...team }
       unfilledSlots.forEach(k => { newTeam[k] = null })
-      set({ team: newTeam, phase: 'complete', currentCard: null, usedSeasonIds: newUsedIds })
+      set({ team: newTeam, phase: 'complete', currentCards: [], usedSeasonIds: newUsedIds })
       return
     }
 
     set({
-      currentCard: resolved,
+      currentCards: cards,
       usedSeasonIds: newUsedIds,
       rollCount: get().rollCount + 1,
     })
@@ -124,7 +125,7 @@ export const useGameStore = create((set, get) => ({
     const allFilled = SLOT_KEYS.every(k => team[k] !== undefined)
     set({
       team,
-      currentCard: null,
+      currentCards: [],
       phase: allFilled ? 'complete' : 'drafting',
     })
     if (!allFilled) {
@@ -136,30 +137,39 @@ export const useGameStore = create((set, get) => ({
   useWildcard: () => {
     const { wildcards } = get()
     if (wildcards <= 0) return
-    set({ wildcards: wildcards - 1, currentCard: null })
+    set({ wildcards: wildcards - 1, currentCards: [] })
     setTimeout(() => get().rollCard(), 300)
   },
 
   // Re-roll keeping the same team, just a different season year
   useWildcardSameTeam: () => {
-    const { wildcards, era, usedSeasonIds, currentCard } = get()
-    if (wildcards <= 0 || !currentCard) return
-    const teamName = currentCard.season.team
+    const { wildcards, era, usedSeasonIds, currentCards } = get()
+    if (wildcards <= 0 || !currentCards.length) return
+    const teamName = currentCards[0].season.team
     const all = getFilteredSeasons(era).filter(
       s => s.team === teamName && !usedSeasonIds.includes(s.id)
     )
     if (all.length === 0) {
       // Fallback: roll any team
-      set({ wildcards: wildcards - 1, currentCard: null })
+      set({ wildcards: wildcards - 1, currentCards: [] })
       setTimeout(() => get().rollCard(), 300)
       return
     }
-    const season = all[Math.floor(Math.random() * all.length)]
-    const resolved = resolveSeasonElements(season)
+    // Draw up to 3 cards from the same team
+    const newUsedIds = [...usedSeasonIds]
+    const cards = []
+    const available = [...all]
+    for (let i = 0; i < 3 && available.length > 0; i++) {
+      const idx = Math.floor(Math.random() * available.length)
+      const season = available.splice(idx, 1)[0]
+      const resolved = resolveSeasonElements(season)
+      newUsedIds.push(season.id)
+      cards.push(resolved)
+    }
     set({
       wildcards: wildcards - 1,
-      currentCard: resolved,
-      usedSeasonIds: [...usedSeasonIds, season.id],
+      currentCards: cards,
+      usedSeasonIds: newUsedIds,
       rollCount: get().rollCount + 1,
     })
   },
@@ -181,7 +191,7 @@ export const useGameStore = create((set, get) => ({
       mode: payload.mode || 'vip',
       rivalYear: payload.ry || 2024,
       phase: 'complete',
-      currentCard: null,
+      currentCards: [],
       wildcards: 0,
       simulationResults: null,
     })
@@ -192,7 +202,7 @@ export const useGameStore = create((set, get) => ({
     set({
       phase: 'setup',
       wildcards: 3,
-      currentCard: null,
+      currentCards: [],
       usedSeasonIds: [],
       rollCount: 0,
       team: { ...EMPTY_TEAM },

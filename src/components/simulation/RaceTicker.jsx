@@ -101,6 +101,12 @@ export default function RaceTicker({ races, d1Name, d2Name }) {
               />
             </div>
 
+            {race.headline && (
+              <div className="mt-1.5 text-[9px] italic text-ink-md">
+                {race.headline}
+              </div>
+            )}
+
             {/* Race total */}
             <div className="flex justify-end mt-1 pt-1 border-t border-borderc">
               <span className="text-[9px] text-ink-md">

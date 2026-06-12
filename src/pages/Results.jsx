@@ -7,6 +7,7 @@ import ChampionshipCard from '../components/results/ChampionshipCard'
 import SeasonHighlights from '../components/results/SeasonHighlights'
 import { getVerdict } from '../utils/simulator'
 import { getActiveSynergies } from '../utils/synergies'
+import { saveGameResult } from '../hooks/useGameHistory'
 
 export default function Results() {
   const simulationResults = useGameStore(s => s.simulationResults)
@@ -20,6 +21,10 @@ export default function Results() {
     const delay = (simulationResults.races?.length ?? 22) * 400 + 900
     const t = setTimeout(() => setTickerDone(true), delay)
     return () => clearTimeout(t)
+  }, [simulationResults])
+
+  useEffect(() => {
+    if (simulationResults) saveGameResult(simulationResults)
   }, [simulationResults])
 
   if (!simulationResults) return null
@@ -93,6 +98,33 @@ export default function Results() {
               rivalYear={rivalYear}
               synergies={getActiveSynergies(team)}
             />
+          </motion.div>
+        )}
+
+        {tickerDone && constructorPos === 1 && (
+          <motion.div
+            initial={{ scale: 0.5, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ type: 'spring', stiffness: 200, damping: 12, delay: 0.15 }}
+            className="text-center py-4"
+          >
+            <div className="text-5xl mb-1">🏆</div>
+            <div className="font-display font-black text-xl uppercase tracking-widest text-ink">
+              CAMPEONES DEL MUNDO
+            </div>
+          </motion.div>
+        )}
+        {tickerDone && d1FinalPos === 1 && constructorPos !== 1 && (
+          <motion.div
+            initial={{ scale: 0.5, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ type: 'spring', stiffness: 200, damping: 12, delay: 0.15 }}
+            className="text-center py-3"
+          >
+            <div className="text-4xl mb-1">🏆</div>
+            <div className="font-display font-black text-lg uppercase tracking-widest text-ink">
+              CAMPEÓN DE PILOTOS
+            </div>
           </motion.div>
         )}
 
