@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useGameStore } from '../../stores/gameStore'
 import { getTeamColors } from '../../utils/teamColors'
@@ -62,49 +61,20 @@ function CardBody({ card, mode }) {
 export default function SeasonCard() {
   const currentCards = useGameStore(s => s.currentCards)
   const mode = useGameStore(s => s.mode)
-  const [activeIdx, setActiveIdx] = useState(0)
-
-  useEffect(() => { setActiveIdx(0) }, [currentCards])
 
   if (!currentCards.length) return null
-
-  const safeIdx = Math.min(activeIdx, currentCards.length - 1)
-  const activeCard = currentCards[safeIdx]
+  const card = currentCards[0]
 
   return (
     <AnimatePresence mode="wait">
       <motion.div
-        key={currentCards.map(c => c.season.id).join('-')}
+        key={card.season.id}
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -12 }}
         transition={{ duration: 0.25, ease: 'easeOut' }}
       >
-        {/* Tabs */}
-        {currentCards.length > 1 && (
-          <div className="flex gap-0.5 mb-0">
-            {currentCards.map((card, i) => {
-              const colors = getTeamColors(card.season.team)
-              const isActive = i === safeIdx
-              return (
-                <button
-                  key={card.season.id}
-                  onClick={() => setActiveIdx(i)}
-                  className={`flex-1 px-2 py-1.5 border transition-colors text-left ${
-                    isActive
-                      ? 'bg-white border-borderc text-ink'
-                      : 'bg-sand-lt border-borderc text-ink-md hover:text-ink'
-                  }`}
-                  style={isActive ? { borderLeftWidth: 3, borderLeftColor: colors.primary, borderBottomColor: 'white' } : {}}
-                >
-                  <div className="text-[9px] font-bold uppercase tracking-wide truncate leading-tight">{card.season.team}</div>
-                  <div className="text-[10px] font-black text-ink">{card.season.year}</div>
-                </button>
-              )
-            })}
-          </div>
-        )}
-        <CardBody card={activeCard} mode={mode} />
+        <CardBody card={card} mode={mode} />
       </motion.div>
     </AnimatePresence>
   )
