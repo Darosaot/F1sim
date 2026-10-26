@@ -9,6 +9,7 @@ import EraSelector from '../components/ui/EraSelector'
 import ModeToggle from '../components/ui/ModeToggle'
 import { simulateSeason } from '../utils/simulator'
 import { buildRivalsForYear } from '../utils/rivalBuilder'
+import { SLOT_COUNT } from '../utils/ratingEngine'
 
 export default function Game() {
   const phase               = useGameStore(s => s.phase)
@@ -30,7 +31,7 @@ export default function Game() {
 
   function handleSimulate() {
     const rivals = buildRivalsForYear(rivalYear)
-    setSimulationResults({ ...simulateSeason(team, rivals), rivalYear })
+    setSimulationResults({ ...simulateSeason(team, rivals, { year: rivalYear }), rivalYear })
   }
 
   return (
@@ -58,13 +59,13 @@ export default function Game() {
           <span className="mx-1 text-ink-lt">·</span>
           <span>VS {rivalYear}</span>
           <span className="mx-1 text-ink-lt">·</span>
-          <span className={filledCount === 10 ? 'text-rust' : ''}>{filledCount}/10</span>
+          <span className={filledCount === SLOT_COUNT ? 'text-rust' : ''}>{filledCount}/{SLOT_COUNT}</span>
         </div>
 
         {/* Mobile progress pill */}
         <div className="flex md:hidden items-center gap-2">
-          <span className={`text-[10px] font-bold uppercase tracking-wider ${filledCount === 10 ? 'text-rust' : 'text-ink-md'}`}>
-            {filledCount}/10
+          <span className={`text-[10px] font-bold uppercase tracking-wider ${filledCount === SLOT_COUNT ? 'text-rust' : 'text-ink-md'}`}>
+            {filledCount}/{SLOT_COUNT}
           </span>
           <WildcardBar />
         </div>
@@ -97,7 +98,7 @@ export default function Game() {
                 <motion.div key="complete" initial={{ opacity: 0 }} animate={{ opacity: 1 }}
                   className="border-2 border-ink p-4">
                   <div className="text-[10px] font-bold uppercase tracking-widest text-ink-md mb-1">EQUIPO COMPLETO</div>
-                  <div className="font-display font-black text-3xl text-ink">10/10</div>
+                  <div className="font-display font-black text-3xl text-ink">{SLOT_COUNT}/{SLOT_COUNT}</div>
                 </motion.div>
               ) : (
                 <motion.div key="placeholder" initial={{ opacity: 0 }} animate={{ opacity: 1 }}

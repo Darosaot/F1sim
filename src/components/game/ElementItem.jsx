@@ -47,6 +47,7 @@ const SLOT_SHORT = {
   driver2:            'DRV 2',
   team_principal:     'TP',
   technical_director: 'TD',
+  strategist:         'STRAT',
   chassis:            'CAR',
   engine:             'ENG',
   tires:              'TYRES',
@@ -74,7 +75,7 @@ export default function ElementItem({ slotKey, element, showStats }) {
 
   const rating      = getElementValue(element, slotKey)
   const isNumeric   = typeof element === 'number'
-  const hasModal    = (slotKey === 'driver1' || slotKey === 'driver2' || slotKey === 'team_principal' || slotKey === 'technical_director') && !isNumeric && element?.attributes
+  const hasModal    = ['driver1', 'driver2', 'team_principal', 'technical_director', 'strategist'].includes(slotKey) && !isNumeric && element?.attributes
   const displayName = isNumeric
     ? (showStats ? `${element}/100` : '—')
     : element?.name || '—'

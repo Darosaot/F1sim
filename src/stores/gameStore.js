@@ -7,6 +7,7 @@ const EMPTY_TEAM = {
   driver2: undefined,
   team_principal: undefined,
   technical_director: undefined,
+  strategist: undefined,
   chassis: undefined,
   engine: undefined,
   tires: undefined,

@@ -1,13 +1,11 @@
 import { useGameStore } from '../../stores/gameStore'
-import { SLOT_LABELS, calculateTeamRating, getElementValue } from '../../utils/ratingEngine'
+import { SLOT_LABELS, SLOT_KEYS, SLOT_COUNT, calculateTeamRating, getElementValue } from '../../utils/ratingEngine'
 import { getActiveSynergies } from '../../utils/synergies'
-
-const SLOT_KEYS = Object.keys(SLOT_LABELS)
 
 // Driver vs Car split for attack/defense equivalent
 const DRIVER_KEYS  = ['driver1', 'driver2']
 const CAR_KEYS     = ['chassis', 'engine', 'aero', 'tires', 'reliability']
-const MGMT_KEYS    = ['team_principal', 'technical_director', 'budget']
+const MGMT_KEYS    = ['team_principal', 'technical_director', 'strategist', 'budget']
 
 function avg(team, keys) {
   const vals = keys.map(k => {
@@ -33,9 +31,9 @@ export default function TeamBuilder() {
       {/* Header */}
       <div className="flex items-baseline justify-between mb-3">
         <span className="text-xs font-bold uppercase tracking-widest text-ink-md">
-          PLANTILLA · {filledCount}/10
+          PLANTILLA · {filledCount}/{SLOT_COUNT}
         </span>
-        {filledCount === 10 && (
+        {filledCount === SLOT_COUNT && (
           <span className="font-display font-black text-3xl text-ink">{rating.toFixed(0)}</span>
         )}
       </div>
@@ -44,7 +42,7 @@ export default function TeamBuilder() {
       <div className="h-0.5 bg-borderc mb-3">
         <div
           className="h-full bg-ink transition-all duration-500"
-          style={{ width: `${(filledCount / 10) * 100}%` }}
+          style={{ width: `${(filledCount / SLOT_COUNT) * 100}%` }}
         />
       </div>
 
@@ -102,6 +100,7 @@ export default function TeamBuilder() {
                    : key === 'driver2'          ? 'DRV 2'
                    : key === 'team_principal'   ? 'TP'
                    : key === 'technical_director' ? 'TD'
+                   : key === 'strategist'       ? 'STRAT'
                    : key === 'chassis'          ? 'CAR'
                    : key === 'engine'           ? 'ENG'
                    : key === 'tires'            ? 'TYRES'
