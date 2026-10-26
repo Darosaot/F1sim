@@ -17,6 +17,17 @@ const EMPTY_TEAM = {
 
 const SLOT_KEYS = Object.keys(EMPTY_TEAM)
 
+const DRIVER_KEYS = ['driver1', 'driver2']
+const has = v => v !== null && v !== undefined
+
+// True if the resolved season offers at least one element for an open slot.
+// Drivers are a shared pool: any card driver can fill any open driver seat.
+function hasPickable(resolved, team) {
+  const driverOpen = DRIVER_KEYS.some(k => team[k] === undefined)
+  if (driverOpen && DRIVER_KEYS.some(k => has(resolved[k]))) return true
+  return SLOT_KEYS.some(k => !DRIVER_KEYS.includes(k) && team[k] === undefined && has(resolved[k]))
+}
+
 export const useGameStore = create((set, get) => ({
   // Config
   era: 'all',
@@ -66,32 +77,16 @@ export const useGameStore = create((set, get) => ({
     const unfilledSlots = SLOT_KEYS.filter(k => team[k] === undefined)
     if (unfilledSlots.length === 0) { set({ phase: 'complete' }); return }
 
-    // Map slot key → resolved card field name
-    const SLOT_FIELD = {
-      driver1: 'driver1', driver2: 'driver2',
-      team_principal: 'team_principal', technical_director: 'technical_director',
-      chassis: 'chassis', engine: 'engine', tires: 'tires',
-      aero: 'aero', budget: 'budget', reliability: 'reliability',
-    }
-
     const newUsedIds = [...usedSeasonIds]
     const cards = []
 
-    // Draw up to 3 cards, each requiring ≥1 pickable slot
-    for (let cardNum = 0; cardNum < 3; cardNum++) {
-      let picked = null
-      for (let attempt = 0; attempt < 15 && !picked; attempt++) {
-        const candidate = getRandomSeason(era, newUsedIds, draftDifficulty)
-        if (!candidate) break
-        const r = resolveSeasonElements(candidate)
-        newUsedIds.push(candidate.id)
-        const hasPickable = unfilledSlots.some(slot => {
-          const val = r[SLOT_FIELD[slot]]
-          return val !== null && val !== undefined
-        })
-        if (hasPickable) picked = r
-      }
-      if (picked) cards.push(picked)
+    // Draw a single team-season that offers ≥1 pickable slot
+    for (let attempt = 0; attempt < 15; attempt++) {
+      const candidate = getRandomSeason(era, newUsedIds, draftDifficulty)
+      if (!candidate) break
+      const r = resolveSeasonElements(candidate)
+      newUsedIds.push(candidate.id)
+      if (hasPickable(r, team)) { cards.push(r); break }
     }
 
     if (cards.length === 0) {
@@ -143,29 +138,23 @@ export const useGameStore = create((set, get) => ({
 
   // Re-roll keeping the same team, just a different season year
   useWildcardSameTeam: () => {
-    const { wildcards, era, usedSeasonIds, currentCards } = get()
+    const { wildcards, era, usedSeasonIds, currentCards, team } = get()
     if (wildcards <= 0 || !currentCards.length) return
     const teamName = currentCards[0].season.team
-    const all = getFilteredSeasons(era).filter(
-      s => s.team === teamName && !usedSeasonIds.includes(s.id)
-    )
+    const all = getFilteredSeasons(era)
+      .filter(s => s.team === teamName && !usedSeasonIds.includes(s.id))
+      .map(resolveSeasonElements)
+      .filter(r => hasPickable(r, team))
     if (all.length === 0) {
       // Fallback: roll any team
       set({ wildcards: wildcards - 1, currentCards: [] })
       setTimeout(() => get().rollCard(), 300)
       return
     }
-    // Draw up to 3 cards from the same team
-    const newUsedIds = [...usedSeasonIds]
-    const cards = []
-    const available = [...all]
-    for (let i = 0; i < 3 && available.length > 0; i++) {
-      const idx = Math.floor(Math.random() * available.length)
-      const season = available.splice(idx, 1)[0]
-      const resolved = resolveSeasonElements(season)
-      newUsedIds.push(season.id)
-      cards.push(resolved)
-    }
+    // Draw one other season of the same team
+    const card = all[Math.floor(Math.random() * all.length)]
+    const cards = [card]
+    const newUsedIds = [...usedSeasonIds, card.season.id]
     set({
       wildcards: wildcards - 1,
       currentCards: cards,
