@@ -1,5 +1,5 @@
 import { useGameStore } from '../../stores/gameStore'
-import { SLOT_LABELS, SLOT_KEYS, SLOT_COUNT, calculateTeamRating, getElementValue } from '../../utils/ratingEngine'
+import { SLOT_KEYS, SLOT_COUNT, calculateTeamRating, getElementValue, getBenchmark } from '../../utils/ratingEngine'
 import { getActiveSynergies } from '../../utils/synergies'
 
 // Driver vs Car split for attack/defense equivalent
@@ -20,7 +20,11 @@ function avg(team, keys) {
 export default function TeamBuilder() {
   const team        = useGameStore(s => s.team)
   const filledCount = useGameStore(s => s.getFilledCount())
+  const mode        = useGameStore(s => s.mode)
+  const showStats   = mode === 'vip'
   const rating      = calculateTeamRating(team)
+  const complete    = filledCount === SLOT_COUNT
+  const benchmark   = complete && showStats ? getBenchmark(rating) : null
 
   const driverAvg = avg(team, DRIVER_KEYS)
   const carAvg    = avg(team, CAR_KEYS)
@@ -33,10 +37,20 @@ export default function TeamBuilder() {
         <span className="text-xs font-bold uppercase tracking-widest text-ink-md">
           PLANTILLA · {filledCount}/{SLOT_COUNT}
         </span>
-        {filledCount === SLOT_COUNT && (
-          <span className="font-display font-black text-3xl text-ink">{rating.toFixed(0)}</span>
+        {(complete || showStats) && (
+          <span
+            className={`font-display font-black text-3xl ${complete ? 'text-ink' : 'text-ink-lt'}`}
+            title={complete ? 'Valoración del equipo' : 'Proyección: los puestos vacíos cuentan como un elemento medio'}
+          >
+            {rating.toFixed(0)}
+          </span>
         )}
       </div>
+      {benchmark && (
+        <p className="text-[10px] text-ink-md -mt-2 mb-2">
+          Nivel de <span className="font-bold text-ink">{benchmark.name}</span>
+        </p>
+      )}
 
       {/* Progress bar */}
       <div className="h-0.5 bg-borderc mb-3">
@@ -84,7 +98,6 @@ export default function TeamBuilder() {
         {SLOT_KEYS.map(key => {
           const el      = team[key]
           const isEmpty = el === null || el === undefined
-          const slotInfo = SLOT_LABELS[key]
           const rating   = isEmpty ? null : getElementValue(el, key)
           const name     = isEmpty
             ? null

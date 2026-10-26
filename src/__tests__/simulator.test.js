@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import circuits from '../data/circuits.json'
 import seasons from '../data/seasons.json'
-import { simulateSeason, pointsForYear, SEASON_LENGTH } from '../utils/simulator'
+import { simulateSeason, simulateOutcomes, pointsForYear, SEASON_LENGTH } from '../utils/simulator'
 import { buildRivalsForYear } from '../utils/rivalBuilder'
 import { resolveSeasonElements } from '../utils/dataQueries'
 import { buildProfile, expectedStrength } from '../utils/performanceModel'
@@ -98,5 +98,18 @@ describe('team rating', () => {
     const r = calculateTeamRating(season('red_bull_2023'))
     const b = getBenchmark(r)
     expect(Math.abs(b.rating - r)).toBeLessThan(0.5)
+  })
+})
+
+describe('simulateOutcomes', () => {
+  it('summarises many seasons into consistent odds', () => {
+    const rivals = buildRivalsForYear(2000)
+    const o = simulateOutcomes(season('ferrari_2002'), rivals, { year: 2000, runs: 50, rng: mulberry32(1) })
+    expect(o.histogram).toHaveLength(rivals.length + 1)
+    expect(o.histogram.reduce((a, b) => a + b, 0)).toBeCloseTo(1)
+    expect(o.constructorTitle).toBeCloseTo(o.histogram[0])
+    expect(o.podium).toBeGreaterThanOrEqual(o.constructorTitle)
+    expect(o.points.p10).toBeLessThanOrEqual(o.points.p50)
+    expect(o.points.p50).toBeLessThanOrEqual(o.points.p90)
   })
 })

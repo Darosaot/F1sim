@@ -196,3 +196,30 @@ export function getVerdict(d1Pos, d2Pos, constructorPos) {
   if (bestDriver <= 5) return `P${bestDriver} pilotos · P${constructorPos} constructores. Cerca de lo más alto.`
   return `P${bestDriver} pilotos · P${constructorPos} constructores. Hay margen de mejora.`
 }
+
+// Re-run the same season many times to show how much of a result was luck:
+// title odds, podium odds and the spread of constructor points.
+export function simulateOutcomes(team, rivals, { year = 2024, runs = 200, rng = Math.random } = {}) {
+  const positions = []
+  const points = []
+  let driverTitles = 0
+  for (let i = 0; i < runs; i++) {
+    const r = simulateSeason(team, rivals, { year, rng })
+    positions.push(r.constructorPos)
+    points.push(r.playerStats.points)
+    if (r.d1FinalPos === 1 || r.d2FinalPos === 1) driverTitles++
+  }
+  const share = pred => positions.filter(pred).length / runs
+  const sorted = [...points].sort((a, b) => a - b)
+  const pct = q => sorted[Math.min(runs - 1, Math.floor(q * runs))]
+  const histogram = Array.from({ length: rivals.length + 1 }, (_, i) => share(p => p === i + 1))
+  return {
+    runs,
+    constructorTitle: share(p => p === 1),
+    driverTitle: driverTitles / runs,
+    podium: share(p => p <= 3),
+    medianPosition: [...positions].sort((a, b) => a - b)[Math.floor(runs / 2)],
+    points: { p10: pct(0.1), p50: pct(0.5), p90: pct(0.9) },
+    histogram,
+  }
+}

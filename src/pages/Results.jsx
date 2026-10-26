@@ -5,6 +5,7 @@ import RaceTicker from '../components/simulation/RaceTicker'
 import SeasonChart from '../components/simulation/SeasonChart'
 import ChampionshipCard from '../components/results/ChampionshipCard'
 import SeasonHighlights from '../components/results/SeasonHighlights'
+import OutcomeRange from '../components/results/OutcomeRange'
 import { getVerdict } from '../utils/simulator'
 import { getActiveSynergies } from '../utils/synergies'
 import { saveGameResult } from '../hooks/useGameHistory'
@@ -98,6 +99,12 @@ export default function Results() {
               rivalYear={rivalYear}
               synergies={getActiveSynergies(team)}
             />
+          </motion.div>
+        )}
+
+        {tickerDone && (
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.08 }}>
+            <OutcomeRange team={team} rivalYear={rivalYear ?? 2024} constructorPos={constructorPos} />
           </motion.div>
         )}
 
