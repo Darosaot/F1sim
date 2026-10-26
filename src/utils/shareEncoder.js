@@ -14,6 +14,7 @@ export function encodeTeam(team, config) {
     era: config?.era || 'all',
     mode: config?.mode || 'vip',
     ry: config?.rivalYear,
+    dy: config?.daily || undefined,
   }
   return btoa(JSON.stringify(payload))
 }

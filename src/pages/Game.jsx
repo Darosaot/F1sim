@@ -10,6 +10,7 @@ import ModeToggle from '../components/ui/ModeToggle'
 import { simulateSeason } from '../utils/simulator'
 import { buildRivalsForYear } from '../utils/rivalBuilder'
 import { SLOT_COUNT } from '../utils/ratingEngine'
+import { dailySeasonRng } from '../utils/daily'
 
 export default function Game() {
   const phase               = useGameStore(s => s.phase)
@@ -25,13 +26,17 @@ export default function Game() {
   const resetGame             = useGameStore(s => s.resetGame)
   const filledCount         = useGameStore(s => s.getFilledCount())
   const currentCards        = useGameStore(s => s.currentCards)
+  const daily               = useGameStore(s => s.daily)
+  const shared              = useGameStore(s => s.shared)
 
   const eraLabel = { all: 'TODA LA HISTORIA', early: '1950–65', pre_turbo: '1966–82', turbo: '1983–88', v10: 'V10 1989–05', v8: 'V8 2006–13', hybrid: 'HÍBRIDA 2014–21', current: 'ACTUAL 2022+' }[era]
   const modeLabel = mode === 'vip' ? 'CLÁSICO' : 'MEMORIA'
 
   function handleSimulate() {
     const rivals = buildRivalsForYear(rivalYear)
-    setSimulationResults({ ...simulateSeason(team, rivals, { year: rivalYear }), rivalYear })
+    // Daily challenge seasons are seeded: same team, same result for everyone
+    const rng = daily ? dailySeasonRng(daily) : Math.random
+    setSimulationResults({ ...simulateSeason(team, rivals, { year: rivalYear, rng }), rivalYear, daily, shared })
   }
 
   return (
@@ -53,6 +58,12 @@ export default function Game() {
         </button>
 
         <div className="hidden md:flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest text-ink-md">
+          {daily && (
+            <>
+              <span className="text-rust">RETO DIARIO {daily}</span>
+              <span className="mx-1 text-ink-lt">·</span>
+            </>
+          )}
           <span>{eraLabel}</span>
           <span className="mx-1 text-ink-lt">·</span>
           <span>{modeLabel}</span>

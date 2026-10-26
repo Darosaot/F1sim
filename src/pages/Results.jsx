@@ -8,7 +8,8 @@ import SeasonHighlights from '../components/results/SeasonHighlights'
 import OutcomeRange from '../components/results/OutcomeRange'
 import { getVerdict } from '../utils/simulator'
 import { getActiveSynergies } from '../utils/synergies'
-import { saveGameResult } from '../hooks/useGameHistory'
+import { saveGameResult, saveDailyResult } from '../hooks/useGameHistory'
+import DailyCard from '../components/results/DailyCard'
 
 export default function Results() {
   const simulationResults = useGameStore(s => s.simulationResults)
@@ -24,8 +25,11 @@ export default function Results() {
     return () => clearTimeout(t)
   }, [simulationResults])
 
+  const [dailyBest, setDailyBest] = useState(null)
   useEffect(() => {
-    if (simulationResults) saveGameResult(simulationResults)
+    if (!simulationResults) return
+    saveGameResult(simulationResults)
+    if (simulationResults.daily && !simulationResults.shared) setDailyBest(saveDailyResult(simulationResults.daily, simulationResults))
   }, [simulationResults])
 
   if (!simulationResults) return null
@@ -66,6 +70,12 @@ export default function Results() {
         <div className="bg-white border border-borderc px-4 py-3">
           <p className="text-sm font-semibold text-ink">{verdict}</p>
         </div>
+
+        {tickerDone && simulationResults.daily && (
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+            <DailyCard results={simulationResults} team={team} best={dailyBest?.best} isNewBest={dailyBest?.isNewBest} />
+          </motion.div>
+        )}
 
         {/* Race ticker */}
         <div>
