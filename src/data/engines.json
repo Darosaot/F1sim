@@ -2704,5 +2704,386 @@
       "deployment_mode": 57
     },
     "bio": "Red Bull Ford DM01 1.6 V6 T H engine."
+  },
+  {
+    "id": "ferrari_v12_1965",
+    "name": "Ferrari Tipo 156 / 1512 / 312",
+    "supplier": "Ferrari",
+    "era": "pre_turbo",
+    "years_available": [
+      1961,
+      1962,
+      1963,
+      1964,
+      1965,
+      1966,
+      1967,
+      1968,
+      1969,
+      1970,
+      1971,
+      1972,
+      1973,
+      1974
+    ],
+    "attributes": {
+      "power": 84,
+      "driveability": 74,
+      "fuel_efficiency": 58,
+      "reliability": 70,
+      "deployment_mode": 62
+    },
+    "bio": "Los V6 y V12 de Maranello de los 60. El 156 'Sharknose' ganó el título de 1961."
+  },
+  {
+    "id": "ferrari_v12_1990",
+    "name": "Ferrari Tipo 126 / 037 V12",
+    "supplier": "Ferrari",
+    "era": "turbo",
+    "years_available": [
+      1981,
+      1982,
+      1983,
+      1984,
+      1985,
+      1986,
+      1987,
+      1988,
+      1989,
+      1990,
+      1991,
+      1992,
+      1993,
+      1994,
+      1995
+    ],
+    "attributes": {
+      "power": 90,
+      "driveability": 72,
+      "fuel_efficiency": 60,
+      "reliability": 66,
+      "deployment_mode": 66
+    },
+    "bio": "Del turbo 126C al V12 atmosférico de los 90. Potencia bruta, fiabilidad irregular."
+  },
+  {
+    "id": "judd_cv_1988",
+    "name": "Judd CV V8",
+    "supplier": "Judd",
+    "era": "turbo",
+    "years_available": [
+      1988
+    ],
+    "attributes": {
+      "power": 74,
+      "driveability": 76,
+      "fuel_efficiency": 70,
+      "reliability": 72,
+      "deployment_mode": 62
+    },
+    "bio": "El V8 atmosférico que usó Williams en 1988 tras perder el Honda turbo."
+  },
+  {
+    "id": "peugeot_a14_1994",
+    "name": "Peugeot A14 / A10 V10",
+    "supplier": "Peugeot",
+    "era": "v10_v12",
+    "years_available": [
+      1994,
+      1995,
+      1996,
+      1997
+    ],
+    "attributes": {
+      "power": 82,
+      "driveability": 74,
+      "fuel_efficiency": 70,
+      "reliability": 64,
+      "deployment_mode": 66
+    },
+    "bio": "El V10 francés de McLaren y Jordan. Prometedor pero sin victorias."
+  },
+  {
+    "id": "mercedes_v10_mclaren",
+    "name": "Mercedes-Ilmor FO110 V10",
+    "supplier": "Mercedes",
+    "era": "v10_v12",
+    "years_available": [
+      1996,
+      1997,
+      1998,
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006
+    ],
+    "attributes": {
+      "power": 93,
+      "driveability": 84,
+      "fuel_efficiency": 76,
+      "reliability": 74,
+      "deployment_mode": 72
+    },
+    "bio": "El V10 de Ilmor que dio a McLaren los títulos de Häkkinen en 1998 y 1999."
+  },
+  {
+    "id": "mugen_ho_v10",
+    "name": "Mugen-Honda MF301 V10",
+    "supplier": "Mugen-Honda",
+    "era": "v10_v12",
+    "years_available": [
+      1998,
+      1999,
+      2000,
+      2001
+    ],
+    "attributes": {
+      "power": 85,
+      "driveability": 82,
+      "fuel_efficiency": 74,
+      "reliability": 80,
+      "deployment_mode": 68
+    },
+    "bio": "El V10 de Mugen que llevó a Jordan a ganar carreras en 1998 y 1999."
+  },
+  {
+    "id": "mecachrome_v10",
+    "name": "Mecachrome / Supertec V10",
+    "supplier": "Mecachrome",
+    "era": "v10_v12",
+    "years_available": [
+      1998,
+      1999
+    ],
+    "attributes": {
+      "power": 82,
+      "driveability": 80,
+      "fuel_efficiency": 72,
+      "reliability": 82,
+      "deployment_mode": 66
+    },
+    "bio": "Renault rebautizado tras su retirada oficial. Fiable pero ya sin desarrollo."
+  },
+  {
+    "id": "bmw_v10_2000",
+    "name": "BMW P80 / P84 V10",
+    "supplier": "BMW",
+    "era": "v10_v12",
+    "years_available": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005
+    ],
+    "attributes": {
+      "power": 97,
+      "driveability": 80,
+      "fuel_efficiency": 70,
+      "reliability": 76,
+      "deployment_mode": 72
+    },
+    "bio": "El motor más potente de la era V10, superando las 19.000 rpm."
+  },
+  {
+    "id": "honda_ra006e_2006",
+    "name": "Honda RA806E / RA808E V8",
+    "supplier": "Honda",
+    "era": "v8",
+    "years_available": [
+      2006,
+      2007,
+      2008
+    ],
+    "attributes": {
+      "power": 86,
+      "driveability": 80,
+      "fuel_efficiency": 76,
+      "reliability": 82,
+      "deployment_mode": 70
+    },
+    "bio": "El V8 de Honda que dio la victoria de Button en Hungría 2006."
+  },
+  {
+    "id": "cosworth_ca_2010",
+    "name": "Cosworth CA V8",
+    "supplier": "Cosworth",
+    "era": "v8",
+    "years_available": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014
+    ],
+    "attributes": {
+      "power": 80,
+      "driveability": 78,
+      "fuel_efficiency": 74,
+      "reliability": 80,
+      "deployment_mode": 62
+    },
+    "bio": "El V8 de los equipos pequeños. Fiable y barato, pero sin KERS competitivo."
+  },
+  {
+    "id": "renault_re14_2014",
+    "name": "Renault Energy F1 V6 Turbo Hybrid",
+    "supplier": "Renault",
+    "era": "hybrid",
+    "years_available": [
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018
+    ],
+    "attributes": {
+      "power": 82,
+      "driveability": 74,
+      "fuel_efficiency": 74,
+      "reliability": 64,
+      "deployment_mode": 70
+    },
+    "bio": "El V6 híbrido de Renault. Muy por detrás de Mercedes en 2014 y frágil."
+  },
+  {
+    "id": "mercedes_m13_2022",
+    "name": "Mercedes-AMG F1 M-series Hybrid",
+    "supplier": "Mercedes",
+    "era": "hybrid",
+    "years_available": [
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "attributes": {
+      "power": 96,
+      "driveability": 88,
+      "fuel_efficiency": 90,
+      "reliability": 90,
+      "deployment_mode": 94
+    },
+    "bio": "La unidad de potencia que dominó la era híbrida: ocho títulos de constructores seguidos."
+  },
+  {
+    "id": "honda_ra615h_2015",
+    "name": "Honda RA615H / RA617H",
+    "supplier": "Honda",
+    "era": "hybrid",
+    "years_available": [
+      2015,
+      2016,
+      2017
+    ],
+    "attributes": {
+      "power": 68,
+      "driveability": 62,
+      "fuel_efficiency": 70,
+      "reliability": 48,
+      "deployment_mode": 58
+    },
+    "bio": "El regreso de Honda con McLaren. Falta de potencia y averías constantes."
+  },
+  {
+    "id": "ferrari_v6h_2019",
+    "name": "Ferrari 062 / 066 Hybrid V6",
+    "supplier": "Ferrari",
+    "era": "hybrid",
+    "years_available": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "attributes": {
+      "power": 93,
+      "driveability": 84,
+      "fuel_efficiency": 84,
+      "reliability": 82,
+      "deployment_mode": 88
+    },
+    "bio": "El V6 híbrido de Maranello. En 2019 fue el más potente de la parrilla."
+  },
+  {
+    "id": "honda_ra618h_2019",
+    "name": "Honda RA619H / RA620H",
+    "supplier": "Honda",
+    "era": "hybrid",
+    "years_available": [
+      2019,
+      2020
+    ],
+    "attributes": {
+      "power": 90,
+      "driveability": 84,
+      "fuel_efficiency": 84,
+      "reliability": 86,
+      "deployment_mode": 86
+    },
+    "bio": "El Honda que devolvió a Red Bull a la victoria y preparó el título de 2021."
+  },
+  {
+    "id": "renault_e_tech_2021",
+    "name": "Renault E-Tech 19 / 20",
+    "supplier": "Renault",
+    "era": "hybrid",
+    "years_available": [
+      2019,
+      2020
+    ],
+    "attributes": {
+      "power": 88,
+      "driveability": 80,
+      "fuel_efficiency": 82,
+      "reliability": 80,
+      "deployment_mode": 82
+    },
+    "bio": "Gran potencia en clasificación con el 'modo fiesta' de Renault."
+  },
+  {
+    "id": "renault_e_tech_2022",
+    "name": "Renault E-Tech RE22-25",
+    "supplier": "Renault",
+    "era": "current",
+    "years_available": [
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "attributes": {
+      "power": 84,
+      "driveability": 80,
+      "fuel_efficiency": 82,
+      "reliability": 76,
+      "deployment_mode": 80
+    },
+    "bio": "La última unidad de potencia de Renault, que motoriza a Alpine."
   }
 ]

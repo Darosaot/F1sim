@@ -6,6 +6,12 @@
     "bio": "Los neumáticos de los años 50-70. Tecnología de la época con sus limitaciones."
   },
   {
+    "id": "pirelli_stelvio", "name": "Pirelli Stelvio (1950-58)", "supplier": "Pirelli",
+    "era": "early", "years": [1950, 1958],
+    "attributes": { "peak_grip": 63, "durability": 56, "thermal_window": 60, "wet_performance": 64, "compound_versatility": 60 },
+    "bio": "Equipó a Alfa Romeo, Ferrari y Maserati en los primeros mundiales."
+  },
+  {
     "id": "continental_racing", "name": "Continental F1", "supplier": "Continental",
     "era": "early", "years": [1954, 1958],
     "attributes": { "peak_grip": 60, "durability": 58, "thermal_window": 58, "wet_performance": 65, "compound_versatility": 58 },
@@ -13,9 +19,9 @@
   },
   {
     "id": "firestone_f1", "name": "Firestone Firehawk", "supplier": "Firestone",
-    "era": "pre_turbo", "years": [1966, 1974],
+    "era": "pre_turbo", "years": [1950, 1975],
     "attributes": { "peak_grip": 68, "durability": 62, "thermal_window": 65, "wet_performance": 70, "compound_versatility": 65 },
-    "bio": "Rival de Goodyear en los 60s. Algunas victorias notables."
+    "bio": "Dominó las 500 Millas de Indianápolis de los 50 y fue rival de Goodyear en los 60 y 70."
   },
   {
     "id": "goodyear_eagle", "name": "Goodyear Eagle", "supplier": "Goodyear",
@@ -28,6 +34,18 @@
     "era": "pre_turbo", "years": [1977, 1984],
     "attributes": { "peak_grip": 82, "durability": 70, "thermal_window": 75, "wet_performance": 80, "compound_versatility": 80 },
     "bio": "Revolucionó con el neumático radial. Ligero y con máximo grip."
+  },
+  {
+    "id": "avon_1981", "name": "Avon (1981-82)", "supplier": "Avon",
+    "era": "turbo", "years": [1981, 1982],
+    "attributes": { "peak_grip": 70, "durability": 66, "thermal_window": 64, "wet_performance": 70, "compound_versatility": 64 },
+    "bio": "Cubrió el hueco de Goodyear en 1981-82 para los equipos pequeños."
+  },
+  {
+    "id": "pirelli_p7", "name": "Pirelli P7 (1981-91)", "supplier": "Pirelli",
+    "era": "turbo", "years": [1981, 1991],
+    "attributes": { "peak_grip": 76, "durability": 66, "thermal_window": 68, "wet_performance": 72, "compound_versatility": 70 },
+    "bio": "El regreso de Pirelli en la era turbo. Victorias con Brabham y Benetton."
   },
   {
     "id": "yokohama_f1", "name": "Yokohama A008", "supplier": "Yokohama",
@@ -43,19 +61,19 @@
   },
   {
     "id": "bridgestone_potenza", "name": "Bridgestone Potenza", "supplier": "Bridgestone",
-    "era": "v10_v12", "years": [1997, 2010],
+    "era": "v10_v12", "years": [1976, 2010],
     "attributes": { "peak_grip": 88, "durability": 85, "thermal_window": 82, "wet_performance": 82, "compound_versatility": 86 },
     "bio": "Proveedor único de 2007-2010. Schumacher prefería Bridgestone."
   },
   {
-    "id": "pirelli_2011", "name": "Pirelli P Zero (2011-18)", "supplier": "Pirelli",
-    "era": "v8", "years": [2011, 2018],
+    "id": "pirelli_2011", "name": "Pirelli P Zero 13\" (2011-21)", "supplier": "Pirelli",
+    "era": "v8", "years": [2011, 2021],
     "attributes": { "peak_grip": 84, "durability": 68, "thermal_window": 76, "wet_performance": 80, "compound_versatility": 85 },
     "bio": "La era del gestionado de neumáticos. 3 paradas por carrera, degradación elevada."
   },
   {
-    "id": "pirelli_2022", "name": "Pirelli P Zero 18\" (2022-pres)", "supplier": "Pirelli",
-    "era": "current", "years": [2022, 2025],
+    "id": "pirelli_2022", "name": "Pirelli P Zero 18\" (2022+)", "supplier": "Pirelli",
+    "era": "current", "years": [2022, 2026],
     "attributes": { "peak_grip": 88, "durability": 80, "thermal_window": 82, "wet_performance": 83, "compound_versatility": 88 },
     "bio": "Neumáticos de 18 pulgadas para los coches de efecto suelo. Mayor consistencia."
   }
