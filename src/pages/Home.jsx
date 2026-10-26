@@ -2,7 +2,8 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useGameStore } from '../stores/gameStore'
 import { getAvailableRivalYears } from '../utils/rivalBuilder'
-import { loadHistory } from '../hooks/useGameHistory'
+import { loadHistory, loadDailyResults } from '../hooks/useGameHistory'
+import { todayKey, dailyConfig } from '../utils/daily'
 
 const STEPS = [
   { n: '01', icon: '🎲', title: 'TIRA',      desc: 'Obtén un equipo y temporada aleatorio' },
@@ -35,7 +36,11 @@ const ALL_RIVAL_YEARS = getAvailableRivalYears()
 
 export default function Home() {
   const [history] = useState(() => loadHistory())
+  const [today] = useState(() => todayKey())
+  const [dailyBest] = useState(() => loadDailyResults()[today])
+  const dailyRivalYear = dailyConfig(today).rivalYear
   const startGame         = useGameStore(s => s.startGame)
+  const startDailyChallenge = useGameStore(s => s.startDailyChallenge)
   const era               = useGameStore(s => s.era)
   const mode              = useGameStore(s => s.mode)
   const draftDifficulty   = useGameStore(s => s.draftDifficulty)
@@ -87,7 +92,7 @@ export default function Home() {
 
             <p className="text-sm text-ink-md leading-relaxed mb-6 max-w-sm">
               Tira el dado: te toca un equipo y temporada. Elige uno de sus elementos,
-              completa los 10 slots y simula — ¿puede tu equipo ganar el campeonato?
+              completa los 11 puestos y simula — ¿puede tu equipo ganar el campeonato?
             </p>
 
             <motion.button
@@ -98,6 +103,29 @@ export default function Home() {
             >
               JUGAR AHORA →
             </motion.button>
+
+            {/* Daily challenge */}
+            <button
+              onClick={() => startDailyChallenge(today)}
+              className="mt-4 w-full max-w-sm flex items-center justify-between gap-3 px-4 py-3 border-2 border-ink bg-white text-left hover:bg-ink hover:text-white transition-colors group"
+            >
+              <div>
+                <div className="font-display font-black text-base uppercase tracking-wider">Reto diario</div>
+                <div className="text-[10px] uppercase tracking-wide opacity-60">
+                  Mismas tiradas para todos · vs parrilla {dailyRivalYear}
+                </div>
+              </div>
+              <div className="text-right shrink-0">
+                {dailyBest ? (
+                  <>
+                    <div className="font-display font-black text-xl leading-none">{dailyBest.points}</div>
+                    <div className="text-[9px] uppercase tracking-wide opacity-60">tu mejor · P{dailyBest.constructorPos}</div>
+                  </>
+                ) : (
+                  <span className="font-display font-black text-lg">→</span>
+                )}
+              </div>
+            </button>
           </div>
 
           {/* Right — config + preview */}

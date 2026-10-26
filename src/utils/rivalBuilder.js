@@ -1,5 +1,5 @@
-import driversData from '../data/drivers.json'
 import seasonsData from '../data/seasons.json'
+import { resolveSeasonElements } from './dataQueries'
 
 const TEAM_COLORS = {
   'McLaren': '#ff8000',
@@ -61,40 +61,26 @@ function teamColor(name) {
   return '#' + ((h >>> 0) & 0xffffff).toString(16).padStart(6, '0')
 }
 
-// Blend driver skill with team quality (chassis/budget)
-function driverRating(driver, budgetIndex) {
-  const teamScore = 60 + (budgetIndex ?? 50) * 0.4
-  if (!driver?.attributes) return Math.round(teamScore)
-  const a = driver.attributes
-  const skill = a.pace * 0.45 + a.racecraft * 0.30 + a.qualifying * 0.25
-  return Math.round(skill * 0.65 + teamScore * 0.35)
-}
-
+// Each rival is the real team-season, fully resolved (drivers, car, engine,
+// staff, strategist...), so it runs through the exact same performance
+// model as the player's drafted team.
 export function buildRivalsForYear(year) {
   const seen = new Set()
-  const yearSeasons = seasonsData
+  return seasonsData
     .filter(s => s.year === year)
     .sort((a, b) => (b.budget_index ?? 0) - (a.budget_index ?? 0))
     .filter(s => { if (seen.has(s.team)) return false; seen.add(s.team); return true })
     .slice(0, 10)
-
-  return yearSeasons.map(season => {
-    const d1 = driversData.find(d => d.id === season.driver1) ?? null
-    const d2 = season.driver2 ? (driversData.find(d => d.id === season.driver2) ?? null) : null
-    const budget = season.budget_index ?? 50
-
-    return {
-      name: season.team,
-      color: teamColor(season.team),
-      d1: d1?.name ?? 'Piloto 1',
-      d2: d2?.name ?? 'Piloto 2',
-      d1Rating: driverRating(d1, budget),
-      d2Rating: d2 ? driverRating(d2, budget) : Math.round(55 + budget * 0.38),
-      d1Points: 0, d1Wins: 0, d1Podiums: 0,
-      d2Points: 0, d2Wins: 0, d2Podiums: 0,
-      points: 0,
-    }
-  })
+    .map(season => {
+      const team = resolveSeasonElements(season)
+      return {
+        name: season.team,
+        color: teamColor(season.team),
+        d1: team.driver1?.name ?? 'Piloto 1',
+        d2: team.driver2?.name ?? 'Piloto 2',
+        team,
+      }
+    })
 }
 
 export function getAvailableRivalYears() {

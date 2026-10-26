@@ -5,9 +5,11 @@ import RaceTicker from '../components/simulation/RaceTicker'
 import SeasonChart from '../components/simulation/SeasonChart'
 import ChampionshipCard from '../components/results/ChampionshipCard'
 import SeasonHighlights from '../components/results/SeasonHighlights'
+import OutcomeRange from '../components/results/OutcomeRange'
 import { getVerdict } from '../utils/simulator'
 import { getActiveSynergies } from '../utils/synergies'
-import { saveGameResult } from '../hooks/useGameHistory'
+import { saveGameResult, saveDailyResult } from '../hooks/useGameHistory'
+import DailyCard from '../components/results/DailyCard'
 
 export default function Results() {
   const simulationResults = useGameStore(s => s.simulationResults)
@@ -23,8 +25,11 @@ export default function Results() {
     return () => clearTimeout(t)
   }, [simulationResults])
 
+  const [dailyBest, setDailyBest] = useState(null)
   useEffect(() => {
-    if (simulationResults) saveGameResult(simulationResults)
+    if (!simulationResults) return
+    saveGameResult(simulationResults)
+    if (simulationResults.daily && !simulationResults.shared) setDailyBest(saveDailyResult(simulationResults.daily, simulationResults))
   }, [simulationResults])
 
   if (!simulationResults) return null
@@ -66,6 +71,12 @@ export default function Results() {
           <p className="text-sm font-semibold text-ink">{verdict}</p>
         </div>
 
+        {tickerDone && simulationResults.daily && (
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+            <DailyCard results={simulationResults} team={team} best={dailyBest?.best} isNewBest={dailyBest?.isNewBest} />
+          </motion.div>
+        )}
+
         {/* Race ticker */}
         <div>
           <p className="text-[10px] font-bold uppercase tracking-widest text-ink-md mb-2">
@@ -98,6 +109,12 @@ export default function Results() {
               rivalYear={rivalYear}
               synergies={getActiveSynergies(team)}
             />
+          </motion.div>
+        )}
+
+        {tickerDone && (
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.08 }}>
+            <OutcomeRange team={team} rivalYear={rivalYear ?? 2024} constructorPos={constructorPos} />
           </motion.div>
         )}
 

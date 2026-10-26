@@ -55,13 +55,14 @@ export default function ChampionshipCard({ results }) {
   const era       = useGameStore(s => s.era)
   const mode      = useGameStore(s => s.mode)
   const rivalYear = useGameStore(s => s.rivalYear)
+  const daily     = useGameStore(s => s.daily)
   const resetGame = useGameStore(s => s.resetGame)
 
   if (!results) return null
   const { driverStandings, constructorStandings, d1FinalPos, d2FinalPos, constructorPos, d1Name, d2Name, playerStats } = results
 
   function handleShareLink() {
-    const url = buildShareUrl(team, { era, mode, rivalYear })
+    const url = buildShareUrl(team, { era, mode, rivalYear, daily })
     navigator.clipboard?.writeText(url).then(() => alert('Enlace copiado 🏁'))
   }
 

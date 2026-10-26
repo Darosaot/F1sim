@@ -4,6 +4,7 @@ export function encodeTeam(team, config) {
     d2: team.driver2?.id,
     tp: team.team_principal?.id,
     td: team.technical_director?.id,
+    st: team.strategist?.id,
     ch: team.chassis?.id,
     en: team.engine?.id,
     ti: team.tires?.id,
@@ -13,6 +14,7 @@ export function encodeTeam(team, config) {
     era: config?.era || 'all',
     mode: config?.mode || 'vip',
     ry: config?.rivalYear,
+    dy: config?.daily || undefined,
   }
   return btoa(JSON.stringify(payload))
 }

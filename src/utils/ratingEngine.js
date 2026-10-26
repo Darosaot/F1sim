@@ -1,86 +1,40 @@
+import circuits from '../data/circuits.json'
+import seasonsData from '../data/seasons.json'
+import { buildProfile, expectedStrength } from './performanceModel'
+import { resolveSeasonElements } from './dataQueries'
+
 export const SLOT_LABELS = {
-  driver1:             { label: 'Piloto 1',           emoji: '🪖', weight: 0.24 },
-  driver2:             { label: 'Piloto 2',           emoji: '🏎️', weight: 0.10 },
-  team_principal:      { label: 'Jefe de Equipo',     emoji: '🎯', weight: 0.05 },
-  technical_director:  { label: 'Director Técnico',   emoji: '🔧', weight: 0.10 },
-  chassis:             { label: 'Chasis',              emoji: '⚙️', weight: 0.17 },
-  engine:              { label: 'Motor',               emoji: '🔋', weight: 0.16 },
-  tires:               { label: 'Neumáticos',          emoji: '🔵', weight: 0.06 },
-  aero:                { label: 'Aerodinámica',        emoji: '💨', weight: 0.05 },
-  budget:              { label: 'Financiación',        emoji: '💰', weight: 0.04 },
-  reliability:         { label: 'Fiabilidad',          emoji: '🛡️', weight: 0.03 },
+  driver1:             { label: 'Piloto 1',           emoji: '🪖' },
+  driver2:             { label: 'Piloto 2',           emoji: '🏎️' },
+  team_principal:      { label: 'Jefe de Equipo',     emoji: '🎯' },
+  technical_director:  { label: 'Director Técnico',   emoji: '🔧' },
+  strategist:          { label: 'Estratega',          emoji: '📻' },
+  chassis:             { label: 'Chasis',              emoji: '⚙️' },
+  engine:              { label: 'Motor',               emoji: '🔋' },
+  tires:               { label: 'Neumáticos',          emoji: '🔵' },
+  aero:                { label: 'Aerodinámica',        emoji: '💨' },
+  budget:              { label: 'Financiación',        emoji: '💰' },
+  reliability:         { label: 'Fiabilidad',          emoji: '🛡️' },
 }
 
+export const SLOT_KEYS  = Object.keys(SLOT_LABELS)
+export const SLOT_COUNT = SLOT_KEYS.length
+
+// Maps the model's expected race score onto a 30–99 scale. Calibrated on
+// every real season in the dataset: the weakest backmarkers (~38) land at
+// 30, the dominant cars (Mercedes 2019, Red Bull 2022, ~113) at 99.
+const RAW_MIN = 38
+const RAW_MAX = 113
+function toRating(raw) {
+  const r = 30 + (raw - RAW_MIN) * (69 / (RAW_MAX - RAW_MIN))
+  return Math.round(Math.max(0, Math.min(99, r)) * 10) / 10
+}
+
+// Team rating = the simulator's own performance model at expected values,
+// so a higher rating really means more points. Empty slots count as the
+// same neutral defaults the simulator uses.
 export function calculateTeamRating(team) {
-  let score = 0
-  let filledCount = 0
-
-  if (team.driver1) {
-    const d = team.driver1.attributes
-    const driverScore = (d.pace * 0.45 + d.racecraft * 0.25 + d.consistency * 0.20 + d.qualifying * 0.10) / 100
-    score += driverScore * 100 * SLOT_LABELS.driver1.weight
-    filledCount++
-  }
-  if (team.driver2) {
-    const d = team.driver2.attributes
-    const driverScore = (d.pace * 0.45 + d.racecraft * 0.25 + d.consistency * 0.20 + d.qualifying * 0.10) / 100
-    score += driverScore * 100 * SLOT_LABELS.driver2.weight
-    filledCount++
-  }
-  if (team.team_principal) {
-    const tp = team.team_principal.attributes
-    const tpScore = (tp.team_management * 0.40 + tp.driver_management * 0.25 + tp.political_skill * 0.20 + tp.crisis_management * 0.15) / 100
-    score += tpScore * 100 * SLOT_LABELS.team_principal.weight
-    filledCount++
-  }
-  if (team.technical_director) {
-    const td = team.technical_director.attributes
-    const tdScore = (td.design_genius * 0.35 + td.innovation * 0.30 + td.aerodynamic_vision * 0.20 + td.development_speed * 0.15) / 100
-    score += tdScore * 100 * SLOT_LABELS.technical_director.weight
-    filledCount++
-  }
-  if (team.chassis) {
-    const ch = team.chassis.attributes
-    const chassisScore = (ch.downforce * 0.35 + ch.mechanical_grip * 0.30 + ch.drag_efficiency * 0.25 + ch.weight_distribution * 0.10) / 100
-    score += chassisScore * 100 * SLOT_LABELS.chassis.weight
-    filledCount++
-  }
-  if (team.engine) {
-    const en = team.engine.attributes
-    const engineScore = (en.power * 0.40 + en.driveability * 0.25 + en.fuel_efficiency * 0.20 + en.reliability * 0.15) / 100
-    score += engineScore * 100 * SLOT_LABELS.engine.weight
-    filledCount++
-  }
-  if (team.tires) {
-    const ti = team.tires.attributes
-    const tiresScore = (ti.peak_grip * 0.35 + ti.durability * 0.25 + ti.thermal_window * 0.20 + ti.wet_performance * 0.20) / 100
-    score += tiresScore * 100 * SLOT_LABELS.tires.weight
-    filledCount++
-  }
-  if (team.aero !== undefined && team.aero !== null) {
-    score += team.aero * SLOT_LABELS.aero.weight
-    filledCount++
-  }
-  if (team.budget !== undefined && team.budget !== null) {
-    score += team.budget * SLOT_LABELS.budget.weight
-    filledCount++
-  }
-  if (team.reliability !== undefined && team.reliability !== null) {
-    score += team.reliability * SLOT_LABELS.reliability.weight
-    filledCount++
-  }
-
-  if (filledCount === 0) return 0
-  // Scale proportionally by filled slots
-  const totalWeight = Object.values(SLOT_LABELS)
-    .filter((_, i) => {
-      const keys = Object.keys(SLOT_LABELS)
-      const key = keys[i]
-      return team[key] !== null && team[key] !== undefined
-    })
-    .reduce((sum, s) => sum + s.weight, 0)
-
-  return totalWeight > 0 ? Math.round(score / totalWeight * 10) / 10 : 0
+  return toRating(expectedStrength(buildProfile(team), circuits))
 }
 
 export function getElementValue(element, slotKey) {
@@ -94,14 +48,21 @@ export function getElementValue(element, slotKey) {
   return Math.round(values.reduce((a, b) => a + b, 0) / values.length)
 }
 
+let seasonRatings = null
+function getSeasonRatings() {
+  if (!seasonRatings) {
+    seasonRatings = seasonsData
+      .map(s => ({ season: s, rating: calculateTeamRating(resolveSeasonElements(s)) }))
+      .sort((a, b) => b.rating - a.rating)
+  }
+  return seasonRatings
+}
+
+// The real team-season whose rating is closest to the given one
 export function getBenchmark(rating) {
-  if (rating >= 96) return { name: 'McLaren-Honda MP4/4 1988', rating: 97 }
-  if (rating >= 93) return { name: 'Ferrari F2004', rating: 95 }
-  if (rating >= 90) return { name: 'Red Bull RB19 2023', rating: 92 }
-  if (rating >= 87) return { name: 'Mercedes W11 2020', rating: 90 }
-  if (rating >= 84) return { name: 'Williams FW14B 1992', rating: 87 }
-  if (rating >= 80) return { name: 'Ferrari F2002', rating: 85 }
-  if (rating >= 75) return { name: 'Red Bull RB6 2010', rating: 82 }
-  if (rating >= 70) return { name: 'McLaren MP4/13 1998', rating: 78 }
-  return { name: 'Equipo de Mitad de Parrilla', rating: 65 }
+  let best = null
+  for (const entry of getSeasonRatings()) {
+    if (!best || Math.abs(entry.rating - rating) < Math.abs(best.rating - rating)) best = entry
+  }
+  return best && { name: `${best.season.team} ${best.season.year}`, rating: best.rating }
 }

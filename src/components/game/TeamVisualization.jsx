@@ -4,7 +4,7 @@ import { getTeamColors } from '../../utils/teamColors'
 
 const LAYOUT = [
   ['driver1', 'driver2'],
-  ['team_principal', 'technical_director'],
+  ['team_principal', 'technical_director', 'strategist'],
   ['chassis', 'engine'],
   ['tires', 'aero'],
   ['budget', 'reliability'],
@@ -15,6 +15,7 @@ const SHORT = {
   driver2:            'P2',
   team_principal:     'TP',
   technical_director: 'TD',
+  strategist:         'STRAT',
   chassis:            'CAR',
   engine:             'ENG',
   tires:              'TYRES',

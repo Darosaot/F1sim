@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useGameStore } from '../../stores/gameStore'
-import { SLOT_LABELS, getElementValue } from '../../utils/ratingEngine'
+import { calculateTeamRating, getElementValue } from '../../utils/ratingEngine'
 import DriverModal from '../ui/DriverModal'
 
 const ATTR_ES = {
@@ -47,6 +47,7 @@ const SLOT_SHORT = {
   driver2:            'DRV 2',
   team_principal:     'TP',
   technical_director: 'TD',
+  strategist:         'STRAT',
   chassis:            'CAR',
   engine:             'ENG',
   tires:              'TYRES',
@@ -72,9 +73,17 @@ export default function ElementItem({ slotKey, element, showStats }) {
        team.driver2 !== null && team.driver2 !== undefined)
     : (team[slotKey] !== null && team[slotKey] !== undefined)
 
+  // Drivers share a pool: a card's "driver 1" fills whichever seat is open
+  const isDriver    = slotKey === 'driver1' || slotKey === 'driver2'
+  const targetSlot  = isDriver ? (team.driver1 === undefined ? 'driver1' : 'driver2') : slotKey
+  // Rating change if picked (empty slots count as the simulator's defaults)
+  const delta       = showStats && !alreadyFilled
+    ? calculateTeamRating({ ...team, [targetSlot]: element }) - calculateTeamRating(team)
+    : null
+
   const rating      = getElementValue(element, slotKey)
   const isNumeric   = typeof element === 'number'
-  const hasModal    = (slotKey === 'driver1' || slotKey === 'driver2' || slotKey === 'team_principal' || slotKey === 'technical_director') && !isNumeric && element?.attributes
+  const hasModal    = ['driver1', 'driver2', 'team_principal', 'technical_director', 'strategist'].includes(slotKey) && !isNumeric && element?.attributes
   const displayName = isNumeric
     ? (showStats ? `${element}/100` : '—')
     : element?.name || '—'
@@ -101,7 +110,7 @@ export default function ElementItem({ slotKey, element, showStats }) {
         <div className="flex items-center gap-3 min-w-0 flex-1">
           {/* Slot tag */}
           <span className="text-[9px] font-bold uppercase tracking-wider text-ink-md w-10 shrink-0">
-            {SLOT_SHORT[slotKey]}
+            {SLOT_SHORT[alreadyFilled ? slotKey : targetSlot]}
           </span>
 
           <div className="min-w-0 flex-1">
@@ -141,6 +150,14 @@ export default function ElementItem({ slotKey, element, showStats }) {
         </div>
 
         <div className="flex items-center gap-2 shrink-0">
+          {delta !== null && (
+            <span
+              className={`text-[10px] font-bold tabular-nums w-9 text-right ${delta >= 0 ? 'text-ink' : 'text-ink-lt'}`}
+              title="Cambio en la valoración del equipo"
+            >
+              {delta >= 0 ? '+' : '−'}{Math.abs(delta).toFixed(1)}
+            </span>
+          )}
           {showStats && rating > 0 && !isNumeric && (
             <span className="font-display font-black text-xl text-rust">{rating}</span>
           )}

@@ -1,5 +1,6 @@
 import { create } from 'zustand'
 import { getRandomSeason, getFilteredSeasons, resolveSeasonElements, resolveSharedTeam } from '../utils/dataQueries'
+import { todayKey, dailyConfig, dailyRollRng } from '../utils/daily'
 
 // undefined = not yet picked; null = slot unavailable for this team (auto-skipped)
 const EMPTY_TEAM = {
@@ -7,6 +8,7 @@ const EMPTY_TEAM = {
   driver2: undefined,
   team_principal: undefined,
   technical_director: undefined,
+  strategist: undefined,
   chassis: undefined,
   engine: undefined,
   tires: undefined,
@@ -50,6 +52,13 @@ export const useGameStore = create((set, get) => ({
   // Results
   simulationResults: null,
 
+  // Daily challenge date ('YYYY-MM-DD') or null for a free game
+  daily: null,
+  // Team loaded from someone else's share link (not your own attempt)
+  shared: false,
+  // The player's own settings, restored when leaving a daily challenge
+  savedConfig: null,
+
   // ---- Config actions ----
   setEra: (era) => set({ era }),
   setMode: (mode) => set({ mode }),
@@ -59,6 +68,10 @@ export const useGameStore = create((set, get) => ({
   // ---- Game flow ----
   startGame: () => {
     set({
+      ...(get().savedConfig ?? {}),
+      savedConfig: null,
+      daily: null,
+      shared: false,
       phase: 'drafting',
       wildcards: 3,
       currentCards: [],
@@ -70,8 +83,34 @@ export const useGameStore = create((set, get) => ({
     get().rollCard()
   },
 
+  startDailyChallenge: (date = todayKey()) => {
+    const { era, mode, draftDifficulty, rivalYear, savedConfig } = get()
+    set({
+      savedConfig: savedConfig ?? { era, mode, draftDifficulty, rivalYear },
+      ...dailyConfig(date),
+      daily: date,
+      shared: false,
+      phase: 'drafting',
+      wildcards: 3,
+      currentCards: [],
+      usedSeasonIds: [],
+      rollCount: 0,
+      team: { ...EMPTY_TEAM },
+      simulationResults: null,
+    })
+    get().rollCard()
+  },
+
+  // Random source for the next roll: seeded by roll number in the daily
+  // challenge, so everyone's roll N comes from the same sequence
+  rollRng: () => {
+    const { daily, rollCount } = get()
+    return daily ? dailyRollRng(daily, rollCount + 1) : Math.random
+  },
+
   rollCard: () => {
     const { era, usedSeasonIds, draftDifficulty, team } = get()
+    const rng = get().rollRng()
 
     // Slots still needing a value (undefined = not yet picked)
     const unfilledSlots = SLOT_KEYS.filter(k => team[k] === undefined)
@@ -82,7 +121,7 @@ export const useGameStore = create((set, get) => ({
 
     // Draw a single team-season that offers ≥1 pickable slot
     for (let attempt = 0; attempt < 15; attempt++) {
-      const candidate = getRandomSeason(era, newUsedIds, draftDifficulty)
+      const candidate = getRandomSeason(era, newUsedIds, draftDifficulty, rng)
       if (!candidate) break
       const r = resolveSeasonElements(candidate)
       newUsedIds.push(candidate.id)
@@ -152,7 +191,7 @@ export const useGameStore = create((set, get) => ({
       return
     }
     // Draw one other season of the same team
-    const card = all[Math.floor(Math.random() * all.length)]
+    const card = all[Math.floor(get().rollRng()() * all.length)]
     const cards = [card]
     const newUsedIds = [...usedSeasonIds, card.season.id]
     set({
@@ -179,6 +218,8 @@ export const useGameStore = create((set, get) => ({
       era: payload.era || 'all',
       mode: payload.mode || 'vip',
       rivalYear: payload.ry || 2024,
+      daily: payload.dy || null,
+      shared: true,
       phase: 'complete',
       currentCards: [],
       wildcards: 0,
@@ -189,6 +230,10 @@ export const useGameStore = create((set, get) => ({
 
   resetGame: () => {
     set({
+      ...(get().savedConfig ?? {}),
+      savedConfig: null,
+      daily: null,
+      shared: false,
       phase: 'setup',
       wildcards: 3,
       currentCards: [],

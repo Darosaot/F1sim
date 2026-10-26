@@ -18,7 +18,7 @@ const ATTR_ES = {
 
 const SLOT_LABEL = {
   driver1: 'PILOTO', driver2: 'PILOTO',
-  team_principal: 'JEFE DE EQUIPO', technical_director: 'DIR. TÉCNICO',
+  team_principal: 'JEFE DE EQUIPO', technical_director: 'DIR. TÉCNICO', strategist: 'ESTRATEGA',
   chassis: 'CHASIS', engine: 'MOTOR', tires: 'NEUMÁTICOS',
 }
 

@@ -1,13 +1,11 @@
 import { useGameStore } from '../../stores/gameStore'
-import { SLOT_LABELS, calculateTeamRating, getElementValue } from '../../utils/ratingEngine'
+import { SLOT_KEYS, SLOT_COUNT, calculateTeamRating, getElementValue, getBenchmark } from '../../utils/ratingEngine'
 import { getActiveSynergies } from '../../utils/synergies'
-
-const SLOT_KEYS = Object.keys(SLOT_LABELS)
 
 // Driver vs Car split for attack/defense equivalent
 const DRIVER_KEYS  = ['driver1', 'driver2']
 const CAR_KEYS     = ['chassis', 'engine', 'aero', 'tires', 'reliability']
-const MGMT_KEYS    = ['team_principal', 'technical_director', 'budget']
+const MGMT_KEYS    = ['team_principal', 'technical_director', 'strategist', 'budget']
 
 function avg(team, keys) {
   const vals = keys.map(k => {
@@ -22,7 +20,11 @@ function avg(team, keys) {
 export default function TeamBuilder() {
   const team        = useGameStore(s => s.team)
   const filledCount = useGameStore(s => s.getFilledCount())
+  const mode        = useGameStore(s => s.mode)
+  const showStats   = mode === 'vip'
   const rating      = calculateTeamRating(team)
+  const complete    = filledCount === SLOT_COUNT
+  const benchmark   = complete && showStats ? getBenchmark(rating) : null
 
   const driverAvg = avg(team, DRIVER_KEYS)
   const carAvg    = avg(team, CAR_KEYS)
@@ -33,18 +35,28 @@ export default function TeamBuilder() {
       {/* Header */}
       <div className="flex items-baseline justify-between mb-3">
         <span className="text-xs font-bold uppercase tracking-widest text-ink-md">
-          PLANTILLA · {filledCount}/10
+          PLANTILLA · {filledCount}/{SLOT_COUNT}
         </span>
-        {filledCount === 10 && (
-          <span className="font-display font-black text-3xl text-ink">{rating.toFixed(0)}</span>
+        {(complete || showStats) && (
+          <span
+            className={`font-display font-black text-3xl ${complete ? 'text-ink' : 'text-ink-lt'}`}
+            title={complete ? 'Valoración del equipo' : 'Proyección: los puestos vacíos cuentan como un elemento medio'}
+          >
+            {rating.toFixed(0)}
+          </span>
         )}
       </div>
+      {benchmark && (
+        <p className="text-[10px] text-ink-md -mt-2 mb-2">
+          Nivel de <span className="font-bold text-ink">{benchmark.name}</span>
+        </p>
+      )}
 
       {/* Progress bar */}
       <div className="h-0.5 bg-borderc mb-3">
         <div
           className="h-full bg-ink transition-all duration-500"
-          style={{ width: `${(filledCount / 10) * 100}%` }}
+          style={{ width: `${(filledCount / SLOT_COUNT) * 100}%` }}
         />
       </div>
 
@@ -86,7 +98,6 @@ export default function TeamBuilder() {
         {SLOT_KEYS.map(key => {
           const el      = team[key]
           const isEmpty = el === null || el === undefined
-          const slotInfo = SLOT_LABELS[key]
           const rating   = isEmpty ? null : getElementValue(el, key)
           const name     = isEmpty
             ? null
@@ -102,6 +113,7 @@ export default function TeamBuilder() {
                    : key === 'driver2'          ? 'DRV 2'
                    : key === 'team_principal'   ? 'TP'
                    : key === 'technical_director' ? 'TD'
+                   : key === 'strategist'       ? 'STRAT'
                    : key === 'chassis'          ? 'CAR'
                    : key === 'engine'           ? 'ENG'
                    : key === 'tires'            ? 'TYRES'

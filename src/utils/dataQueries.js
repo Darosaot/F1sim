@@ -5,6 +5,8 @@ import tpData from '../data/team_principals.json'
 import tdData from '../data/technical_directors.json'
 import tiresData from '../data/tires.json'
 import seasonsData from '../data/seasons.json'
+import strategistsData from '../data/strategists.json'
+import { hashString } from './random'
 
 const ERA_RANGES = {
   all:        null,
@@ -33,10 +35,10 @@ export function getFilteredSeasons(era) {
   return seasonsData.filter(s => matchesEra(s, era))
 }
 
-function weightedRandom(items, weightFn) {
+function weightedRandom(items, weightFn, rng) {
   const weights = items.map(weightFn)
   const total = weights.reduce((a, b) => a + b, 0)
-  let r = Math.random() * total
+  let r = rng() * total
   for (let i = 0; i < items.length; i++) {
     r -= weights[i]
     if (r <= 0) return items[i]
@@ -48,15 +50,15 @@ function weightedRandom(items, weightFn) {
 // hard    → team-equal probability (every team equally likely, random year within team)
 // medium  → weighted by budget_index^1.5 (better teams moderately more likely)
 // easy    → weighted by budget_index^3   (top teams heavily favoured)
-export function getRandomSeason(era, excludeIds = [], difficulty = 'hard') {
+export function getRandomSeason(era, excludeIds = [], difficulty = 'hard', rng = Math.random) {
   const filtered = getFilteredSeasons(era).filter(s => !excludeIds.includes(s.id))
   if (filtered.length === 0) return null
 
   if (difficulty === 'easy') {
-    return weightedRandom(filtered, s => Math.pow(Math.max(1, s.budget_index ?? 50), 3))
+    return weightedRandom(filtered, s => Math.pow(Math.max(1, s.budget_index ?? 50), 3), rng)
   }
   if (difficulty === 'medium') {
-    return weightedRandom(filtered, s => Math.pow(Math.max(1, s.budget_index ?? 50), 1.5))
+    return weightedRandom(filtered, s => Math.pow(Math.max(1, s.budget_index ?? 50), 1.5), rng)
   }
 
   // Hard: team-equal probability — each team equally likely regardless of seasons count
@@ -66,8 +68,47 @@ export function getRandomSeason(era, excludeIds = [], difficulty = 'hard') {
     byTeam[s.team].push(s)
   }
   const teams = Object.values(byTeam)
-  const randomTeam = teams[Math.floor(Math.random() * teams.length)]
-  return randomTeam[Math.floor(Math.random() * randomTeam.length)]
+  const randomTeam = teams[Math.floor(rng() * teams.length)]
+  return randomTeam[Math.floor(rng() * randomTeam.length)]
+}
+
+const STRATEGIST_ATTRS = ['race_management', 'pit_timing', 'undercut_instinct', 'safety_car_read', 'pressure_decisions']
+
+// The pit wall for a season: a named strategist when one worked for this
+// team within two years of a peak season, otherwise the team's generic
+// strategy group, rated from its budget (richer teams, better tools).
+export function resolveStrategist(season) {
+  const named = strategistsData.find(st =>
+    st.teams.some(t => t.toLowerCase() === season.team.toLowerCase()) &&
+    st.peak_years.some(y => Math.abs(y - season.year) <= 2)
+  )
+  if (named) return named
+
+  const base = 42 + (season.budget_index ?? 50) * 0.42
+  const h = hashString(season.id)
+  const attributes = {}
+  STRATEGIST_ATTRS.forEach((k, i) => {
+    const jitter = ((h >>> (i * 5)) % 9) - 4 // deterministic -4..+4
+    attributes[k] = Math.max(30, Math.min(88, Math.round(base + jitter)))
+  })
+  return {
+    id: `wall:${season.id}`,
+    name: `Muro de ${season.team}`,
+    team: season.team,
+    year: season.year,
+    generic: true,
+    attributes,
+    bio: `El equipo de estrategia de ${season.team} en ${season.year}.`,
+  }
+}
+
+function strategistFromId(id) {
+  if (!id) return null
+  if (id.startsWith('wall:')) {
+    const season = seasonsData.find(s => s.id === id.slice(5))
+    return season ? resolveStrategist(season) : null
+  }
+  return strategistsData.find(s => s.id === id) ?? null
 }
 
 export function resolveSeasonElements(season) {
@@ -79,6 +120,7 @@ export function resolveSeasonElements(season) {
     engine: enginesData.find(e => e.id === season.engine) || null,
     team_principal: tpData.find(t => t.id === season.tp) || null,
     technical_director: tdData.find(t => t.id === season.td) || null,
+    strategist: resolveStrategist(season),
     tires: tiresData.find(t => t.id === season.tires) || null,
     aero: season.aero_index,
     budget: season.budget_index,
@@ -94,6 +136,7 @@ export function resolveSharedTeam(p) {
     driver2:            driversData.find(d => d.id === p.d2) ?? null,
     team_principal:     tpData.find(t => t.id === p.tp) ?? null,
     technical_director: tdData.find(t => t.id === p.td) ?? null,
+    strategist:         strategistFromId(p.st),
     chassis:            chassisData.find(c => c.id === p.ch) ?? null,
     engine:             enginesData.find(e => e.id === p.en) ?? null,
     tires:              tiresData.find(t => t.id === p.ti) ?? null,
